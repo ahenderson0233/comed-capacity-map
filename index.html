@@ -239,7 +239,7 @@
       // served GeoJSON instead — otherwise the browser holds a second full copy of
       // the corridors in memory, and adding a large uploaded layer can exhaust the
       // renderer and make the corridors stop drawing (data stays, rendering drops).
-      if(__b64 && location.protocol === "file:"){
+      if(__b64 && location.hostname!=="localhost" && location.hostname!=="127.0.0.1"){
         var __bin = atob(__b64), __bytes = new Uint8Array(__bin.length);
         for(var __i=0; __i<__bin.length; __i++){ __bytes[__i] = __bin.charCodeAt(__i); }
         EMBEDDED_LAYERS = JSON.parse(pako.inflate(__bytes, { to:"string" }));
