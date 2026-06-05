@@ -1,0 +1,6 @@
+illinois_dashboard.html
+__pycache__/
+*.pyc
+comed_section.geojson
+comed_quarter.geojson
+comed_sixteenth.geojson
