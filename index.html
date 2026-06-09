@@ -451,7 +451,7 @@ require([
   $("applyBtn").addEventListener("click",findFeeders);
   $("resetBtn").addEventListener("click",resetFilter);
   $("sortSel").addEventListener("change",function(){ if(_lastRows&&_lastRows.length) applySortAndShow(_lastLabel,_lastRows); });
-  ["qualDist","subDist"].forEach(function(id){ var el=$(id); if(el) el.addEventListener("change",function(){ restrictToMatching=true; updateSiteList(); renderManual(); }); });
+  ["qualDist","subDist","minGen","minLoad"].forEach(function(id){ var el=$(id); if(el){ var _h=function(){ restrictToMatching=true; updateSiteList(); renderManual(); }; el.addEventListener("change",_h); el.addEventListener("input",_h); } });
   $("resultsExport").addEventListener("click",function(){ if(!_lastRows||!_lastRows.length||typeof XLSX==="undefined")return;
     var aoa=[["Feeder","Network","Substation","Est. Net Generation Capacity (MW)","Est. Net Load Capacity (MW)"]];
     _lastRows.forEach(function(c){ aoa.push([c.feeder,(c.network||"Ameren"),(c.ss||""),isNaN(c.gen)?"":c.gen,isNaN(c.load)?"":c.load]); });
@@ -633,13 +633,13 @@ require([
       var qual={}; rr[0].features.forEach(function(f){ cellFeeders(f.attributes.FEEDERID,f.attributes.MAXGENMW_TXT).forEach(function(p){ var ge=p.val,lo=(p.feeder in loadF)?loadF[p.feeder]:NaN; if((isNaN(ge)?0:ge)>=g && (isNaN(lo)?0:lo)>=l) qual[p.feeder]=1; }); });
       var n=Object.keys(qual).length; return {ok:n>0,n:n}; }); }
   function updateSiteList(){ var token=++__siteToken; siteQualList=[]; if(!siteCache.length){ renderSiteList(); applyMapRestriction(); return; }
-    var snap=siteCache.slice(0,400),i=0,CONC=6,active=0,finished=0;
+    var snap=siteCache.slice(0,5000),i=0,CONC=8,active=0,finished=0;
     function done1(){ finished++; if(finished>=snap.length){ if(token===__siteToken){ siteQualList.sort(function(a,b){return b.n-a.n;}); renderSiteList(); applyMapRestriction(); } } }
     function pump(){ while(active<CONC && i<snap.length){ if(token!==__siteToken) return; var s=snap[i++]; active++; siteQualifies(s).then(function(q){ if(q.ok) siteQualList.push({site:s,n:q.n}); }).catch(function(){}).then(function(){ active--; done1(); if(token===__siteToken) renderSiteList(); pump(); }); } } pump(); }
   function renderSiteList(){ var box=$("siteList"),cnt=$("siteCount"),E=$("siteExport"); cnt.textContent=siteCache.length+" site(s) uploaded - "+siteQualList.length+" match parameters"; if(E)E.disabled=!siteQualList.length;
     if(!siteCache.length){ box.innerHTML='<div class="resEmpty">Upload site files above; matching sites appear here.</div>'; return; }
     if(!siteQualList.length){ box.innerHTML='<div class="resEmpty">No uploaded sites match the current parameters yet.</div>'; return; }
-    box.innerHTML=""; var cap=Math.min(siteQualList.length,400);
+    box.innerHTML=""; var cap=Math.min(siteQualList.length,1000);
     for(var i=0;i<cap;i++){ (function(item){ var d=document.createElement("div"); d.className="resRow"; d.innerHTML='<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:'+item.site.color+';margin-right:7px;vertical-align:middle;"></span><span class="f">'+he(item.site.name)+'</span><br><span class="m">'+item.n+' qualifying feeder(s) within '+qualDistMi()+' mi</span>'; d.addEventListener("click",function(){ showSiteDetail(item.site); }); box.appendChild(d); })(siteQualList[i]); } }
   function applyMapRestriction(){ if(!upLayers.length) return; if(!restrictToMatching){ upLayers.forEach(function(fl){ if(fl.definitionExpression) fl.definitionExpression=null; }); return; }
     var byLayer=new Map(); siteQualList.forEach(function(it){ var fl=it.site.fl,oid=it.site.oid; if(!fl||oid==null)return; var a=byLayer.get(fl); if(!a){ a={}; byLayer.set(fl,a); } a[oid]=1; });
