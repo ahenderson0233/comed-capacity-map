@@ -75,7 +75,7 @@
         <div class="note" style="margin-top:0;">Switch the capacity network shown + searched. Substations, uploads, sites, footprint and save/load work across both. ComEd = kW corridors; Ameren = MW feeders.</div>
       </div></div>
       <div class="section" id="secFindAmeren">
-        <h3>Find Feeders</h3>
+        <h3>Find Feeders &amp; Site Eligibility</h3>
         <div class="inner">
           <div class="fld"><label>Min Estimated Net Generation Capacity (MW)</label><input type="number" id="minGen" value="0" min="0" step="0.1" /></div>
           <div class="fld"><label>Min Estimated Net Load Capacity (MW)</label><input type="number" id="minLoad" value="0" min="0" step="0.1" /></div>
@@ -85,6 +85,9 @@
           <div class="fld"><label>Radius (miles)</label><input type="number" id="radiusMi" value="" min="0" step="1" placeholder="blank = whole system" /></div>
           <div class="subhdr">Eligibility distances (mi)</div>
           <div class="fld"><label>A site is eligible if a qualifying feeder is within</label><input type="number" id="qualDist" value="1" min="0.05" step="0.25" /></div>
+          <div class="fld"><label>A site is eligible if a substation is within</label><input type="number" id="subEligDist" min="0" step="0.5" placeholder="blank = not required" /></div>
+          <div class="fld"><label>A site is eligible if a 69 kV line is within</label><input type="number" id="txEligDist" min="0" step="0.5" placeholder="blank = not required" /></div>
+          <div class="note" style="margin:0 0 7px 0;">Substation &amp; 69 kV criteria are optional &mdash; leave blank to not require them. Nearest distances are always reported and exported.</div>
           <div class="btnRow"><button class="btnPrimary" id="applyBtn">Search</button><button class="btnGhost" id="resetBtn">Reset</button></div>
           <div class="sortRow"><span>Sort by</span><select id="sortSel"><option value="gen">Generation (high to low)</option><option value="load">Load (high to low)</option></select></div>
           <div class="count" id="resultsLabel" style="color:#170d67;"></div>
@@ -472,7 +475,7 @@ require([
   $("applyBtn").addEventListener("click",findFeeders);
   $("resetBtn").addEventListener("click",resetFilter);
   $("sortSel").addEventListener("change",function(){ if(_lastRows&&_lastRows.length) applySortAndShow(_lastLabel,_lastRows); });
-  ["qualDist","subDist","minGen","minLoad"].forEach(function(id){ var el=$(id); if(el){ var _h=function(){ restrictToMatching=true; updateSiteList(); renderManual(); }; el.addEventListener("change",_h); el.addEventListener("input",_h); } });
+  ["qualDist","subDist","minGen","minLoad","subEligDist","txEligDist"].forEach(function(id){ var el=$(id); if(el){ var _h=function(){ restrictToMatching=true; updateSiteList(); renderManual(); }; el.addEventListener("change",_h); el.addEventListener("input",_h); } });
   $("resultsExport").addEventListener("click",function(){ if(!_lastRows||!_lastRows.length||typeof XLSX==="undefined")return;
     var aoa=[["Feeder","Network","Substation","Est. Net Generation Capacity (MW)","Est. Net Load Capacity (MW)"]];
     _lastRows.forEach(function(c){ aoa.push([c.feeder,(c.network||"Ameren"),(c.ss||""),isNaN(c.gen)?"":c.gen,isNaN(c.load)?"":c.load]); });
@@ -528,12 +531,25 @@ require([
   // ---------- eligibility distances + site analysis ----------
   function qualDistMi(){ var v=parseFloat($("qualDist").value); return (isNaN(v)||v<=0)?1:v; }
   function subDistMi(){ var v=parseFloat($("subDist").value); return (isNaN(v)||v<=0)?5:v; }
+  function subEligMi(){ var v=parseFloat($("subEligDist").value); return (isNaN(v)||v<=0)?0:v; }
+  function txEligMi(){ var v=parseFloat($("txEligDist").value); return (isNaN(v)||v<=0)?0:v; }
+  function nearestSubMi(site,cap){ var best=Infinity,marg=((cap>0?cap:60)/45)+0.05; getSubPts().forEach(function(s){ if(Math.abs(s.lat-site.lat)>marg||Math.abs(s.lon-site.lon)>marg)return; var d=haversineMi(site.lat,site.lon,s.lat,s.lon); if(d<best)best=d; }); return isFinite(best)?best:null; }
+  var __IL69IDX=null;
+  function il69Index(){ if(__IL69IDX)return __IL69IDX; __IL69IDX=[]; try{ var fs=(typeof IL69_GEOJSON!=="undefined"&&IL69_GEOJSON&&IL69_GEOJSON.features)||[];
+    fs.forEach(function(f){ var g=f.geometry; if(!g)return; var lines=(g.type==="LineString")?[g.coordinates]:((g.type==="MultiLineString")?g.coordinates:null); if(!lines)return;
+      var mnx=Infinity,mny=Infinity,mxx=-Infinity,mxy=-Infinity,segs=[]; lines.forEach(function(line){ for(var i=0;i<line.length;i++){ var p=line[i]; if(p[0]<mnx)mnx=p[0]; if(p[0]>mxx)mxx=p[0]; if(p[1]<mny)mny=p[1]; if(p[1]>mxy)mxy=p[1]; if(i<line.length-1){ var b=line[i+1]; segs.push([p[0],p[1],b[0],b[1]]); } } });
+      if(segs.length)__IL69IDX.push({bb:[mnx,mny,mxx,mxy],segs:segs}); }); }catch(e){ __IL69IDX=[]; } return __IL69IDX; }
+  function near69Mi(site,cap){ var idx=il69Index(); if(!idx.length)return null; var plat=site.lat,plon=site.lon,cl=Math.cos(plat*Math.PI/180),kx=69.172*cl,ky=69.172;
+    var mLat=((cap>0?cap:80)/69.0)+0.02,mLon=((cap>0?cap:80)/(69.0*Math.max(0.2,cl)))+0.02,best=Infinity;
+    for(var fi=0;fi<idx.length;fi++){ var bb=idx[fi].bb; if(plon<bb[0]-mLon||plon>bb[2]+mLon||plat<bb[1]-mLat||plat>bb[3]+mLat)continue; var segs=idx[fi].segs;
+      for(var si=0;si<segs.length;si++){ var s=segs[si],ax=(s[0]-plon)*kx,ay=(s[1]-plat)*ky,bx=(s[2]-plon)*kx,by=(s[3]-plat)*ky,dx=bx-ax,dy=by-ay,L2=dx*dx+dy*dy,tt=L2?(-(ax*dx+ay*dy)/L2):0; if(tt<0)tt=0; else if(tt>1)tt=1; var cx=ax+tt*dx,cy=ay+tt*dy,d=Math.sqrt(cx*cx+cy*cy); if(d<best){best=d; if(best<=0)return 0;} } }
+    return isFinite(best)?best:null; }
   function siteSubs(site){ var subs=[],sd=subDistMi(),marg=sd/45+0.05; getSubPts().forEach(function(s){ if(Math.abs(s.lat-site.lat)>marg||Math.abs(s.lon-site.lon)>marg)return;
     var d=haversineMi(site.lat,site.lon,s.lat,s.lon); if(d<=sd) subs.push({ss:subDisplayLabel(s),dist_mi:d,lon:s.lon,lat:s.lat}); }); subs.sort(function(a,b){return a.dist_mi-b.dist_mi;}); return subs; }
     function effectiveUtil(site){ if(ACTIVE_UTIL==="comed")return "comed"; if(ACTIVE_UTIL==="ameren")return "ameren"; try{ return inComEd(site.lon,site.lat)?"comed":"ameren"; }catch(e){ return "ameren"; } }
   function ceDist(site,g){ var rings=(g&&g.rings)||null; if(!rings||!rings.length) return null; try{ if(turf.booleanPointInPolygon(turf.point([site.lon,site.lat]),turf.polygon(rings))) return 0; }catch(e){} var plat=site.lat,plon=site.lon,kx=69.172*Math.cos(plat*Math.PI/180),ky=69.172,best=Infinity; rings.forEach(function(r){ for(var i=0;i<r.length-1;i++){ var ax=(r[i][0]-plon)*kx,ay=(r[i][1]-plat)*ky,bx=(r[i+1][0]-plon)*kx,by=(r[i+1][1]-plat)*ky,dx=bx-ax,dy=by-ay,L2=dx*dx+dy*dy,t=L2?(-(ax*dx+ay*dy)/L2):0; if(t<0)t=0; else if(t>1)t=1; var cx=ax+t*dx,cy=ay+t*dy,d=Math.sqrt(cx*cx+cy*cy); if(d<best)best=d; } }); return isFinite(best)?best:null; }
   function ceAnalyzeSite(site){ var R=Math.max(0.5,qualDistMi()), g=parseFloat($("minGen").value)||0, l=parseFloat($("minLoad").value)||0;
-    if(!ceCorridorLayer){ var z=siteSubs(site); return Promise.resolve({name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:[],nFeeders01:0,sumGen01:0,sumLoad01:0,nFeeders03:0,sumGen03:0,sumLoad03:0,nFeeders05:0,sumGen05:0,sumLoad05:0,qualFeeders:[],nQual:0,nearestQual:null,subs:z,nSub:z.length,nearestSub:z[0]||null,unit:"MW",util:"ComEd"}); }
+    if(!ceCorridorLayer){ var z=siteSubs(site); return Promise.resolve({name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:[],nFeeders01:0,sumGen01:0,sumLoad01:0,nFeeders03:0,sumGen03:0,sumLoad03:0,nFeeders05:0,sumGen05:0,sumLoad05:0,qualFeeders:[],nQual:0,nearestQual:null,subs:z,nSub:z.length,nearestSub:z[0]||null,nearest69:near69Mi(site,0),nearestSubAnyMi:nearestSubMi(site,0),unit:"MW",util:"ComEd"}); }
     return ceCorridorLayer.queryFeatures({geometry:new Point({longitude:site.lon,latitude:site.lat}),distance:R,units:"miles",spatialRelationship:"intersects",outFields:["*"],returnGeometry:true,outSpatialReference:{wkid:4326},num:3000}).catch(function(){return {features:[]};}).then(function(res){
       var b01={},b03={},b05={},qual={};
       (res.features||[]).forEach(function(f){ var a=f.attributes||{},fid=a.Feeder_N; if(fid==null)return; var d=ceDist(site,f.geometry); if(d==null)return; var gen=parseFloat(a.PV_HC_kW)/1000,lo=parseFloat(a.EV_HC_kW)/1000;
@@ -542,9 +558,9 @@ require([
         if(d<=qualDistMi() && (isNaN(gen)?0:gen)>=g && (isNaN(lo)?0:lo)>=l)put(qual); });
       function sums(o){ var k=Object.keys(o),gg=0,ll=0; k.forEach(function(x){ if(!isNaN(o[x].gen))gg+=o[x].gen; if(!isNaN(o[x].load))ll+=o[x].load; }); return {n:k.length,gen:gg,load:ll}; }
       var s1=sums(b01),s3=sums(b03),s5=sums(b05),qf=Object.keys(qual).map(function(k){return qual[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}),subs=siteSubs(site);
-      return {name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:Object.keys(b01).map(function(k){return b01[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}),nFeeders01:s1.n,sumGen01:s1.gen,sumLoad01:s1.load,nFeeders03:s3.n,sumGen03:s3.gen,sumLoad03:s3.load,nFeeders05:s5.n,sumGen05:s5.gen,sumLoad05:s5.load,qualFeeders:qf,nQual:qf.length,nearestQual:qf[0]||null,subs:subs,nSub:subs.length,nearestSub:subs[0]||null,unit:"MW",util:"ComEd"}; }); }
+      return {name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:Object.keys(b01).map(function(k){return b01[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}),nFeeders01:s1.n,sumGen01:s1.gen,sumLoad01:s1.load,nFeeders03:s3.n,sumGen03:s3.gen,sumLoad03:s3.load,nFeeders05:s5.n,sumGen05:s5.gen,sumLoad05:s5.load,qualFeeders:qf,nQual:qf.length,nearestQual:qf[0]||null,subs:subs,nSub:subs.length,nearestSub:subs[0]||null,nearest69:near69Mi(site,0),nearestSubAnyMi:nearestSubMi(site,0),unit:"MW",util:"ComEd"}; }); }
   function ceSiteQualifies(site){ if(!ceCorridorLayer) return Promise.resolve({ok:false,n:0}); var qd=qualDistMi(),g=parseFloat($("minGen").value)||0,l=parseFloat($("minLoad").value)||0;
-    return ceCorridorLayer.queryFeatures({geometry:new Point({longitude:site.lon,latitude:site.lat}),distance:Math.max(0.5,qd),units:"miles",spatialRelationship:"intersects",outFields:["Feeder_N","PV_HC_kW","EV_HC_kW"],returnGeometry:true,outSpatialReference:{wkid:4326},num:5000}).catch(function(){return {features:[]};}).then(function(res){ var qual={}; (res.features||[]).forEach(function(f){ var a=f.attributes||{},fid=a.Feeder_N; if(fid==null)return; var d=ceDist(site,f.geometry); if(d==null||d>qd)return; var gen=parseFloat(a.PV_HC_kW)/1000,lo=parseFloat(a.EV_HC_kW)/1000; if((isNaN(gen)?0:gen)>=g && (isNaN(lo)?0:lo)>=l)qual[fid]=1; }); var n=Object.keys(qual).length; return {ok:n>0,n:n}; }); }
+    return ceCorridorLayer.queryFeatures({geometry:new Point({longitude:site.lon,latitude:site.lat}),distance:Math.max(0.5,qd),units:"miles",spatialRelationship:"intersects",outFields:["Feeder_N","PV_HC_kW","EV_HC_kW"],returnGeometry:true,outSpatialReference:{wkid:4326},num:5000}).catch(function(){return {features:[]};}).then(function(res){ var qual={}; (res.features||[]).forEach(function(f){ var a=f.attributes||{},fid=a.Feeder_N; if(fid==null)return; var d=ceDist(site,f.geometry); if(d==null||d>qd)return; var gen=parseFloat(a.PV_HC_kW)/1000,lo=parseFloat(a.EV_HC_kW)/1000; if((isNaN(gen)?0:gen)>=g && (isNaN(lo)?0:lo)>=l)qual[fid]=1; }); var n=Object.keys(qual).length; var ok=n>0; var _se=subEligMi(); if(ok&&_se>0){ var _ds=nearestSubMi(site,_se); if(_ds==null||_ds>_se)ok=false; } var _te=txEligMi(); if(ok&&_te>0){ var _dt=near69Mi(site,_te); if(_dt==null||_dt>_te)ok=false; } return {ok:ok,n:n}; }); }
   function analyzeSite(site){ if(effectiveUtil(site)==="comed") return ceAnalyzeSite(site); var pt=new Point({longitude:site.lon,latitude:site.lat}); var R=Math.max(0.5,qualDistMi());
     var g=parseFloat($("minGen").value)||0, l=parseFloat($("minLoad").value)||0; flG=g; flL=l; flOn=(g>0||l>0);
     return Promise.all([
@@ -562,7 +578,7 @@ require([
       var s1=sums(b01),s3=sums(b03),s5=sums(b05); var qf=Object.keys(qual).map(function(k){return qual[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}); var subs=siteSubs(site);
       return {name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:Object.keys(b01).map(function(k){return b01[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}),
         nFeeders01:s1.n,sumGen01:s1.gen,sumLoad01:s1.load,nFeeders03:s3.n,sumGen03:s3.gen,sumLoad03:s3.load,nFeeders05:s5.n,sumGen05:s5.gen,sumLoad05:s5.load,
-        qualFeeders:qf,nQual:qf.length,nearestQual:qf[0]||null,subs:subs,nSub:subs.length,nearestSub:subs[0]||null,unit:"MW",util:"Ameren"}; }); }
+        qualFeeders:qf,nQual:qf.length,nearestQual:qf[0]||null,subs:subs,nSub:subs.length,nearestSub:subs[0]||null,nearest69:near69Mi(site,0),nearestSubAnyMi:nearestSubMi(site,0),unit:"MW",util:"Ameren"}; }); }
   function kv2(k,v){ return '<div style="display:flex;justify-content:space-between;gap:14px;padding:2px 0;"><span style="color:#5a5a72;">'+k+'</span><span style="font-weight:600;color:#170d67;text-align:right;white-space:nowrap;">'+v+'</span></div>'; }
   function subhd(t){ return '<div style="font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#9a9ab0;margin:9px 0 3px;border-top:1px solid #ececf2;padding-top:6px;">'+t+'</div>'; }
   function siteAnalysisHtml(a){ var U=" "+(a.unit||"MW"); var s='<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;min-width:252px;color:#22223b;">';
@@ -571,7 +587,9 @@ require([
     s+=subhd("Within 0.5 mi")+kv2("Feeders",a.nFeeders05)+kv2("Sum Generation",fmtMW(a.sumGen05)+U)+kv2("Sum Load",fmtMW(a.sumLoad05)+U);
     s+=subhd("Qualifying feeders <= "+qualDistMi()+" mi")+kv2("Count",a.nQual);
     if(a.nearestQual) s+=kv2("Nearest",a.nearestQual.feeder+" - "+ftMi(a.nearestQual.dist_mi))+kv2("its Gen / Load",fmtMW(a.nearestQual.gen)+" / "+fmtMW(a.nearestQual.load)+U);
-    s+=subhd("Substations <= "+subDistMi()+" mi")+kv2("Count",a.nSub); if(a.nearestSub) s+=kv2("Nearest",a.nearestSub.ss+" - "+a.nearestSub.dist_mi.toFixed(2)+" mi"); return s+'</div>'; }
+    s+=subhd("Substations <= "+subDistMi()+" mi")+kv2("Count",a.nSub); if(a.nearestSub) s+=kv2("Nearest",a.nearestSub.ss+" - "+a.nearestSub.dist_mi.toFixed(2)+" mi"); var _se=subEligMi(); if(_se>0) s+=kv2("Within "+_se+" mi?",((a.nearestSubAnyMi!=null&&a.nearestSubAnyMi<=_se)?"Yes":"No"));
+    s+=subhd("69 kV transmission"); if(a.nearest69!=null){ s+=kv2("Nearest line",ftMi(a.nearest69)); var _te=txEligMi(); if(_te>0) s+=kv2("Within "+_te+" mi?",(a.nearest69<=_te?"Yes":"No")); } else { s+=kv2("Nearest line","none found"); }
+    return s+'</div>'; }
   var siteHiLayer=null;
   function chip(label,cb){ var c=document.createElement("span"); c.textContent=label; c.style.cssText="display:inline-block;margin:2px 4px 2px 0;padding:2px 7px;border:1px solid #cdd6e6;border-radius:10px;background:#eef4fb;color:#170d67;font-size:11.5px;cursor:pointer;"; c.addEventListener("click",cb); return c; }
   function showSiteDetail(site,targetId){ var tgt=$(targetId||"siteDetail"); tgt.innerHTML='<div class="note">Analyzing...</div>';
@@ -653,7 +671,7 @@ require([
       LC.queryFeatures({geometry:pt,distance:qd,units:"miles",spatialRelationship:"intersects",outFields:["FEEDERID","MAXLOADMW_TXT"],returnGeometry:false,num:2000}).catch(function(){return{features:[]};})
     ]).then(function(rr){ var loadF={}; rr[1].features.forEach(function(f){ cellFeeders(f.attributes.FEEDERID,f.attributes.MAXLOADMW_TXT).forEach(function(p){ if(isNaN(p.val))return; if(!(p.feeder in loadF)||p.val>loadF[p.feeder]) loadF[p.feeder]=p.val; }); });
       var qual={}; rr[0].features.forEach(function(f){ cellFeeders(f.attributes.FEEDERID,f.attributes.MAXGENMW_TXT).forEach(function(p){ var ge=p.val,lo=(p.feeder in loadF)?loadF[p.feeder]:NaN; if((isNaN(ge)?0:ge)>=g && (isNaN(lo)?0:lo)>=l) qual[p.feeder]=1; }); });
-      var n=Object.keys(qual).length; return {ok:n>0,n:n}; }); }
+      var n=Object.keys(qual).length; var ok=n>0; var _se=subEligMi(); if(ok&&_se>0){ var _ds=nearestSubMi(site,_se); if(_ds==null||_ds>_se)ok=false; } var _te=txEligMi(); if(ok&&_te>0){ var _dt=near69Mi(site,_te); if(_dt==null||_dt>_te)ok=false; } return {ok:ok,n:n}; }); }
   function updateSiteList(){ var token=++__siteToken; siteQualList=[]; if(!siteCache.length){ renderSiteList(); applyMapRestriction(); return; }
     var snap=siteCache.slice(0,5000),i=0,CONC=8,active=0,finished=0;
     function done1(){ finished++; if(finished>=snap.length){ if(token===__siteToken){ siteQualList.sort(function(a,b){return b.n-a.n;}); renderSiteList(); applyMapRestriction(); } } }
@@ -667,11 +685,11 @@ require([
     var byLayer=new Map(); siteQualList.forEach(function(it){ var fl=it.site.fl,oid=it.site.oid; if(!fl||oid==null)return; var a=byLayer.get(fl); if(!a){ a={}; byLayer.set(fl,a); } a[oid]=1; });
     upLayers.forEach(function(fl){ var qual=byLayer.get(fl)||{},all=(fl.__sites||[]).map(function(s){return s.oid;}).filter(function(o){return o!=null;}),q=all.filter(function(o){return qual[o];});
       if(!q.length){ fl.definitionExpression="1=0"; return; } if(q.length===all.length){ fl.definitionExpression=null; return; } var non=all.filter(function(o){return !qual[o];}); fl.definitionExpression=(q.length<=non.length)?("OBJECTID IN ("+q.join(",")+")"):("OBJECTID NOT IN ("+non.join(",")+")"); }); }
-  function exportSiteRows(sites,filename,statusId){ if(!sites.length||typeof XLSX==="undefined")return; var st=$(statusId); var qd=qualDistMi(),sd=subDistMi();
-    var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)"];
+  function exportSiteRows(sites,filename,statusId){ if(!sites.length||typeof XLSX==="undefined")return; var st=$(statusId); var qd=qualDistMi(),sd=subDistMi(),se=subEligMi(),te=txEligMi();
+    var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)","Nearest substation (any, mi)","Sub within "+(se>0?se+"mi":"(off)"),"Nearest 69 kV line (mi)","69 kV within "+(te>0?te+"mi":"(off)")];
     var out=[header],i=0;
     function step(){ if(i>=sites.length){ var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(out),"Site Summary"); XLSX.writeFile(wb,filename); if(st)st.textContent="Exported "+sites.length+" site(s)."; return; }
-      if(st)st.textContent="Analyzing "+(i+1)+"/"+sites.length+"..."; analyzeSite(sites[i]).then(function(a){ out.push([a.name,a.sheet||"",a.lat,a.lon,(a.util||""),(a.unit||"MW"),a.nFeeders01,Math.round(a.sumGen01*100)/100,Math.round(a.sumLoad01*100)/100,a.nFeeders03,Math.round(a.sumGen03*100)/100,Math.round(a.sumLoad03*100)/100,a.nFeeders05,Math.round(a.sumGen05*100)/100,Math.round(a.sumLoad05*100)/100,a.nQual,a.nearestQual?a.nearestQual.feeder:"",a.nearestQual?+a.nearestQual.dist_mi.toFixed(3):"",a.nSub,a.nearestSub?a.nearestSub.ss:"",a.nearestSub?+a.nearestSub.dist_mi.toFixed(3):""]); i++; step(); }); } step(); }
+      if(st)st.textContent="Analyzing "+(i+1)+"/"+sites.length+"..."; analyzeSite(sites[i]).then(function(a){ out.push([a.name,a.sheet||"",a.lat,a.lon,(a.util||""),(a.unit||"MW"),a.nFeeders01,Math.round(a.sumGen01*100)/100,Math.round(a.sumLoad01*100)/100,a.nFeeders03,Math.round(a.sumGen03*100)/100,Math.round(a.sumLoad03*100)/100,a.nFeeders05,Math.round(a.sumGen05*100)/100,Math.round(a.sumLoad05*100)/100,a.nQual,a.nearestQual?a.nearestQual.feeder:"",a.nearestQual?+a.nearestQual.dist_mi.toFixed(3):"",a.nSub,a.nearestSub?a.nearestSub.ss:"",a.nearestSub?+a.nearestSub.dist_mi.toFixed(3):"",(a.nearestSubAnyMi!=null?+a.nearestSubAnyMi.toFixed(3):""),(se>0?((a.nearestSubAnyMi!=null&&a.nearestSubAnyMi<=se)?"Yes":"No"):""),(a.nearest69!=null?+a.nearest69.toFixed(3):""),(te>0?((a.nearest69!=null&&a.nearest69<=te)?"Yes":"No"):"")]); i++; step(); }); } step(); }
   $("siteExport").addEventListener("click",function(){ exportSiteRows(siteQualList.map(function(x){return x.site;}),"site_analysis.xlsx","siteCount"); });
 
   // ---------- My Sites ----------
