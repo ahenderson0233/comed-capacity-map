@@ -1,0 +1,46 @@
+name: Refresh hosting-capacity data
+
+# Quarterly (06:00 UTC on the 1st of Jan/Apr/Jul/Oct) + a manual "Run workflow" button.
+on:
+  schedule:
+    - cron: "0 6 1 1,4,7,10 *"
+  workflow_dispatch: {}
+
+# Allow the job to commit the regenerated data files back to the repo.
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Rebuild ComEd corridors + townships
+        run: python scraper_comed.py
+
+      - name: Rebuild Ameren feeder index (centroids)
+        run: python scraper_ameren.py
+
+      - name: Commit refreshed data (only if changed + validation passed)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add comed_corridors.geojson comed_townships.geojson feeder_segments.json
+          if git diff --cached --quiet; then
+            echo "No data changes - nothing to commit."
+          else
+            git commit -m "Auto-refresh hosting-capacity data ($(date -u +%Y-%m-%d))"
+            git push
+          fi
