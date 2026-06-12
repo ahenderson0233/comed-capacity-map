@@ -96,6 +96,7 @@
         <div class="modeRow"><button id="utilBoth" class="active">Both</button><button id="utilComed">ComEd</button><button id="utilAmeren">Ameren</button></div>
         <div class="note" style="margin-top:0;">Switch the capacity network shown + searched. Substations, uploads, sites, footprint and save/load work across both. ComEd = kW corridors; Ameren = MW feeders.</div>
       </div></div>
+      <div class="section"><h3>Capacity legend (MW)</h3><div class="inner"><div id="capLegendInner"></div><div class="note" style="margin-top:6px;">Shown for ComEd corridors (Both / ComEd). Ameren uses its own published vector-tile shading.</div></div></div>
       <div class="section" id="secFindAmeren">
         <h3>Find Feeders &amp; Site Eligibility</h3>
         <div class="inner">
@@ -116,19 +117,6 @@
           <div class="count" id="resultsCount"></div>
           <div class="results" id="resultsList"><div class="resEmpty">Set parameters and click &ldquo;Search&rdquo;.</div></div>
           <div class="btnRow"><button class="btnPrimary" id="resultsExport" disabled>Export results (Excel)</button></div>
-        </div>
-      </div>
-      <div class="section" id="secFindComed" style="display:none;">
-        <h3>Find Corridors (ComEd)</h3>
-        <div class="inner">
-          <div class="fld"><label>Min Generation capacity (kW)</label><input type="number" id="ceMinGen" value="0" min="0" step="50" /></div>
-          <div class="fld"><label>Min Load capacity (kW)</label><input type="number" id="ceMinLoad" value="0" min="0" step="50" /></div>
-          <div class="btnRow"><button class="btnPrimary" id="ceApplyBtn">Search</button><button class="btnGhost" id="ceResetBtn">Reset</button></div>
-          <div class="sortRow"><span>Sort by</span><select id="ceSortSel"><option value="gen">Generation (high to low)</option><option value="load">Load (high to low)</option></select></div>
-          <div class="count" id="ceResultsLabel" style="color:#170d67;"></div><div class="count" id="ceResultsCount"></div>
-          <div class="results" id="ceResultsList"><div class="resEmpty">Set parameters and click Search.</div></div>
-          <div class="btnRow"><button class="btnPrimary" id="ceResultsExport" disabled>Export results (Excel)</button></div>
-          <div class="note">ComEd feeder corridors (kW). Same data + popups as the standalone ComEd map.</div>
         </div>
       </div>
       <div class="section">
@@ -238,7 +226,7 @@
     var head=document.getElementById("sideHead");
     if(head && !document.getElementById("brandSub")){ var p=document.createElement("p"); p.id="brandSub"; p.textContent="Illinois \u00b7 ComEd + Ameren \u00b7 PV + load hosting capacity"; head.appendChild(p); }
     var TAB={ "Utility network":"layers","Substations":"layers","Transmission lines":"layers",
-      "Find Feeders & Site Eligibility":"find","Find Corridors (ComEd)":"find",
+      "Find Feeders & Site Eligibility":"find","Capacity legend (MW)":"layers",
       "Upload Locations (Excel / CSV)":"sites","Site Analysis":"sites","My Sites":"sites","Save / Load Session":"sites",
       "Site Footprint Analysis":"foot" };
     var secs=document.querySelectorAll("#sideBody > .section");
@@ -360,7 +348,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     var body=document.createElement("div"); body.style.padding="2px 11px 9px"; var infos=(r&&(r.uniqueValueInfos||r.classBreakInfos))||[];
     var prev=0; infos.forEach(function(i){ var s=i.symbol||{}; var mx=(i.classMaxValue!=null?i.classMaxValue:null); var lab=(mx!=null)?((Math.round(prev/10)/100)+" - "+(Math.round(mx/10)/100)+" MW"):(i.label||String(i.value!=null?i.value:"")); if(mx!=null)prev=mx; var d=document.createElement("div"); d.style.cssText="display:flex;align-items:center;margin:4px 0;"; var sw=document.createElement("span"); sw.style.cssText="width:24px;height:14px;display:inline-block;margin-right:9px;border:1px solid #6f6f6f;"; sw.style.background=ceRgb(s.color); d.appendChild(sw); var l=document.createElement("span"); l.textContent=lab; d.appendChild(l); body.appendChild(d); });
     box.appendChild(body); return box; }
-  var ceLegendBox=ceBuildLegend(CE_RENDERER); view.ui.add(ceLegendBox,"bottom-left");
+  var ceLegendBox=ceBuildLegend(CE_RENDERER); ceLegendBox.style.cssText="font-size:12px;"; (function(){ var _h=document.getElementById("capLegendInner"); if(_h){ _h.appendChild(ceLegendBox); } else { view.ui.add(ceLegendBox,"bottom-left"); } })();
   // ---- Find Corridors (kW) ----
   var CE_GLOW="drop-shadow(0px 0px 6px #00e5ff) saturate(1.35) brightness(1.05)", CE_DIM="opacity(0.18) grayscale(0.85)", ceLastRows=null, ceLastLabel="";
   function ceRender(label,rows){ var L=$("ceResultsLabel"),C=$("ceResultsCount"),B=$("ceResultsList"),E=$("ceResultsExport"); if(!rows||!rows.length){ L.textContent=label||""; C.textContent=""; if(E)E.disabled=true; B.innerHTML='<div class="resEmpty">No corridors match.</div>'; return; } L.textContent=label||""; C.textContent=rows.length+" corridor(s)"; if(E)E.disabled=false; B.innerHTML="";
@@ -381,16 +369,16 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(!ceCorridorLayer||!pt) return build(g?[g]:[]);
     var q=ceCorridorLayer.createQuery(); q.geometry=pt; q.spatialRelationship="intersects"; q.outFields=["*"]; q.returnGeometry=false;
     return ceCorridorLayer.queryFeatures(q).then(function(res){ return build(res.features); }).catch(function(){ return build(g?[g]:[]); }); }
-  $("ceApplyBtn").addEventListener("click",ceFind); $("ceResetBtn").addEventListener("click",ceReset);
+  if($("ceApplyBtn")){ $("ceApplyBtn").addEventListener("click",ceFind); $("ceResetBtn").addEventListener("click",ceReset);
   $("ceSortSel").addEventListener("change",function(){ if(ceLastRows&&ceLastRows.length)ceSort(ceLastLabel,ceLastRows); });
-  $("ceResultsExport").addEventListener("click",function(){ if(!ceLastRows||!ceLastRows.length||typeof XLSX==="undefined")return; var aoa=[["Feeder","Substation","Est Net Generation (kW)","Est Net Load (kW)","Feeder DER in Queue (kW)","Queue Refresh"]]; ceLastRows.forEach(function(c){aoa.push([c.feeder,c.ss||"",isNaN(c.gen)?"":c.gen,isNaN(c.load)?"":c.load,(c.q==null?"":c.q),(c.rd==null?"":c.rd)]);}); var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(aoa),"Corridors"); XLSX.writeFile(wb,"comed_corridor_results.xlsx"); });
+  $("ceResultsExport").addEventListener("click",function(){ if(!ceLastRows||!ceLastRows.length||typeof XLSX==="undefined")return; var aoa=[["Feeder","Substation","Est Net Generation (kW)","Est Net Load (kW)","Feeder DER in Queue (kW)","Queue Refresh"]]; ceLastRows.forEach(function(c){aoa.push([c.feeder,c.ss||"",isNaN(c.gen)?"":c.gen,isNaN(c.load)?"":c.load,(c.q==null?"":c.q),(c.rd==null?"":c.rd)]);}); var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(aoa),"Corridors"); XLSX.writeFile(wb,"comed_corridor_results.xlsx"); }); }
   // ---- utility selector ----
   var ACTIVE_UTIL="both";
   function setUtil(u){ ACTIVE_UTIL=u; var ids={ameren:"utilAmeren",comed:"utilComed",both:"utilBoth"}; ["utilAmeren","utilComed","utilBoth"].forEach(function(id){ var b=$(id); if(b)b.classList.remove("active"); }); var ab=$(ids[u]); if(ab)ab.classList.add("active");
     var showA=(u!=="comed"), showC=(u!=="ameren");
     try{ heat.visible=showA; info.visible=showA; stInfo.visible=showA; }catch(e){}
     ceLayers.forEach(function(L){ L.visible=showC; });
-    var sa=$("secFindAmeren"); if(sa)sa.style.display=""; var sc=$("secFindComed"); if(sc)sc.style.display="none";
+    /* find-section visibility handled by tab system */
     if(ceLegendBox)ceLegendBox.style.display=showC?"":"none";
     try{ view.goTo(u==="comed"?{center:[-87.95,41.85],zoom:8}:(u==="ameren"?{center:[-89.4,39.9],zoom:7}:{center:[-89.0,40.4],zoom:6})); }catch(e){} try{ __subPts=null; if(typeof showSubs!=="undefined"&&showSubs&&showSubs.checked&&typeof refreshSubLayer==="function")refreshSubLayer(); else if(typeof updateSubCount==="function")updateSubCount(); }catch(e){} try{ if(typeof updateSiteList==="function"){ updateSiteList(); renderManual(); } }catch(e){} }
   $("utilAmeren").addEventListener("click",function(){ setUtil("ameren"); }); $("utilComed").addEventListener("click",function(){ setUtil("comed"); }); $("utilBoth").addEventListener("click",function(){ setUtil("both"); }); try{ setUtil("both"); }catch(e){}
