@@ -63,6 +63,28 @@
   #reopen{position:absolute;top:10px;left:10px;z-index:60;display:none;background:#170d67;color:#fff;border:none;border-radius:6px;padding:8px 12px;font-size:13px;cursor:pointer;box-shadow:0 1px 5px rgba(0,0,0,.3);}
   #sidebar.collapsed ~ #viewWrap #reopen{display:block;}
   #sidebar.collapsed ~ #viewWrap .esri-ui-top-left{top:50px !important;}
+  /* ===== Dominion-style dashboard theme (visual match; functionality unchanged) ===== */
+  :root{ --navy:#1b2a4a; --navy2:#24385f; --slate:#3b5380; --slate-l:#e8edf6; --accent:#3d7bd9; --ok:#1a9641; --bad:#d7191c; --ink:#1f2733; --muted:#637088; --line:#d6deea; }
+  #sidebar{ flex-basis:384px; width:384px; background:#fff; border-right:1px solid var(--line); }
+  #sideHead{ background:var(--navy); color:#fff; padding:12px 16px; display:block; }
+  #sideHead > span:first-child{ font-size:15px; font-weight:600; letter-spacing:.2px; }
+  #sideHead .x{ float:right; opacity:.85; cursor:pointer; }
+  #brandSub{ margin:3px 0 0; font-size:11px; color:#aebbd6; font-weight:400; }
+  #tabs{ display:flex; background:var(--navy2); }
+  #tabs button{ flex:1; background:none; border:none; color:#c5d0e6; padding:10px 4px; font-size:12px; font-weight:600; cursor:pointer; border-bottom:3px solid transparent; }
+  #tabs button.on{ color:#fff; border-bottom-color:var(--accent); background:rgba(255,255,255,.06); }
+  #sideBody{ background:#fff; padding:0; }
+  #sideBody .section{ background:#fff; border:none; border-bottom:1px solid var(--line); border-radius:0; margin:0; }
+  #sideBody .section > h3{ font-size:12px; text-transform:uppercase; letter-spacing:.6px; color:var(--slate); border-bottom:1px solid var(--line); padding:12px 12px 6px; margin:0; }
+  #sideBody .inner{ padding:10px 12px 14px; }
+  .btnPrimary{ background:var(--accent); }
+  .btnPrimary:hover{ background:#2f63b3; }
+  .btnPrimary:disabled{ background:#9db8e2; }
+  .btnGhost{ background:#fff; color:var(--slate); border:1px solid var(--slate); }
+  .btnGhost:hover{ background:var(--slate-l); }
+  .count{ color:var(--navy); }
+  .subhdr{ color:var(--slate); }
+  .resRow .f{ color:var(--navy); }
 </style>
 </head>
 <body>
@@ -212,6 +234,20 @@
   var sidebar=document.getElementById("sidebar");
   document.getElementById("collapseBtn").addEventListener("click",function(){ sidebar.classList.add("collapsed"); });
   document.getElementById("reopen").addEventListener("click",function(){ sidebar.classList.remove("collapsed"); });
+  (function(){
+    var head=document.getElementById("sideHead");
+    if(head && !document.getElementById("brandSub")){ var p=document.createElement("p"); p.id="brandSub"; p.textContent="Illinois \u00b7 ComEd + Ameren \u00b7 PV + load hosting capacity"; head.appendChild(p); }
+    var TAB={ "Utility network":"layers","Substations":"layers","Transmission lines":"layers",
+      "Find Feeders & Site Eligibility":"find","Find Corridors (ComEd)":"find",
+      "Upload Locations (Excel / CSV)":"sites","Site Analysis":"sites","My Sites":"sites","Save / Load Session":"sites",
+      "Site Footprint Analysis":"foot" };
+    var secs=document.querySelectorAll("#sideBody > .section");
+    Array.prototype.forEach.call(secs,function(s){ var h=s.querySelector("h3"); var key=h?h.textContent.trim():""; s.setAttribute("data-tab", TAB[key]||"layers"); s.classList.add("tabsec"); });
+    var body=document.getElementById("sideBody"); var bar=document.createElement("div"); bar.id="tabs";
+    function show(tab){ Array.prototype.forEach.call(document.querySelectorAll("#sideBody .tabsec"),function(s){ s.style.display=(s.getAttribute("data-tab")===tab)?"":"none"; }); Array.prototype.forEach.call(bar.querySelectorAll("button"),function(b){ b.classList.toggle("on", b.getAttribute("data-tab")===tab); }); }
+    [["layers","Layers"],["find","Find"],["sites","Sites"],["foot","Footprint"]].forEach(function(pair){ var b=document.createElement("button"); b.textContent=pair[1]; b.setAttribute("data-tab",pair[0]); b.addEventListener("click",function(){ show(pair[0]); }); bar.appendChild(b); });
+    if(body && body.parentNode){ body.parentNode.insertBefore(bar, body); show("layers"); }
+  })();
 </script>
 <script>
 // ===== Territory mask: generalized Illinois bbox minus the ComEd region =====
