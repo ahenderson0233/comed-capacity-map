@@ -653,10 +653,24 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   // ---------- Upload ----------
   var UP_COLORS=["#e6194B","#3cb44b","#4363d8","#f58231","#911eb4","#42d4f4","#f032e6","#bfef45","#fabed4","#469990","#9A6324","#800000","#000075","#a9a9a9"];
   var upLayers=[],upColorIdx=0,siteCache=[],siteQualList=[];
-  // NY-style candidate-site symbology: matching = navy circle (size 13), non-matching = greyed/dimmed (size 8). Driven by per-feature __match ("y"/"n").
-  var SITE_RENDERER={type:"unique-value",field:"__match",
-    defaultSymbol:{type:"simple-marker",style:"circle",size:8,color:[150,160,175,0.4],outline:{color:[255,255,255,0.9],width:1}},
-    uniqueValueInfos:[{value:"y",symbol:{type:"simple-marker",style:"circle",size:13,color:[27,42,74],outline:{color:[255,255,255],width:1.8}}}]};
+  // The upload FeatureLayers hold the data (queries / extent / geocode edits) but are drawn invisibly; every
+  // visible site marker is rendered by a single GraphicsLayer overlay, exactly like the NY tool's siteLyr/drawSites.
+  var SITE_RENDERER={type:"simple",symbol:{type:"simple-marker",style:"circle",size:1,color:[0,0,0,0]}};
+  var siteSym=null;
+  function ensureSiteSym(){ if(!siteSym){ siteSym=new GraphicsLayer({title:"Site markers",listMode:"hide"}); map.add(siteSym); } return siteSym; }
+  // NY drawSites(): matching = navy circle (size 13, outline 1.8); non-matching (when a Find is active) = grey and
+  // dimmed (size 8, opacity 0.4). With no Find active every site is navy. Matches are drawn last so they sit on top.
+  function drawSiteSymbols(){ var gl=ensureSiteSym(); gl.removeAll();
+    var matchedSet=new Set(); (siteQualList||[]).forEach(function(it){ matchedSet.add(it.site); });
+    var findActive=restrictToMatching, unmatched=[], matched=[];
+    (siteCache||[]).forEach(function(s){ if(s.fl&&s.fl.__hidden) return; var ok=findActive?matchedSet.has(s):true;
+      var g=new Graphic({geometry:new Point({longitude:s.lon,latitude:s.lat}),
+        symbol:{type:"simple-marker",style:"circle",size:ok?13:8,color:ok?[27,42,74]:[150,160,175,(findActive?0.4:1)],outline:{color:[255,255,255],width:ok?1.8:1}},
+        attributes:{__title:s.name,lon:s.lon,lat:s.lat},
+        popupTemplate:{title:"{__title}",content:function(feat){ var a=feat.graphic.attributes; return analyzeSite({name:a.__title,lon:a.lon,lat:a.lat}).then(function(x){ return siteAnalysisHtml(x); }); }}});
+      (ok?matched:unmatched).push(g); });
+    gl.addMany(unmatched); gl.addMany(matched);
+    try{ map.reorder(gl,map.layers.length-1); if(typeof manualLayer!=="undefined"&&manualLayer) map.reorder(manualLayer,map.layers.length-1); }catch(e){} }
   function setUpStatus(t){ $("upStatus").textContent=t||""; }
   $("fileUp").addEventListener("change",function(evt){ Array.prototype.slice.call(evt.target.files||[]).forEach(loadFile); evt.target.value=""; });
   function loadIlSchools(){
@@ -689,7 +703,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     return val(/^(name|site|facility|label|title|location)$/i)||val(/(name|site|facility|label|title)/i)||val(/(^id$|_id$|osm_id|objectid)/i)||(function(){ for(var i=0;i<cols.length;i++){ var v=row[cols[i]]; if(v!=null&&String(v).trim())return String(v); } return "Location"; })(); }
   function mkGraphic(lon,lat,row,cols,oidRef){ return new Graphic({geometry:new Point({longitude:lon,latitude:lat}),attributes:{OBJECTID:oidRef.v++,__title:rowTitle(row,cols),__match:"y"}}); }
   function createLayer(fname,sheetName,graphics,color){ var fl=new FeatureLayer({source:graphics,objectIdField:"OBJECTID",fields:[{name:"OBJECTID",type:"oid"},{name:"__title",type:"string"},{name:"__match",type:"string"}],geometryType:"point",spatialReference:{wkid:4326},title:fname,
-    renderer:SITE_RENDERER,
+    renderer:SITE_RENDERER,popupEnabled:false,opacity:0,
     popupTemplate:{title:"{__title}",outFields:["*"],content:function(feat){ var gm=feat.graphic.geometry; var lon=(gm.longitude!=null?gm.longitude:gm.x),lat=(gm.latitude!=null?gm.latitude:gm.y); return analyzeSite({name:(feat.graphic.attributes.__title||"Site"),lon:lon,lat:lat}).then(function(a){ return siteAnalysisHtml(a); }); }}});
     fl.__sheet=sheetName; fl.__color=color; fl.__sites=(graphics||[]).map(function(g){ var gm=g.geometry||{}; return {name:(g.attributes&&g.attributes.__title)||"Site",lon:(gm.longitude!=null?gm.longitude:gm.x),lat:(gm.latitude!=null?gm.latitude:gm.y),oid:(g.attributes&&g.attributes.OBJECTID)}; });
     map.add(fl); upLayers.push(fl); if(typeof raiseSites==="function")raiseSites(); var ui=addUpRow(fname,sheetName,graphics.length,color,fl); return {fl:fl,ui:ui,baseCount:graphics.length}; }
@@ -704,7 +718,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       if(addrRows.length){ setUpStatus("Loaded "+fname+" - "+sheetName+": "+coordGraphics.length+" by coordinates"+terrMsg+"; geocoding "+addrRows.length+"..."); geocodeAddrs(fname,sheetName,color,addrRows,cols,oidRef,L); } else setUpStatus("Loaded "+fname+" - "+sheetName+" ("+coordGraphics.length+")"+terrMsg); }
     else geocodeAddrs(fname,sheetName,color,addrRows,cols,oidRef,null); refreshSites(); }
   function addUpRow(fname,sheetName,n,color,fl){ var box=$("upLayers"); var rw=document.createElement("div"); rw.className="upRow";
-    var cb=document.createElement("input"); cb.type="checkbox"; cb.checked=true; cb.addEventListener("change",function(){ fl.visible=cb.checked; });
+    var cb=document.createElement("input"); cb.type="checkbox"; cb.checked=true; cb.addEventListener("change",function(){ fl.__hidden=!cb.checked; drawSiteSymbols(); });
     var sw=document.createElement("span"); sw.className="sw"; sw.style.background=color; var label=sheetName||fname;
     var nm=document.createElement("span"); nm.className="nm"; nm.title=label; nm.textContent=label+" ("+n+")";
     var rm=document.createElement("span"); rm.className="rm"; rm.textContent="x"; rm.title="Remove layer"; rm.addEventListener("click",function(){ map.remove(fl); var i=upLayers.indexOf(fl); if(i>=0)upLayers.splice(i,1); box.removeChild(rw); refreshSites(); });
@@ -743,18 +757,8 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     box.innerHTML=""; var cap=Math.min(siteQualList.length,1000);
     for(var i=0;i<cap;i++){ (function(item){ var d=document.createElement("div"); d.className="resRow"; d.innerHTML='<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:'+item.site.color+';margin-right:7px;vertical-align:middle;"></span><span class="f">'+he(item.site.name)+'</span><br><span class="m">'+item.n+' qualifying feeder(s) within '+qualDistMi()+' mi</span>'; d.addEventListener("click",function(){ showSiteDetail(item.site); }); box.appendChild(d); })(siteQualList[i]); } }
   // NY behavior: when a Find is active, non-qualifying sites turn grey/dim (stay visible) instead of being hidden.
-  // featureEffect guarantees the visual dim (same mechanism used for the ComEd feeder layers above); the __match
-  // attribute edit additionally drives the size difference (navy 13 vs grey 8) where client renderer updates apply.
-  function applyMapRestriction(){ if(!upLayers.length) return;
-    var DIM="grayscale(100%) opacity(0.35)";
-    var byLayer=new Map(); siteQualList.forEach(function(it){ var fl=it.site.fl,oid=it.site.oid; if(!fl||oid==null)return; var a=byLayer.get(fl); if(!a){ a={}; byLayer.set(fl,a); } a[oid]=1; });
-    upLayers.forEach(function(fl){ if(fl.definitionExpression) fl.definitionExpression=null; var qual=byLayer.get(fl)||{};
-      if(!restrictToMatching){ fl.featureEffect=null; }
-      else { var ids=[]; (fl.__sites||[]).forEach(function(s){ if(s.oid!=null&&qual[s.oid])ids.push(s.oid); });
-        fl.featureEffect={filter:{where: ids.length?("OBJECTID IN ("+ids.join(",")+")"):"1=0"}, excludedEffect:DIM}; }
-      if(!fl.__matchState)fl.__matchState={}; var ups=[];
-      (fl.__sites||[]).forEach(function(s){ if(s.oid==null)return; var want=(!restrictToMatching||qual[s.oid])?"y":"n"; if(fl.__matchState[s.oid]!==want){ fl.__matchState[s.oid]=want; ups.push({attributes:{OBJECTID:s.oid,__title:s.name,__match:want}}); } });
-      if(ups.length) fl.applyEdits({updateFeatures:ups}).catch(function(){}); }); }
+  // Rendering is delegated entirely to the GraphicsLayer overlay, exactly like the NY tool's drawSites().
+  function applyMapRestriction(){ drawSiteSymbols(); }
   function exportSiteRows(sites,filename,statusId){ if(!sites.length||typeof XLSX==="undefined")return; var st=$(statusId); var qd=qualDistMi(),sd=subDistMi(),se=subEligMi(),te=txEligMi();
     var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)","Nearest substation (any, mi)","Sub within "+(se>0?se+"mi":"(off)"),"Nearest 69 kV line (mi)","69 kV within "+(te>0?te+"mi":"(off)")];
     var out=[header],i=0;
