@@ -743,9 +743,16 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     box.innerHTML=""; var cap=Math.min(siteQualList.length,1000);
     for(var i=0;i<cap;i++){ (function(item){ var d=document.createElement("div"); d.className="resRow"; d.innerHTML='<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:'+item.site.color+';margin-right:7px;vertical-align:middle;"></span><span class="f">'+he(item.site.name)+'</span><br><span class="m">'+item.n+' qualifying feeder(s) within '+qualDistMi()+' mi</span>'; d.addEventListener("click",function(){ showSiteDetail(item.site); }); box.appendChild(d); })(siteQualList[i]); } }
   // NY behavior: when a Find is active, non-qualifying sites turn grey/dim (stay visible) instead of being hidden.
+  // featureEffect guarantees the visual dim (same mechanism used for the ComEd feeder layers above); the __match
+  // attribute edit additionally drives the size difference (navy 13 vs grey 8) where client renderer updates apply.
   function applyMapRestriction(){ if(!upLayers.length) return;
+    var DIM="grayscale(100%) opacity(0.35)";
     var byLayer=new Map(); siteQualList.forEach(function(it){ var fl=it.site.fl,oid=it.site.oid; if(!fl||oid==null)return; var a=byLayer.get(fl); if(!a){ a={}; byLayer.set(fl,a); } a[oid]=1; });
-    upLayers.forEach(function(fl){ if(fl.definitionExpression) fl.definitionExpression=null; var qual=byLayer.get(fl)||{}; if(!fl.__matchState)fl.__matchState={}; var ups=[];
+    upLayers.forEach(function(fl){ if(fl.definitionExpression) fl.definitionExpression=null; var qual=byLayer.get(fl)||{};
+      if(!restrictToMatching){ fl.featureEffect=null; }
+      else { var ids=[]; (fl.__sites||[]).forEach(function(s){ if(s.oid!=null&&qual[s.oid])ids.push(s.oid); });
+        fl.featureEffect={filter:{where: ids.length?("OBJECTID IN ("+ids.join(",")+")"):"1=0"}, excludedEffect:DIM}; }
+      if(!fl.__matchState)fl.__matchState={}; var ups=[];
       (fl.__sites||[]).forEach(function(s){ if(s.oid==null)return; var want=(!restrictToMatching||qual[s.oid])?"y":"n"; if(fl.__matchState[s.oid]!==want){ fl.__matchState[s.oid]=want; ups.push({attributes:{OBJECTID:s.oid,__title:s.name,__match:want}}); } });
       if(ups.length) fl.applyEdits({updateFeatures:ups}).catch(function(){}); }); }
   function exportSiteRows(sites,filename,statusId){ if(!sites.length||typeof XLSX==="undefined")return; var st=$(statusId); var qd=qualDistMi(),sd=subDistMi(),se=subEligMi(),te=txEligMi();
