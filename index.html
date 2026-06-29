@@ -122,8 +122,10 @@
       <div class="section">
         <h3>Substations</h3>
         <div class="inner">
-          <label class="chk"><input type="checkbox" id="showSubs" /> Show substation markers</label>
+          <label class="chk"><input type="checkbox" id="showSubs" /> Show substation markers (OpenStreetMap)</label>
           <div class="note" style="margin:0 0 7px 0;">Tick the box above, then <b>click a substation marker on the map</b> to see its details.</div>
+          <label class="chk"><input type="checkbox" id="showCeSubs" /> Show ComEd substations (derived &mdash; ComEd only)</label>
+          <div class="note" style="margin:0 0 7px 0;">ComEd substation locations are derived from where each substation's feeders converge (orange triangles). Click one for its PV hosting capacity, generation/applications in queue, penetration ratio, and feeders served.</div>
           <div class="fld" style="margin-top:9px;"><label>Count substations within (mi)</label><input type="number" id="subDist" value="5" min="0.5" step="1" /></div>
           <div style="margin:0 0 7px 0;">
             <div style="font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:#9a9ab0;margin-bottom:3px;">Classification</div>
@@ -565,6 +567,21 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   function raiseSites(){ try{ var tops=[]; if(typeof manualLayer!=="undefined"&&manualLayer)tops.push(manualLayer); if(typeof upLayers!=="undefined"&&upLayers)upLayers.forEach(function(L){ if(L)tops.push(L); }); if(typeof matchLayer!=="undefined"&&matchLayer)tops.push(matchLayer); var n=map.layers.length; tops.forEach(function(L){ try{ map.reorder(L,n-1); }catch(e){} }); }catch(e){} }
   function refreshSubLayer(){ if(!showSubs.checked) return; if(subLayer){ map.remove(subLayer); subLayer=null; } subLayer=buildSubLayer(); map.add(subLayer); raiseSites(); updateSubCount(); }
   showSubs.addEventListener("change",function(){ if(showSubs.checked) refreshSubLayer(); else if(subLayer){ map.remove(subLayer); subLayer=null; } });
+  // ---- ComEd substations (derived from feeder convergence) — separate layer, in addition to the OSM markers ----
+  var ceSubLayer=null, CE_SUB_URL=(location.href.replace(/[?#].*$/,"").replace(/[^/]*$/,""))+"comed_substations.geojson";
+  function ceSubPopup(feat){ var a=(feat&&feat.graphic&&feat.graphic.attributes)||{};
+    var s='<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;color:#22223b;min-width:230px;">';
+    s+='<div style="font-size:14px;font-weight:700;color:#170d67;border-bottom:2px solid #170d67;padding-bottom:5px;margin-bottom:5px;">Substation '+he(String(a.SS_N||""))+'</div>';
+    s+=kv2("PV hosting capacity",ceKW(a.SS_HC))+kv2("Generation in queue",ceKW(a.SS_Q))+kv2("Applications in queue",ceCount(a.SS_QC))+kv2("Penetration ratio",ceRatioFmt(a.SS_PR))+kv2("Feeders served",(a.n_feeders!=null?a.n_feeders:"—"));
+    if(a.feeders) s+='<div style="margin-top:6px;font-size:11px;color:#5a5a72;word-break:break-word;"><b>Feeders:</b> '+he(String(a.feeders))+'</div>';
+    s+='<div style="margin-top:6px;font-size:11px;color:#5a5a72;">Location derived from feeder convergence'+((a.loc_method&&String(a.loc_method).indexOf("approx")>=0)?" (approximate — single feeder)":"")+'.</div>';
+    return s+'</div>'; }
+  function ensureCeSubLayer(){ if(ceSubLayer) return ceSubLayer;
+    ceSubLayer=new GeoJSONLayer({url:CE_SUB_URL,title:"ComEd substations (derived)",outFields:["*"],legendEnabled:false,listMode:"hide",
+      renderer:{type:"simple",symbol:{type:"simple-marker",style:"triangle",size:13,color:[255,140,0,0.95],outline:{color:[120,60,0,1],width:1.2}}},
+      popupTemplate:{title:"",content:ceSubPopup}});
+    map.add(ceSubLayer); if(typeof raiseSites==="function")raiseSites(); return ceSubLayer; }
+  (function(){ var cb=$("showCeSubs"); if(cb) cb.addEventListener("change",function(){ var L=ensureCeSubLayer(); L.visible=cb.checked; }); })();
   (function(){ var _tx=$("show69kv"); if(_tx){ _tx.addEventListener("change",function(){ var v=_tx.checked; if(il69Case)il69Case.visible=v; if(il69Line)il69Line.visible=v; }); } var c=$("tx69Count"); if(c){ try{ c.textContent=((IL69_GEOJSON.features||[]).length)+" lines in Illinois"; }catch(e){} } })();
   Array.prototype.forEach.call(document.querySelectorAll(".subCls"),function(cb){ cb.addEventListener("change",refreshSubLayer); });
   (function(){ var mk=$("subMinKv"); if(mk){ mk.addEventListener("input",refreshSubLayer); mk.addEventListener("change",refreshSubLayer); } })();
