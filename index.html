@@ -585,6 +585,9 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       renderer:{type:"simple",symbol:{type:"simple-marker",style:"triangle",size:13,color:[255,140,0,0.95],outline:{color:[120,60,0,1],width:1.2}}},
       popupTemplate:{title:"",content:ceSubPopup}});
     map.add(ceSubLayer); if(typeof raiseSites==="function")raiseSites(); return ceSubLayer; }
+  window.__ceGoToSub=function(ss){ if(ss==null||ss==="")return; var L=ensureCeSubLayer(); L.visible=true; var cb=$("showCeSubs"); if(cb)cb.checked=true;
+    L.when(function(){ var q=L.createQuery(); q.where="SS_N='"+String(ss).replace(/'/g,"''")+"'"; q.outFields=["*"]; q.returnGeometry=true;
+      L.queryFeatures(q).then(function(res){ if(res.features&&res.features.length){ var f=res.features[0]; try{glowSubstation(ss);}catch(e){} view.goTo({target:f.geometry,zoom:Math.max(view.zoom||0,13)}).then(function(){ try{view.openPopup({features:[f],location:f.geometry});}catch(e){} }).catch(function(){ try{view.openPopup({features:[f],location:f.geometry});}catch(e){} }); } }).catch(function(){}); }); };
   (function(){ var cb=$("showCeSubs"); if(cb) cb.addEventListener("change",function(){ var L=ensureCeSubLayer(); L.visible=cb.checked; }); })();
   (function(){ var _tx=$("show69kv"); if(_tx){ _tx.addEventListener("change",function(){ var v=_tx.checked; if(il69Case)il69Case.visible=v; if(il69Line)il69Line.visible=v; }); } var c=$("tx69Count"); if(c){ try{ c.textContent=((IL69_GEOJSON.features||[]).length)+" lines in Illinois"; }catch(e){} } })();
   Array.prototype.forEach.call(document.querySelectorAll(".subCls"),function(cb){ cb.addEventListener("change",refreshSubLayer); });
@@ -661,7 +664,8 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   function ceHeadroomKW(hc,q){ hc=parseFloat(hc); if(isNaN(hc))return "—"; q=parseFloat(q); var h=hc-(isNaN(q)?0:q); return Math.round(h).toLocaleString()+" kW"+(h<=0?" (oversubscribed)":""); }
   // Substation interconnection block (feeder-level extras intentionally omitted — the feeder table already covers them).
   function ceQueueBlockHtml(d){ if(!d) return "";
-    var s='<div style="font-size:13px;font-weight:800;color:#1763d6;margin:9px 0 4px;border-top:1px solid #ececf2;padding-top:6px;">Substation'+(d.ssN?(" "+he(String(d.ssN))):"")+'</div>';
+    var ssHead=d.ssN?('Substation <span style="text-decoration:underline;cursor:pointer;" title="Go to this substation" onclick="window.__ceGoToSub(&#39;'+he(String(d.ssN))+'&#39;)">'+he(String(d.ssN))+'</span>'):'Substation';
+    var s='<div style="font-size:13px;font-weight:800;color:#1763d6;margin:9px 0 4px;border-top:1px solid #ececf2;padding-top:6px;">'+ssHead+'</div>';
     s+=kv2("PV hosting capacity (total)",ceKW(d.ssHC))+kv2("PV headroom (after queue)",ceHeadroomKW(d.ssHC,d.ssQ))+kv2("Generation in queue",ceKW(d.ssQ))+kv2("Applications in queue",ceCount(d.ssQC))+kv2("Penetration ratio",ceRatioFmt(d.ssPR));
     return s; }
   function siteAnalysisHtml(a){ var U=" "+(a.unit||"MW"); var s='<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;min-width:252px;color:#22223b;">';
