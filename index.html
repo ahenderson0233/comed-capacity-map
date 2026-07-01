@@ -444,7 +444,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   // ---- Service-territory footprint (bundled ComEd boundary) ----
   var terrLayer=null;
   function ensureTerrLayer(){ if(terrLayer) return terrLayer; terrLayer=new GraphicsLayer({title:"Service territory",listMode:"hide"});
-    try{ terrLayer.add(new Graphic({geometry:{type:"polygon",rings:COMED_TERRITORY_GEOM.coordinates,spatialReference:{wkid:4326}},symbol:{type:"simple-fill",color:[61,123,217,0.05],outline:{color:[27,42,74,0.9],width:1.6}},popupTemplate:{title:"ComEd service territory",content:"Commonwealth Edison (ComEd) retail service-territory footprint. Ameren Illinois serves the balance of downstate Illinois."})); }catch(e){}
+    try{ terrLayer.add(new Graphic({geometry:{type:"polygon",rings:COMED_TERRITORY_GEOM.coordinates,spatialReference:{wkid:4326}},symbol:{type:"simple-fill",color:[61,123,217,0.05],outline:{color:[27,42,74,0.9],width:1.6}},popupTemplate:{title:"ComEd service territory",content:"Commonwealth Edison (ComEd) retail service-territory footprint. Ameren Illinois serves the balance of downstate Illinois."}})); }catch(e){}
     map.add(terrLayer); if(typeof raiseSites==="function")raiseSites(); return terrLayer; }
   (function(){ var cb=$("terrOn"); if(cb) cb.addEventListener("change",function(){ var L=ensureTerrLayer(); L.visible=cb.checked; }); })();
 
