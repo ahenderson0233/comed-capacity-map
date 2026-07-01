@@ -95,6 +95,12 @@
       <div class="section"><h3>Utility network</h3><div class="inner">
         <div class="modeRow"><button id="utilBoth" class="active">Both</button><button id="utilComed">ComEd</button><button id="utilAmeren">Ameren</button></div>
         <div class="note" style="margin-top:0;">Switch the capacity network shown + searched. Substations, uploads, sites, footprint and save/load work across both. ComEd = kW corridors; Ameren = MW feeders.</div>
+        <style>#capSeg{display:flex;border:1px solid #d6deea;border-radius:6px;overflow:hidden;margin:4px 0 2px;}#capSeg button{flex:1;background:#fff;border:none;padding:8px 4px;font-size:12px;font-weight:600;color:#637088;cursor:pointer;}#capSeg button.on{background:#3b5380;color:#fff;}</style>
+        <label style="display:block;font-size:12px;color:#637088;margin:10px 0 3px;font-weight:600;">Capacity layer</label>
+        <div class="seg" id="capSeg"><button type="button" data-cap="combined" class="on">Combined</button><button type="button" data-cap="load">Load</button><button type="button" data-cap="gen">Generation</button></div>
+        <div class="note" style="margin-top:6px;">Re-shades ComEd corridors by the selected metric; Ameren switches its published generation/load tiles. &ldquo;Combined&rdquo; = ComEd bidirectional (min of generation &amp; load); Ameren shows generation.</div>
+        <label class="chk" style="margin-top:10px;"><input type="checkbox" id="terrOn" /> Show service-territory footprint</label>
+        <div class="note" style="margin:2px 0 0;">ComEd retail service-territory boundary outline (Ameren serves the balance of downstate Illinois).</div>
       </div></div>
       <div class="section"><h3>Capacity legend (MW)</h3><div class="inner"><div id="capLegendInner"></div><div class="note" style="margin-top:6px;">Shown for ComEd corridors (Both / ComEd). Ameren uses its own published vector-tile shading.</div></div></div>
       <div class="section" id="secFindAmeren">
@@ -137,16 +143,17 @@
           <div class="count" id="subCount"></div>
           <div class="results" id="subFeeders"><div class="resEmpty">Click a substation marker on the map to see its details.</div></div>
           <div class="btnRow"><button class="btnPrimary" id="subExport" disabled>Export substations (Excel)</button></div>
-          <div class="note">Substations are from your workbook, masked to the Ameren Illinois service territory, colored by classification.</div>
+          <div class="note">Substations combine OpenStreetMap + HIFLD (federal), de-duplicated by location, within the active service territory and colored by classification. Voltage is from HIFLD MAX_VOLT / OSM tags (blank = unknown, never treated as 0).</div>
         </div>
       </div>
       <div class="section">
         <h3>Transmission lines</h3>
         <div class="inner">
-          <label class="chk"><input type="checkbox" id="show69kv" /> Show 69 kV lines (In Service)</label>
-          <div style="margin:8px 0 5px 0;display:flex;align-items:center;"><span style="display:inline-block;width:26px;height:4px;background:#b011c9;border:1px solid #fff;outline:1px solid #7a0c8c;margin-right:7px;"></span><span style="font-size:12px;color:#5a5a72;">69 kV transmission</span></div>
-          <div class="note" style="margin:0 0 7px 0;">Every 69 kV In-Service transmission line within Illinois - across ComEd, Ameren, and all other utilities - clipped to the state border. Click a line for details.</div>
-          <div class="count" id="tx69Count"></div>
+          <label class="chk"><input type="checkbox" id="txOn" /> Show transmission lines (all voltages)</label>
+          <label style="display:block;font-size:12px;color:#637088;margin:8px 0 3px;font-weight:600;">Voltage class</label>
+          <select id="txClass" style="width:100%;box-sizing:border-box;padding:7px 8px;border:1px solid #d6deea;border-radius:6px;font-size:13px;background:#fff;"><option value="">All classes</option><option value="735 AND ABOVE">735 kV &amp; above</option><option value="500">500 kV</option><option value="345">345 kV</option><option value="220-287">220&ndash;287 kV</option><option value="100-161">100&ndash;161 kV</option><option value="UNDER 100">Under 100 kV (incl. 69)</option><option value="NOT AVAILABLE">Unknown kV</option></select>
+          <div class="note" style="margin:6px 0 7px 0;">HIFLD transmission lines (all utilities) in the current view, colored by voltage class. Click a line for details.</div>
+          <div class="count" id="txCount"></div>
         </div>
       </div>
       <div class="section"><h3>Candidate Sites</h3><div class="inner">
@@ -276,6 +283,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   var $=function(id){ return document.getElementById(id); };
 
   function num(t){ if(t==null) return NaN; var m=String(t).match(/-?\d+(\.\d+)?/); return m?parseFloat(m[0]):NaN; }
+  function numOrNull(v){ if(v==null)return null; var s=String(v).trim(); if(s===""||/^(na|n\/a|not available|unknown|null|-?9{4,}(\.0+)?)$/i.test(s))return null; var f=parseFloat(s.replace(/,/g,"")); return isFinite(f)?f:null; }
   function fmtMW(v){ return isNaN(v)?"-":(Math.round(v*100)/100); }
   function esc(s){ return String(s).replace(/'/g,"''"); }
   function he(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
@@ -363,6 +371,26 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     il69Case=mk69([255,255,255,0.9],5.5,false); il69Line=mk69([176,17,201,0.97],2.4,true);
     map.add(il69Case); map.add(il69Line);
   }catch(e){} })();
+  /* ---------- All-voltage transmission (HIFLD, all utilities) — colored & filtered by VOLT_CLASS ---------- */
+  var HIFLD_TX=null;
+  (function(){ try{
+    function txnn(v){ if(v==null||v==="")return "not published"; var s=String(v).trim(); return (s===""||/^(NOT AVAILABLE|UNKNOWN|N\/A)$/i.test(s))?"not published":s; }
+    HIFLD_TX=new FeatureLayer({url:"https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/Electric_Power_Transmission_Lines/FeatureServer/0",
+      title:"Transmission lines (HIFLD)",visible:false,legendEnabled:false,listMode:"hide",outFields:["VOLT_CLASS","VOLTAGE","OWNER","SUB_1","SUB_2","STATUS"],
+      renderer:{type:"unique-value",field:"VOLT_CLASS",defaultSymbol:{type:"simple-line",color:[150,150,150,0.85],width:1.1,cap:"round",join:"round"},uniqueValueInfos:[
+        {value:"735 AND ABOVE",symbol:{type:"simple-line",color:[103,0,13,0.95],width:2.8,cap:"round",join:"round"}},
+        {value:"500",symbol:{type:"simple-line",color:[178,24,43,0.95],width:2.4,cap:"round",join:"round"}},
+        {value:"345",symbol:{type:"simple-line",color:[214,96,77,0.95],width:2.1,cap:"round",join:"round"}},
+        {value:"220-287",symbol:{type:"simple-line",color:[244,109,67,0.92],width:1.8,cap:"round",join:"round"}},
+        {value:"100-161",symbol:{type:"simple-line",color:[253,174,97,0.92],width:1.5,cap:"round",join:"round"}},
+        {value:"UNDER 100",symbol:{type:"simple-line",color:[140,81,10,0.9],width:1.2,cap:"round",join:"round"}},
+        {value:"NOT AVAILABLE",symbol:{type:"simple-line",color:[150,150,150,0.85],width:1.0,cap:"round",join:"round"}}
+      ]},
+      popupTemplate:{title:"Transmission line",content:function(f){ var a=(f.graphic&&f.graphic.attributes)||{}; var kv=parseFloat(a.VOLTAGE);
+        return '<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;color:#22223b;min-width:220px;">'+kv2("Voltage class",txnn(a.VOLT_CLASS))+kv2("Voltage (kV)",(isFinite(kv)&&kv>0)?kv:"not published")+kv2("Owner",txnn(a.OWNER))+kv2("Status",txnn(a.STATUS))+kv2("Between",txnn(a.SUB_1)+" ↔ "+txnn(a.SUB_2))+'</div>'; }}
+    });
+    map.add(HIFLD_TX);
+  }catch(e){} })();
   function ceBuildLegend(r){ var box=document.createElement("div"); box.style.cssText="background:#fff;border:1px solid #b0b0b0;border-radius:4px;box-shadow:0 1px 6px rgba(0,0,0,.28);font-size:12px;min-width:178px;overflow:hidden;display:none;";
     var bar=document.createElement("div"); bar.style.cssText="padding:7px 11px;font-weight:bold;"; bar.textContent="ComEd Hosting Capacity (MW)"; box.appendChild(bar);
     var body=document.createElement("div"); body.style.padding="2px 11px 9px"; var infos=(r&&(r.uniqueValueInfos||r.classBreakInfos))||[];
@@ -403,6 +431,22 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(ceLegendBox)ceLegendBox.style.display=showC?"":"none";
     try{ view.goTo(u==="comed"?{center:[-87.95,41.85],zoom:8}:(u==="ameren"?{center:[-89.4,39.9],zoom:7}:{center:[-89.0,40.4],zoom:6})); }catch(e){} try{ __subPts=null; if(typeof showSubs!=="undefined"&&showSubs&&showSubs.checked&&typeof refreshSubLayer==="function")refreshSubLayer(); else if(typeof updateSubCount==="function")updateSubCount(); }catch(e){} try{ if(typeof updateSiteList==="function"){ updateSiteList(); renderManual(); } }catch(e){} }
   $("utilAmeren").addEventListener("click",function(){ setUtil("ameren"); }); $("utilComed").addEventListener("click",function(){ setUtil("comed"); }); $("utilBoth").addEventListener("click",function(){ setUtil("both"); }); try{ setUtil("both"); }catch(e){}
+  // ---- Network capacity layer switch (Combined / Load / Generation) — Mid-Atlantic parity ----
+  var capMetric="combined", CAP_FIELD={combined:"BESS_HC",load:"EV_HC_kW",gen:"PV_HC_kW"}, CAP_LABEL={combined:"Combined",load:"Load",gen:"Generation"};
+  function setCapMetric(m){ if(!CAP_FIELD[m])m="combined"; capMetric=m;
+    var seg=document.getElementById("capSeg"); if(seg)[].forEach.call(seg.querySelectorAll("button"),function(b){ b.classList.toggle("on", b.getAttribute("data-cap")===m); });
+    var base=JSON.parse(JSON.stringify(CE_RENDERER)); base.field=CAP_FIELD[m];
+    try{ ceLayers.forEach(function(L){ L.renderer=rendererJsonUtils.fromJSON(L===ceCorridorLayer?ceStrip(base):base); }); }catch(e){}
+    try{ var gen=(m!=="load"); pvHeat.visible=gen; stHeat.visible=gen; lcHeat.visible=!gen; }catch(e){}
+    try{ var host=document.getElementById("capLegendInner"); if(host){ host.innerHTML=""; var nb=ceBuildLegend(base); nb.style.cssText="font-size:12px;"; nb.style.display=(ACTIVE_UTIL!=="ameren")?"":"none"; var bar=nb.querySelector("div"); if(bar)bar.textContent="ComEd Hosting Capacity — "+CAP_LABEL[m]+" (MW)"; host.appendChild(nb); ceLegendBox=nb; } }catch(e){}
+  }
+  (function(){ var seg=document.getElementById("capSeg"); if(seg)[].forEach.call(seg.querySelectorAll("button"),function(b){ b.addEventListener("click",function(){ setCapMetric(b.getAttribute("data-cap")); }); }); try{ setCapMetric("combined"); }catch(e){} })();
+  // ---- Service-territory footprint (bundled ComEd boundary) ----
+  var terrLayer=null;
+  function ensureTerrLayer(){ if(terrLayer) return terrLayer; terrLayer=new GraphicsLayer({title:"Service territory",listMode:"hide"});
+    try{ terrLayer.add(new Graphic({geometry:{type:"polygon",rings:COMED_TERRITORY_GEOM.coordinates,spatialReference:{wkid:4326}},symbol:{type:"simple-fill",color:[61,123,217,0.05],outline:{color:[27,42,74,0.9],width:1.6}},popupTemplate:{title:"ComEd service territory",content:"Commonwealth Edison (ComEd) retail service-territory footprint. Ameren Illinois serves the balance of downstate Illinois."})); }catch(e){}
+    map.add(terrLayer); if(typeof raiseSites==="function")raiseSites(); return terrLayer; }
+  (function(){ var cb=$("terrOn"); if(cb) cb.addEventListener("change",function(){ var L=ensureTerrLayer(); L.visible=cb.checked; }); })();
 
 
   var searchW=new Search({view:view,allPlaceholder:"Find address or place"}); var lastSearch=null;
@@ -542,9 +586,19 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   var CLS_COLORS={"Transmission":[192,57,43,0.95],"Distribution":[37,99,235,0.95],"Undetermined":[120,120,130,0.95]};
   var CLS_OUTLINE={"Transmission":"#99281c","Distribution":"#1b46a8","Undetermined":"#565660"};
   var __subPts=null;
+  var HIFLD_SUBS=null, __hifldTried=false;
+  function loadHifldSubs(){ if(__hifldTried)return; __hifldTried=true;
+    try{ var L=new FeatureLayer({url:"https://services5.arcgis.com/HDRa0B57OVrv2E1q/arcgis/rest/services/Electric_Substations/FeatureServer/0"});
+      L.queryFeatures({where:"STATE='IL'",outFields:["MAX_VOLT","NAME","COUNTY","STATUS"],returnGeometry:true,outSpatialReference:{wkid:4326},num:6000}).then(function(res){
+        HIFLD_SUBS=(res.features||[]).map(function(f){ var g=f.geometry||{},a=f.attributes||{}; var lon=(g.longitude!=null?g.longitude:g.x),lat=(g.latitude!=null?g.latitude:g.y); var kv=numOrNull(a.MAX_VOLT); if(kv!=null&&kv<=0)kv=null; return {lon:lon,lat:lat,kv:kv,name:((a.NAME!=null&&String(a.NAME).trim())?String(a.NAME).trim():""),county:(a.COUNTY||""),status:(a.STATUS||""),cls:(kv==null?"Undetermined":(kv>=100?"Transmission":"Distribution"))}; }).filter(function(s){ return isFinite(s.lon)&&isFinite(s.lat); });
+        __subPts=null; try{ if(typeof showSubs!=="undefined"&&showSubs&&showSubs.checked&&typeof refreshSubLayer==="function"){ refreshSubLayer(); } else if(typeof updateSubCount==="function"){ updateSubCount(); } }catch(e){}
+      }).catch(function(){});
+    }catch(e){} }
+  loadHifldSubs();
   function getSubPts(){ if(__subPts) return __subPts; __subPts=[];
     (AMEREN_SUBS||[]).forEach(function(s,i){ if(!s)return; var lon=parseFloat(s.lon),lat=parseFloat(s.lat); if(isNaN(lon)||isNaN(lat))return; if(!inTerritory(lon,lat))return;
-      __subPts.push({lon:lon,lat:lat,kv:(s.kv!=null?s.kv:null),cls:(s.cls?String(s.cls):"Undetermined"),name:((s.name!=null&&String(s.name).trim())?String(s.name).trim():""),operator:(s.operator?String(s.operator):""),stype:(s.type?String(s.type):""),url:(s.url?String(s.url):""),id:(s.id!=null?s.id:""),idx:i}); });
+      __subPts.push({lon:lon,lat:lat,kv:(s.kv!=null?s.kv:null),cls:(s.cls?String(s.cls):"Undetermined"),name:((s.name!=null&&String(s.name).trim())?String(s.name).trim():""),operator:(s.operator?String(s.operator):""),stype:(s.type?String(s.type):""),url:(s.url?String(s.url):""),id:(s.id!=null?s.id:""),idx:i,source:"OSM"}); });
+    if(HIFLD_SUBS){ HIFLD_SUBS.forEach(function(h){ if(!inTerritory(h.lon,h.lat))return; var dup=false; for(var i=0;i<__subPts.length;i++){ var o=__subPts[i]; if(Math.abs(o.lat-h.lat)<0.006&&Math.abs(o.lon-h.lon)<0.006&&haversineMi(o.lat,o.lon,h.lat,h.lon)<0.25){ dup=true; break; } } if(dup)return; __subPts.push({lon:h.lon,lat:h.lat,kv:h.kv,cls:h.cls,name:h.name,operator:"",stype:"",url:"",id:"",idx:__subPts.length,source:"HIFLD",county:h.county,status:h.status}); }); }
     return __subPts; }
   function subDisplayLabel(s){ if(s.name) return s.name; if(s.operator) return s.operator+" substation"; return "Substation #"+(s.idx+1); }
   function activeClasses(){ var set={}; Array.prototype.forEach.call(document.querySelectorAll(".subCls"),function(cb){ if(cb.checked) set[cb.value]=1; }); return set; }
@@ -566,7 +620,9 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   function refreshSubLayer(){ if(!showSubs.checked) return; if(subLayer){ map.remove(subLayer); subLayer=null; } subLayer=buildSubLayer(); map.add(subLayer); raiseSites(); updateSubCount(); }
   showSubs.addEventListener("change",function(){ if(showSubs.checked) refreshSubLayer(); else if(subLayer){ map.remove(subLayer); subLayer=null; } });
   // (ComEd substations layer removed — substation detail is shown on feeder-ID click inside the feeder popup.)
-  (function(){ var _tx=$("show69kv"); if(_tx){ _tx.addEventListener("change",function(){ var v=_tx.checked; if(il69Case)il69Case.visible=v; if(il69Line)il69Line.visible=v; }); } var c=$("tx69Count"); if(c){ try{ c.textContent=((IL69_GEOJSON.features||[]).length)+" lines in Illinois"; }catch(e){} } })();
+  (function(){ var _tx=$("txOn"); if(_tx){ _tx.addEventListener("change",function(){ if(HIFLD_TX)HIFLD_TX.visible=_tx.checked; }); }
+    var _c=$("txClass"); if(_c){ _c.addEventListener("change",function(){ if(HIFLD_TX)HIFLD_TX.definitionExpression=_c.value?("VOLT_CLASS='"+String(_c.value).replace(/'/g,"''")+"'"):null; }); }
+    var cnt=$("txCount"); if(cnt&&HIFLD_TX){ HIFLD_TX.when(function(){ HIFLD_TX.queryFeatureCount({where:"1=1",geometry:view.extent}).then(function(n){ cnt.textContent=(n||0).toLocaleString()+" line segment(s) in view"; }).catch(function(){}); }); } })();
   Array.prototype.forEach.call(document.querySelectorAll(".subCls"),function(cb){ cb.addEventListener("change",refreshSubLayer); });
   (function(){ var mk=$("subMinKv"); if(mk){ mk.addEventListener("input",refreshSubLayer); mk.addEventListener("change",refreshSubLayer); } })();
   function selectSubstation(si){ var s=getSubPts()[si]; if(!s)return; currentSub=s; $("subCount").textContent=subDisplayLabel(s);
