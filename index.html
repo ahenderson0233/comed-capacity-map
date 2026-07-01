@@ -92,9 +92,11 @@
   <div id="sidebar">
     <div id="sideHead"><span>Illinois Capacity &amp; Siting Dashboard</span><span class="x" id="collapseBtn" title="Collapse">&#10005;</span><div id="brandSub">ComEd + Ameren &middot; Load + Generation &middot; live ArcGIS data</div></div>
     <div id="sideBody">
-      <div class="section"><h3>Utility network</h3><div class="inner">
+      <div class="section"><h3>Utility</h3><div class="inner">
         <div class="modeRow"><button id="utilBoth" class="active">Both</button><button id="utilComed">ComEd</button><button id="utilAmeren">Ameren</button></div>
         <div class="note" style="margin-top:0;">Switch the capacity network shown + searched. Substations, uploads, sites, footprint and save/load work across both. ComEd = kW corridors; Ameren = MW feeders.</div>
+      </div></div>
+      <div class="section"><h3>Network</h3><div class="inner">
         <style>#capSeg{display:flex;border:1px solid #d6deea;border-radius:6px;overflow:hidden;margin:4px 0 2px;}#capSeg button{flex:1;background:#fff;border:none;padding:8px 4px;font-size:12px;font-weight:600;color:#637088;cursor:pointer;}#capSeg button.on{background:#3b5380;color:#fff;}</style>
         <label style="display:block;font-size:12px;color:#637088;margin:10px 0 3px;font-weight:600;">Capacity layer</label>
         <div class="seg" id="capSeg"><button type="button" data-cap="combined" class="on">Combined</button><button type="button" data-cap="load">Load</button><button type="button" data-cap="gen">Generation</button></div>
@@ -102,25 +104,30 @@
       </div></div>
       <div class="section"><h3>Capacity legend (MW)</h3><div class="inner"><div id="capLegendInner"></div><div class="note" style="margin-top:6px;">Shown for ComEd corridors (Both / ComEd). Ameren uses its own published vector-tile shading.</div></div></div>
       <div class="section" id="secFindAmeren">
-        <h3>Find Feeders &amp; Site Eligibility</h3>
+        <h3>Find</h3>
         <div class="inner">
+          <div class="subhdr" style="border-top:none;padding-top:2px;margin-top:0;">Capacity filter</div>
           <div class="fld"><label>Min Estimated Net Generation Capacity (MW)</label><input type="number" id="minGen" value="0" min="0" step="0.1" /></div>
           <div class="fld"><label>Min Estimated Net Load Capacity (MW)</label><input type="number" id="minLoad" value="0" min="0" step="0.1" /></div>
-          <div class="subhdr">Limit to a location (optional)</div>
+          <div class="subhdr">Spatial (optional)</div>
           <button class="btnGhost" id="pickPt" style="width:100%;margin-bottom:8px;">Pick center point (click the map)</button>
           <div class="fld"><label>Center (lat, lon)</label><input type="text" id="ctrInput" placeholder="click map, or type: 39.80, -89.64" /></div>
-          <div class="fld"><label>Radius (miles)</label><input type="number" id="radiusMi" value="" min="0" step="1" placeholder="blank = whole system" /></div>
-          <div class="subhdr">Eligibility distances (mi)</div>
-          <div class="fld"><label>A site is eligible if a qualifying feeder is within</label><input type="number" id="qualDist" value="1" min="0.05" step="0.25" /></div>
-          <div class="fld"><label>A site is eligible if a substation is within</label><input type="number" id="subEligDist" min="0" step="0.5" placeholder="blank = not required" /></div>
-          <div class="fld"><label>Count nearby substations within (mi)</label><input type="number" id="subDist" value="5" min="0.5" step="1" /></div>
-          <div class="fld"><label>A site is eligible if a 69 kV line is within</label><input type="number" id="txEligDist" min="0" step="0.5" placeholder="blank = not required" /></div>
-          <div class="note" style="margin:0 0 7px 0;">Substation &amp; 69 kV criteria are optional &mdash; leave blank to not require them. Nearest distances are always reported and exported.</div>
-          <div class="btnRow"><button class="btnPrimary" id="applyBtn">Search</button><button class="btnGhost" id="resetBtn">Reset</button></div>
+          <div class="fld"><label>Search radius (mi)</label><input type="number" id="radiusMi" value="" min="0" step="1" placeholder="blank = whole system" /></div>
+          <div class="note" style="margin:0 0 7px 0;">Tip: switch to the <b>Footprint</b> tab and click the map to capture a center point.</div>
+          <div class="subhdr">Dual-use eligibility</div>
+          <div class="fld"><label>Eligibility distance (mi)</label><input type="number" id="qualDist" value="1" min="0.05" step="0.25" /></div>
+          <div class="fld"><label>Substation-count radius (mi)</label><input type="number" id="subDist" value="5" min="0.5" step="1" /></div>
+          <div class="note" style="margin:0 0 7px 0;">A site qualifies when a feeder meeting your generation and/or load minimums lies within the eligibility distance (one point of interconnection). The matched feeder ID is shown in each site&rsquo;s breakdown.</div>
+          <div class="subhdr">Site eligibility (optional)</div>
+          <div class="fld"><label>Require a substation within (mi) &mdash; blank = not required</label><input type="number" id="subEligDist" min="0" step="0.5" placeholder="not required" /></div>
+          <div class="fld"><label>Require a 69 kV line within (mi) &mdash; blank = not required</label><input type="number" id="txEligDist" min="0" step="0.5" placeholder="not required" /></div>
+          <div class="note" style="margin:0 0 7px 0;">Substation &amp; 69 kV criteria are optional &mdash; leave blank to not require them. Nearest distances are always computed &amp; exported.</div>
+          <div class="btnRow"><button class="btnPrimary" id="applyBtn" style="flex:1;">Run Find</button></div>
+          <div class="btnRow" style="margin-top:6px;"><button class="btnGhost" id="resetBtn" style="flex:1;">Clear filter</button></div>
           <div class="sortRow"><span>Sort by</span><select id="sortSel"><option value="gen">Generation (high to low)</option><option value="load">Load (high to low)</option></select></div>
           <div class="count" id="resultsLabel" style="color:#1b2a4a;"></div>
           <div class="count" id="resultsCount"></div>
-          <div class="results" id="resultsList"><div class="resEmpty">Set parameters and click &ldquo;Search&rdquo;.</div></div>
+          <div class="results" id="resultsList"><div class="resEmpty">Set parameters and click &ldquo;Run Find&rdquo;.</div></div>
           <div class="btnRow"><button class="btnPrimary" id="resultsExport" disabled>Export results (Excel)</button></div>
         </div>
       </div>
@@ -128,7 +135,7 @@
         <h3>Substations</h3>
         <div class="inner">
           <label class="chk"><input type="checkbox" id="showSubs" /> Show substation markers (OpenStreetMap)</label>
-          <div class="note" style="margin:0 0 7px 0;">Tick the box above, then <b>click a substation marker on the map</b> to see its details.</div>          <div style="margin:0 0 7px 0;">
+          <div class="note" style="margin:0 0 7px 0;">Tick the box above, then click a substation marker on the map to see its details.</div>          <div style="margin:0 0 7px 0;">
             <div style="font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:#9a9ab0;margin-bottom:3px;">Classification</div>
             <label class="chk" style="font-size:12px;"><input type="checkbox" class="subCls" value="Transmission" checked /> <span style="display:inline-block;width:11px;height:11px;background:#c0392b;border:1px solid #fff;outline:1px solid #99281c;margin:0 5px -1px 0;"></span>Transmission</label>
             <label class="chk" style="font-size:12px;"><input type="checkbox" class="subCls" value="Distribution" checked /> <span style="display:inline-block;width:11px;height:11px;background:#2563eb;border:1px solid #fff;outline:1px solid #1b46a8;margin:0 5px -1px 0;"></span>Distribution</label>
@@ -140,7 +147,7 @@
           <div class="count" id="subCount"></div>
           <div class="results" id="subFeeders"><div class="resEmpty">Click a substation marker on the map to see its details.</div></div>
           <div class="btnRow"><button class="btnPrimary" id="subExport" disabled>Export substations (Excel)</button></div>
-          <div class="note">Substations combine OpenStreetMap + HIFLD (federal), de-duplicated by location, within the active service territory and colored by classification. Voltage is from HIFLD MAX_VOLT / OSM tags (blank = unknown, never treated as 0).</div>
+          <div class="note">Substations come from <b>HIFLD</b> plus <b>OpenStreetMap</b>, merged and <b>de-duplicated</b> by location, within the active service territory and colored by classification. Voltage is from HIFLD MAX_VOLT / OSM tags (blank = unknown, never treated as 0).</div>
         </div>
       </div>
       <div class="section">
@@ -149,14 +156,14 @@
           <label class="chk"><input type="checkbox" id="txOn" /> Show transmission lines (all voltages)</label>
           <label style="display:block;font-size:12px;color:#637088;margin:8px 0 3px;font-weight:600;">Voltage class</label>
           <select id="txClass" style="width:100%;box-sizing:border-box;padding:7px 8px;border:1px solid #d6deea;border-radius:6px;font-size:13px;background:#fff;"><option value="">All classes</option><option value="735 AND ABOVE">735 kV &amp; above</option><option value="500">500 kV</option><option value="345">345 kV</option><option value="220-287">220&ndash;287 kV</option><option value="100-161">100&ndash;161 kV</option><option value="UNDER 100">Under 100 kV (incl. 69)</option><option value="NOT AVAILABLE">Unknown kV</option></select>
-          <div class="note" style="margin:6px 0 7px 0;">HIFLD transmission lines (all utilities) in the current view, colored by voltage class. Click a line for details.</div>
+          <div class="note" style="margin:6px 0 7px 0;">HIFLD transmission lines (<b>all utilities</b>) in the current view, colored by voltage class. Click a line for details.</div>
           <div class="count" id="txCount"></div>
         </div>
       </div>
       <div class="section"><h3>Candidate Sites</h3><div class="inner">
           <label class="chk"><input type="checkbox" id="showNces" /> Show all NCES schools (IL preview)</label>
-          <label class="chk" style="margin-top:6px;"><input type="checkbox" id="loadIlSchools" /> Load in-territory schools as candidate sites</label>
-          <div class="note" style="margin:6px 0 0;">Schools are the demand-side site universe \u2014 large, distributed, already-served parcels. The preview shows all Illinois NCES school locations; the button loads in-territory schools as analyzable candidate sites (Site Analysis + Footprint).</div>
+          <div class="btnRow" style="margin-top:6px;"><button class="btnGhost" id="loadIlSchools">Load in-territory schools as candidate sites</button></div>
+          <div class="note" style="margin:6px 0 0;">Schools are the demand-side site universe \u2014 large, distributed, already-served parcels. The preview shows all Illinois NCES school locations; the button loads in-territory schools as analyzable candidate sites (Site analysis + Footprint).</div>
         </div></div>
       <div class="section"><h3>Context (informational)</h3><div class="inner">
           <label class="chk"><input type="checkbox" id="ctxEquity" /> Show Equity Investment Eligible Communities</label>
@@ -168,10 +175,13 @@
           <div style="margin:5px 0 6px;display:flex;align-items:center;"><span style="display:inline-block;width:15px;height:15px;background:rgba(245,130,32,0.45);border:1px solid #b45a0a;margin-right:7px;"></span><span style="font-size:12px;color:#5a5a72;">Industrial parcels</span></div>
           <div class="note" style="margin:0;">CMAP Land Use Inventory (industrial / manufacturing / warehousing) across the 7-county region \u2014 Cook + DuPage, Kane, Kendall, Lake, McHenry, Will. Loads when zoomed in past ~metro scale.</div>
         </div></div>
+      <div class="section"><h3>Basemap</h3><div class="inner">
+          <div class="note" style="margin-top:0;">Use the imagery toggle at the bottom-left of the map to switch to satellite.</div>
+        </div></div>
       <div class="section">
-        <h3>Upload Locations (Excel / CSV)</h3>
+        <h3>Upload sites</h3>
         <div class="inner">
-          <div class="note" style="margin-top:0;line-height:1.45;">Every <b>sheet</b> is plotted as its own colored layer (labeled by sheet name). <b>Coordinates</b> (lat/lon or a combined column) are used first; rows without coordinates are <b>geocoded by address</b>. Points outside the Ameren territory are skipped.</div>
+          <div class="note" style="margin-top:0;line-height:1.45;">Excel/CSV needs <b>lat, lon</b> (or <b>latitude, longitude</b>). <b>Each sheet</b> becomes its own colored layer. Rows without coordinates are geocoded by address; points outside the territory are skipped.</div>
           <input type="file" id="fileUp" accept=".xlsx,.xls,.csv" multiple style="width:100%;font-size:12px;margin-bottom:8px;" />
           
           <div class="count" id="upStatus"></div>
@@ -179,19 +189,19 @@
         </div>
       </div>
       <div class="section">
-        <h3>Site Analysis</h3>
+        <h3>Site analysis</h3>
         <div class="inner">
-          <div class="note" style="margin-top:0;line-height:1.45;">Uploaded sites that <b>match the current Find Feeders parameters</b> appear below; the list updates when you click <b>Search</b>. Each site sums the gen/load of unique feeders within <b>0.1 / 0.3 / 0.5 mi</b>, counts qualifying feeders within your distance, and substations within your distance.</div>
+          <div class="note" style="margin-top:0;line-height:1.45;">Press <b>Run Find</b> (Find tab) to analyze every loaded site against the current parameters &mdash; it highlights matching feeders and analyzes the sites in one step. Each site shows feeders + sum gen/load within 0.1/0.3/0.5 mi, qualifying feeders, nearest substation &amp; transmission line. With criteria set, only matching sites are listed (click chips to zoom).</div>
           <div class="count" id="siteCount"></div>
-          <div class="results" id="siteList"><div class="resEmpty">Upload site files above, then click &ldquo;Search&rdquo;.</div></div>
+          <div class="results" id="siteList"><div class="resEmpty">Upload site files above, then click &ldquo;Run Find&rdquo;.</div></div>
           <div id="siteDetail"></div>
           <div class="btnRow"><button class="btnPrimary" id="siteExport" disabled>Export site analysis (Excel)</button></div>
         </div>
       </div>
       <div class="section">
-        <h3>My Sites</h3>
+        <h3>Add a site</h3>
         <div class="inner">
-          <div class="note" style="margin-top:0;line-height:1.45;">Add your own sites &mdash; by <b>clicking the map</b>, by the address in the <b>Find address</b> box, or at <b>your current location</b>. Each is analyzed like an uploaded site. Saved in your browser; export anytime.</div>
+          <div class="note" style="margin-top:0;line-height:1.45;">Add your own sites &mdash; by clicking the map, by the address in the Find address box, or at your current location. Each is analyzed like an uploaded site. Saved in your browser; export anytime.</div>
           <div class="btnRow"><button class="btnGhost" id="mAddClick">Add by map click</button><button class="btnGhost" id="mAddSearch">Add searched address</button></div>
           <div class="btnRow" style="margin-top:6px;"><button class="btnGhost" id="mAddLoc">Add at my location</button></div>
           <div class="count" id="mCount"></div>
@@ -202,23 +212,28 @@
       <div class="section">
         <h3>Coordinate capture</h3>
         <div class="inner">
-          <div class="note" style="margin-top:0;line-height:1.45;">Toggle on, then click anywhere on the map. Each click logs the <b>time</b>, the <b>city/county</b> at that point, and the <b>X / Y</b> coordinates.</div>
+          <div class="note" style="margin-top:0;line-height:1.45;">Toggle on, then click anywhere on the map to log each point's time, county, and lon/lat.</div>
           <div class="btnRow"><button class="btnGhost" id="ccToggle">Capture coordinates: off</button><button class="btnGhost" id="ccClear">Clear</button><button class="btnGhost" id="ccExport" disabled>Export (CSV)</button></div>
           <div class="results" id="ccList"><div class="resEmpty">No captured points yet.</div></div>
         </div>
       </div>
       <div class="section">
-        <h3>Site Footprint Analysis</h3>
+        <h3>Site footprint</h3>
         <div class="inner">
-          <div class="note" style="margin-top:0;line-height:1.45;">For each uploaded or manual site (all of them by default; tick the box below to restrict to Find Feeders matches), this pulls <b>parcel</b> + <b>building footprint</b> geometry to compute <b>building area</b>, <b>lot area</b> (geometry-computed and the assessor's recorded land sq ft), and <b>outdoor area</b> (lot &minus; building) &mdash; all in ft&sup2;. Building area comes from the national <b>USA Structures</b> layer (works anywhere). Lot/parcel data is pulled from county GIS for verified counties: <b>Macon, Peoria, McLean, Madison, St. Clair, Vermilion, Adams, Coles, Morgan, Greene, Scott, Hancock, Henderson, McDonough, Jackson, Monroe</b>. Some county servers refuse a browser request from a file opened directly; those rows fall back to building-only and say so. Elsewhere lot data isn't public, so only building area shows. <b>Tip:</b> run the dashboard through the <b>Ameren_Server</b> cell to unlock county data the browser otherwise blocks and to fill vendor-locked counties via ReportAllUSA.</div>
-          <div class="fld" style="margin-top:8px;"><label>Parallel requests (lower if a county server rate-limits)</label><input type="number" id="fpConc" value="5" min="1" max="12" step="1" /></div>
-          <label class="chk" style="margin:2px 0 8px;"><input type="checkbox" id="fpMatchOnly" /> Only sites matching the current <b>Find Feeders</b> parameters (default off = every uploaded + manual site)</label>
-          <label class="chk" style="margin:2px 0 8px;"><input type="checkbox" id="fpWhole" /> <b>Whole property</b> &mdash; also include parcels that physically touch the site's parcel <b>and</b> share the same owner (multi-parcel campuses; off = just the parcel the point sits in)</label>
-          <div class="btnRow"><button class="btnPrimary" id="fpAnalyze">Analyze sites</button><button class="btnGhost" id="fpStop" disabled>Stop</button></div>
+          <div class="note" style="margin-top:0;line-height:1.45;">For each uploaded or manual site (all of them by default; tick the box below to restrict to Find matches), this pulls parcel + building footprint geometry to compute <b>building area</b>, <b>lot area</b> (geometry-computed and the assessor's recorded land sq ft), and <b>outdoor area</b> (lot &minus; building) &mdash; all in ft&sup2;. Building area comes from the national USA Structures layer (works anywhere). Lot/parcel data is pulled from county GIS for verified counties: Macon, Peoria, McLean, Madison, St. Clair, Vermilion, Adams, Coles, Morgan, Greene, Scott, Hancock, Henderson, McDonough, Jackson, Monroe. Some county servers refuse a browser request from a file opened directly; those rows fall back to building-only and say so. Elsewhere lot data isn't public, so only building area shows. Tip: run the dashboard through the Ameren_Server cell to unlock county data the browser otherwise blocks and to fill vendor-locked counties via ReportAllUSA.</div>
+          <div class="subhdr">All loaded sites</div>
+          <div class="fld" style="margin-top:8px;"><label>Parallel requests (lower this if a parcel server rate-limits)</label><input type="number" id="fpConc" value="5" min="1" max="12" step="1" /></div>
+          <label class="chk" style="margin:2px 0 8px;"><input type="checkbox" id="fpMatchOnly" /> Only sites matching the current Find parameters</label>
+          <label class="chk" style="margin:2px 0 8px;"><input type="checkbox" id="fpWhole" /> Whole property (add touching same-owner parcels)</label>
+          <div class="btnRow"><button class="btnPrimary" id="fpAnalyze">Analyze footprint &mdash; all sites</button><button class="btnGhost" id="fpStop" disabled>Stop</button></div>
+          <div class="note" style="margin:6px 0 7px 0;">Load schools first (Layers &rarr; &ldquo;Load in-territory schools&rdquo;), then run this to footprint every school at once.</div>
           <div class="count" id="fpStatus"></div>
-          <div class="results" id="fpList" style="max-height:46vh;"><div class="resEmpty">Set Find Feeders params + click Search (or add a manual site), then &ldquo;Analyze sites.&rdquo;</div></div>
+          <div class="results" id="fpList" style="max-height:46vh;"><div class="resEmpty">Set Find params + click Run Find (or add a manual site), then &ldquo;Analyze footprint.&rdquo;</div></div>
           <div class="btnRow"><button class="btnPrimary" id="fpExport" disabled>Export footprint analysis (Excel)</button></div>
           <div class="note" style="line-height:1.4;">Outdoor area = computed lot area &minus; building footprint. A blank assessor column means the county record had no land-sqft field; the geometry-computed lot is the reliable figure. Multi-parcel sites are summed automatically.</div>
+          <div class="subhdr">Single point</div>
+          <div class="btnRow"><button class="btnGhost" id="fpSingleBtn" style="width:100%;">Analyze last captured point</button></div>
+          <div class="results" id="fpSingleOut"><div class="resEmpty">Capture a point with <b>Coordinate capture</b> (Sites tab), then analyze it here &mdash; parcel area, building footprint, owner, and outdoor area.</div></div>
         </div>
       </div>
       <div class="section">
@@ -244,11 +259,11 @@
   document.getElementById("reopen").addEventListener("click",function(){ sidebar.classList.remove("collapsed"); });
   (function(){
     var head=document.getElementById("sideHead");
-    if(head && !document.getElementById("brandSub")){ var p=document.createElement("p"); p.id="brandSub"; p.textContent="Illinois \u00b7 ComEd + Ameren \u00b7 PV + load hosting capacity"; head.appendChild(p); }
-    var TAB={ "Utility network":"layers","Substations":"layers","Transmission lines":"layers",
-      "Find Feeders & Site Eligibility":"find","Capacity legend (MW)":"layers","Context (informational)":"layers","Candidate Sites":"layers",
-      "Upload Locations (Excel / CSV)":"sites","Site Analysis":"sites","My Sites":"sites","Save / Load Session":"sites",
-      "Site Footprint Analysis":"foot","Coordinate capture":"foot" };
+    if(head && !document.getElementById("brandSub")){ var p=document.createElement("p"); p.id="brandSub"; p.textContent="Illinois \u00b7 ComEd + Ameren \u00b7 Load + Generation hosting capacity"; head.appendChild(p); }
+    var TAB={ "Utility":"layers","Network":"layers","Capacity legend (MW)":"layers","Substations":"layers","Transmission lines":"layers","Candidate Sites":"layers","Context (informational)":"layers","Basemap":"layers",
+      "Find":"find",
+      "Add a site":"sites","Upload sites":"sites","Site analysis":"sites","Save / Load Session":"sites",
+      "Coordinate capture":"sites","Site footprint":"foot" };
     var secs=document.querySelectorAll("#sideBody > .section");
     Array.prototype.forEach.call(secs,function(s){ var h=s.querySelector("h3"); var key=h?h.textContent.trim():""; s.setAttribute("data-tab", TAB[key]||"layers"); s.classList.add("tabsec"); });
     var body=document.getElementById("sideBody"); var bar=document.createElement("div"); bar.id="tabs";
@@ -320,7 +335,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   var info=new FeatureLayer({url:SVC+"IL_HC_Grids/FeatureServer/0",title:"Feeder info (click)",renderer:clear,outFields:["*"],popupTemplate:combinedPopup,legendEnabled:false,listMode:"hide"});
   var stInfo=new FeatureLayer({url:SVC+"ST_Grids/FeatureServer/0",title:"Subtransmission (click)",renderer:clear,outFields:["*"],legendEnabled:false,listMode:"hide",
     popupTemplate:{title:"Subtransmission Feeder {feeder}",content:[{type:"fields",fieldInfos:[{fieldName:"hca_con_txt",label:"Hosting Capacity (MW)"},{fieldName:"OPERATINGVOLTAGE",label:"Operating Voltage"}]}]}});
-  var pvHeat=new VectorTileLayer({url:TILES+"HcVectorTiles/VectorTileServer",title:"PV / Generation Hosting Capacity",visible:true});
+  var pvHeat=new VectorTileLayer({url:TILES+"HcVectorTiles/VectorTileServer",title:"Generation Hosting Capacity",visible:true});
   var stHeat=new VectorTileLayer({url:TILES+"SubtHcVectorTile/VectorTileServer",title:"Subtransmission Hosting Capacity",visible:true});
   var lcHeat=new VectorTileLayer({url:TILES+"LcVectorTile/VectorTileServer",title:"Load Capacity",visible:false});
   var evL=new FeatureLayer({url:SVC+"EV_Corridors/FeatureServer/0",title:"EV Corridors",visible:false,outFields:["*"],popupTemplate:{title:"EV Corridor",content:[{type:"fields"}]}});
@@ -410,7 +425,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   function popupTableNode(rows,footer){ var wrap=document.createElement("div"); var sc=document.createElement("div"); sc.style.cssText="max-height:240px;overflow:auto;border:1px solid #e2e2ec;border-radius:6px"; var t=document.createElement("table"); t.style.cssText="width:100%;border-collapse:collapse;font-size:12.5px";
     var tg=0,tl=0,tq=0; rows.forEach(function(r){ if(!isNaN(r.gen))tg+=r.gen; if(!isNaN(r.load))tl+=r.load; if(r.q&&!isNaN(r.q))tq+=r.q; });
     t.innerHTML="<tr style='background:#1b2a4a;color:#fff'><th style='text-align:left;padding:5px 8px'>Feeder</th><th style='text-align:right;padding:5px 8px'>Net Gen (MW)</th><th style='text-align:right;padding:5px 8px'>Net Load (MW)</th><th style='text-align:right;padding:5px 8px'>DER Queue</th></tr><tr style='background:#eef4fb;font-weight:700;color:#1b2a4a'><td style='padding:4px 8px'>Total ("+rows.length+")</td><td style='text-align:right;padding:4px 8px'>"+fmtMW(tg)+"</td><td style='text-align:right;padding:4px 8px'>"+fmtMW(tl)+"</td><td style='text-align:right;padding:4px 8px'>"+(Math.round(tq*100)/100)+" MW</td></tr>";
-    rows.forEach(function(r,ix){ var tr=document.createElement("tr"); tr.style.cssText="border-top:1px solid #eef0f4;cursor:pointer;background:"+(ix%2?"#fafbfe":"#fff"); tr.innerHTML="<td style='padding:3px 8px;font-weight:700;color:#1763d6;text-decoration:underline'>"+he(r.feeder)+"</td><td style='text-align:right;padding:3px 8px'>"+fmtMW(r.gen)+"</td><td style='text-align:right;padding:3px 8px'>"+fmtMW(r.load)+"</td><td style='text-align:right;padding:3px 8px'>"+(Math.round((r.q||0)*100)/100)+" MW</td>"; tr.addEventListener("click",function(){ glowFeeder(r.feeder,r.network,true); det.innerHTML=ceHasQueue(r)?ceQueueBlockHtml(r):""; }); t.appendChild(tr); });
+    rows.forEach(function(r,ix){ var tr=document.createElement("tr"); tr.style.cssText="border-top:1px solid #eef0f4;cursor:pointer;background:"+(ix%2?"#fafbfe":"#fff"); tr.innerHTML="<td style='padding:3px 8px;font-weight:700;color:#1763d6;text-decoration:underline'>"+he(r.feeder)+"</td><td style='text-align:right;padding:3px 8px'>"+fmtMW(r.gen)+"</td><td style='text-align:right;padding:3px 8px'>"+fmtMW(r.load)+"</td><td style='text-align:right;padding:3px 8px'>"+(Math.round((r.q||0)*100)/100)+" MW</td>"; tr.addEventListener("click",function(){ glowFeeder(r.feeder,r.network,true); det.innerHTML=(capMetric!=="load"&&ceHasQueue(r))?ceQueueBlockHtml(r):""; }); t.appendChild(tr); });
     sc.appendChild(t); wrap.appendChild(sc); var det=document.createElement("div"); det.style.cssText="margin-top:8px;font-size:12.5px;"; wrap.appendChild(det); if(footer){ var fd=document.createElement("div"); fd.style.cssText="margin-top:6px;font-size:11px;color:#5a5a72"; fd.innerHTML=footer; wrap.appendChild(fd); } return wrap; }
   function ceCorridorPopupContent(ev){ var g=ev&&ev.graphic, geom=g&&g.geometry, pt=(view.popup&&view.popup.location)?view.popup.location:((geom&&geom.extent)?geom.extent.center:geom);
     function mkRow(a){ var r={feeder:String(a.Feeder_N),gen:parseFloat(a.PV_HC_kW)/1000,load:parseFloat(a.EV_HC_kW)/1000,q:(parseFloat(a.Feeder_Q)/1000||0),network:"ComEd"}; var qf=ceQueueFields(a); for(var k in qf)r[k]=qf[k]; return r; }
@@ -475,7 +490,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(target&&miles){ gl.add(new Graphic({geometry:new Circle({center:target,radius:miles,radiusUnit:"miles",geodesic:true}),symbol:{type:"simple-fill",color:[0,229,255,0.07],outline:{color:[0,150,180,0.95],width:1.5}}})); }
     if(target){ gl.add(new Graphic({geometry:target,symbol:new SimpleMarkerSymbol({style:"diamond",color:[214,40,40,0.95],size:13,outline:{color:"#fff",width:1.5}})})); } }
   function renderResults(label,rows){ var L=$("resultsLabel"),C=$("resultsCount"),B=$("resultsList"),E=$("resultsExport");
-    if(rows==null){ L.textContent=""; C.textContent=""; if(E)E.disabled=true; B.innerHTML='<div class="resEmpty">'+(label||"Set parameters and click Search.")+'</div>'; return; }
+    if(rows==null){ L.textContent=""; C.textContent=""; if(E)E.disabled=true; B.innerHTML='<div class="resEmpty">'+(label||"Set parameters and click Run Find.")+'</div>'; return; }
     L.textContent=label||""; if(!rows.length){ C.textContent=""; if(E)E.disabled=true; B.innerHTML='<div class="resEmpty">No feeders match.</div>'; return; }
     if(E)E.disabled=false; C.textContent=rows.length+" feeder(s)"; var sg=0,sl=0,sq=0; rows.forEach(function(c){ if(!isNaN(c.gen))sg+=c.gen; if(!isNaN(c.load))sl+=c.load; if(c.q&&!isNaN(c.q))sq+=c.q; }); B.innerHTML='<div style="padding:6px 10px;background:#eef4fb;border-bottom:1px solid #dbe4f3;font-size:12px;color:#1b2a4a;font-weight:700;">&Sigma; Gen '+fmtMW(sg)+' MW &nbsp;|&nbsp; Load '+fmtMW(sl)+' MW &nbsp;|&nbsp; Queue '+(Math.round(sq*100)/100)+' MW</div>';
     rows.forEach(function(c){ var d=document.createElement("div"); d.className="resRow";
@@ -509,7 +524,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     var miles=parseFloat($("radiusMi").value), useR=(target && !isNaN(miles) && miles>0);
     var doA=(u==="ameren"||u==="both"), doC=(u==="comed"||u==="both");
     if(u==="ameren" && !(SEG_INDEX && SEG_INDEX.segments && SEG_INDEX.segments.length)){ findFeedersLive(); return; }
-    if(g<=0 && l<=0){ renderResults("Enter a minimum for generation, load, or both, then Search.",null); updateSiteList(); renderManual(); return; }
+    if(g<=0 && l<=0){ renderResults("Enter a minimum for generation, load, or both, then Run Find.",null); updateSiteList(); renderManual(); return; }
     $("resultsList").innerHTML='<div class="resEmpty">Searching...</div>';
     var tlat=0,tlon=0; if(useR){ tlat=target.latitude; tlon=target.longitude; drawOverlay(miles); try{ view.goTo(new Circle({center:target,radius:miles,radiusUnit:"miles",geodesic:true}).extent.expand(1.3)); }catch(e){} } else if(radiusLayer){ radiusLayer.removeAll(); }
     ensureMatchLayer(); matchLayer.removeAll(); var aRows=[], capped=false;
@@ -700,7 +715,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   // Shown only when a feeder ID is clicked. Parent-substation values (from ComEd) + the feeder's voltage. No "PV", no calculations.
   function ceQueueBlockHtml(d){ if(!d) return "";
     var s='<div style="font-size:13px;font-weight:800;color:#1763d6;margin:2px 0 4px;">Substation'+(d.ssN?(" "+he(String(d.ssN))):"")+'</div>';
-    s+=kv2("Voltage level",ceKV(d.fdrV))+kv2("Hosting capacity",ceKW(d.ssHC))+kv2("Generation in queue",ceKW(d.ssQ))+kv2("Applications in queue",ceCount(d.ssQC))+kv2("Penetration ratio",ceRatioFmt(d.ssPR));
+    s+=kv2("Voltage level",ceKV(d.fdrV))+kv2("Generation hosting capacity",ceKW(d.ssHC))+kv2("Generation in queue",ceKW(d.ssQ))+kv2("Applications in queue",ceCount(d.ssQC))+kv2("Penetration ratio",ceRatioFmt(d.ssPR));
     return s; }
   function siteAnalysisHtml(a){ var U=" "+(a.unit||"MW"); var s='<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;min-width:252px;color:#22223b;">';
     s+=subhd("Within 0.1 mi")+kv2("Feeders",a.nFeeders01)+kv2("Sum Generation",fmtMW(a.sumGen01)+U)+kv2("Sum Load",fmtMW(a.sumLoad01)+U);
@@ -755,7 +770,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(!graphics.length){ setUpStatus("No Illinois schools fall inside the active service territory (try the Both/ComEd/Ameren selector)."); return; }
     var color=UP_COLORS[upColorIdx++ % UP_COLORS.length]; var L=createLayer("IL Public Schools","IL Public Schools",graphics,color); zoomToLayer(L.fl); refreshSites();
     setUpStatus("Loaded "+graphics.length+" Illinois public school(s) as candidate sites"+(dropped?(" ("+dropped+" outside the active territory skipped)"):"")+"."); }
-  (function(){ var b=$("loadIlSchools"); if(b) b.addEventListener("change",function(){ if(b.checked) loadIlSchools(); }); })();
+  (function(){ var b=$("loadIlSchools"); if(b) b.addEventListener("click",loadIlSchools); })();
   function coordKey(lon,lat){ return lat.toFixed(3)+","+lon.toFixed(3); }
   function loadFile(file){ setUpStatus("Reading "+file.name+"..."); var reader=new FileReader();
     reader.onload=function(e){ try{ var wb=XLSX.read(new Uint8Array(e.target.result),{type:"array"}); var seenCoord={},seenAddr={},any=false;
@@ -834,7 +849,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   // Rendering is delegated entirely to the GraphicsLayer overlay, exactly like the NY tool's drawSites().
   function applyMapRestriction(){ drawSiteSymbols(); }
   function exportSiteRows(sites,filename,statusId){ if(!sites.length||typeof XLSX==="undefined")return; var st=$(statusId); var qd=qualDistMi(),sd=subDistMi(),se=subEligMi(),te=txEligMi();
-    var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)","Nearest substation (any, mi)","Sub within "+(se>0?se+"mi":"(off)"),"Nearest 69 kV line (mi)","69 kV within "+(te>0?te+"mi":"(off)"),"Substation (queue)","Substation hosting capacity (kW)","Substation gen in queue (kW)","Substation apps in queue","Substation penetration"];
+    var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)","Nearest substation (any, mi)","Sub within "+(se>0?se+"mi":"(off)"),"Nearest 69 kV line (mi)","69 kV within "+(te>0?te+"mi":"(off)"),"Substation (queue)","Substation generation hosting capacity (kW)","Substation gen in queue (kW)","Substation apps in queue","Substation penetration"];
     var out=[header],i=0;
     function ceX(v,dp){ if(v==null)return ""; var n=parseFloat(v); if(isNaN(n))return ""; return dp!=null?+n.toFixed(dp):Math.round(n); }
     function step(){ if(i>=sites.length){ var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(out),"Site Summary"); XLSX.writeFile(wb,filename); if(st)st.textContent="Exported "+sites.length+" site(s)."; return; }
@@ -1032,6 +1047,27 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
         function step(){ if(i>=list.length){ return endFb(); }
           var c2=list[i++]; return analyzeCounty(c2,lat,lon,whole).then(function(out){ if(out&&out.n_parcels>0){ out.lat=lat; out.lon=lon; return out; } return step(); }).catch(function(e){ err=e; return step(); }); }
         return step(); }); }
+    (function(){ var b=document.getElementById("fpSingleBtn"); if(!b) return;
+      b.addEventListener("click",function(){
+        var out=document.getElementById("fpSingleOut");
+        if(!capRows||!capRows.length){ if(out) out.innerHTML='<div class="resEmpty">No captured point yet &mdash; use Coordinate capture (Sites tab) first.</div>'; return; }
+        var last=capRows[capRows.length-1];
+        var wc=document.getElementById("fpWhole"); var whole=!!(wc&&wc.checked);
+        if(out) out.innerHTML='<div class="resEmpty">Analyzing…</div>';
+        footprintAnalyze(last.lat,last.lon,whole).then(function(r){
+          if(!out) return;
+          function ft(x){ return (x==null)?"—":(Math.round(x).toLocaleString()+" ft²"); }
+          var lot=(r&&r.lot_area_geom_sqft!=null)?r.lot_area_geom_sqft:null;
+          var bld=(r&&r.building_area_sqft!=null)?r.building_area_sqft:null;
+          var od=(lot!=null&&bld!=null)?Math.max(0,lot-bld):null;
+          var h='<div style="font-size:12.5px;line-height:1.6;padding:2px 0;">';
+          h+='<div><b>Point:</b> '+(+last.lat).toFixed(5)+', '+(+last.lon).toFixed(5)+'</div>';
+          if(r&&r.owner){ h+='<div><b>Owner:</b> '+he(String(r.owner))+'</div>'; }
+          h+='<div><b>Building area:</b> '+ft(bld)+'</div><div><b>Lot area:</b> '+ft(lot)+'</div><div><b>Outdoor area:</b> '+ft(od)+'</div></div>';
+          out.innerHTML=h;
+        }).catch(function(e){ if(out) out.innerHTML='<div class="resEmpty">Analysis failed for that point.</div>'; });
+      });
+    })();
     // ----- panel behaviour -----
     var fpRows=[], fpAbort=false;
     function reviewFlags(r){ var f=[]; var lg=r.lot_area_geom_sqft;
