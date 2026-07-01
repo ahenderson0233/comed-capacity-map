@@ -100,7 +100,7 @@
         <style>#capSeg{display:flex;border:1px solid #d6deea;border-radius:6px;overflow:hidden;margin:4px 0 2px;}#capSeg button{flex:1;background:#fff;border:none;padding:8px 4px;font-size:12px;font-weight:600;color:#637088;cursor:pointer;}#capSeg button.on{background:#3b5380;color:#fff;}</style>
         <label style="display:block;font-size:12px;color:#637088;margin:10px 0 3px;font-weight:600;">Capacity layer</label>
         <div class="seg" id="capSeg"><button type="button" data-cap="combined" class="on">Combined</button><button type="button" data-cap="load">Load</button><button type="button" data-cap="gen">Generation</button></div>
-        <div class="note" style="margin-top:6px;">Re-shades ComEd corridors by the selected metric; Ameren switches its published generation/load tiles. &ldquo;Combined&rdquo; = ComEd bidirectional (min of generation &amp; load); Ameren shows generation.</div>
+        <div class="note" style="margin-top:6px;">Re-shades ComEd corridors by the selected metric; Ameren switches its published generation/load tiles. &ldquo;Combined&rdquo; = the average of a feeder&rsquo;s generation &amp; load hosting capacity (ComEd corridors); Ameren shows generation.</div>
       </div></div>
       <div class="section"><h3>Capacity legend (MW)</h3><div class="inner"><div id="capLegendInner"></div><div class="note" style="margin-top:6px;">One MW scale for both utilities &mdash; ComEd corridors and Ameren&rsquo;s published grid shading share the same bands and colors.</div></div></div>
       <div class="section" id="secFindAmeren">
@@ -448,7 +448,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   var capMetric="combined", CAP_FIELD={combined:"BESS_HC",load:"EV_HC_kW",gen:"PV_HC_kW"}, CAP_LABEL={combined:"Combined",load:"Load",gen:"Generation"};
   function setCapMetric(m){ if(!CAP_FIELD[m])m="combined"; capMetric=m;
     var seg=document.getElementById("capSeg"); if(seg)[].forEach.call(seg.querySelectorAll("button"),function(b){ b.classList.toggle("on", b.getAttribute("data-cap")===m); });
-    var base=JSON.parse(JSON.stringify(CE_RENDERER)); base.field=CAP_FIELD[m];
+    var base=JSON.parse(JSON.stringify(CE_RENDERER)); if(m==="combined"){ base.valueExpression="(DefaultValue($feature.PV_HC_kW,0) + DefaultValue($feature.EV_HC_kW,0)) / 2"; delete base.field; } else { base.field=CAP_FIELD[m]; delete base.valueExpression; }
     try{ ceLayers.forEach(function(L){ L.renderer=rendererJsonUtils.fromJSON(L===ceCorridorLayer?ceStrip(base):base); }); }catch(e){}
     try{ var gen=(m!=="load"); pvHeat.visible=gen; stHeat.visible=gen; lcHeat.visible=!gen; }catch(e){}
     try{ var host=document.getElementById("capLegendInner"); if(host){ host.innerHTML=""; var nb=ceBuildLegend(base); nb.style.cssText="font-size:12px;"; nb.style.display=(ACTIVE_UTIL!=="ameren")?"":"none"; var bar=nb.querySelector("div"); if(bar){bar.textContent=CAP_LABEL[m]+" — available MW"; bar.style.cssText="padding:0 11px 4px;font-size:11px;font-weight:700;color:#637088;";} host.appendChild(nb); ceLegendBox=nb; } }catch(e){}
