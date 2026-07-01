@@ -25,7 +25,7 @@
   .fld input[type=number],.fld input[type=text],.fld select{width:100%;box-sizing:border-box;padding:7px 9px;font-size:13px;color:#2b3242;border:1px solid #cdd5e1;border-radius:6px;background:#fff;transition:border-color .15s,box-shadow .15s;}
   .fld input[type=number]:focus,.fld input[type=text]:focus,.fld select:focus{outline:none;border-color:#2f5fa3;box-shadow:0 0 0 3px rgba(47,95,163,.15);}
   .chk{display:block;font-size:12.5px;color:#3c4456;margin-bottom:10px;cursor:pointer;}
-  .subhdr{font-size:11px;font-weight:700;color:#1b2a4a;text-transform:uppercase;letter-spacing:.5px;margin:4px 0 8px;padding-top:10px;border-top:1px solid #eef1f6;}
+  .subhdr{font-size:12px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.6px;margin:14px 0 8px;padding:0 0 4px;border-bottom:1px solid var(--line);}
   .btnRow{display:flex;gap:8px;margin-top:6px;}
   .btnRow button{flex:1;padding:9px 0;font-size:13px;font-weight:600;border:1px solid transparent;border-radius:6px;cursor:pointer;transition:background .15s,border-color .15s,box-shadow .15s;}
   .btnPrimary{background:#2f5fa3;color:#fff;box-shadow:0 1px 2px rgba(47,95,163,.25);}
@@ -75,12 +75,12 @@
   #tabs button.on{ color:#fff; border-bottom-color:var(--accent); background:rgba(255,255,255,.06); }
   #sideBody{ background:#fff; padding:0; }
   #sideBody .section{ background:#fff; border:none; border-bottom:1px solid var(--line); border-radius:0; margin:0; }
-  #sideBody .section > h3{ font-size:12px; text-transform:uppercase; letter-spacing:.6px; color:var(--slate); border-bottom:1px solid var(--line); padding:12px 12px 6px; margin:0; }
+  #sideBody .section > h3{ font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:var(--slate); border-bottom:1px solid var(--line); padding:12px 12px 6px; margin:0; }
   #sideBody .inner{ padding:10px 12px 14px; }
   .btnPrimary{ background:var(--accent); }
   .btnPrimary:hover{ background:#2f63b3; }
   .btnPrimary:disabled{ background:#9db8e2; }
-  .btnGhost{ background:#fff; color:var(--slate); border:1px solid var(--slate); }
+  .btnRow .btnGhost,.btnGhost{ background:#fff; color:var(--slate); border:1px solid var(--slate); }
   .btnGhost:hover{ background:var(--slate-l); }
   .count{ color:var(--navy); }
   .subhdr{ color:var(--slate); }
@@ -134,7 +134,7 @@
       <div class="section">
         <h3>Substations</h3>
         <div class="inner">
-          <label class="chk"><input type="checkbox" id="showSubs" /> Show substation markers (OpenStreetMap)</label>
+          <label class="chk"><input type="checkbox" id="showSubs" /> Show substation markers</label>
           <div class="note" style="margin:0 0 7px 0;">Tick the box above, then click a substation marker on the map to see its details.</div>          <div style="margin:0 0 7px 0;">
             <div style="font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:#9a9ab0;margin-bottom:3px;">Classification</div>
             <label class="chk" style="font-size:12px;"><input type="checkbox" class="subCls" value="Transmission" checked /> <span style="display:inline-block;width:11px;height:11px;background:#c0392b;border:1px solid #fff;outline:1px solid #99281c;margin:0 5px -1px 0;"></span>Transmission</label>
@@ -225,7 +225,7 @@
           <div class="fld" style="margin-top:8px;"><label>Parallel requests (lower this if a parcel server rate-limits)</label><input type="number" id="fpConc" value="5" min="1" max="12" step="1" /></div>
           <label class="chk" style="margin:2px 0 8px;"><input type="checkbox" id="fpMatchOnly" /> Only sites matching the current Find parameters</label>
           <label class="chk" style="margin:2px 0 8px;"><input type="checkbox" id="fpWhole" /> Whole property (add touching same-owner parcels)</label>
-          <div class="btnRow"><button class="btnPrimary" id="fpAnalyze">Analyze footprint &mdash; all sites</button><button class="btnGhost" id="fpStop" disabled>Stop</button></div>
+          <div class="btnRow"><button class="btnPrimary" id="fpAnalyze">Analyze footprint &mdash; all sites</button><button class="btnGhost" id="fpStop" disabled style="display:none;">Stop</button></div>
           <div class="note" style="margin:6px 0 7px 0;">Load schools first (Layers &rarr; &ldquo;Load in-territory schools&rdquo;), then run this to footprint every school at once.</div>
           <div class="count" id="fpStatus"></div>
           <div class="results" id="fpList" style="max-height:46vh;"><div class="resEmpty">Set Find params + click Run Find (or add a manual site), then &ldquo;Analyze footprint.&rdquo;</div></div>
@@ -407,9 +407,9 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     map.add(HIFLD_TX);
   }catch(e){} })();
   function ceBuildLegend(r){ var box=document.createElement("div"); box.style.cssText="background:#fff;border:1px solid #b0b0b0;border-radius:4px;box-shadow:0 1px 6px rgba(0,0,0,.28);font-size:12px;min-width:178px;overflow:hidden;display:none;";
-    var bar=document.createElement("div"); bar.style.cssText="padding:7px 11px;font-weight:bold;"; bar.textContent="ComEd Hosting Capacity (MW)"; box.appendChild(bar);
+    var bar=document.createElement("div"); bar.style.cssText="padding:0 11px 4px;font-size:11px;font-weight:700;color:#637088;"; bar.textContent="Combined — available MW"; box.appendChild(bar);
     var body=document.createElement("div"); body.style.padding="2px 11px 9px"; var infos=(r&&(r.uniqueValueInfos||r.classBreakInfos))||[];
-    var prev=0; infos.forEach(function(i){ var s=i.symbol||{}; var mx=(i.classMaxValue!=null?i.classMaxValue:null); var lab=(mx!=null)?((Math.round(prev/10)/100)+" - "+(Math.round(mx/10)/100)+" MW"):(i.label||String(i.value!=null?i.value:"")); if(mx!=null)prev=mx; var d=document.createElement("div"); d.style.cssText="display:flex;align-items:center;margin:4px 0;"; var sw=document.createElement("span"); sw.style.cssText="width:24px;height:14px;display:inline-block;margin-right:9px;border:1px solid #6f6f6f;"; sw.style.background=ceRgb(s.color); d.appendChild(sw); var l=document.createElement("span"); l.textContent=lab; d.appendChild(l); body.appendChild(d); });
+    var prev=0; infos.forEach(function(i){ var s=i.symbol||{}; var mx=(i.classMaxValue!=null?i.classMaxValue:null); var lab=(mx!=null)?((Math.round(prev/10)/100)+" - "+(Math.round(mx/10)/100)+" MW"):(i.label||String(i.value!=null?i.value:"")); if(mx!=null)prev=mx; var d=document.createElement("div"); d.style.cssText="display:flex;align-items:center;margin:4px 0;"; var sw=document.createElement("span"); sw.style.cssText="width:18px;height:10px;display:inline-block;margin-right:9px;border-radius:2px;border:1px solid #b8c0cf;"; sw.style.background=ceRgb(s.color); d.appendChild(sw); var l=document.createElement("span"); l.textContent=lab; d.appendChild(l); body.appendChild(d); });
     box.appendChild(body); return box; }
   var ceLegendBox=ceBuildLegend(CE_RENDERER); ceLegendBox.style.cssText="font-size:12px;"; (function(){ var _h=document.getElementById("capLegendInner"); if(_h){ _h.appendChild(ceLegendBox); } else { view.ui.add(ceLegendBox,"bottom-left"); } })();
   // ---- Find Corridors (kW) ----
@@ -453,7 +453,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     var base=JSON.parse(JSON.stringify(CE_RENDERER)); base.field=CAP_FIELD[m];
     try{ ceLayers.forEach(function(L){ L.renderer=rendererJsonUtils.fromJSON(L===ceCorridorLayer?ceStrip(base):base); }); }catch(e){}
     try{ var gen=(m!=="load"); pvHeat.visible=gen; stHeat.visible=gen; lcHeat.visible=!gen; }catch(e){}
-    try{ var host=document.getElementById("capLegendInner"); if(host){ host.innerHTML=""; var nb=ceBuildLegend(base); nb.style.cssText="font-size:12px;"; nb.style.display=(ACTIVE_UTIL!=="ameren")?"":"none"; var bar=nb.querySelector("div"); if(bar)bar.textContent="ComEd Hosting Capacity — "+CAP_LABEL[m]+" (MW)"; host.appendChild(nb); ceLegendBox=nb; } }catch(e){}
+    try{ var host=document.getElementById("capLegendInner"); if(host){ host.innerHTML=""; var nb=ceBuildLegend(base); nb.style.cssText="font-size:12px;"; nb.style.display=(ACTIVE_UTIL!=="ameren")?"":"none"; var bar=nb.querySelector("div"); if(bar){bar.textContent=CAP_LABEL[m]+" — available MW"; bar.style.cssText="padding:0 11px 4px;font-size:11px;font-weight:700;color:#637088;";} host.appendChild(nb); ceLegendBox=nb; } }catch(e){}
   }
   (function(){ var seg=document.getElementById("capSeg"); if(seg)[].forEach.call(seg.querySelectorAll("button"),function(b){ b.addEventListener("click",function(){ setCapMetric(b.getAttribute("data-cap")); }); }); try{ setCapMetric("combined"); }catch(e){} })();
   // ---- Service-territory footprint (bundled ComEd boundary) ----
