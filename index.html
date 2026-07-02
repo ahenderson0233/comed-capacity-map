@@ -317,14 +317,14 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   // ---------- data layers ----------
   var LC=new FeatureLayer({url:SVC+"AIC_LC_Grids/FeatureServer/0"});
   var PQ=new FeatureLayer({url:SVC+"PublicQueue/FeatureServer/0"});
-  var feederQ={};
+  var feederQ={}, amVolt={};
   var combinedPopup={ title:"Feeder(s) {FEEDERID}", outFields:["*"], content:function(ev){
     var a=ev.graphic.attributes, g=ev.graphic.geometry, pt=(g&&g.extent)?g.extent.center:g;
     var genPairs=cellFeeders(a.FEEDERID,a.MAXGENMW_TXT);
     var lq=LC.createQuery(); lq.geometry=pt; lq.spatialRelationship="intersects"; lq.outFields=["FEEDERID","MAXLOADMW_TXT"]; lq.returnGeometry=false;
     return LC.queryFeatures(lq).catch(function(){return {features:[]};}).then(function(r){
       var loadMap={}; if(r.features.length){ cellFeeders(r.features[0].attributes.FEEDERID,r.features[0].attributes.MAXLOADMW_TXT).forEach(function(p){ loadMap[p.feeder]=p.val; }); }
-      var rows=genPairs.map(function(p){ var q=feederQ[p.feeder]||{mw:0,ct:0}; return {feeder:p.feeder,gen:p.val,load:((p.feeder in loadMap)?loadMap[p.feeder]:NaN),q:q.mw,network:"Ameren"}; }); if(flOn){ rows=rows.filter(function(r){ return (flG<=0||(!isNaN(r.gen)&&r.gen>=flG))&&(flL<=0||(!isNaN(r.load)&&r.load>=flL)); }); }
+      var rows=genPairs.map(function(p){ var q=feederQ[p.feeder]||{mw:0,ct:0}; return {feeder:p.feeder,gen:p.val,load:((p.feeder in loadMap)?loadMap[p.feeder]:NaN),q:q.mw,qct:q.ct,volt:(amVolt[p.feeder]!=null?amVolt[p.feeder]:""),network:"Ameren"}; }); if(flOn){ rows=rows.filter(function(r){ return (flG<=0||(!isNaN(r.gen)&&r.gen>=flG))&&(flL<=0||(!isNaN(r.load)&&r.load>=flL)); }); }
       var footer="Substation "+String(a.FEEDERID||"").slice(0,3)+" &middot; Operating voltage "+(a.OPERATINGVOLTAGE||"n/a")+(a.GENLIMITER?(" &middot; Gen limiter: "+a.GENLIMITER):"");
       if(flOn&&!rows.length){ var dn=document.createElement("div"); dn.style.cssText="font-size:12px;color:#5a6376;padding:4px 2px;"; dn.textContent="No feeders here match the current filter."; return dn; } return popupTableNode(rows, footer);
     });
@@ -478,8 +478,10 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     return layer.queryFeatures(qq).then(function(r){ out=out.concat(r.features); if(r.features.length<2000||(cap&&out.length>=cap)) return out; return pg(s+2000); }); } return pg(0); }
 
   // queue only (gen/load come from live area queries that split comma feeders)
-  function prefetch(){ return queryAll(PQ,{where:"1=1",outFields:["Point_of_Interconnection_Feeder_ID","Proposed_Size__MW_"],returnGeometry:false})
-    .then(function(fs){ fs.forEach(function(f){ var a=f.attributes,fid=a.Point_of_Interconnection_Feeder_ID; if(!fid)return; var e=feederQ[fid]||(feederQ[fid]={mw:0,ct:0}); e.mw+=(a.Proposed_Size__MW_||0)/1000; e.ct+=1; }); }); }
+  function prefetch(){ var pV=(function pg(off){ return info.queryFeatures({where:"FEEDERID NOT LIKE '%,%'",groupByFieldsForStatistics:["FEEDERID","OPERATINGVOLTAGE"],outStatistics:[{statisticType:"count",onStatisticField:"OBJECTID",outStatisticFieldName:"n"}],returnGeometry:false,start:off,num:2000}).then(function(r){ var fe=(r&&r.features)||[]; fe.forEach(function(f){ var a=f.attributes; if(a.FEEDERID!=null&&amVolt[a.FEEDERID]==null)amVolt[a.FEEDERID]=a.OPERATINGVOLTAGE; }); if(fe.length>=2000&&off<8000)return pg(off+2000); }).catch(function(){}); })(0);
+    var pQ=queryAll(PQ,{where:"1=1",outFields:["Point_of_Interconnection_Feeder_ID","Proposed_Size__MW_"],returnGeometry:false})
+    .then(function(fs){ fs.forEach(function(f){ var a=f.attributes,fid=a.Point_of_Interconnection_Feeder_ID; if(!fid)return; var e=feederQ[fid]||(feederQ[fid]={mw:0,ct:0}); e.mw+=(a.Proposed_Size__MW_||0)/1000; e.ct+=1; }); });
+    return Promise.all([pQ,pV]); }
 
   // ---------- Find Feeders (search the radius, or the current view) ----------
   var radiusLayer=null,target=null,pickingTarget=false,_lastLabel="",_lastRows=null,restrictToMatching=false;
@@ -582,13 +584,13 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   $("resetBtn").addEventListener("click",resetFilter);
   $("sortSel").addEventListener("change",function(){ if(_lastRows&&_lastRows.length) applySortAndShow(_lastLabel,_lastRows); });
   ["qualDist","subDist","minGen","minLoad","subEligDist","txEligDist"].forEach(function(id){ var el=$(id); if(el){ var _h=function(){ restrictToMatching=true; updateSiteList(); renderManual(); }; el.addEventListener("change",_h); el.addEventListener("input",_h); } });
-  function xlAoa(A){ var ws=XLSX.utils.aoa_to_sheet(A); try{ var nr=A.length, nc=(A[0]||[]).length; var cw=[]; for(var c=0;c<nc;c++){ var mx=String((A[0]||[])[c]==null?"":A[0][c]).length; for(var r=1;r<nr;r++){ var v=(A[r]||[])[c]; var L=(v==null?0:String(v).length); if(L>mx)mx=L; } cw.push({wch:Math.min(Math.max(mx+2,9),46)}); } ws["!cols"]=cw; ws["!rows"]=[{hpt:24}]; ws["!autofilter"]={ref:XLSX.utils.encode_range({s:{r:0,c:0},e:{r:Math.max(nr-1,0),c:Math.max(nc-1,0)}})}; var H={fill:{patternType:"solid",fgColor:{rgb:"1B2A4A"}},font:{bold:true,color:{rgb:"FFFFFF"},name:"Segoe UI",sz:11},alignment:{horizontal:"left",vertical:"center",wrapText:true}}; for(var hc=0;hc<nc;hc++){ var ha=XLSX.utils.encode_cell({r:0,c:hc}); if(ws[ha])ws[ha].s=H; } for(var br=1;br<nr;br++){ for(var bc=0;bc<nc;bc++){ var da=XLSX.utils.encode_cell({r:br,c:bc}); if(!ws[da])continue; var st={font:{name:"Segoe UI",sz:10,color:{rgb:"1F2733"}},alignment:{vertical:"center"}}; if(br%2===0)st.fill={patternType:"solid",fgColor:{rgb:"EEF3FA"}}; ws[da].s=st; } } }catch(e){} return ws; }
+  function xlAoa(A){ try{ if(A&&A.length>1){ var nc0=(A[0]||[]).length; var keep=[]; for(var kc=0;kc<nc0;kc++){ var any=false; for(var kr=1;kr<A.length;kr++){ var vv=(A[kr]||[])[kc]; if(!(vv===null||vv===undefined||vv==="")){any=true;break;} } if(any)keep.push(kc); } if(keep.length&&keep.length<nc0){ A=A.map(function(row){ return keep.map(function(cc){ return row[cc]; }); }); } } }catch(e){} var ws=XLSX.utils.aoa_to_sheet(A); try{ var nr=A.length, nc=(A[0]||[]).length; var cw=[]; for(var c=0;c<nc;c++){ var mx=String((A[0]||[])[c]==null?"":A[0][c]).length; for(var r=1;r<nr;r++){ var v=(A[r]||[])[c]; var L=(v==null?0:String(v).length); if(L>mx)mx=L; } cw.push({wch:Math.min(Math.max(mx+2,9),46)}); } ws["!cols"]=cw; ws["!rows"]=[{hpt:24}]; ws["!autofilter"]={ref:XLSX.utils.encode_range({s:{r:0,c:0},e:{r:Math.max(nr-1,0),c:Math.max(nc-1,0)}})}; var H={fill:{patternType:"solid",fgColor:{rgb:"1B2A4A"}},font:{bold:true,color:{rgb:"FFFFFF"},name:"Segoe UI",sz:11},alignment:{horizontal:"left",vertical:"center",wrapText:true}}; for(var hc=0;hc<nc;hc++){ var ha=XLSX.utils.encode_cell({r:0,c:hc}); if(ws[ha])ws[ha].s=H; } for(var br=1;br<nr;br++){ for(var bc=0;bc<nc;bc++){ var da=XLSX.utils.encode_cell({r:br,c:bc}); if(!ws[da])continue; var st={font:{name:"Segoe UI",sz:10,color:{rgb:"1F2733"}},alignment:{vertical:"center"}}; if(br%2===0)st.fill={patternType:"solid",fgColor:{rgb:"EEF3FA"}}; ws[da].s=st; } } }catch(e){} return ws; }
   $("resultsExport").addEventListener("click",function(){ if(!_lastRows||!_lastRows.length||typeof XLSX==="undefined")return;
     function n2(v,dp){ if(v==null)return ""; var x=parseFloat(v); if(isNaN(x))return ""; return dp!=null?+x.toFixed(dp):x; }
     var by=($("sortSel")&&$("sortSel").value)||"gen";
     var rows=_lastRows.slice().sort(function(a,b){ var av=(by==="load")?a.load:a.gen, bv=(by==="load")?b.load:b.gen; av=(av==null||isNaN(av))?-1:av; bv=(bv==null||isNaN(bv))?-1:bv; return bv-av; });
     var aoa=[["Feeder","Network","Est. Net Generation Capacity (MW)","Est. Net Load Capacity (MW)","Feeder DER in Queue (MW)","Feeder Voltage (kV)","Feeder Applications in Queue","Feeder Penetration","Substation","Substation Generation Hosting Capacity (kW)","Substation Generation Headroom (kW)","Substation Generation in Queue (kW)","Substation Applications in Queue","Substation Penetration"]];
-    rows.forEach(function(c){ var ce=(c.network==="ComEd"); var hr=(ce&&c.ssHC!=null&&c.ssQ!=null)?(parseFloat(c.ssHC)-parseFloat(c.ssQ)):null; aoa.push([c.feeder,(c.network||"Ameren"),n2(c.gen,3),n2(c.load,3),n2(c.q,3),ce?n2(c.fdrV):"",ce?n2(c.fdrQC):"",ce?n2(c.fdrPR,3):"",(c.ssN||c.ss||""),ce?n2(c.ssHC):"",ce?n2(hr):"",ce?n2(c.ssQ):"",ce?n2(c.ssQC):"",ce?n2(c.ssPR,3):""]); });
+    rows.forEach(function(c){ var ce=(c.network==="ComEd"); var hr=(ce&&c.ssHC!=null&&c.ssQ!=null)?(parseFloat(c.ssHC)-parseFloat(c.ssQ)):null; aoa.push([c.feeder,(c.network||"Ameren"),n2(c.gen,3),n2(c.load,3),n2(c.q,3),(ce?n2(c.fdrV):(c.volt?n2(parseFloat(c.volt)):"")),(ce?n2(c.fdrQC):(c.qct!=null?c.qct:"")),ce?n2(c.fdrPR,3):"",(c.ssN||c.ss||""),ce?n2(c.ssHC):"",ce?n2(hr):"",ce?n2(c.ssQ):"",ce?n2(c.ssQC):"",ce?n2(c.ssPR,3):""]); });
     var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Feeders"); XLSX.writeFile(wb,"feeder_results.xlsx"); });
 
   // ---------- pick center / radius ----------
