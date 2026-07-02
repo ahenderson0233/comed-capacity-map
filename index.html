@@ -843,6 +843,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       var n=Object.keys(qual).length; var ok=n>0; var _se=subEligMi(); if(ok&&_se>0){ var _ds=nearestSubMi(site,_se); if(_ds==null||_ds>_se)ok=false; } var _te=txEligMi(); if(ok&&_te>0){ var _dt=near69Mi(site,_te); if(_dt==null||_dt>_te)ok=false; } return {ok:ok,n:n}; }); }
   function updateSiteList(){ var token=++__siteToken; siteQualList=[]; if(!siteCache.length){ renderSiteList(); applyMapRestriction(); return; }
     var snap=siteCache.slice(0,5000),i=0,CONC=8,active=0,finished=0;
+    applyMapRestriction();
     function done1(){ finished++; if(finished>=snap.length){ if(token===__siteToken){ siteQualList.sort(function(a,b){return b.n-a.n;}); renderSiteList(); applyMapRestriction(); } } }
     function pump(){ while(active<CONC && i<snap.length){ if(token!==__siteToken) return; var s=snap[i++]; active++; siteQualifies(s).then(function(q){ if(q.ok) siteQualList.push({site:s,n:q.n}); }).catch(function(){}).then(function(){ active--; done1(); if(token===__siteToken) renderSiteList(); pump(); }); } } pump(); }
   function renderSiteList(){ var box=$("siteList"),cnt=$("siteCount"),E=$("siteExport"); cnt.textContent=siteCache.length+" site(s) uploaded - "+siteQualList.length+" match parameters"; if(E)E.disabled=!siteQualList.length;
