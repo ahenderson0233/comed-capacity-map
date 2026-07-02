@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 <title>Ameren Illinois - Capacity Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script>
 <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
 <script src="https://js.arcgis.com/4.30/"></script>
@@ -582,10 +582,14 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   $("resetBtn").addEventListener("click",resetFilter);
   $("sortSel").addEventListener("change",function(){ if(_lastRows&&_lastRows.length) applySortAndShow(_lastLabel,_lastRows); });
   ["qualDist","subDist","minGen","minLoad","subEligDist","txEligDist"].forEach(function(id){ var el=$(id); if(el){ var _h=function(){ restrictToMatching=true; updateSiteList(); renderManual(); }; el.addEventListener("change",_h); el.addEventListener("input",_h); } });
+  function xlAoa(A){ var ws=XLSX.utils.aoa_to_sheet(A); try{ var nr=A.length, nc=(A[0]||[]).length; var cw=[]; for(var c=0;c<nc;c++){ var mx=String((A[0]||[])[c]==null?"":A[0][c]).length; for(var r=1;r<nr;r++){ var v=(A[r]||[])[c]; var L=(v==null?0:String(v).length); if(L>mx)mx=L; } cw.push({wch:Math.min(Math.max(mx+2,9),46)}); } ws["!cols"]=cw; ws["!rows"]=[{hpt:24}]; ws["!autofilter"]={ref:XLSX.utils.encode_range({s:{r:0,c:0},e:{r:Math.max(nr-1,0),c:Math.max(nc-1,0)}})}; var H={fill:{patternType:"solid",fgColor:{rgb:"1B2A4A"}},font:{bold:true,color:{rgb:"FFFFFF"},name:"Segoe UI",sz:11},alignment:{horizontal:"left",vertical:"center",wrapText:true}}; for(var hc=0;hc<nc;hc++){ var ha=XLSX.utils.encode_cell({r:0,c:hc}); if(ws[ha])ws[ha].s=H; } for(var br=1;br<nr;br++){ for(var bc=0;bc<nc;bc++){ var da=XLSX.utils.encode_cell({r:br,c:bc}); if(!ws[da])continue; var st={font:{name:"Segoe UI",sz:10,color:{rgb:"1F2733"}},alignment:{vertical:"center"}}; if(br%2===0)st.fill={patternType:"solid",fgColor:{rgb:"EEF3FA"}}; ws[da].s=st; } } }catch(e){} return ws; }
   $("resultsExport").addEventListener("click",function(){ if(!_lastRows||!_lastRows.length||typeof XLSX==="undefined")return;
-    var aoa=[["Feeder","Network","Substation","Est. Net Generation Capacity (MW)","Est. Net Load Capacity (MW)"]];
-    _lastRows.forEach(function(c){ aoa.push([c.feeder,(c.network||"Ameren"),(c.ss||""),isNaN(c.gen)?"":c.gen,isNaN(c.load)?"":c.load]); });
-    var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(aoa),"Feeders"); XLSX.writeFile(wb,"feeder_results.xlsx"); });
+    function n2(v,dp){ if(v==null)return ""; var x=parseFloat(v); if(isNaN(x))return ""; return dp!=null?+x.toFixed(dp):x; }
+    var by=($("sortSel")&&$("sortSel").value)||"gen";
+    var rows=_lastRows.slice().sort(function(a,b){ var av=(by==="load")?a.load:a.gen, bv=(by==="load")?b.load:b.gen; av=(av==null||isNaN(av))?-1:av; bv=(bv==null||isNaN(bv))?-1:bv; return bv-av; });
+    var aoa=[["Feeder","Network","Est. Net Generation Capacity (MW)","Est. Net Load Capacity (MW)","Feeder DER in Queue (MW)","Feeder Voltage (kV)","Feeder Applications in Queue","Feeder Penetration","Substation","Substation Generation Hosting Capacity (kW)","Substation Generation Headroom (kW)","Substation Generation in Queue (kW)","Substation Applications in Queue","Substation Penetration"]];
+    rows.forEach(function(c){ var ce=(c.network==="ComEd"); var hr=(ce&&c.ssHC!=null&&c.ssQ!=null)?(parseFloat(c.ssHC)-parseFloat(c.ssQ)):null; aoa.push([c.feeder,(c.network||"Ameren"),n2(c.gen,3),n2(c.load,3),n2(c.q,3),ce?n2(c.fdrV):"",ce?n2(c.fdrQC):"",ce?n2(c.fdrPR,3):"",(c.ssN||c.ss||""),ce?n2(c.ssHC):"",ce?n2(hr):"",ce?n2(c.ssQ):"",ce?n2(c.ssQC):"",ce?n2(c.ssPR,3):""]); });
+    var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Feeders"); XLSX.writeFile(wb,"feeder_results.xlsx"); });
 
   // ---------- pick center / radius ----------
   var pickBtn=$("pickPt");
@@ -643,9 +647,10 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(subLayer){ try{ view.whenLayerView(subLayer).then(function(lv){ var hit=subLayer.graphics.filter(function(g){return g.attributes.si===si;}).toArray(); if(subHighlight){ subHighlight.remove(); subHighlight=null; } if(hit.length) subHighlight=lv.highlight(hit); }); }catch(e){} }
     view.goTo({center:[s.lon,s.lat],zoom:Math.max(view.zoom||0,13)}).catch(function(){}); }
   $("subExport").addEventListener("click",function(){ var pts=getSubPts().filter(subPasses); if(!pts.length||typeof XLSX==="undefined")return;
-    var aoa=[["Name","Classification","Voltage (kV)","Operator","Subtype","Latitude","Longitude","OSM ID","OSM URL"]];
-    pts.forEach(function(s){ aoa.push([s.name||"",s.cls||"",(s.kv==null?"":s.kv),s.operator||"",(s.stype||""),s.lat,s.lon,s.id,s.url||""]); });
-    var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(aoa),"Substations"); XLSX.writeFile(wb,"ameren_territory_substations.xlsx"); });
+    pts=pts.slice().sort(function(a,b){ var av=(a.kv==null||isNaN(a.kv))?-1:+a.kv, bv=(b.kv==null||isNaN(b.kv))?-1:+b.kv; return bv-av; });
+    var aoa=[["Name","Classification","Voltage (kV)","Source","County","Operator","Subtype","Latitude","Longitude","OSM ID","OSM URL"]];
+    pts.forEach(function(s){ aoa.push([s.name||"",s.cls||"",(s.kv==null?"":s.kv),(s.source||""),(s.county||""),s.operator||"",(s.stype||""),s.lat,s.lon,s.id,s.url||""]); });
+    var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Substations"); XLSX.writeFile(wb,"ameren_territory_substations.xlsx"); });
 
   // ---------- eligibility distances + site analysis ----------
   function qualDistMi(){ var v=parseFloat($("qualDist").value); return (isNaN(v)||v<=0)?1:v; }
@@ -847,11 +852,11 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   // Rendering is delegated entirely to the GraphicsLayer overlay, exactly like the NY tool's drawSites().
   function applyMapRestriction(){ drawSiteSymbols(); }
   function exportSiteRows(sites,filename,statusId){ if(!sites.length||typeof XLSX==="undefined")return; var st=$(statusId); var qd=qualDistMi(),sd=subDistMi(),se=subEligMi(),te=txEligMi();
-    var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)","Nearest substation (any, mi)","Sub within "+(se>0?se+"mi":"(off)"),"Nearest 69 kV line (mi)","69 kV within "+(te>0?te+"mi":"(off)"),"Substation (queue)","Substation generation hosting capacity (kW)","Substation gen in queue (kW)","Substation apps in queue","Substation penetration"];
+    var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)","Nearest substation (any, mi)","Sub within "+(se>0?se+"mi":"(off)"),"Nearest 69 kV line (mi)","69 kV within "+(te>0?te+"mi":"(off)"),"Substation (queue)","Substation generation hosting capacity (kW)","Substation gen in queue (kW)","Substation apps in queue","Substation penetration","Substation Generation Headroom (kW)","Feeder Voltage (kV)","Feeder DER in Queue (kW)","Feeder Applications in Queue","Feeder Penetration"];
     var out=[header],i=0;
     function ceX(v,dp){ if(v==null)return ""; var n=parseFloat(v); if(isNaN(n))return ""; return dp!=null?+n.toFixed(dp):Math.round(n); }
-    function step(){ if(i>=sites.length){ var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(out),"Site Summary"); XLSX.writeFile(wb,filename); if(st)st.textContent="Exported "+sites.length+" site(s)."; return; }
-      if(st)st.textContent="Analyzing "+(i+1)+"/"+sites.length+"..."; analyzeSite(sites[i]).then(function(a){ out.push([a.name,a.sheet||"",a.lat,a.lon,(a.util||""),(a.unit||"MW"),a.nFeeders01,Math.round(a.sumGen01*100)/100,Math.round(a.sumLoad01*100)/100,a.nFeeders03,Math.round(a.sumGen03*100)/100,Math.round(a.sumLoad03*100)/100,a.nFeeders05,Math.round(a.sumGen05*100)/100,Math.round(a.sumLoad05*100)/100,a.nQual,a.nearestQual?a.nearestQual.feeder:"",a.nearestQual?+a.nearestQual.dist_mi.toFixed(3):"",a.nSub,a.nearestSub?a.nearestSub.ss:"",a.nearestSub?+a.nearestSub.dist_mi.toFixed(3):"",(a.nearestSubAnyMi!=null?+a.nearestSubAnyMi.toFixed(3):""),(se>0?((a.nearestSubAnyMi!=null&&a.nearestSubAnyMi<=se)?"Yes":"No"):""),(a.nearest69!=null?+a.nearest69.toFixed(3):""),(te>0?((a.nearest69!=null&&a.nearest69<=te)?"Yes":"No"):""),((a.ceFeeder&&a.ceFeeder.ssN!=null)?a.ceFeeder.ssN:""),ceX(a.ceFeeder&&a.ceFeeder.ssHC),ceX(a.ceFeeder&&a.ceFeeder.ssQ),ceX(a.ceFeeder&&a.ceFeeder.ssQC),ceX(a.ceFeeder&&a.ceFeeder.ssPR,3)]); i++; step(); }); } step(); }
+    function step(){ if(i>=sites.length){ var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(out),"Site Summary"); XLSX.writeFile(wb,filename); if(st)st.textContent="Exported "+sites.length+" site(s)."; return; }
+      if(st)st.textContent="Analyzing "+(i+1)+"/"+sites.length+"..."; analyzeSite(sites[i]).then(function(a){ out.push([a.name,a.sheet||"",a.lat,a.lon,(a.util||""),(a.unit||"MW"),a.nFeeders01,Math.round(a.sumGen01*100)/100,Math.round(a.sumLoad01*100)/100,a.nFeeders03,Math.round(a.sumGen03*100)/100,Math.round(a.sumLoad03*100)/100,a.nFeeders05,Math.round(a.sumGen05*100)/100,Math.round(a.sumLoad05*100)/100,a.nQual,a.nearestQual?a.nearestQual.feeder:"",a.nearestQual?+a.nearestQual.dist_mi.toFixed(3):"",a.nSub,a.nearestSub?a.nearestSub.ss:"",a.nearestSub?+a.nearestSub.dist_mi.toFixed(3):"",(a.nearestSubAnyMi!=null?+a.nearestSubAnyMi.toFixed(3):""),(se>0?((a.nearestSubAnyMi!=null&&a.nearestSubAnyMi<=se)?"Yes":"No"):""),(a.nearest69!=null?+a.nearest69.toFixed(3):""),(te>0?((a.nearest69!=null&&a.nearest69<=te)?"Yes":"No"):""),((a.ceFeeder&&a.ceFeeder.ssN!=null)?a.ceFeeder.ssN:""),ceX(a.ceFeeder&&a.ceFeeder.ssHC),ceX(a.ceFeeder&&a.ceFeeder.ssQ),ceX(a.ceFeeder&&a.ceFeeder.ssQC),ceX(a.ceFeeder&&a.ceFeeder.ssPR,3),(a.ceFeeder&&a.ceFeeder.ssHC!=null&&a.ceFeeder.ssQ!=null?ceX(parseFloat(a.ceFeeder.ssHC)-parseFloat(a.ceFeeder.ssQ)):""),ceX(a.ceFeeder&&a.ceFeeder.fdrV),ceX(a.ceFeeder&&a.ceFeeder.fdrQ),ceX(a.ceFeeder&&a.ceFeeder.fdrQC),ceX(a.ceFeeder&&a.ceFeeder.fdrPR,3)]); i++; step(); }); } step(); }
   $("siteExport").addEventListener("click",function(){ exportSiteRows(siteQualList.map(function(x){return x.site;}),"site_analysis.xlsx","siteCount"); });
 
   // ---------- My Sites ----------
@@ -1102,7 +1107,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     var eb=$("fpExport"); if(eb) eb.addEventListener("click",function(){ if(!fpRows.length||typeof XLSX==="undefined") return;
       var aoa=[["Site","Source","Lat","Lon","Owner","Owner check","County","Address","PIN(s)","# Parcels","# Footprints","Building source","Building ft2","Lot ft2 (computed)","Lot ft2 (assessor)","Outdoor ft2","Coverage %","Lot source","Review","Hosting hint","Note"]];
       fpRows.forEach(function(r){ aoa.push([r.name||"",r.src||"",r.lat,r.lon,(r.owner||""),ownerCheck(r.name,r.owner),r.county||"",r.address||"",(r.pins||[]).join("; "),(r.n_parcels==null?"":r.n_parcels),(r.n_footprints==null?"":r.n_footprints),(r.building_source||""),(r.building_area_sqft==null?"":r.building_area_sqft),(r.lot_area_geom_sqft==null?"":r.lot_area_geom_sqft),(r.lot_area_assessor_sqft==null?"":r.lot_area_assessor_sqft),(r.outdoor_area_sqft==null?"":r.outdoor_area_sqft),(r.building_coverage_pct==null?"":r.building_coverage_pct),(r.source||""),reviewFlags(r).join("; "),(r.hosting_hint||""),(r.error?("ERROR: "+r.error):(r.no_parcel?"building only":""))]); });
-      var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(aoa),"Footprint Analysis"); XLSX.writeFile(wb,"site_footprint_analysis.xlsx"); });
+      var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Footprint Analysis"); XLSX.writeFile(wb,"site_footprint_analysis.xlsx"); });
   })();
 
   view.when(function(){ prefetch().then(function(){ if(window.__SAVED_STATE__){ try{ restoreSession(window.__SAVED_STATE__); }catch(e){ console.error("restore failed",e); } } }).catch(function(e){ console.error("prefetch failed",e); }); });
