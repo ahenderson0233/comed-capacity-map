@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>Ameren Illinois - Capacity Dashboard</title>
+<title>Illinois Capacity & Siting Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script>
 <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
@@ -120,8 +120,8 @@
           <div class="note" style="margin:0 0 7px 0;">A site qualifies when a feeder meeting your generation and/or load minimums lies within the eligibility distance (one point of interconnection). The matched feeder ID is shown in each site&rsquo;s breakdown.</div>
           <div class="subhdr">Site eligibility (optional)</div>
           <div class="fld"><label>Require a substation within (mi) &mdash; blank = not required</label><input type="number" id="subEligDist" min="0" step="0.5" placeholder="not required" /></div>
-          <div class="fld"><label>Require a 69 kV line within (mi) &mdash; blank = not required</label><input type="number" id="txEligDist" min="0" step="0.5" placeholder="not required" /></div>
-          <div class="note" style="margin:0 0 7px 0;">Substation &amp; 69 kV criteria are optional &mdash; leave blank to not require them. Nearest distances are always computed &amp; exported.</div>
+          <div class="fld"><label>Require a transmission line within (mi) &mdash; blank = not required</label><input type="number" id="txEligDist" min="0" step="0.5" placeholder="not required" /></div>
+          <div class="note" style="margin:0 0 7px 0;">Substation &amp; transmission criteria are optional &mdash; leave blank to not require them. Nearest distances are always computed &amp; exported.</div>
           <div class="btnRow"><button class="btnPrimary" id="applyBtn" style="flex:1;">Run Find</button></div>
           <div class="btnRow" style="margin-top:6px;"><button class="btnGhost" id="resetBtn" style="flex:1;">Clear filter</button></div>
           <div class="sortRow"><span>Sort by</span><select id="sortSel"><option value="gen">Generation (high to low)</option><option value="load">Load (high to low)</option></select></div>
@@ -340,17 +340,15 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   var coop=new FeatureLayer({url:SVC+"IL_Coop_Boundaries/FeatureServer/0",title:"Approx. IL Coop Boundaries",opacity:0.5,visible:false,outFields:["*"]});
   var equity=new FeatureLayer({url:SVC2+"R3_23_24_EJ_23_Union_Dissolve/FeatureServer/0",title:"Equity Investment Eligible Communities",opacity:1,visible:false,outFields:["*"],renderer:{type:"simple",symbol:{type:"simple-fill",color:[124,58,178,0.32],outline:{color:[122,45,160,0.9],width:1}}},popupTemplate:{title:"Equity Investment Eligible Community",content:"This area qualifies as an Illinois <b>Equity Investment Eligible Community</b> (R3 + Environmental-Justice) under CEJA \u2014 where clean-energy &amp; storage equity incentives apply. Context only; not used in site matching."}});
   (function(){ var _ce=$("ctxEquity"); if(_ce) _ce.addEventListener("change",function(){ equity.visible=_ce.checked; }); })();
-  var chicagoZoning=new MapImageLayer({url:"https://gisapps.cityofchicago.org/arcgis/rest/services/ExternalApps/Zoning_update/MapServer",opacity:0.45,visible:false,title:"Chicago zoning"});
   var cookIndustrial=new FeatureLayer({url:"https://services5.arcgis.com/LcMXE3TFhi1BSaCY/arcgis/rest/services/LUI20_geodatabase_v1_CMAP/FeatureServer/0",definitionExpression:"(LANDUSE LIKE '14%' OR LANDUSE = '4130')",outFields:["LANDUSE"],visible:false,minScale:6000000,title:"Industrial-classed parcels (7-county region)",renderer:{type:"simple",symbol:{type:"simple-fill",color:[245,130,32,0.45],outline:{color:[180,90,10,0.95],width:0.5}}},popupTemplate:{title:"Industrial-classed parcel",content:"CMAP Land Use Inventory 2020 \u00b7 land-use class {LANDUSE} (industrial / manufacturing / warehousing)."}});
   var ncesSchools=new FeatureLayer({url:"https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0",definitionExpression:"STATE='IL'",outFields:["NAME","CITY","STATE"],visible:false,title:"NCES schools (Illinois)",renderer:{type:"simple",symbol:{type:"simple-marker",style:"circle",size:5,color:[37,99,235,0.85],outline:{color:"#fff",width:0.5}}},popupTemplate:{title:"{NAME}",content:"NCES public school \u00b7 {CITY}, {STATE}"}});
-  (function(){ var z=$("ctxChiZoning"); if(z) z.addEventListener("change",function(){ chicagoZoning.visible=z.checked; });
-    var ci=$("ctxCookInd"); if(ci) ci.addEventListener("change",function(){ cookIndustrial.visible=ci.checked; if(ci.checked){ try{ map.reorder(cookIndustrial,map.layers.length-1); }catch(e){} } });
+  (function(){ var ci=$("ctxCookInd"); if(ci) ci.addEventListener("change",function(){ cookIndustrial.visible=ci.checked; if(ci.checked){ try{ map.reorder(cookIndustrial,map.layers.length-1); }catch(e){} } });
     var ns=$("showNces"); if(ns) ns.addEventListener("change",function(){ ncesSchools.visible=ns.checked; if(ns.checked){ try{ map.reorder(ncesSchools,map.layers.length-1); }catch(e){} } }); })();
   var heat=new GroupLayer({title:"Capacity heat (toggle)",visibilityMode:"independent",layers:[lcHeat,stHeat,pvHeat]});
   function recolorAmeren(){ var pv={"HC_PRI_CONDUCTOR:1/0.000000":"#a50026","HC_PRI_CONDUCTOR:1/0.000001 - 0.500000":"#d73027","HC_PRI_CONDUCTOR:1/0.500001 - 1.000000":"#fd8c3c","HC_PRI_CONDUCTOR:1/1.000001 - 2.000000":"#fed36e","HC_PRI_CONDUCTOR:1/2.000001 - 5.000000":"#a6d96a","HC_PRI_CONDUCTOR:1/5.000001 - 8.000000":"#1a9641"}; var st={"subtransmission_hca_web_erase/0.000000 - 4.999999":"#d73027","subtransmission_hca_web_erase/5.000000 - 9.999999":"#fd8c3c","subtransmission_hca_web_erase/10.000000 - 14.999999":"#a6d96a","subtransmission_hca_web_erase/15.000000 - 50.000000":"#1a9641"}; try{ pvHeat.when(function(){ Object.keys(pv).forEach(function(id){ try{ pvHeat.setPaintProperties(id,{"line-color":pv[id],"line-width":3}); }catch(e){} }); }).catch(function(){}); }catch(e){} try{ stHeat.when(function(){ Object.keys(st).forEach(function(id){ try{ stHeat.setPaintProperties(id,{"line-color":st[id],"line-width":3}); }catch(e){} }); }).catch(function(){}); }catch(e){} }
   recolorAmeren();
   
-  var context=new GroupLayer({title:"Context & EV",visibilityMode:"independent",layers:[chicagoZoning,evL,coop,equity]});
+  var context=new GroupLayer({title:"Context & EV",visibilityMode:"independent",layers:[evL,coop,equity]});
   var map=new Map({basemap:"topo-vector",layers:[heat,context,stInfo,info,cookIndustrial,ncesSchools]});
   var view=new MapView({container:"viewDiv",map:map,center:[-89.4,39.9],zoom:7,popup:{dockEnabled:true,dockOptions:{position:"top-right",breakpoint:false},visibleElements:{featureNavigation:false}}});
   // ===================== ComEd capacity module (additive; renders identically to the ComEd system) =====================
@@ -385,7 +383,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     map.add(il69Case); map.add(il69Line);
   }catch(e){} })();
   /* ---------- All-voltage transmission (HIFLD, all utilities) — colored & filtered by VOLT_CLASS ---------- */
-  var HIFLD_TX=null;
+  var HIFLD_TX=null, __TXIDX=null, __txReq=null;
   (function(){ try{
     function txnn(v){ if(v==null||v==="")return "not published"; var s=String(v).trim(); return (s===""||/^(NOT AVAILABLE|UNKNOWN|N\/A)$/i.test(s))?"not published":s; }
     HIFLD_TX=new FeatureLayer({url:"https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/Electric_Power_Transmission_Lines/FeatureServer/0",
@@ -402,7 +400,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       popupTemplate:{title:"Transmission line",content:function(f){ var a=(f.graphic&&f.graphic.attributes)||{}; var kv=parseFloat(a.VOLTAGE);
         return '<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;color:#22223b;min-width:220px;">'+kv2("Voltage class",txnn(a.VOLT_CLASS))+kv2("Voltage (kV)",(isFinite(kv)&&kv>0)?kv:"not published")+kv2("Owner",txnn(a.OWNER))+kv2("Status",txnn(a.STATUS))+kv2("Between",txnn(a.SUB_1)+" ↔ "+txnn(a.SUB_2))+'</div>'; }}
     });
-    map.add(HIFLD_TX);
+    map.add(HIFLD_TX); buildTxIndex();
   }catch(e){} })();
   function ceBuildLegend(r){ var box=document.createElement("div"); box.style.cssText="background:#fff;border:1px solid #b0b0b0;border-radius:4px;box-shadow:0 1px 6px rgba(0,0,0,.28);font-size:12px;min-width:178px;overflow:hidden;display:none;";
     var bar=document.createElement("div"); bar.style.cssText="padding:0 11px 4px;font-size:11px;font-weight:700;color:#637088;"; bar.textContent="Combined — available MW"; box.appendChild(bar);
@@ -433,7 +431,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     return ceCorridorLayer.queryFeatures(q).then(function(res){ return build(res.features); }).catch(function(){ return build(g?[g]:[]); }); }
   if($("ceApplyBtn")){ $("ceApplyBtn").addEventListener("click",ceFind); $("ceResetBtn").addEventListener("click",ceReset);
   $("ceSortSel").addEventListener("change",function(){ if(ceLastRows&&ceLastRows.length)ceSort(ceLastLabel,ceLastRows); });
-  $("ceResultsExport").addEventListener("click",function(){ if(!ceLastRows||!ceLastRows.length||typeof XLSX==="undefined")return; var aoa=[["Feeder","Substation","Est Net Generation (kW)","Est Net Load (kW)","Feeder DER in Queue (kW)","Queue Refresh"]]; ceLastRows.forEach(function(c){aoa.push([c.feeder,c.ss||"",isNaN(c.gen)?"":c.gen,isNaN(c.load)?"":c.load,(c.q==null?"":c.q),(c.rd==null?"":c.rd)]);}); var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(aoa),"Corridors"); XLSX.writeFile(wb,"comed_corridor_results.xlsx"); }); }
+  $("ceResultsExport").addEventListener("click",function(){ if(!ceLastRows||!ceLastRows.length||typeof XLSX==="undefined")return; var aoa=[["Feeder","Substation","Est Net Generation (kW)","Est Net Load (kW)","Feeder DER in Queue (kW)","Queue Refresh"]]; ceLastRows.forEach(function(c){aoa.push([c.feeder,c.ss||"",isNaN(c.gen)?"":c.gen,isNaN(c.load)?"":c.load,(c.q==null?"":c.q),(c.rd==null?"":c.rd)]);}); var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Corridors"); XLSX.writeFile(wb,"comed_corridor_results.xlsx"); }); }
   // ---- utility selector ----
   var ACTIVE_UTIL="both";
   function setUtil(u){ ACTIVE_UTIL=u; var ids={ameren:"utilAmeren",comed:"utilComed",both:"utilBoth"}; ["utilAmeren","utilComed","utilBoth"].forEach(function(id){ var b=$(id); if(b)b.classList.remove("active"); }); var ab=$(ids[u]); if(ab)ab.classList.add("active");
@@ -454,12 +452,6 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     try{ var host=document.getElementById("capLegendInner"); if(host){ host.innerHTML=""; var nb=ceBuildLegend(base); nb.style.cssText="font-size:12px;"; nb.style.display=(ACTIVE_UTIL!=="ameren")?"":"none"; var bar=nb.querySelector("div"); if(bar){bar.textContent=CAP_LABEL[m]+" — available MW"; bar.style.cssText="padding:0 11px 4px;font-size:11px;font-weight:700;color:#637088;";} host.appendChild(nb); ceLegendBox=nb; } }catch(e){}
   }
   (function(){ var seg=document.getElementById("capSeg"); if(seg)[].forEach.call(seg.querySelectorAll("button"),function(b){ b.addEventListener("click",function(){ setCapMetric(b.getAttribute("data-cap")); }); }); try{ setCapMetric("combined"); }catch(e){} })();
-  // ---- Service-territory footprint (bundled ComEd boundary) ----
-  var terrLayer=null;
-  function ensureTerrLayer(){ if(terrLayer) return terrLayer; terrLayer=new GraphicsLayer({title:"Service territory",listMode:"hide"});
-    try{ terrLayer.add(new Graphic({geometry:{type:"polygon",rings:COMED_TERRITORY_GEOM.coordinates,spatialReference:{wkid:4326}},symbol:{type:"simple-fill",color:[61,123,217,0.05],outline:{color:[27,42,74,0.9],width:1.6}},popupTemplate:{title:"ComEd service territory",content:"Commonwealth Edison (ComEd) retail service-territory footprint. Ameren Illinois serves the balance of downstate Illinois."}})); }catch(e){}
-    map.add(terrLayer); if(typeof raiseSites==="function")raiseSites(); return terrLayer; }
-  (function(){ var cb=$("terrOn"); if(cb) cb.addEventListener("change",function(){ var L=ensureTerrLayer(); L.visible=cb.checked; }); })();
 
 
   var searchW=new Search({view:view,allPlaceholder:"Find address or place"}); var lastSearch=null;
@@ -634,7 +626,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       symbol:new SimpleMarkerSymbol({style:"square",color:(CLS_COLORS[s.cls]||CLS_COLORS["Undetermined"]),size:9,outline:{color:(CLS_OUTLINE[s.cls]||CLS_OUTLINE["Undetermined"]),width:1}}),
       popupTemplate:{title:"{label}",content:function(feat){ var x=getSubPts()[feat.graphic.attributes.si]; return x?subMetaHtml(x,true):""; }}})); }); return gl; }
   function visibleSubCount(){ var n=0; getSubPts().forEach(function(s){ if(subPasses(s))n++; }); return n; }
-  function updateSubCount(){ var c=$("subCount"),eb=$("subExport"),n=visibleSubCount(); if(c)c.textContent=n.toLocaleString()+" substation(s) shown (Ameren territory)"; if(eb)eb.disabled=!n; }
+  function updateSubCount(){ var c=$("subCount"),eb=$("subExport"),n=visibleSubCount(); if(c)c.textContent=n.toLocaleString()+" substation(s) shown (service territory)"; if(eb)eb.disabled=!n; }
   function raiseSites(){ try{ var tops=[]; if(typeof manualLayer!=="undefined"&&manualLayer)tops.push(manualLayer); if(typeof upLayers!=="undefined"&&upLayers)upLayers.forEach(function(L){ if(L)tops.push(L); }); if(typeof matchLayer!=="undefined"&&matchLayer)tops.push(matchLayer); var n=map.layers.length; tops.forEach(function(L){ try{ map.reorder(L,n-1); }catch(e){} }); }catch(e){} }
   function refreshSubLayer(){ if(!showSubs.checked) return; if(subLayer){ map.remove(subLayer); subLayer=null; } subLayer=buildSubLayer(); map.add(subLayer); raiseSites(); updateSubCount(); }
   showSubs.addEventListener("change",function(){ if(showSubs.checked) refreshSubLayer(); else if(subLayer){ map.remove(subLayer); subLayer=null; } });
@@ -652,7 +644,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     pts=pts.slice().sort(function(a,b){ var av=(a.kv==null||isNaN(a.kv))?-1:+a.kv, bv=(b.kv==null||isNaN(b.kv))?-1:+b.kv; return bv-av; });
     var aoa=[["Name","Classification","Voltage (kV)","Source","County","Operator","Subtype","Status","Latitude","Longitude","OSM ID","OSM URL"]];
     pts.forEach(function(s){ aoa.push([s.name||"",s.cls||"",(s.kv==null?"":s.kv),(s.source||""),(s.county||""),s.operator||"",(s.stype||""),(s.status||""),s.lat,s.lon,s.id,s.url||""]); });
-    var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Substations"); XLSX.writeFile(wb,"ameren_territory_substations.xlsx"); });
+    var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Substations"); XLSX.writeFile(wb,"illinois_substations.xlsx"); });
 
   // ---------- eligibility distances + site analysis ----------
   function qualDistMi(){ var v=parseFloat($("qualDist").value); return (isNaN(v)||v<=0)?1:v; }
@@ -670,12 +662,22 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     for(var fi=0;fi<idx.length;fi++){ var bb=idx[fi].bb; if(plon<bb[0]-mLon||plon>bb[2]+mLon||plat<bb[1]-mLat||plat>bb[3]+mLat)continue; var segs=idx[fi].segs;
       for(var si=0;si<segs.length;si++){ var s=segs[si],ax=(s[0]-plon)*kx,ay=(s[1]-plat)*ky,bx=(s[2]-plon)*kx,by=(s[3]-plat)*ky,dx=bx-ax,dy=by-ay,L2=dx*dx+dy*dy,tt=L2?(-(ax*dx+ay*dy)/L2):0; if(tt<0)tt=0; else if(tt>1)tt=1; var cx=ax+tt*dx,cy=ay+tt*dy,d=Math.sqrt(cx*cx+cy*cy); if(d<best){best=d; if(best<=0)return 0;} } }
     return isFinite(best)?best:null; }
+  function buildTxIndex(){ if(__txReq||__TXIDX)return; if(typeof HIFLD_TX==="undefined"||!HIFLD_TX)return; var acc=[];
+    function pg(off){ var q=HIFLD_TX.createQuery(); q.where="1=1"; q.geometry={type:"extent",xmin:-91.7,ymin:36.9,xmax:-86.9,ymax:42.7,spatialReference:{wkid:4326}}; q.spatialRelationship="intersects"; q.returnGeometry=true; q.outFields=["VOLTAGE"]; q.outSpatialReference={wkid:4326}; q.maxAllowableOffset=0.002; q.num=2000; q.start=off;
+      return HIFLD_TX.queryFeatures(q).then(function(r){ (r.features||[]).forEach(function(f){ var g=f.geometry; if(!g||!g.paths)return; g.paths.forEach(function(path){ var mnx=Infinity,mny=Infinity,mxx=-Infinity,mxy=-Infinity,segs=[]; for(var i=0;i<path.length;i++){ var p=path[i]; if(p[0]<mnx)mnx=p[0]; if(p[0]>mxx)mxx=p[0]; if(p[1]<mny)mny=p[1]; if(p[1]>mxy)mxy=p[1]; if(i<path.length-1){ var b=path[i+1]; segs.push([p[0],p[1],b[0],b[1]]); } } if(segs.length)acc.push({bb:[mnx,mny,mxx,mxy],segs:segs}); }); }); if(r.exceededTransferLimit&&(r.features||[]).length){return pg(off+r.features.length);} __TXIDX=acc; return acc; }); }
+    __txReq=pg(0).then(function(res){ try{ if(typeof siteCache!=="undefined"&&siteCache&&siteCache.length&&siteCache.length<=1200&&typeof updateSiteList==="function") updateSiteList(); }catch(e){} return res; }).catch(function(){ __TXIDX=[]; return []; }); }
+  function txIndex(){ if(__TXIDX)return __TXIDX; buildTxIndex(); return []; }
+  function nearTxMi(site,cap){ var idx=txIndex(); if(!idx.length)return null; var plat=site.lat,plon=site.lon,cl=Math.cos(plat*Math.PI/180),kx=69.172*cl,ky=69.172;
+    var mLat=((cap>0?cap:120)/69.0)+0.02,mLon=((cap>0?cap:120)/(69.0*Math.max(0.2,cl)))+0.02,best=Infinity;
+    for(var fi=0;fi<idx.length;fi++){ var bb=idx[fi].bb; if(plon<bb[0]-mLon||plon>bb[2]+mLon||plat<bb[1]-mLat||plat>bb[3]+mLat)continue; var segs=idx[fi].segs;
+      for(var si=0;si<segs.length;si++){ var s=segs[si],ax=(s[0]-plon)*kx,ay=(s[1]-plat)*ky,bx=(s[2]-plon)*kx,by=(s[3]-plat)*ky,dx=bx-ax,dy=by-ay,L2=dx*dx+dy*dy,tt=L2?(-(ax*dx+ay*dy)/L2):0; if(tt<0)tt=0; else if(tt>1)tt=1; var cx=ax+tt*dx,cy=ay+tt*dy,d=Math.sqrt(cx*cx+cy*cy); if(d<best){best=d; if(best<=0)return 0;} } }
+    return isFinite(best)?best:null; }
   function siteSubs(site){ var subs=[],sd=subDistMi(),marg=sd/45+0.05; getSubPts().forEach(function(s){ if(Math.abs(s.lat-site.lat)>marg||Math.abs(s.lon-site.lon)>marg)return;
     var d=haversineMi(site.lat,site.lon,s.lat,s.lon); if(d<=sd) subs.push({ss:subDisplayLabel(s),dist_mi:d,lon:s.lon,lat:s.lat}); }); subs.sort(function(a,b){return a.dist_mi-b.dist_mi;}); return subs; }
     function effectiveUtil(site){ if(ACTIVE_UTIL==="comed")return "comed"; if(ACTIVE_UTIL==="ameren")return "ameren"; try{ return inComEd(site.lon,site.lat)?"comed":"ameren"; }catch(e){ return "ameren"; } }
   function ceDist(site,g){ var rings=(g&&g.rings)||null; if(!rings||!rings.length) return null; try{ if(turf.booleanPointInPolygon(turf.point([site.lon,site.lat]),turf.polygon(rings))) return 0; }catch(e){} var plat=site.lat,plon=site.lon,kx=69.172*Math.cos(plat*Math.PI/180),ky=69.172,best=Infinity; rings.forEach(function(r){ for(var i=0;i<r.length-1;i++){ var ax=(r[i][0]-plon)*kx,ay=(r[i][1]-plat)*ky,bx=(r[i+1][0]-plon)*kx,by=(r[i+1][1]-plat)*ky,dx=bx-ax,dy=by-ay,L2=dx*dx+dy*dy,t=L2?(-(ax*dx+ay*dy)/L2):0; if(t<0)t=0; else if(t>1)t=1; var cx=ax+t*dx,cy=ay+t*dy,d=Math.sqrt(cx*cx+cy*cy); if(d<best)best=d; } }); return isFinite(best)?best:null; }
   function ceAnalyzeSite(site){ var R=Math.max(0.5,qualDistMi()), g=parseFloat($("minGen").value)||0, l=parseFloat($("minLoad").value)||0;
-    if(!ceCorridorLayer){ var z=siteSubs(site); return Promise.resolve({name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:[],nFeeders01:0,sumGen01:0,sumLoad01:0,nFeeders03:0,sumGen03:0,sumLoad03:0,nFeeders05:0,sumGen05:0,sumLoad05:0,qualFeeders:[],nQual:0,nearestQual:null,subs:z,nSub:z.length,nearestSub:z[0]||null,nearest69:near69Mi(site,0),nearestSubAnyMi:nearestSubMi(site,0),unit:"MW",util:"ComEd"}); }
+    if(!ceCorridorLayer){ var z=siteSubs(site); return Promise.resolve({name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:[],nFeeders01:0,sumGen01:0,sumLoad01:0,nFeeders03:0,sumGen03:0,sumLoad03:0,nFeeders05:0,sumGen05:0,sumLoad05:0,qualFeeders:[],nQual:0,nearestQual:null,subs:z,nSub:z.length,nearestSub:z[0]||null,nearest69:nearTxMi(site,0),nearestSubAnyMi:nearestSubMi(site,0),unit:"MW",util:"ComEd"}); }
     return ceCorridorLayer.queryFeatures({geometry:new Point({longitude:site.lon,latitude:site.lat}),distance:R,units:"miles",spatialRelationship:"intersects",outFields:["*"],returnGeometry:true,outSpatialReference:{wkid:4326},num:3000}).catch(function(){return {features:[]};}).then(function(res){
       var b01={},b03={},b05={},qual={},ceNF=null;
       (res.features||[]).forEach(function(f){ var a=f.attributes||{},fid=a.Feeder_N; if(fid==null)return; var d=ceDist(site,f.geometry); if(d==null)return; var gen=parseFloat(a.PV_HC_kW)/1000,lo=parseFloat(a.EV_HC_kW)/1000; if(ceNF==null||d<ceNF.dist_mi){ ceNF=ceQueueFields(a); ceNF.dist_mi=d; }
@@ -684,7 +686,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
         if(d<=qualDistMi() && (isNaN(gen)?0:gen)>=g && (isNaN(lo)?0:lo)>=l)put(qual); });
       function sums(o){ var k=Object.keys(o),gg=0,ll=0; k.forEach(function(x){ if(!isNaN(o[x].gen))gg+=o[x].gen; if(!isNaN(o[x].load))ll+=o[x].load; }); return {n:k.length,gen:gg,load:ll}; }
       var s1=sums(b01),s3=sums(b03),s5=sums(b05),qf=Object.keys(qual).map(function(k){return qual[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}),subs=siteSubs(site);
-      return {name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:Object.keys(b01).map(function(k){return b01[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}),nFeeders01:s1.n,sumGen01:s1.gen,sumLoad01:s1.load,nFeeders03:s3.n,sumGen03:s3.gen,sumLoad03:s3.load,nFeeders05:s5.n,sumGen05:s5.gen,sumLoad05:s5.load,qualFeeders:qf,nQual:qf.length,nearestQual:qf[0]||null,subs:subs,nSub:subs.length,nearestSub:subs[0]||null,nearest69:near69Mi(site,0),nearestSubAnyMi:nearestSubMi(site,0),ceFeeder:ceNF,unit:"MW",util:"ComEd"}; }); }
+      return {name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:Object.keys(b01).map(function(k){return b01[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}),nFeeders01:s1.n,sumGen01:s1.gen,sumLoad01:s1.load,nFeeders03:s3.n,sumGen03:s3.gen,sumLoad03:s3.load,nFeeders05:s5.n,sumGen05:s5.gen,sumLoad05:s5.load,qualFeeders:qf,nQual:qf.length,nearestQual:qf[0]||null,subs:subs,nSub:subs.length,nearestSub:subs[0]||null,nearest69:nearTxMi(site,0),nearestSubAnyMi:nearestSubMi(site,0),ceFeeder:ceNF,unit:"MW",util:"ComEd"}; }); }
   function ceSiteQualifies(site){ if(!ceCorridorLayer) return Promise.resolve({ok:false,n:0}); var qd=qualDistMi(),g=parseFloat($("minGen").value)||0,l=parseFloat($("minLoad").value)||0;
     return ceCorridorLayer.queryFeatures({geometry:new Point({longitude:site.lon,latitude:site.lat}),distance:Math.max(0.5,qd),units:"miles",spatialRelationship:"intersects",outFields:["Feeder_N","PV_HC_kW","EV_HC_kW","SS_N","Feeder_Q","FDR_V","FDR_QC","FDR_PR","SS_HC","SS_Q","SS_QC","SS_PR"],returnGeometry:true,outSpatialReference:{wkid:4326},num:5000}).catch(function(){return {features:[]};}).then(function(res){ var qual={}; (res.features||[]).forEach(function(f){ var a=f.attributes||{},fid=a.Feeder_N; if(fid==null)return; var d=ceDist(site,f.geometry); if(d==null||d>qd)return; var gen=parseFloat(a.PV_HC_kW)/1000,lo=parseFloat(a.EV_HC_kW)/1000; if((isNaN(gen)?0:gen)>=g && (isNaN(lo)?0:lo)>=l)qual[fid]=1; }); var n=Object.keys(qual).length; var ok=n>0; var _se=subEligMi(); if(ok&&_se>0){ var _ds=nearestSubMi(site,_se); if(_ds==null||_ds>_se)ok=false; } var _te=txEligMi(); if(ok&&_te>0){ var _dt=near69Mi(site,_te); if(_dt==null||_dt>_te)ok=false; } return {ok:ok,n:n}; }); }
   function analyzeSite(site){ if(effectiveUtil(site)==="comed") return ceAnalyzeSite(site); var pt=new Point({longitude:site.lon,latitude:site.lat}); var R=Math.max(0.5,qualDistMi());
@@ -704,7 +706,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       var s1=sums(b01),s3=sums(b03),s5=sums(b05); var qf=Object.keys(qual).map(function(k){return qual[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}); var subs=siteSubs(site);
       return {name:site.name,sheet:site.sheet,lon:site.lon,lat:site.lat,within01:Object.keys(b01).map(function(k){return b01[k];}).sort(function(a,b){return a.dist_mi-b.dist_mi;}),
         nFeeders01:s1.n,sumGen01:s1.gen,sumLoad01:s1.load,nFeeders03:s3.n,sumGen03:s3.gen,sumLoad03:s3.load,nFeeders05:s5.n,sumGen05:s5.gen,sumLoad05:s5.load,
-        qualFeeders:qf,nQual:qf.length,nearestQual:qf[0]||null,subs:subs,nSub:subs.length,nearestSub:subs[0]||null,nearest69:near69Mi(site,0),nearestSubAnyMi:nearestSubMi(site,0),unit:"MW",util:"Ameren"}; }); }
+        qualFeeders:qf,nQual:qf.length,nearestQual:qf[0]||null,subs:subs,nSub:subs.length,nearestSub:subs[0]||null,nearest69:nearTxMi(site,0),nearestSubAnyMi:nearestSubMi(site,0),unit:"MW",util:"Ameren"}; }); }
   function kv2(k,v){ return '<div style="display:flex;justify-content:space-between;gap:14px;padding:2px 0;"><span style="color:#5a5a72;">'+k+'</span><span style="font-weight:600;color:#1b2a4a;text-align:right;white-space:nowrap;">'+v+'</span></div>'; }
   function subhd(t){ return '<div style="font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#9a9ab0;margin:9px 0 3px;border-top:1px solid #ececf2;padding-top:6px;">'+t+'</div>'; }
   // ---- ComEd interconnection-queue parity (feeder + substation), from ComEd PV Hosting Capacity service ----
@@ -729,7 +731,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     s+=subhd("Qualifying feeders <= "+qualDistMi()+" mi")+kv2("Count",a.nQual);
     if(a.nearestQual) s+=kv2("Nearest",a.nearestQual.feeder+" - "+ftMi(a.nearestQual.dist_mi))+kv2("its Gen / Load",fmtMW(a.nearestQual.gen)+" / "+fmtMW(a.nearestQual.load)+U);
     s+=subhd("Substations <= "+subDistMi()+" mi")+kv2("Count",a.nSub); if(a.nearestSub) s+=kv2("Nearest",a.nearestSub.ss+" - "+a.nearestSub.dist_mi.toFixed(2)+" mi"); var _se=subEligMi(); if(_se>0) s+=kv2("Within "+_se+" mi?",((a.nearestSubAnyMi!=null&&a.nearestSubAnyMi<=_se)?"Yes":"No"));
-    s+=subhd("69 kV transmission"); if(a.nearest69!=null){ s+=kv2("Nearest line",ftMi(a.nearest69)); var _te=txEligMi(); if(_te>0) s+=kv2("Within "+_te+" mi?",(a.nearest69<=_te?"Yes":"No")); } else { s+=kv2("Nearest line","none found"); }
+    s+=subhd("Transmission line"); if(a.nearest69!=null){ s+=kv2("Nearest line",ftMi(a.nearest69)); var _te=txEligMi(); if(_te>0) s+=kv2("Within "+_te+" mi?",(a.nearest69<=_te?"Yes":"No")); } else { s+=kv2("Nearest line","none found"); }
     if(a.util==="ComEd" && ceHasQueue(a.ceFeeder)){ s+=ceQueueBlockHtml(a.ceFeeder); }
     return s+'</div>'; }
   var siteHiLayer=null;
@@ -805,8 +807,8 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   function processSheet(fname,sheetName,rows,cols,f,seenCoord,seenAddr){ var oidRef={v:1},coordGraphics=[],addrRows=[],droppedTerr=0;
     rows.forEach(function(row){ var ll=parseLatLon(f,row); if(ll){ if(!inTerritory(ll[0],ll[1])){ droppedTerr++; return; } var k=coordKey(ll[0],ll[1]); if(seenCoord[k])return; seenCoord[k]=1; coordGraphics.push(mkGraphic(ll[0],ll[1],row,cols,oidRef)); return; }
       var a=getAddress(f,row); if(a){ var ak=String(a).toLowerCase(); if(seenAddr[ak])return; seenAddr[ak]=1; addrRows.push({row:row,addr:a}); } });
-    var terrMsg=droppedTerr?(" - "+droppedTerr+" outside Ameren territory skipped"):"";
-    if(!coordGraphics.length&&!addrRows.length){ if(droppedTerr) setUpStatus(fname+" - "+sheetName+": all points outside Ameren territory."); return; }
+    var terrMsg=droppedTerr?(" - "+droppedTerr+" outside service territory skipped"):"";
+    if(!coordGraphics.length&&!addrRows.length){ if(droppedTerr) setUpStatus(fname+" - "+sheetName+": all points outside service territory."); return; }
     var color=UP_COLORS[upColorIdx++ % UP_COLORS.length];
     if(coordGraphics.length){ var L=createLayer(fname,sheetName,coordGraphics,color); zoomToLayer(L.fl);
       if(addrRows.length){ setUpStatus("Loaded "+fname+" - "+sheetName+": "+coordGraphics.length+" by coordinates"+terrMsg+"; geocoding "+addrRows.length+"..."); geocodeAddrs(fname,sheetName,color,addrRows,cols,oidRef,L); } else setUpStatus("Loaded "+fname+" - "+sheetName+" ("+coordGraphics.length+")"+terrMsg); }
@@ -824,10 +826,10 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       return locator.addressToLocations(GEOCODE_URL,{address:{SingleLine:item.addr},maxLocations:1}).then(function(c){ if(c&&c.length&&c[0].location){ var lx=c[0].location.x,ly=c[0].location.y;
         if(!inTerritory(lx,ly)){ outTerr++; } else { var g=mkGraphic(lx,ly,item.row,cols,oidRef); got++; if(existing){ pending.push(g); if(existing.fl){ (existing.fl.__sites||(existing.fl.__sites=[])).push({name:(g.attributes.__title)||"Site",lon:lx,lat:ly,oid:g.attributes.OBJECTID}); } } else all.push(g); } } }).catch(function(){}).then(function(){ done++; if(existing&&pending.length>=25){ flush(); if(existing.ui)existing.ui.setCount(existing.baseCount+got); } if(done%20===0||done===total) setUpStatus("Geocoded "+done+"/"+total+" - "+fname); return next(); }); }
     var runners=[]; for(var k=0;k<CONC;k++) runners.push(next());
-    return Promise.all(runners).then(function(){ var notFound=total-got-outTerr,terrMsg=outTerr?(" - "+outTerr+" outside Ameren territory"):"";
+    return Promise.all(runners).then(function(){ var notFound=total-got-outTerr,terrMsg=outTerr?(" - "+outTerr+" outside service territory"):"";
       if(existing){ flush(); if(existing.ui)existing.ui.setCount(existing.baseCount+got); zoomToLayer(existing.fl); setUpStatus("Loaded "+(existing.baseCount+got)+" point(s) from "+fname+(notFound?(" - "+notFound+" not found"):"")+terrMsg); }
       else if(all.length){ var L=createLayer(fname,sheetName,all,color); zoomToLayer(L.fl); setUpStatus("Loaded "+got+" point(s) from "+fname+(notFound?(" - "+notFound+" not found"):"")+terrMsg); }
-      else setUpStatus("Could not plot any points from "+fname+(outTerr?(" ("+outTerr+" outside Ameren territory)"):"")); refreshSites(); }); }
+      else setUpStatus("Could not plot any points from "+fname+(outTerr?(" ("+outTerr+" outside service territory)"):"")); refreshSites(); }); }
 
   // ---------- site list ----------
   var __siteToken=0;
@@ -855,7 +857,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   // Rendering is delegated entirely to the GraphicsLayer overlay, exactly like the NY tool's drawSites().
   function applyMapRestriction(){ drawSiteSymbols(); }
   function exportSiteRows(sites,filename,statusId){ if(!sites.length||typeof XLSX==="undefined")return; var st=$(statusId); var qd=qualDistMi(),sd=subDistMi(),se=subEligMi(),te=txEligMi();
-    var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)","Nearest substation (any, mi)","Sub within "+(se>0?se+"mi":"(off)"),"Nearest 69 kV line (mi)","69 kV within "+(te>0?te+"mi":"(off)"),"Substation ID","Substation Generation Hosting Capacity (kW)","Substation Generation in Queue (kW)","Substation Applications in Queue","Substation Penetration","Substation Generation Headroom (kW)","Feeder Voltage (kV)","Feeder DER in Queue (kW)","Feeder Applications in Queue","Feeder Penetration"];
+    var header=["Site","Sheet","Lat","Lon","Network","Units","Feeders <=0.1mi","Gen <=0.1mi (MW)","Load <=0.1mi (MW)","Feeders <=0.3mi","Gen <=0.3mi (MW)","Load <=0.3mi (MW)","Feeders <=0.5mi","Gen <=0.5mi (MW)","Load <=0.5mi (MW)","Qualifying feeders <="+qd+"mi","Nearest qual feeder","Nearest qual dist (mi)","Substations <="+sd+"mi","Nearest substation","Nearest sub dist (mi)","Nearest substation (any, mi)","Sub within "+(se>0?se+"mi":"(off)"),"Nearest transmission line (mi)","Transmission within "+(te>0?te+"mi":"(off)"),"Substation ID","Substation Generation Hosting Capacity (kW)","Substation Generation in Queue (kW)","Substation Applications in Queue","Substation Penetration","Substation Generation Headroom (kW)","Feeder Voltage (kV)","Feeder DER in Queue (kW)","Feeder Applications in Queue","Feeder Penetration"];
     var out=[header],i=0;
     function ceX(v,dp){ if(v==null)return ""; var n=parseFloat(v); if(isNaN(n))return ""; return dp!=null?+n.toFixed(dp):Math.round(n); }
     function step(){ if(i>=sites.length){ var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(out),"Site Summary"); XLSX.writeFile(wb,filename); if(st)st.textContent="Exported "+sites.length+" site(s)."; return; }
