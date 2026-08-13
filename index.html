@@ -767,6 +767,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     var lm=String(g("loc_method")||""),un=parseFloat(g("uncertainty_mi"));
     var LMT={verified_service_extent:"Verified from live feeder geometry",
              verified_asset_match:"Matched to a real substation record",
+             substation_match:"Snapped to the one known substation nearby",
              municipality_centroid:"Town centroid — NOT the asset site",
              approximate_locality:"Neighborhood / road reference",
              narrative_reference:"Utility's own descriptive siting language",
@@ -777,6 +778,21 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(!isNaN(un)&&un>0)s+=kv2("Could be within","± "+un+" mi");
     if(g("place"))s+=kv2("Named place",he(String(g("place")))+(g("county")?(", "+he(String(g("county")))+" Co."):""));
     if(g("region"))s+=kv2("Region",he(String(g("region"))));
+    /* Link to the real substation we derived by feeder convergence. ComEd's
+       public map is anonymized, so this is a PROXIMITY inference, never an ID
+       match — and the as-built capacity below is today's, not post-upgrade.  */
+    if(g("sub_nearest")){
+      s+=subhd("Nearest known substation");
+      s+=kv2("Derived substation",he(String(g("sub_nearest")))+" ("+he(String(g("sub_nearest_mi")))+" mi)");
+      var shc=parseFloat(g("sub_hc_kw"));
+      if(!isNaN(shc)){
+        s+=kv2("Its hosting capacity today",Math.round(shc).toLocaleString()+" kW");
+        if(shc<=0)s+='<div style="font-size:11px;color:#991b1b;font-weight:700;margin-top:3px;">Zero available capacity today — planned work here is the reason to watch this location.</div>';
+      }
+      var nc=String(g("sub_candidates")||"").split(";").filter(function(x){return x;}).length;
+      if(nc>1)s+=kv2("Substations within 3 mi",nc+" — not a unique match");
+      s+='<div style="font-size:10.5px;color:#8a8a9c;margin-top:4px;">Matched by proximity to substations we derived from feeder convergence, not by ID — ComEd publishes anonymized substation IDs. Capacity shown is as-built today and excludes this planned work.</div>';
+    }
     if(!isNaN(hm)&&hm>0)s+='<div style="font-size:10.5px;color:#8a8a9c;margin-top:7px;">* Estimate using ComEd&rsquo;s published averages (+8 MW per new 12 kV circuit, +4 MW per 4&rarr;12 kV conversion). Not a project-specific engineering value.</div>';
     /* This layer is ADDITIVE. Where a planned project sits at an existing
        asset, the existing substation/feeder record is untouched and still
@@ -816,9 +832,9 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
            distinction — which is exactly what happened to the narrative-tier
            substations and the Mendota constraint zone. */
         uniqueValueInfos:(function(){ var out=[],
-            METH=["verified_service_extent","verified_asset_match","approximate_locality",
-                  "narrative_reference","municipality_centroid","constraint_zone",
-                  "region_approximation","system_wide"];
+            METH=["verified_service_extent","verified_asset_match","substation_match",
+                  "approximate_locality","narrative_reference","municipality_centroid",
+                  "constraint_zone","region_approximation","system_wide"];
           METH.forEach(function(m){
             out.push({value:"proposed|"+m,symbol:{type:"simple-marker",style:"diamond",size:12,color:[237,233,254],outline:{color:[124,58,237],width:1.7}}});
             out.push({value:"approved|"+m,symbol:{type:"simple-marker",style:"diamond",size:12,color:[139,92,246],outline:{color:[76,29,149],width:1.7}}});

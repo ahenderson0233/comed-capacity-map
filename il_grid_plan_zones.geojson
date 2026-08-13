@@ -30,6 +30,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -332,6 +336,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -634,6 +642,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -936,6 +948,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1238,6 +1254,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1540,6 +1560,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1842,6 +1866,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2144,6 +2172,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "high",
     "risk_reason": "The AG specifically targets this project ($7.9M) as cost-ineffective - the ONLY Ameren Capacity Expansion project any party seeks to remove on those grounds.",
@@ -2446,6 +2478,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "high",
     "risk_reason": "The AG specifically targets this project ($7.9M) as cost-ineffective - the ONLY Ameren Capacity Expansion project any party seeks to remove on those grounds.",
@@ -2748,6 +2784,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -3050,6 +3090,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -3352,6 +3396,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -3654,6 +3702,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -3956,6 +4008,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -4258,6 +4314,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -4560,6 +4620,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -4862,6 +4926,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "Falls within the AG's $34.7M of targeted substation transformer / switchgear / breaker reductions. Note these are asset replacement, so they add little headroom regardless.",
@@ -5164,6 +5232,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -5466,6 +5538,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -5768,6 +5844,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -6070,6 +6150,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -6372,6 +6456,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -6674,6 +6762,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -6976,6 +7068,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -7278,6 +7374,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -7580,6 +7680,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -7882,6 +7986,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -8184,6 +8292,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -8486,6 +8598,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -8788,6 +8904,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -9090,6 +9210,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -9392,6 +9516,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -9694,6 +9822,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -9996,6 +10128,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -10298,6 +10434,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -10600,6 +10740,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -10902,6 +11046,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -11204,6 +11352,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -11506,6 +11658,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -11808,6 +11964,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -12110,6 +12270,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -12412,6 +12576,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -12714,6 +12882,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -13016,6 +13188,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -13318,6 +13494,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -13606,912 +13786,6 @@
     "status": "proposed",
     "group": "3. Feeders & lines",
     "project_id": "",
-    "project_name": "NRE GBG L6627 Reconductor",
-    "category": "Capacity Expansion",
-    "asset_type": "reconductor",
-    "feeder_id": "L6627",
-    "substation": "",
-    "place": "Galesburg",
-    "county": "Knox",
-    "region": "Northern",
-    "program_year": 2030,
-    "cost_usd": 1614618,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "feeder_match": "",
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "low",
-    "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "program_id": "",
-    "itn": "",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "L#### IDs are subtransmission lines (34.5/69kV) - NOT present in the <=15kV distribution HC layer."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -90.332824,
-       40.9478
-      ],
-      [
-       -90.333009,
-       40.950641
-      ],
-      [
-       -90.333562,
-       40.953455
-      ],
-      [
-       -90.334477,
-       40.956214
-      ],
-      [
-       -90.335745,
-       40.958892
-      ],
-      [
-       -90.337356,
-       40.961464
-      ],
-      [
-       -90.339292,
-       40.963903
-      ],
-      [
-       -90.341535,
-       40.966188
-      ],
-      [
-       -90.344064,
-       40.968296
-      ],
-      [
-       -90.346855,
-       40.970206
-      ],
-      [
-       -90.34988,
-       40.971901
-      ],
-      [
-       -90.35311,
-       40.973363
-      ],
-      [
-       -90.356514,
-       40.974579
-      ],
-      [
-       -90.36006,
-       40.975537
-      ],
-      [
-       -90.363713,
-       40.976229
-      ],
-      [
-       -90.367439,
-       40.976646
-      ],
-      [
-       -90.3712,
-       40.976786
-      ],
-      [
-       -90.374961,
-       40.976646
-      ],
-      [
-       -90.378687,
-       40.976229
-      ],
-      [
-       -90.38234,
-       40.975537
-      ],
-      [
-       -90.385886,
-       40.974579
-      ],
-      [
-       -90.38929,
-       40.973363
-      ],
-      [
-       -90.39252,
-       40.971901
-      ],
-      [
-       -90.395545,
-       40.970206
-      ],
-      [
-       -90.398336,
-       40.968296
-      ],
-      [
-       -90.400865,
-       40.966188
-      ],
-      [
-       -90.403108,
-       40.963903
-      ],
-      [
-       -90.405044,
-       40.961464
-      ],
-      [
-       -90.406655,
-       40.958892
-      ],
-      [
-       -90.407923,
-       40.956214
-      ],
-      [
-       -90.408838,
-       40.953455
-      ],
-      [
-       -90.409391,
-       40.950641
-      ],
-      [
-       -90.409576,
-       40.9478
-      ],
-      [
-       -90.409391,
-       40.944959
-      ],
-      [
-       -90.408838,
-       40.942145
-      ],
-      [
-       -90.407923,
-       40.939386
-      ],
-      [
-       -90.406655,
-       40.936708
-      ],
-      [
-       -90.405044,
-       40.934136
-      ],
-      [
-       -90.403108,
-       40.931697
-      ],
-      [
-       -90.400865,
-       40.929412
-      ],
-      [
-       -90.398336,
-       40.927304
-      ],
-      [
-       -90.395545,
-       40.925394
-      ],
-      [
-       -90.39252,
-       40.923699
-      ],
-      [
-       -90.38929,
-       40.922237
-      ],
-      [
-       -90.385886,
-       40.921021
-      ],
-      [
-       -90.38234,
-       40.920063
-      ],
-      [
-       -90.378687,
-       40.919371
-      ],
-      [
-       -90.374961,
-       40.918954
-      ],
-      [
-       -90.3712,
-       40.918814
-      ],
-      [
-       -90.367439,
-       40.918954
-      ],
-      [
-       -90.363713,
-       40.919371
-      ],
-      [
-       -90.36006,
-       40.920063
-      ],
-      [
-       -90.356514,
-       40.921021
-      ],
-      [
-       -90.35311,
-       40.922237
-      ],
-      [
-       -90.34988,
-       40.923699
-      ],
-      [
-       -90.346855,
-       40.925394
-      ],
-      [
-       -90.344064,
-       40.927304
-      ],
-      [
-       -90.341535,
-       40.929412
-      ],
-      [
-       -90.339292,
-       40.931697
-      ],
-      [
-       -90.337356,
-       40.934136
-      ],
-      [
-       -90.335745,
-       40.936708
-      ],
-      [
-       -90.334477,
-       40.939386
-      ],
-      [
-       -90.333562,
-       40.942145
-      ],
-      [
-       -90.333009,
-       40.944959
-      ],
-      [
-       -90.332824,
-       40.9478
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "Ameren Illinois",
-    "docket": "26-0051",
-    "status": "proposed",
-    "group": "3. Feeders & lines",
-    "project_id": "",
-    "project_name": "WRE Maryville Reconductor L3314 E Collinsville",
-    "category": "Capacity Expansion",
-    "asset_type": "reconductor",
-    "feeder_id": "L3314",
-    "substation": "",
-    "place": "Collinsville",
-    "county": "Madison",
-    "region": "Western",
-    "program_year": "",
-    "cost_usd": 1622000,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "feeder_match": "",
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "low",
-    "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "program_id": "",
-    "itn": "",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "L#### IDs are subtransmission lines (34.5/69kV) - NOT present in the <=15kV distribution HC layer."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -89.947475,
-       38.6703
-      ],
-      [
-       -89.947654,
-       38.673141
-      ],
-      [
-       -89.948188,
-       38.675955
-      ],
-      [
-       -89.949074,
-       38.678714
-      ],
-      [
-       -89.950301,
-       38.681392
-      ],
-      [
-       -89.951859,
-       38.683964
-      ],
-      [
-       -89.953732,
-       38.686403
-      ],
-      [
-       -89.955902,
-       38.688688
-      ],
-      [
-       -89.958349,
-       38.690796
-      ],
-      [
-       -89.961048,
-       38.692706
-      ],
-      [
-       -89.963974,
-       38.694401
-      ],
-      [
-       -89.967099,
-       38.695863
-      ],
-      [
-       -89.970393,
-       38.697079
-      ],
-      [
-       -89.973823,
-       38.698037
-      ],
-      [
-       -89.977357,
-       38.698729
-      ],
-      [
-       -89.980961,
-       38.699146
-      ],
-      [
-       -89.9846,
-       38.699286
-      ],
-      [
-       -89.988239,
-       38.699146
-      ],
-      [
-       -89.991843,
-       38.698729
-      ],
-      [
-       -89.995377,
-       38.698037
-      ],
-      [
-       -89.998807,
-       38.697079
-      ],
-      [
-       -90.002101,
-       38.695863
-      ],
-      [
-       -90.005226,
-       38.694401
-      ],
-      [
-       -90.008152,
-       38.692706
-      ],
-      [
-       -90.010851,
-       38.690796
-      ],
-      [
-       -90.013298,
-       38.688688
-      ],
-      [
-       -90.015468,
-       38.686403
-      ],
-      [
-       -90.017341,
-       38.683964
-      ],
-      [
-       -90.018899,
-       38.681392
-      ],
-      [
-       -90.020126,
-       38.678714
-      ],
-      [
-       -90.021012,
-       38.675955
-      ],
-      [
-       -90.021546,
-       38.673141
-      ],
-      [
-       -90.021725,
-       38.6703
-      ],
-      [
-       -90.021546,
-       38.667459
-      ],
-      [
-       -90.021012,
-       38.664645
-      ],
-      [
-       -90.020126,
-       38.661886
-      ],
-      [
-       -90.018899,
-       38.659208
-      ],
-      [
-       -90.017341,
-       38.656636
-      ],
-      [
-       -90.015468,
-       38.654197
-      ],
-      [
-       -90.013298,
-       38.651912
-      ],
-      [
-       -90.010851,
-       38.649804
-      ],
-      [
-       -90.008152,
-       38.647894
-      ],
-      [
-       -90.005226,
-       38.646199
-      ],
-      [
-       -90.002101,
-       38.644737
-      ],
-      [
-       -89.998807,
-       38.643521
-      ],
-      [
-       -89.995377,
-       38.642563
-      ],
-      [
-       -89.991843,
-       38.641871
-      ],
-      [
-       -89.988239,
-       38.641454
-      ],
-      [
-       -89.9846,
-       38.641314
-      ],
-      [
-       -89.980961,
-       38.641454
-      ],
-      [
-       -89.977357,
-       38.641871
-      ],
-      [
-       -89.973823,
-       38.642563
-      ],
-      [
-       -89.970393,
-       38.643521
-      ],
-      [
-       -89.967099,
-       38.644737
-      ],
-      [
-       -89.963974,
-       38.646199
-      ],
-      [
-       -89.961048,
-       38.647894
-      ],
-      [
-       -89.958349,
-       38.649804
-      ],
-      [
-       -89.955902,
-       38.651912
-      ],
-      [
-       -89.953732,
-       38.654197
-      ],
-      [
-       -89.951859,
-       38.656636
-      ],
-      [
-       -89.950301,
-       38.659208
-      ],
-      [
-       -89.949074,
-       38.661886
-      ],
-      [
-       -89.948188,
-       38.664645
-      ],
-      [
-       -89.947654,
-       38.667459
-      ],
-      [
-       -89.947475,
-       38.6703
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "Ameren Illinois",
-    "docket": "26-0051",
-    "status": "proposed",
-    "group": "3. Feeders & lines",
-    "project_id": "",
-    "project_name": "WRE Maryville L3308 Reconductor",
-    "category": "Capacity Expansion",
-    "asset_type": "reconductor",
-    "feeder_id": "L3308",
-    "substation": "",
-    "place": "Maryville",
-    "county": "Madison",
-    "region": "Western",
-    "program_year": "",
-    "cost_usd": 329362,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "feeder_match": "",
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "low",
-    "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "program_id": "",
-    "itn": "",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "L#### IDs are subtransmission lines (34.5/69kV) - NOT present in the <=15kV distribution HC layer."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -89.918448,
-       38.7231
-      ],
-      [
-       -89.918626,
-       38.725941
-      ],
-      [
-       -89.919161,
-       38.728755
-      ],
-      [
-       -89.920047,
-       38.731514
-      ],
-      [
-       -89.921276,
-       38.734192
-      ],
-      [
-       -89.922834,
-       38.736764
-      ],
-      [
-       -89.924709,
-       38.739203
-      ],
-      [
-       -89.926881,
-       38.741488
-      ],
-      [
-       -89.929329,
-       38.743596
-      ],
-      [
-       -89.932031,
-       38.745506
-      ],
-      [
-       -89.934959,
-       38.747201
-      ],
-      [
-       -89.938086,
-       38.748663
-      ],
-      [
-       -89.941382,
-       38.749879
-      ],
-      [
-       -89.944815,
-       38.750837
-      ],
-      [
-       -89.948352,
-       38.751529
-      ],
-      [
-       -89.951958,
-       38.751946
-      ],
-      [
-       -89.9556,
-       38.752086
-      ],
-      [
-       -89.959242,
-       38.751946
-      ],
-      [
-       -89.962848,
-       38.751529
-      ],
-      [
-       -89.966385,
-       38.750837
-      ],
-      [
-       -89.969818,
-       38.749879
-      ],
-      [
-       -89.973114,
-       38.748663
-      ],
-      [
-       -89.976241,
-       38.747201
-      ],
-      [
-       -89.979169,
-       38.745506
-      ],
-      [
-       -89.981871,
-       38.743596
-      ],
-      [
-       -89.984319,
-       38.741488
-      ],
-      [
-       -89.986491,
-       38.739203
-      ],
-      [
-       -89.988366,
-       38.736764
-      ],
-      [
-       -89.989924,
-       38.734192
-      ],
-      [
-       -89.991153,
-       38.731514
-      ],
-      [
-       -89.992039,
-       38.728755
-      ],
-      [
-       -89.992574,
-       38.725941
-      ],
-      [
-       -89.992752,
-       38.7231
-      ],
-      [
-       -89.992574,
-       38.720259
-      ],
-      [
-       -89.992039,
-       38.717445
-      ],
-      [
-       -89.991153,
-       38.714686
-      ],
-      [
-       -89.989924,
-       38.712008
-      ],
-      [
-       -89.988366,
-       38.709436
-      ],
-      [
-       -89.986491,
-       38.706997
-      ],
-      [
-       -89.984319,
-       38.704712
-      ],
-      [
-       -89.981871,
-       38.702604
-      ],
-      [
-       -89.979169,
-       38.700694
-      ],
-      [
-       -89.976241,
-       38.698999
-      ],
-      [
-       -89.973114,
-       38.697537
-      ],
-      [
-       -89.969818,
-       38.696321
-      ],
-      [
-       -89.966385,
-       38.695363
-      ],
-      [
-       -89.962848,
-       38.694671
-      ],
-      [
-       -89.959242,
-       38.694254
-      ],
-      [
-       -89.9556,
-       38.694114
-      ],
-      [
-       -89.951958,
-       38.694254
-      ],
-      [
-       -89.948352,
-       38.694671
-      ],
-      [
-       -89.944815,
-       38.695363
-      ],
-      [
-       -89.941382,
-       38.696321
-      ],
-      [
-       -89.938086,
-       38.697537
-      ],
-      [
-       -89.934959,
-       38.698999
-      ],
-      [
-       -89.932031,
-       38.700694
-      ],
-      [
-       -89.929329,
-       38.702604
-      ],
-      [
-       -89.926881,
-       38.704712
-      ],
-      [
-       -89.924709,
-       38.706997
-      ],
-      [
-       -89.922834,
-       38.709436
-      ],
-      [
-       -89.921276,
-       38.712008
-      ],
-      [
-       -89.920047,
-       38.714686
-      ],
-      [
-       -89.919161,
-       38.717445
-      ],
-      [
-       -89.918626,
-       38.720259
-      ],
-      [
-       -89.918448,
-       38.7231
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "Ameren Illinois",
-    "docket": "26-0051",
-    "status": "proposed",
-    "group": "3. Feeders & lines",
-    "project_id": "",
     "project_name": "SRE-ECP102 Herrin East 273 Reconductor",
     "category": "Capacity Expansion",
     "asset_type": "reconductor",
@@ -14526,6 +13800,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -14828,6 +14106,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -15130,6 +14412,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -15432,6 +14718,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -15734,6 +15024,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -16036,6 +15330,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -16338,6 +15636,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -16640,6 +15942,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -16942,6 +16248,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -17244,6 +16554,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -17546,6 +16860,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -17848,6 +17166,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -18150,6 +17472,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -18452,6 +17778,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -18754,6 +18084,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -19056,6 +18390,10 @@
     "loc_method": "verified_asset_match",
     "uncertainty_mi": 0.75,
     "feeder_match": "",
+    "sub_nearest": "S0732",
+    "sub_nearest_mi": 0.06,
+    "sub_hc_kw": 223823,
+    "sub_candidates": "S0732;S0665",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in cuts overall, but this project cleared ComEd's own non-wires screen and has a dedicated cost-effectiveness appendix, which strengthens it relative to other ComEd asks.",
@@ -19358,6 +18696,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0528",
+    "sub_nearest_mi": 1.77,
+    "sub_hc_kw": 14361,
+    "sub_candidates": "S0528;S0638;S0538;S0752",
     "hosting_capacity_flag": "possible",
     "removal_risk": "high",
     "risk_reason": "CUB seeks $405M of data-center-driven upgrades cut until costs are allocated to the causing customers, arguing the forecasts come from developers facing no penalty for speculating. ComEd conceded one such data center was CANCELLED by its developer.",
@@ -19660,6 +19002,10 @@
     "loc_method": "narrative_reference",
     "uncertainty_mi": 1.0,
     "feeder_match": "",
+    "sub_nearest": "S0702",
+    "sub_nearest_mi": 0.9,
+    "sub_hc_kw": 27364,
+    "sub_candidates": "S0702;S0713;S0735;S0648;S0504;S0700;S0697",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -19962,6 +19308,10 @@
     "loc_method": "narrative_reference",
     "uncertainty_mi": 1.5,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.22,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0740;S0723;S0633;S0698;S0706;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -20264,6 +19614,10 @@
     "loc_method": "narrative_reference",
     "uncertainty_mi": 3.0,
     "feeder_match": "",
+    "sub_nearest": "S0736",
+    "sub_nearest_mi": 1.25,
+    "sub_hc_kw": 1470,
+    "sub_candidates": "S0736;S0072;S0559",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -20566,6 +19920,10 @@
     "loc_method": "narrative_reference",
     "uncertainty_mi": 1.5,
     "feeder_match": "",
+    "sub_nearest": "S0632",
+    "sub_nearest_mi": 1.35,
+    "sub_hc_kw": 25513,
+    "sub_candidates": "S0632;S0700;S0698;S0693",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -20865,9 +20223,13 @@
     "program_year": 2026,
     "cost_usd": 7798872,
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0661",
+    "sub_nearest_mi": 1.23,
+    "sub_hc_kw": 48221,
+    "sub_candidates": "S0661",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -20878,271 +20240,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": ""
+    "notes": "LOCATION UPGRADED: snapped to derived ComEd substation S0661, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 48221 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -88.164967,
-       41.8847
+       -88.215245,
+       41.89319
       ],
       [
-       -88.165154,
-       41.887541
+       -88.215292,
+       41.8939
       ],
       [
-       -88.165715,
-       41.890355
+       -88.215432,
+       41.894604
       ],
       [
-       -88.166643,
-       41.893114
+       -88.215665,
+       41.895294
       ],
       [
-       -88.16793,
-       41.895792
+       -88.215986,
+       41.895963
       ],
       [
-       -88.169564,
-       41.898364
+       -88.216395,
+       41.896606
       ],
       [
-       -88.171528,
-       41.900803
+       -88.216886,
+       41.897216
       ],
       [
-       -88.173804,
-       41.903088
+       -88.217455,
+       41.897787
       ],
       [
-       -88.17637,
-       41.905196
+       -88.218097,
+       41.898314
       ],
       [
-       -88.179201,
-       41.907106
+       -88.218804,
+       41.898792
       ],
       [
-       -88.18227,
-       41.908801
+       -88.219572,
+       41.899215
       ],
       [
-       -88.185547,
-       41.910263
+       -88.220391,
+       41.899581
       ],
       [
-       -88.189001,
-       41.911479
+       -88.221255,
+       41.899885
       ],
       [
-       -88.192598,
-       41.912437
+       -88.222154,
+       41.900124
       ],
       [
-       -88.196304,
-       41.913129
+       -88.223081,
+       41.900297
       ],
       [
-       -88.200084,
-       41.913546
+       -88.224026,
+       41.900401
       ],
       [
-       -88.2039,
-       41.913686
+       -88.22498,
+       41.900436
       ],
       [
-       -88.207716,
-       41.913546
+       -88.225934,
+       41.900401
       ],
       [
-       -88.211496,
-       41.913129
+       -88.226879,
+       41.900297
       ],
       [
-       -88.215202,
-       41.912437
+       -88.227806,
+       41.900124
       ],
       [
-       -88.218799,
-       41.911479
+       -88.228705,
+       41.899885
       ],
       [
-       -88.222253,
-       41.910263
+       -88.229569,
+       41.899581
       ],
       [
-       -88.22553,
-       41.908801
+       -88.230388,
+       41.899215
       ],
       [
-       -88.228599,
-       41.907106
+       -88.231156,
+       41.898792
       ],
       [
-       -88.23143,
-       41.905196
+       -88.231863,
+       41.898314
       ],
       [
-       -88.233996,
-       41.903088
+       -88.232505,
+       41.897787
       ],
       [
-       -88.236272,
-       41.900803
+       -88.233074,
+       41.897216
       ],
       [
-       -88.238236,
-       41.898364
+       -88.233565,
+       41.896606
       ],
       [
-       -88.23987,
-       41.895792
+       -88.233974,
+       41.895963
       ],
       [
-       -88.241157,
-       41.893114
+       -88.234295,
+       41.895294
       ],
       [
-       -88.242085,
-       41.890355
+       -88.234528,
+       41.894604
       ],
       [
-       -88.242646,
-       41.887541
+       -88.234668,
+       41.8939
       ],
       [
-       -88.242833,
-       41.8847
+       -88.234715,
+       41.89319
       ],
       [
-       -88.242646,
-       41.881859
+       -88.234668,
+       41.89248
       ],
       [
-       -88.242085,
-       41.879045
+       -88.234528,
+       41.891776
       ],
       [
-       -88.241157,
-       41.876286
+       -88.234295,
+       41.891086
       ],
       [
-       -88.23987,
-       41.873608
+       -88.233974,
+       41.890417
       ],
       [
-       -88.238236,
-       41.871036
+       -88.233565,
+       41.889774
       ],
       [
-       -88.236272,
-       41.868597
+       -88.233074,
+       41.889164
       ],
       [
-       -88.233996,
-       41.866312
+       -88.232505,
+       41.888593
       ],
       [
-       -88.23143,
-       41.864204
+       -88.231863,
+       41.888066
       ],
       [
-       -88.228599,
-       41.862294
+       -88.231156,
+       41.887588
       ],
       [
-       -88.22553,
-       41.860599
+       -88.230388,
+       41.887165
       ],
       [
-       -88.222253,
-       41.859137
+       -88.229569,
+       41.886799
       ],
       [
-       -88.218799,
-       41.857921
+       -88.228705,
+       41.886495
       ],
       [
-       -88.215202,
-       41.856963
+       -88.227806,
+       41.886256
       ],
       [
-       -88.211496,
-       41.856271
+       -88.226879,
+       41.886083
       ],
       [
-       -88.207716,
-       41.855854
+       -88.225934,
+       41.885979
       ],
       [
-       -88.2039,
-       41.855714
+       -88.22498,
+       41.885944
       ],
       [
-       -88.200084,
-       41.855854
+       -88.224026,
+       41.885979
       ],
       [
-       -88.196304,
-       41.856271
+       -88.223081,
+       41.886083
       ],
       [
-       -88.192598,
-       41.856963
+       -88.222154,
+       41.886256
       ],
       [
-       -88.189001,
-       41.857921
+       -88.221255,
+       41.886495
       ],
       [
-       -88.185547,
-       41.859137
+       -88.220391,
+       41.886799
       ],
       [
-       -88.18227,
-       41.860599
+       -88.219572,
+       41.887165
       ],
       [
-       -88.179201,
-       41.862294
+       -88.218804,
+       41.887588
       ],
       [
-       -88.17637,
-       41.864204
+       -88.218097,
+       41.888066
       ],
       [
-       -88.173804,
-       41.866312
+       -88.217455,
+       41.888593
       ],
       [
-       -88.171528,
-       41.868597
+       -88.216886,
+       41.889164
       ],
       [
-       -88.169564,
-       41.871036
+       -88.216395,
+       41.889774
       ],
       [
-       -88.16793,
-       41.873608
+       -88.215986,
+       41.890417
       ],
       [
-       -88.166643,
-       41.876286
+       -88.215665,
+       41.891086
       ],
       [
-       -88.165715,
-       41.879045
+       -88.215432,
+       41.891776
       ],
       [
-       -88.165154,
-       41.881859
+       -88.215292,
+       41.89248
       ],
       [
-       -88.164967,
-       41.8847
+       -88.215245,
+       41.89319
       ]
      ]
     ]
@@ -21170,6 +20532,10 @@
     "loc_method": "approximate_locality",
     "uncertainty_mi": 1.0,
     "feeder_match": "",
+    "sub_nearest": "S0699",
+    "sub_nearest_mi": 0.55,
+    "sub_hc_kw": 9067,
+    "sub_candidates": "S0699;S0694;S0599;S0695",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -21472,6 +20838,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -21771,9 +21141,13 @@
     "program_year": 2026,
     "cost_usd": 4484783,
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0277",
+    "sub_nearest_mi": 0.93,
+    "sub_hc_kw": 0,
+    "sub_candidates": "S0277;S0276",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -21784,271 +21158,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": "FORECAST REVISED DOWN SHARPLY: ComEd's Q4 2025 filing projected $24.27M for this same 2026 work; the Q1 2026 filing shows $4.48M. The later figure is used here. A revision this large is a caution against treating any single-vintage cost as settled."
+    "notes": "FORECAST REVISED DOWN SHARPLY: ComEd's Q4 2025 filing projected $24.27M for this same 2026 work; the Q1 2026 filing shows $4.48M. The later figure is used here. A revision this large is a caution against treating any single-vintage cost as settled. LOCATION UPGRADED: snapped to derived ComEd substation S0277, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 0 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -88.738135,
-       41.7717
+       -88.764142,
+       41.78504
       ],
       [
-       -88.738322,
-       41.774541
+       -88.764189,
+       41.78575
       ],
       [
-       -88.738882,
-       41.777355
+       -88.764329,
+       41.786454
       ],
       [
-       -88.739809,
-       41.780114
+       -88.76456,
+       41.787144
       ],
       [
-       -88.741094,
-       41.782792
+       -88.764882,
+       41.787813
       ],
       [
-       -88.742724,
-       41.785364
+       -88.765289,
+       41.788456
       ],
       [
-       -88.744685,
-       41.787803
+       -88.76578,
+       41.789066
       ],
       [
-       -88.746957,
-       41.790088
+       -88.766348,
+       41.789637
       ],
       [
-       -88.749518,
-       41.792196
+       -88.766988,
+       41.790164
       ],
       [
-       -88.752344,
-       41.794106
+       -88.767695,
+       41.790642
       ],
       [
-       -88.755408,
-       41.795801
+       -88.768461,
+       41.791065
       ],
       [
-       -88.758679,
-       41.797263
+       -88.769279,
+       41.791431
       ],
       [
-       -88.762127,
-       41.798479
+       -88.770141,
+       41.791735
       ],
       [
-       -88.765718,
-       41.799437
+       -88.771039,
+       41.791974
       ],
       [
-       -88.769418,
-       41.800129
+       -88.771964,
+       41.792147
       ],
       [
-       -88.773191,
-       41.800546
+       -88.772907,
+       41.792251
       ],
       [
-       -88.777,
-       41.800686
+       -88.77386,
+       41.792286
       ],
       [
-       -88.780809,
-       41.800546
+       -88.774813,
+       41.792251
       ],
       [
-       -88.784582,
-       41.800129
+       -88.775756,
+       41.792147
       ],
       [
-       -88.788282,
-       41.799437
+       -88.776681,
+       41.791974
       ],
       [
-       -88.791873,
-       41.798479
+       -88.777579,
+       41.791735
       ],
       [
-       -88.795321,
-       41.797263
+       -88.778441,
+       41.791431
       ],
       [
-       -88.798592,
-       41.795801
+       -88.779259,
+       41.791065
       ],
       [
-       -88.801656,
-       41.794106
+       -88.780025,
+       41.790642
       ],
       [
-       -88.804482,
-       41.792196
+       -88.780732,
+       41.790164
       ],
       [
-       -88.807043,
-       41.790088
+       -88.781372,
+       41.789637
       ],
       [
-       -88.809315,
-       41.787803
+       -88.78194,
+       41.789066
       ],
       [
-       -88.811276,
-       41.785364
+       -88.782431,
+       41.788456
       ],
       [
-       -88.812906,
-       41.782792
+       -88.782838,
+       41.787813
       ],
       [
-       -88.814191,
-       41.780114
+       -88.78316,
+       41.787144
       ],
       [
-       -88.815118,
-       41.777355
+       -88.783391,
+       41.786454
       ],
       [
-       -88.815678,
-       41.774541
+       -88.783531,
+       41.78575
       ],
       [
-       -88.815865,
-       41.7717
+       -88.783578,
+       41.78504
       ],
       [
-       -88.815678,
-       41.768859
+       -88.783531,
+       41.78433
       ],
       [
-       -88.815118,
-       41.766045
+       -88.783391,
+       41.783626
       ],
       [
-       -88.814191,
-       41.763286
+       -88.78316,
+       41.782936
       ],
       [
-       -88.812906,
-       41.760608
+       -88.782838,
+       41.782267
       ],
       [
-       -88.811276,
-       41.758036
+       -88.782431,
+       41.781624
       ],
       [
-       -88.809315,
-       41.755597
+       -88.78194,
+       41.781014
       ],
       [
-       -88.807043,
-       41.753312
+       -88.781372,
+       41.780443
       ],
       [
-       -88.804482,
-       41.751204
+       -88.780732,
+       41.779916
       ],
       [
-       -88.801656,
-       41.749294
+       -88.780025,
+       41.779438
       ],
       [
-       -88.798592,
-       41.747599
+       -88.779259,
+       41.779015
       ],
       [
-       -88.795321,
-       41.746137
+       -88.778441,
+       41.778649
       ],
       [
-       -88.791873,
-       41.744921
+       -88.777579,
+       41.778345
       ],
       [
-       -88.788282,
-       41.743963
+       -88.776681,
+       41.778106
       ],
       [
-       -88.784582,
-       41.743271
+       -88.775756,
+       41.777933
       ],
       [
-       -88.780809,
-       41.742854
+       -88.774813,
+       41.777829
       ],
       [
-       -88.777,
-       41.742714
+       -88.77386,
+       41.777794
       ],
       [
-       -88.773191,
-       41.742854
+       -88.772907,
+       41.777829
       ],
       [
-       -88.769418,
-       41.743271
+       -88.771964,
+       41.777933
       ],
       [
-       -88.765718,
-       41.743963
+       -88.771039,
+       41.778106
       ],
       [
-       -88.762127,
-       41.744921
+       -88.770141,
+       41.778345
       ],
       [
-       -88.758679,
-       41.746137
+       -88.769279,
+       41.778649
       ],
       [
-       -88.755408,
-       41.747599
+       -88.768461,
+       41.779015
       ],
       [
-       -88.752344,
-       41.749294
+       -88.767695,
+       41.779438
       ],
       [
-       -88.749518,
-       41.751204
+       -88.766988,
+       41.779916
       ],
       [
-       -88.746957,
-       41.753312
+       -88.766348,
+       41.780443
       ],
       [
-       -88.744685,
-       41.755597
+       -88.76578,
+       41.781014
       ],
       [
-       -88.742724,
-       41.758036
+       -88.765289,
+       41.781624
       ],
       [
-       -88.741094,
-       41.760608
+       -88.764882,
+       41.782267
       ],
       [
-       -88.739809,
-       41.763286
+       -88.76456,
+       41.782936
       ],
       [
-       -88.738882,
-       41.766045
+       -88.764329,
+       41.783626
       ],
       [
-       -88.738322,
-       41.768859
+       -88.764189,
+       41.78433
       ],
       [
-       -88.738135,
-       41.7717
+       -88.764142,
+       41.78504
       ]
      ]
     ]
@@ -22073,9 +21447,13 @@
     "program_year": 2026,
     "cost_usd": 3764419,
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0277",
+    "sub_nearest_mi": 0.93,
+    "sub_hc_kw": 0,
+    "sub_candidates": "S0277;S0276",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -22086,271 +21464,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": ""
+    "notes": "LOCATION UPGRADED: snapped to derived ComEd substation S0277, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 0 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -88.738135,
-       41.7717
+       -88.764142,
+       41.78504
       ],
       [
-       -88.738322,
-       41.774541
+       -88.764189,
+       41.78575
       ],
       [
-       -88.738882,
-       41.777355
+       -88.764329,
+       41.786454
       ],
       [
-       -88.739809,
-       41.780114
+       -88.76456,
+       41.787144
       ],
       [
-       -88.741094,
-       41.782792
+       -88.764882,
+       41.787813
       ],
       [
-       -88.742724,
-       41.785364
+       -88.765289,
+       41.788456
       ],
       [
-       -88.744685,
-       41.787803
+       -88.76578,
+       41.789066
       ],
       [
-       -88.746957,
-       41.790088
+       -88.766348,
+       41.789637
       ],
       [
-       -88.749518,
-       41.792196
+       -88.766988,
+       41.790164
       ],
       [
-       -88.752344,
-       41.794106
+       -88.767695,
+       41.790642
       ],
       [
-       -88.755408,
-       41.795801
+       -88.768461,
+       41.791065
       ],
       [
-       -88.758679,
-       41.797263
+       -88.769279,
+       41.791431
       ],
       [
-       -88.762127,
-       41.798479
+       -88.770141,
+       41.791735
       ],
       [
-       -88.765718,
-       41.799437
+       -88.771039,
+       41.791974
       ],
       [
-       -88.769418,
-       41.800129
+       -88.771964,
+       41.792147
       ],
       [
-       -88.773191,
-       41.800546
+       -88.772907,
+       41.792251
       ],
       [
-       -88.777,
-       41.800686
+       -88.77386,
+       41.792286
       ],
       [
-       -88.780809,
-       41.800546
+       -88.774813,
+       41.792251
       ],
       [
-       -88.784582,
-       41.800129
+       -88.775756,
+       41.792147
       ],
       [
-       -88.788282,
-       41.799437
+       -88.776681,
+       41.791974
       ],
       [
-       -88.791873,
-       41.798479
+       -88.777579,
+       41.791735
       ],
       [
-       -88.795321,
-       41.797263
+       -88.778441,
+       41.791431
       ],
       [
-       -88.798592,
-       41.795801
+       -88.779259,
+       41.791065
       ],
       [
-       -88.801656,
-       41.794106
+       -88.780025,
+       41.790642
       ],
       [
-       -88.804482,
-       41.792196
+       -88.780732,
+       41.790164
       ],
       [
-       -88.807043,
-       41.790088
+       -88.781372,
+       41.789637
       ],
       [
-       -88.809315,
-       41.787803
+       -88.78194,
+       41.789066
       ],
       [
-       -88.811276,
-       41.785364
+       -88.782431,
+       41.788456
       ],
       [
-       -88.812906,
-       41.782792
+       -88.782838,
+       41.787813
       ],
       [
-       -88.814191,
-       41.780114
+       -88.78316,
+       41.787144
       ],
       [
-       -88.815118,
-       41.777355
+       -88.783391,
+       41.786454
       ],
       [
-       -88.815678,
-       41.774541
+       -88.783531,
+       41.78575
       ],
       [
-       -88.815865,
-       41.7717
+       -88.783578,
+       41.78504
       ],
       [
-       -88.815678,
-       41.768859
+       -88.783531,
+       41.78433
       ],
       [
-       -88.815118,
-       41.766045
+       -88.783391,
+       41.783626
       ],
       [
-       -88.814191,
-       41.763286
+       -88.78316,
+       41.782936
       ],
       [
-       -88.812906,
-       41.760608
+       -88.782838,
+       41.782267
       ],
       [
-       -88.811276,
-       41.758036
+       -88.782431,
+       41.781624
       ],
       [
-       -88.809315,
-       41.755597
+       -88.78194,
+       41.781014
       ],
       [
-       -88.807043,
-       41.753312
+       -88.781372,
+       41.780443
       ],
       [
-       -88.804482,
-       41.751204
+       -88.780732,
+       41.779916
       ],
       [
-       -88.801656,
-       41.749294
+       -88.780025,
+       41.779438
       ],
       [
-       -88.798592,
-       41.747599
+       -88.779259,
+       41.779015
       ],
       [
-       -88.795321,
-       41.746137
+       -88.778441,
+       41.778649
       ],
       [
-       -88.791873,
-       41.744921
+       -88.777579,
+       41.778345
       ],
       [
-       -88.788282,
-       41.743963
+       -88.776681,
+       41.778106
       ],
       [
-       -88.784582,
-       41.743271
+       -88.775756,
+       41.777933
       ],
       [
-       -88.780809,
-       41.742854
+       -88.774813,
+       41.777829
       ],
       [
-       -88.777,
-       41.742714
+       -88.77386,
+       41.777794
       ],
       [
-       -88.773191,
-       41.742854
+       -88.772907,
+       41.777829
       ],
       [
-       -88.769418,
-       41.743271
+       -88.771964,
+       41.777933
       ],
       [
-       -88.765718,
-       41.743963
+       -88.771039,
+       41.778106
       ],
       [
-       -88.762127,
-       41.744921
+       -88.770141,
+       41.778345
       ],
       [
-       -88.758679,
-       41.746137
+       -88.769279,
+       41.778649
       ],
       [
-       -88.755408,
-       41.747599
+       -88.768461,
+       41.779015
       ],
       [
-       -88.752344,
-       41.749294
+       -88.767695,
+       41.779438
       ],
       [
-       -88.749518,
-       41.751204
+       -88.766988,
+       41.779916
       ],
       [
-       -88.746957,
-       41.753312
+       -88.766348,
+       41.780443
       ],
       [
-       -88.744685,
-       41.755597
+       -88.76578,
+       41.781014
       ],
       [
-       -88.742724,
-       41.758036
+       -88.765289,
+       41.781624
       ],
       [
-       -88.741094,
-       41.760608
+       -88.764882,
+       41.782267
       ],
       [
-       -88.739809,
-       41.763286
+       -88.76456,
+       41.782936
       ],
       [
-       -88.738882,
-       41.766045
+       -88.764329,
+       41.783626
       ],
       [
-       -88.738322,
-       41.768859
+       -88.764189,
+       41.78433
       ],
       [
-       -88.738135,
-       41.7717
+       -88.764142,
+       41.78504
       ]
      ]
     ]
@@ -22378,6 +21756,10 @@
     "loc_method": "approximate_locality",
     "uncertainty_mi": 1.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -22680,6 +22062,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0708",
+    "sub_nearest_mi": 2.0,
+    "sub_hc_kw": 28555,
+    "sub_candidates": "S0708;S0741;S0550",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -22982,6 +22368,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -23281,9 +22671,13 @@
     "program_year": 2026,
     "cost_usd": 2316783,
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0664",
+    "sub_nearest_mi": 1.16,
+    "sub_hc_kw": 10668,
+    "sub_candidates": "S0664;S0711",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -23294,271 +22688,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": "Asset replacement - may or may not add headroom."
+    "notes": "Asset replacement - may or may not add headroom. LOCATION UPGRADED: snapped to derived ComEd substation S0664, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 10668 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.812504,
-       41.8236
+       -87.856924,
+       41.83601
       ],
       [
-       -87.812691,
-       41.826441
+       -87.856971,
+       41.83672
       ],
       [
-       -87.813251,
-       41.829255
+       -87.857111,
+       41.837424
       ],
       [
-       -87.814179,
-       41.832014
+       -87.857343,
+       41.838114
       ],
       [
-       -87.815465,
-       41.834692
+       -87.857664,
+       41.838783
       ],
       [
-       -87.817097,
-       41.837264
+       -87.858072,
+       41.839426
       ],
       [
-       -87.819059,
-       41.839703
+       -87.858563,
+       41.840036
       ],
       [
-       -87.821333,
-       41.841988
+       -87.859132,
+       41.840607
       ],
       [
-       -87.823896,
-       41.844096
+       -87.859773,
+       41.841134
       ],
       [
-       -87.826725,
-       41.846006
+       -87.86048,
+       41.841612
       ],
       [
-       -87.82979,
-       41.847701
+       -87.861247,
+       41.842035
       ],
       [
-       -87.833064,
-       41.849163
+       -87.862065,
+       41.842401
       ],
       [
-       -87.836515,
-       41.850379
+       -87.862928,
+       41.842705
       ],
       [
-       -87.840109,
-       41.851337
+       -87.863827,
+       41.842944
       ],
       [
-       -87.843812,
-       41.852029
+       -87.864753,
+       41.843117
       ],
       [
-       -87.847588,
-       41.852446
+       -87.865697,
+       41.843221
       ],
       [
-       -87.8514,
-       41.852586
+       -87.86665,
+       41.843256
       ],
       [
-       -87.855212,
-       41.852446
+       -87.867603,
+       41.843221
       ],
       [
-       -87.858988,
-       41.852029
+       -87.868547,
+       41.843117
       ],
       [
-       -87.862691,
-       41.851337
+       -87.869473,
+       41.842944
       ],
       [
-       -87.866285,
-       41.850379
+       -87.870372,
+       41.842705
       ],
       [
-       -87.869736,
-       41.849163
+       -87.871235,
+       41.842401
       ],
       [
-       -87.87301,
-       41.847701
+       -87.872053,
+       41.842035
       ],
       [
-       -87.876075,
-       41.846006
+       -87.87282,
+       41.841612
       ],
       [
-       -87.878904,
-       41.844096
+       -87.873527,
+       41.841134
       ],
       [
-       -87.881467,
-       41.841988
+       -87.874168,
+       41.840607
       ],
       [
-       -87.883741,
-       41.839703
+       -87.874737,
+       41.840036
       ],
       [
-       -87.885703,
-       41.837264
+       -87.875228,
+       41.839426
       ],
       [
-       -87.887335,
-       41.834692
+       -87.875636,
+       41.838783
       ],
       [
-       -87.888621,
-       41.832014
+       -87.875957,
+       41.838114
       ],
       [
-       -87.889549,
-       41.829255
+       -87.876189,
+       41.837424
       ],
       [
-       -87.890109,
-       41.826441
+       -87.876329,
+       41.83672
       ],
       [
-       -87.890296,
-       41.8236
+       -87.876376,
+       41.83601
       ],
       [
-       -87.890109,
-       41.820759
+       -87.876329,
+       41.8353
       ],
       [
-       -87.889549,
-       41.817945
+       -87.876189,
+       41.834596
       ],
       [
-       -87.888621,
-       41.815186
+       -87.875957,
+       41.833906
       ],
       [
-       -87.887335,
-       41.812508
+       -87.875636,
+       41.833237
       ],
       [
-       -87.885703,
-       41.809936
+       -87.875228,
+       41.832594
       ],
       [
-       -87.883741,
-       41.807497
+       -87.874737,
+       41.831984
       ],
       [
-       -87.881467,
-       41.805212
+       -87.874168,
+       41.831413
       ],
       [
-       -87.878904,
-       41.803104
+       -87.873527,
+       41.830886
       ],
       [
-       -87.876075,
-       41.801194
+       -87.87282,
+       41.830408
       ],
       [
-       -87.87301,
-       41.799499
+       -87.872053,
+       41.829985
       ],
       [
-       -87.869736,
-       41.798037
+       -87.871235,
+       41.829619
       ],
       [
-       -87.866285,
-       41.796821
+       -87.870372,
+       41.829315
       ],
       [
-       -87.862691,
-       41.795863
+       -87.869473,
+       41.829076
       ],
       [
-       -87.858988,
-       41.795171
+       -87.868547,
+       41.828903
       ],
       [
-       -87.855212,
-       41.794754
+       -87.867603,
+       41.828799
       ],
       [
-       -87.8514,
-       41.794614
+       -87.86665,
+       41.828764
       ],
       [
-       -87.847588,
-       41.794754
+       -87.865697,
+       41.828799
       ],
       [
-       -87.843812,
-       41.795171
+       -87.864753,
+       41.828903
       ],
       [
-       -87.840109,
-       41.795863
+       -87.863827,
+       41.829076
       ],
       [
-       -87.836515,
-       41.796821
+       -87.862928,
+       41.829315
       ],
       [
-       -87.833064,
-       41.798037
+       -87.862065,
+       41.829619
       ],
       [
-       -87.82979,
-       41.799499
+       -87.861247,
+       41.829985
       ],
       [
-       -87.826725,
-       41.801194
+       -87.86048,
+       41.830408
       ],
       [
-       -87.823896,
-       41.803104
+       -87.859773,
+       41.830886
       ],
       [
-       -87.821333,
-       41.805212
+       -87.859132,
+       41.831413
       ],
       [
-       -87.819059,
-       41.807497
+       -87.858563,
+       41.831984
       ],
       [
-       -87.817097,
-       41.809936
+       -87.858072,
+       41.832594
       ],
       [
-       -87.815465,
-       41.812508
+       -87.857664,
+       41.833237
       ],
       [
-       -87.814179,
-       41.815186
+       -87.857343,
+       41.833906
       ],
       [
-       -87.813251,
-       41.817945
+       -87.857111,
+       41.834596
       ],
       [
-       -87.812691,
-       41.820759
+       -87.856971,
+       41.8353
       ],
       [
-       -87.812504,
-       41.8236
+       -87.856924,
+       41.83601
       ]
      ]
     ]
@@ -23583,9 +22977,13 @@
     "program_year": 2026,
     "cost_usd": "",
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0591",
+    "sub_nearest_mi": 0.5,
+    "sub_hc_kw": 11914,
+    "sub_candidates": "S0591",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -23596,271 +22994,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": "Asset replacement - may or may not add headroom."
+    "notes": "Asset replacement - may or may not add headroom. LOCATION UPGRADED: snapped to derived ComEd substation S0591, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 11914 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.700712,
-       41.6447
+       -87.722454,
+       41.63987
       ],
       [
-       -87.700899,
-       41.647541
+       -87.7225,
+       41.64058
       ],
       [
-       -87.701457,
-       41.650355
+       -87.72264,
+       41.641284
       ],
       [
-       -87.702382,
-       41.653114
+       -87.722871,
+       41.641974
       ],
       [
-       -87.703665,
-       41.655792
+       -87.723192,
+       41.642643
       ],
       [
-       -87.705292,
-       41.658364
+       -87.723599,
+       41.643286
       ],
       [
-       -87.707249,
-       41.660803
+       -87.724088,
+       41.643896
       ],
       [
-       -87.709516,
-       41.663088
+       -87.724655,
+       41.644467
       ],
       [
-       -87.712073,
-       41.665196
+       -87.725294,
+       41.644994
       ],
       [
-       -87.714893,
-       41.667106
+       -87.725999,
+       41.645472
       ],
       [
-       -87.717951,
-       41.668801
+       -87.726763,
+       41.645895
       ],
       [
-       -87.721215,
-       41.670263
+       -87.727579,
+       41.646261
       ],
       [
-       -87.724656,
-       41.671479
+       -87.728439,
+       41.646565
       ],
       [
-       -87.72824,
-       41.672437
+       -87.729335,
+       41.646804
       ],
       [
-       -87.731933,
-       41.673129
+       -87.730258,
+       41.646977
       ],
       [
-       -87.735698,
-       41.673546
+       -87.7312,
+       41.647081
       ],
       [
-       -87.7395,
-       41.673686
+       -87.73215,
+       41.647116
       ],
       [
-       -87.743302,
-       41.673546
+       -87.7331,
+       41.647081
       ],
       [
-       -87.747067,
-       41.673129
+       -87.734042,
+       41.646977
       ],
       [
-       -87.75076,
-       41.672437
+       -87.734965,
+       41.646804
       ],
       [
-       -87.754344,
-       41.671479
+       -87.735861,
+       41.646565
       ],
       [
-       -87.757785,
-       41.670263
+       -87.736721,
+       41.646261
       ],
       [
-       -87.761049,
-       41.668801
+       -87.737537,
+       41.645895
       ],
       [
-       -87.764107,
-       41.667106
+       -87.738301,
+       41.645472
       ],
       [
-       -87.766927,
-       41.665196
+       -87.739006,
+       41.644994
       ],
       [
-       -87.769484,
-       41.663088
+       -87.739645,
+       41.644467
       ],
       [
-       -87.771751,
-       41.660803
+       -87.740212,
+       41.643896
       ],
       [
-       -87.773708,
-       41.658364
+       -87.740701,
+       41.643286
       ],
       [
-       -87.775335,
-       41.655792
+       -87.741108,
+       41.642643
       ],
       [
-       -87.776618,
-       41.653114
+       -87.741429,
+       41.641974
       ],
       [
-       -87.777543,
-       41.650355
+       -87.74166,
+       41.641284
       ],
       [
-       -87.778101,
-       41.647541
+       -87.7418,
+       41.64058
       ],
       [
-       -87.778288,
-       41.6447
+       -87.741846,
+       41.63987
       ],
       [
-       -87.778101,
-       41.641859
+       -87.7418,
+       41.63916
       ],
       [
-       -87.777543,
-       41.639045
+       -87.74166,
+       41.638456
       ],
       [
-       -87.776618,
-       41.636286
+       -87.741429,
+       41.637766
       ],
       [
-       -87.775335,
-       41.633608
+       -87.741108,
+       41.637097
       ],
       [
-       -87.773708,
-       41.631036
+       -87.740701,
+       41.636454
       ],
       [
-       -87.771751,
-       41.628597
+       -87.740212,
+       41.635844
       ],
       [
-       -87.769484,
-       41.626312
+       -87.739645,
+       41.635273
       ],
       [
-       -87.766927,
-       41.624204
+       -87.739006,
+       41.634746
       ],
       [
-       -87.764107,
-       41.622294
+       -87.738301,
+       41.634268
       ],
       [
-       -87.761049,
-       41.620599
+       -87.737537,
+       41.633845
       ],
       [
-       -87.757785,
-       41.619137
+       -87.736721,
+       41.633479
       ],
       [
-       -87.754344,
-       41.617921
+       -87.735861,
+       41.633175
       ],
       [
-       -87.75076,
-       41.616963
+       -87.734965,
+       41.632936
       ],
       [
-       -87.747067,
-       41.616271
+       -87.734042,
+       41.632763
       ],
       [
-       -87.743302,
-       41.615854
+       -87.7331,
+       41.632659
       ],
       [
-       -87.7395,
-       41.615714
+       -87.73215,
+       41.632624
       ],
       [
-       -87.735698,
-       41.615854
+       -87.7312,
+       41.632659
       ],
       [
-       -87.731933,
-       41.616271
+       -87.730258,
+       41.632763
       ],
       [
-       -87.72824,
-       41.616963
+       -87.729335,
+       41.632936
       ],
       [
-       -87.724656,
-       41.617921
+       -87.728439,
+       41.633175
       ],
       [
-       -87.721215,
-       41.619137
+       -87.727579,
+       41.633479
       ],
       [
-       -87.717951,
-       41.620599
+       -87.726763,
+       41.633845
       ],
       [
-       -87.714893,
-       41.622294
+       -87.725999,
+       41.634268
       ],
       [
-       -87.712073,
-       41.624204
+       -87.725294,
+       41.634746
       ],
       [
-       -87.709516,
-       41.626312
+       -87.724655,
+       41.635273
       ],
       [
-       -87.707249,
-       41.628597
+       -87.724088,
+       41.635844
       ],
       [
-       -87.705292,
-       41.631036
+       -87.723599,
+       41.636454
       ],
       [
-       -87.703665,
-       41.633608
+       -87.723192,
+       41.637097
       ],
       [
-       -87.702382,
-       41.636286
+       -87.722871,
+       41.637766
       ],
       [
-       -87.701457,
-       41.639045
+       -87.72264,
+       41.638456
       ],
       [
-       -87.700899,
-       41.641859
+       -87.7225,
+       41.63916
       ],
       [
-       -87.700712,
-       41.6447
+       -87.722454,
+       41.63987
       ]
      ]
     ]
@@ -23888,6 +23286,10 @@
     "loc_method": "constraint_zone",
     "uncertainty_mi": 25.0,
     "feeder_match": "",
+    "sub_nearest": "S0668",
+    "sub_nearest_mi": 0.44,
+    "sub_hc_kw": 922,
+    "sub_candidates": "S0668",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -24187,9 +23589,13 @@
     "program_year": "",
     "cost_usd": "",
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0655",
+    "sub_nearest_mi": 1.12,
+    "sub_hc_kw": 30328,
+    "sub_candidates": "S0655",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -24200,271 +23606,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Refiled Grid Plan Ch. V, compliance filing 2025-02-14",
-    "notes": "Second substation. Targets PV hosting capacity limitation in the area between Belvidere, Woodstock and Marengo. DISCLOSED CONSTRAINT: zero available PV hosting capacity when queue projects are considered; Marengo substation and neighbors at ~95% of substation capacity BEFORE any EV load. Highest-value constrained-area signal ComEd discloses."
+    "notes": "Second substation. Targets PV hosting capacity limitation in the area between Belvidere, Woodstock and Marengo. DISCLOSED CONSTRAINT: zero available PV hosting capacity when queue projects are considered; Marengo substation and neighbors at ~95% of substation capacity BEFORE any EV load. Highest-value constrained-area signal ComEd discloses. LOCATION UPGRADED: snapped to derived ComEd substation S0655, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 30328 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -88.568943,
-       42.2489
+       -88.61928,
+       42.25381
       ],
       [
-       -88.569131,
-       42.251741
+       -88.619327,
+       42.25452
       ],
       [
-       -88.569695,
-       42.254555
+       -88.619468,
+       42.255224
       ],
       [
-       -88.570629,
-       42.257314
+       -88.619701,
+       42.255914
       ],
       [
-       -88.571923,
-       42.259992
+       -88.620025,
+       42.256583
       ],
       [
-       -88.573566,
-       42.262564
+       -88.620436,
+       42.257226
       ],
       [
-       -88.575542,
-       42.265003
+       -88.62093,
+       42.257836
       ],
       [
-       -88.577831,
-       42.267288
+       -88.621502,
+       42.258407
       ],
       [
-       -88.580412,
-       42.269396
+       -88.622147,
+       42.258934
       ],
       [
-       -88.583259,
-       42.271306
+       -88.622859,
+       42.259412
       ],
       [
-       -88.586345,
-       42.273001
+       -88.623631,
+       42.259835
       ],
       [
-       -88.589641,
-       42.274463
+       -88.624455,
+       42.260201
       ],
       [
-       -88.593115,
-       42.275679
+       -88.625323,
+       42.260505
       ],
       [
-       -88.596733,
-       42.276637
+       -88.626228,
+       42.260744
       ],
       [
-       -88.600461,
-       42.277329
+       -88.62716,
+       42.260917
       ],
       [
-       -88.604262,
-       42.277746
+       -88.62811,
+       42.261021
       ],
       [
-       -88.6081,
-       42.277886
+       -88.62907,
+       42.261056
       ],
       [
-       -88.611938,
-       42.277746
+       -88.63003,
+       42.261021
       ],
       [
-       -88.615739,
-       42.277329
+       -88.63098,
+       42.260917
       ],
       [
-       -88.619467,
-       42.276637
+       -88.631912,
+       42.260744
       ],
       [
-       -88.623085,
-       42.275679
+       -88.632817,
+       42.260505
       ],
       [
-       -88.626559,
-       42.274463
+       -88.633685,
+       42.260201
       ],
       [
-       -88.629855,
-       42.273001
+       -88.634509,
+       42.259835
       ],
       [
-       -88.632941,
-       42.271306
+       -88.635281,
+       42.259412
       ],
       [
-       -88.635788,
-       42.269396
+       -88.635993,
+       42.258934
       ],
       [
-       -88.638369,
-       42.267288
+       -88.636638,
+       42.258407
       ],
       [
-       -88.640658,
-       42.265003
+       -88.63721,
+       42.257836
       ],
       [
-       -88.642634,
-       42.262564
+       -88.637704,
+       42.257226
       ],
       [
-       -88.644277,
-       42.259992
+       -88.638115,
+       42.256583
       ],
       [
-       -88.645571,
-       42.257314
+       -88.638439,
+       42.255914
       ],
       [
-       -88.646505,
-       42.254555
+       -88.638672,
+       42.255224
       ],
       [
-       -88.647069,
-       42.251741
+       -88.638813,
+       42.25452
       ],
       [
-       -88.647257,
-       42.2489
+       -88.63886,
+       42.25381
       ],
       [
-       -88.647069,
-       42.246059
+       -88.638813,
+       42.2531
       ],
       [
-       -88.646505,
-       42.243245
+       -88.638672,
+       42.252396
       ],
       [
-       -88.645571,
-       42.240486
+       -88.638439,
+       42.251706
       ],
       [
-       -88.644277,
-       42.237808
+       -88.638115,
+       42.251037
       ],
       [
-       -88.642634,
-       42.235236
+       -88.637704,
+       42.250394
       ],
       [
-       -88.640658,
-       42.232797
+       -88.63721,
+       42.249784
       ],
       [
-       -88.638369,
-       42.230512
+       -88.636638,
+       42.249213
       ],
       [
-       -88.635788,
-       42.228404
+       -88.635993,
+       42.248686
       ],
       [
-       -88.632941,
-       42.226494
+       -88.635281,
+       42.248208
       ],
       [
-       -88.629855,
-       42.224799
+       -88.634509,
+       42.247785
       ],
       [
-       -88.626559,
-       42.223337
+       -88.633685,
+       42.247419
       ],
       [
-       -88.623085,
-       42.222121
+       -88.632817,
+       42.247115
       ],
       [
-       -88.619467,
-       42.221163
+       -88.631912,
+       42.246876
       ],
       [
-       -88.615739,
-       42.220471
+       -88.63098,
+       42.246703
       ],
       [
-       -88.611938,
-       42.220054
+       -88.63003,
+       42.246599
       ],
       [
-       -88.6081,
-       42.219914
+       -88.62907,
+       42.246564
       ],
       [
-       -88.604262,
-       42.220054
+       -88.62811,
+       42.246599
       ],
       [
-       -88.600461,
-       42.220471
+       -88.62716,
+       42.246703
       ],
       [
-       -88.596733,
-       42.221163
+       -88.626228,
+       42.246876
       ],
       [
-       -88.593115,
-       42.222121
+       -88.625323,
+       42.247115
       ],
       [
-       -88.589641,
-       42.223337
+       -88.624455,
+       42.247419
       ],
       [
-       -88.586345,
-       42.224799
+       -88.623631,
+       42.247785
       ],
       [
-       -88.583259,
-       42.226494
+       -88.622859,
+       42.248208
       ],
       [
-       -88.580412,
-       42.228404
+       -88.622147,
+       42.248686
       ],
       [
-       -88.577831,
-       42.230512
+       -88.621502,
+       42.249213
       ],
       [
-       -88.575542,
-       42.232797
+       -88.62093,
+       42.249784
       ],
       [
-       -88.573566,
-       42.235236
+       -88.620436,
+       42.250394
       ],
       [
-       -88.571923,
-       42.237808
+       -88.620025,
+       42.251037
       ],
       [
-       -88.570629,
-       42.240486
+       -88.619701,
+       42.251706
       ],
       [
-       -88.569695,
-       42.243245
+       -88.619468,
+       42.252396
       ],
       [
-       -88.569131,
-       42.246059
+       -88.619327,
+       42.2531
       ],
       [
-       -88.568943,
-       42.2489
+       -88.61928,
+       42.25381
       ]
      ]
     ]
@@ -24492,6 +23898,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -24791,9 +24201,13 @@
     "program_year": "2024",
     "cost_usd": 19797402,
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0593",
+    "sub_nearest_mi": 0.56,
+    "sub_hc_kw": 6772,
+    "sub_candidates": "S0593;S0636;S0696;S0742",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -24804,271 +24218,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. LOCATION UPGRADED: snapped to derived ComEd substation S0593, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 6772 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.662866,
-       41.7203
+       -87.697421,
+       41.72728
       ],
       [
-       -87.663053,
-       41.723141
+       -87.697467,
+       41.72799
       ],
       [
-       -87.663613,
-       41.725955
+       -87.697607,
+       41.728694
       ],
       [
-       -87.664539,
-       41.728714
+       -87.697839,
+       41.729384
       ],
       [
-       -87.665822,
-       41.731392
+       -87.69816,
+       41.730053
       ],
       [
-       -87.667452,
-       41.733964
+       -87.698567,
+       41.730696
       ],
       [
-       -87.669411,
-       41.736403
+       -87.699057,
+       41.731306
       ],
       [
-       -87.671681,
-       41.738688
+       -87.699624,
+       41.731877
       ],
       [
-       -87.67424,
-       41.740796
+       -87.700264,
+       41.732404
       ],
       [
-       -87.677064,
-       41.742706
+       -87.70097,
+       41.732882
       ],
       [
-       -87.680125,
-       41.744401
+       -87.701736,
+       41.733305
       ],
       [
-       -87.683394,
-       41.745863
+       -87.702553,
+       41.733671
       ],
       [
-       -87.686839,
-       41.747079
+       -87.703414,
+       41.733975
       ],
       [
-       -87.690427,
-       41.748037
+       -87.704311,
+       41.734214
       ],
       [
-       -87.694124,
-       41.748729
+       -87.705236,
+       41.734387
       ],
       [
-       -87.697894,
-       41.749146
+       -87.706178,
+       41.734491
       ],
       [
-       -87.7017,
-       41.749286
+       -87.70713,
+       41.734526
       ],
       [
-       -87.705506,
-       41.749146
+       -87.708082,
+       41.734491
       ],
       [
-       -87.709276,
-       41.748729
+       -87.709024,
+       41.734387
       ],
       [
-       -87.712973,
-       41.748037
+       -87.709949,
+       41.734214
       ],
       [
-       -87.716561,
-       41.747079
+       -87.710846,
+       41.733975
       ],
       [
-       -87.720006,
-       41.745863
+       -87.711707,
+       41.733671
       ],
       [
-       -87.723275,
-       41.744401
+       -87.712524,
+       41.733305
       ],
       [
-       -87.726336,
-       41.742706
+       -87.71329,
+       41.732882
       ],
       [
-       -87.72916,
-       41.740796
+       -87.713996,
+       41.732404
       ],
       [
-       -87.731719,
-       41.738688
+       -87.714636,
+       41.731877
       ],
       [
-       -87.733989,
-       41.736403
+       -87.715203,
+       41.731306
       ],
       [
-       -87.735948,
-       41.733964
+       -87.715693,
+       41.730696
       ],
       [
-       -87.737578,
-       41.731392
+       -87.7161,
+       41.730053
       ],
       [
-       -87.738861,
-       41.728714
+       -87.716421,
+       41.729384
       ],
       [
-       -87.739787,
-       41.725955
+       -87.716653,
+       41.728694
       ],
       [
-       -87.740347,
-       41.723141
+       -87.716793,
+       41.72799
       ],
       [
-       -87.740534,
-       41.7203
+       -87.716839,
+       41.72728
       ],
       [
-       -87.740347,
-       41.717459
+       -87.716793,
+       41.72657
       ],
       [
-       -87.739787,
-       41.714645
+       -87.716653,
+       41.725866
       ],
       [
-       -87.738861,
-       41.711886
+       -87.716421,
+       41.725176
       ],
       [
-       -87.737578,
-       41.709208
+       -87.7161,
+       41.724507
       ],
       [
-       -87.735948,
-       41.706636
+       -87.715693,
+       41.723864
       ],
       [
-       -87.733989,
-       41.704197
+       -87.715203,
+       41.723254
       ],
       [
-       -87.731719,
-       41.701912
+       -87.714636,
+       41.722683
       ],
       [
-       -87.72916,
-       41.699804
+       -87.713996,
+       41.722156
       ],
       [
-       -87.726336,
-       41.697894
+       -87.71329,
+       41.721678
       ],
       [
-       -87.723275,
-       41.696199
+       -87.712524,
+       41.721255
       ],
       [
-       -87.720006,
-       41.694737
+       -87.711707,
+       41.720889
       ],
       [
-       -87.716561,
-       41.693521
+       -87.710846,
+       41.720585
       ],
       [
-       -87.712973,
-       41.692563
+       -87.709949,
+       41.720346
       ],
       [
-       -87.709276,
-       41.691871
+       -87.709024,
+       41.720173
       ],
       [
-       -87.705506,
-       41.691454
+       -87.708082,
+       41.720069
       ],
       [
-       -87.7017,
-       41.691314
+       -87.70713,
+       41.720034
       ],
       [
-       -87.697894,
-       41.691454
+       -87.706178,
+       41.720069
       ],
       [
-       -87.694124,
-       41.691871
+       -87.705236,
+       41.720173
       ],
       [
-       -87.690427,
-       41.692563
+       -87.704311,
+       41.720346
       ],
       [
-       -87.686839,
-       41.693521
+       -87.703414,
+       41.720585
       ],
       [
-       -87.683394,
-       41.694737
+       -87.702553,
+       41.720889
       ],
       [
-       -87.680125,
-       41.696199
+       -87.701736,
+       41.721255
       ],
       [
-       -87.677064,
-       41.697894
+       -87.70097,
+       41.721678
       ],
       [
-       -87.67424,
-       41.699804
+       -87.700264,
+       41.722156
       ],
       [
-       -87.671681,
-       41.701912
+       -87.699624,
+       41.722683
       ],
       [
-       -87.669411,
-       41.704197
+       -87.699057,
+       41.723254
       ],
       [
-       -87.667452,
-       41.706636
+       -87.698567,
+       41.723864
       ],
       [
-       -87.665822,
-       41.709208
+       -87.69816,
+       41.724507
       ],
       [
-       -87.664539,
-       41.711886
+       -87.697839,
+       41.725176
       ],
       [
-       -87.663613,
-       41.714645
+       -87.697607,
+       41.725866
       ],
       [
-       -87.663053,
-       41.717459
+       -87.697467,
+       41.72657
       ],
       [
-       -87.662866,
-       41.7203
+       -87.697421,
+       41.72728
       ]
      ]
     ]
@@ -25096,6 +24510,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -25398,6 +24816,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0554",
+    "sub_nearest_mi": 1.75,
+    "sub_hc_kw": 342,
+    "sub_candidates": "S0554",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -25700,6 +25122,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -26002,6 +25428,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -26304,6 +25734,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -26606,6 +26040,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -26908,6 +26346,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -27210,6 +26652,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0734",
+    "sub_nearest_mi": 2.97,
+    "sub_hc_kw": 1692,
+    "sub_candidates": "S0734",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -27509,9 +26955,13 @@
     "program_year": "2024",
     "cost_usd": 12602901,
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0535",
+    "sub_nearest_mi": 1.07,
+    "sub_hc_kw": 5203,
+    "sub_candidates": "S0535;S0549",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -27522,271 +26972,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. LOCATION UPGRADED: snapped to derived ComEd substation S0535, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 5203 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -88.044376,
-       42.0334
+       -88.054095,
+       42.02796
       ],
       [
-       -88.044564,
-       42.036241
+       -88.054142,
+       42.02867
       ],
       [
-       -88.045126,
-       42.039055
+       -88.054282,
+       42.029374
       ],
       [
-       -88.046056,
-       42.041814
+       -88.054515,
+       42.030064
       ],
       [
-       -88.047346,
-       42.044492
+       -88.054837,
+       42.030733
       ],
       [
-       -88.048984,
-       42.047064
+       -88.055247,
+       42.031376
       ],
       [
-       -88.050952,
-       42.049503
+       -88.055739,
+       42.031986
       ],
       [
-       -88.053234,
-       42.051788
+       -88.056309,
+       42.032557
       ],
       [
-       -88.055806,
-       42.053896
+       -88.056952,
+       42.033084
       ],
       [
-       -88.058643,
-       42.055806
+       -88.057661,
+       42.033562
       ],
       [
-       -88.061719,
-       42.057501
+       -88.05843,
+       42.033985
       ],
       [
-       -88.065004,
-       42.058963
+       -88.059251,
+       42.034351
       ],
       [
-       -88.068466,
-       42.060179
+       -88.060117,
+       42.034655
       ],
       [
-       -88.072072,
-       42.061137
+       -88.061018,
+       42.034894
       ],
       [
-       -88.075787,
-       42.061829
+       -88.061947,
+       42.035067
       ],
       [
-       -88.079575,
-       42.062246
+       -88.062894,
+       42.035171
       ],
       [
-       -88.0834,
-       42.062386
+       -88.06385,
+       42.035206
       ],
       [
-       -88.087225,
-       42.062246
+       -88.064806,
+       42.035171
       ],
       [
-       -88.091013,
-       42.061829
+       -88.065753,
+       42.035067
       ],
       [
-       -88.094728,
-       42.061137
+       -88.066682,
+       42.034894
       ],
       [
-       -88.098334,
-       42.060179
+       -88.067583,
+       42.034655
       ],
       [
-       -88.101796,
-       42.058963
+       -88.068449,
+       42.034351
       ],
       [
-       -88.105081,
-       42.057501
+       -88.06927,
+       42.033985
       ],
       [
-       -88.108157,
-       42.055806
+       -88.070039,
+       42.033562
       ],
       [
-       -88.110994,
-       42.053896
+       -88.070748,
+       42.033084
       ],
       [
-       -88.113566,
-       42.051788
+       -88.071391,
+       42.032557
       ],
       [
-       -88.115848,
-       42.049503
+       -88.071961,
+       42.031986
       ],
       [
-       -88.117816,
-       42.047064
+       -88.072453,
+       42.031376
       ],
       [
-       -88.119454,
-       42.044492
+       -88.072863,
+       42.030733
       ],
       [
-       -88.120744,
-       42.041814
+       -88.073185,
+       42.030064
       ],
       [
-       -88.121674,
-       42.039055
+       -88.073418,
+       42.029374
       ],
       [
-       -88.122236,
-       42.036241
+       -88.073558,
+       42.02867
       ],
       [
-       -88.122424,
-       42.0334
+       -88.073605,
+       42.02796
       ],
       [
-       -88.122236,
-       42.030559
+       -88.073558,
+       42.02725
       ],
       [
-       -88.121674,
-       42.027745
+       -88.073418,
+       42.026546
       ],
       [
-       -88.120744,
-       42.024986
+       -88.073185,
+       42.025856
       ],
       [
-       -88.119454,
-       42.022308
+       -88.072863,
+       42.025187
       ],
       [
-       -88.117816,
-       42.019736
+       -88.072453,
+       42.024544
       ],
       [
-       -88.115848,
-       42.017297
+       -88.071961,
+       42.023934
       ],
       [
-       -88.113566,
-       42.015012
+       -88.071391,
+       42.023363
       ],
       [
-       -88.110994,
-       42.012904
+       -88.070748,
+       42.022836
       ],
       [
-       -88.108157,
-       42.010994
+       -88.070039,
+       42.022358
       ],
       [
-       -88.105081,
-       42.009299
+       -88.06927,
+       42.021935
       ],
       [
-       -88.101796,
-       42.007837
+       -88.068449,
+       42.021569
       ],
       [
-       -88.098334,
-       42.006621
+       -88.067583,
+       42.021265
       ],
       [
-       -88.094728,
-       42.005663
+       -88.066682,
+       42.021026
       ],
       [
-       -88.091013,
-       42.004971
+       -88.065753,
+       42.020853
       ],
       [
-       -88.087225,
-       42.004554
+       -88.064806,
+       42.020749
       ],
       [
-       -88.0834,
-       42.004414
+       -88.06385,
+       42.020714
       ],
       [
-       -88.079575,
-       42.004554
+       -88.062894,
+       42.020749
       ],
       [
-       -88.075787,
-       42.004971
+       -88.061947,
+       42.020853
       ],
       [
-       -88.072072,
-       42.005663
+       -88.061018,
+       42.021026
       ],
       [
-       -88.068466,
-       42.006621
+       -88.060117,
+       42.021265
       ],
       [
-       -88.065004,
-       42.007837
+       -88.059251,
+       42.021569
       ],
       [
-       -88.061719,
-       42.009299
+       -88.05843,
+       42.021935
       ],
       [
-       -88.058643,
-       42.010994
+       -88.057661,
+       42.022358
       ],
       [
-       -88.055806,
-       42.012904
+       -88.056952,
+       42.022836
       ],
       [
-       -88.053234,
-       42.015012
+       -88.056309,
+       42.023363
       ],
       [
-       -88.050952,
-       42.017297
+       -88.055739,
+       42.023934
       ],
       [
-       -88.048984,
-       42.019736
+       -88.055247,
+       42.024544
       ],
       [
-       -88.047346,
-       42.022308
+       -88.054837,
+       42.025187
       ],
       [
-       -88.046056,
-       42.024986
+       -88.054515,
+       42.025856
       ],
       [
-       -88.045126,
-       42.027745
+       -88.054282,
+       42.026546
       ],
       [
-       -88.044564,
-       42.030559
+       -88.054142,
+       42.02725
       ],
       [
-       -88.044376,
-       42.0334
+       -88.054095,
+       42.02796
       ]
      ]
     ]
@@ -27811,9 +27261,13 @@
     "program_year": "2024",
     "cost_usd": 3815905,
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0718",
+    "sub_nearest_mi": 1.41,
+    "sub_hc_kw": 27700,
+    "sub_candidates": "S0718;S0591",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -27824,271 +27278,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. LOCATION UPGRADED: snapped to derived ComEd substation S0718, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 27700 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.699898,
-       41.6683
+       -87.732066,
+       41.68862
       ],
       [
-       -87.700085,
-       41.671141
+       -87.732113,
+       41.68933
       ],
       [
-       -87.700643,
-       41.673955
+       -87.732253,
+       41.690034
       ],
       [
-       -87.701569,
-       41.676714
+       -87.732484,
+       41.690724
       ],
       [
-       -87.702851,
-       41.679392
+       -87.732805,
+       41.691393
       ],
       [
-       -87.704479,
-       41.681964
+       -87.733212,
+       41.692036
       ],
       [
-       -87.706437,
-       41.684403
+       -87.733702,
+       41.692646
       ],
       [
-       -87.708705,
-       41.686688
+       -87.734269,
+       41.693217
       ],
       [
-       -87.711263,
-       41.688796
+       -87.734909,
+       41.693744
       ],
       [
-       -87.714084,
-       41.690706
+       -87.735614,
+       41.694222
       ],
       [
-       -87.717143,
-       41.692401
+       -87.736379,
+       41.694645
       ],
       [
-       -87.720409,
-       41.693863
+       -87.737196,
+       41.695011
       ],
       [
-       -87.723851,
-       41.695079
+       -87.738057,
+       41.695315
       ],
       [
-       -87.727436,
-       41.696037
+       -87.738953,
+       41.695554
       ],
       [
-       -87.73113,
-       41.696729
+       -87.739877,
+       41.695727
       ],
       [
-       -87.734897,
-       41.697146
+       -87.740819,
+       41.695831
       ],
       [
-       -87.7387,
-       41.697286
+       -87.74177,
+       41.695866
       ],
       [
-       -87.742503,
-       41.697146
+       -87.742721,
+       41.695831
       ],
       [
-       -87.74627,
-       41.696729
+       -87.743663,
+       41.695727
       ],
       [
-       -87.749964,
-       41.696037
+       -87.744587,
+       41.695554
       ],
       [
-       -87.753549,
-       41.695079
+       -87.745483,
+       41.695315
       ],
       [
-       -87.756991,
-       41.693863
+       -87.746344,
+       41.695011
       ],
       [
-       -87.760257,
-       41.692401
+       -87.747161,
+       41.694645
       ],
       [
-       -87.763316,
-       41.690706
+       -87.747926,
+       41.694222
       ],
       [
-       -87.766137,
-       41.688796
+       -87.748631,
+       41.693744
       ],
       [
-       -87.768695,
-       41.686688
+       -87.749271,
+       41.693217
       ],
       [
-       -87.770963,
-       41.684403
+       -87.749838,
+       41.692646
       ],
       [
-       -87.772921,
-       41.681964
+       -87.750328,
+       41.692036
       ],
       [
-       -87.774549,
-       41.679392
+       -87.750735,
+       41.691393
       ],
       [
-       -87.775831,
-       41.676714
+       -87.751056,
+       41.690724
       ],
       [
-       -87.776757,
-       41.673955
+       -87.751287,
+       41.690034
       ],
       [
-       -87.777315,
-       41.671141
+       -87.751427,
+       41.68933
       ],
       [
-       -87.777502,
-       41.6683
+       -87.751474,
+       41.68862
       ],
       [
-       -87.777315,
-       41.665459
+       -87.751427,
+       41.68791
       ],
       [
-       -87.776757,
-       41.662645
+       -87.751287,
+       41.687206
       ],
       [
-       -87.775831,
-       41.659886
+       -87.751056,
+       41.686516
       ],
       [
-       -87.774549,
-       41.657208
+       -87.750735,
+       41.685847
       ],
       [
-       -87.772921,
-       41.654636
+       -87.750328,
+       41.685204
       ],
       [
-       -87.770963,
-       41.652197
+       -87.749838,
+       41.684594
       ],
       [
-       -87.768695,
-       41.649912
+       -87.749271,
+       41.684023
       ],
       [
-       -87.766137,
-       41.647804
+       -87.748631,
+       41.683496
       ],
       [
-       -87.763316,
-       41.645894
+       -87.747926,
+       41.683018
       ],
       [
-       -87.760257,
-       41.644199
+       -87.747161,
+       41.682595
       ],
       [
-       -87.756991,
-       41.642737
+       -87.746344,
+       41.682229
       ],
       [
-       -87.753549,
-       41.641521
+       -87.745483,
+       41.681925
       ],
       [
-       -87.749964,
-       41.640563
+       -87.744587,
+       41.681686
       ],
       [
-       -87.74627,
-       41.639871
+       -87.743663,
+       41.681513
       ],
       [
-       -87.742503,
-       41.639454
+       -87.742721,
+       41.681409
       ],
       [
-       -87.7387,
-       41.639314
+       -87.74177,
+       41.681374
       ],
       [
-       -87.734897,
-       41.639454
+       -87.740819,
+       41.681409
       ],
       [
-       -87.73113,
-       41.639871
+       -87.739877,
+       41.681513
       ],
       [
-       -87.727436,
-       41.640563
+       -87.738953,
+       41.681686
       ],
       [
-       -87.723851,
-       41.641521
+       -87.738057,
+       41.681925
       ],
       [
-       -87.720409,
-       41.642737
+       -87.737196,
+       41.682229
       ],
       [
-       -87.717143,
-       41.644199
+       -87.736379,
+       41.682595
       ],
       [
-       -87.714084,
-       41.645894
+       -87.735614,
+       41.683018
       ],
       [
-       -87.711263,
-       41.647804
+       -87.734909,
+       41.683496
       ],
       [
-       -87.708705,
-       41.649912
+       -87.734269,
+       41.684023
       ],
       [
-       -87.706437,
-       41.652197
+       -87.733702,
+       41.684594
       ],
       [
-       -87.704479,
-       41.654636
+       -87.733212,
+       41.685204
       ],
       [
-       -87.702851,
-       41.657208
+       -87.732805,
+       41.685847
       ],
       [
-       -87.701569,
-       41.659886
+       -87.732484,
+       41.686516
       ],
       [
-       -87.700643,
-       41.662645
+       -87.732253,
+       41.687206
       ],
       [
-       -87.700085,
-       41.665459
+       -87.732113,
+       41.68791
       ],
       [
-       -87.699898,
-       41.6683
+       -87.732066,
+       41.68862
       ]
      ]
     ]
@@ -28116,6 +27570,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -28418,6 +27876,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -28720,6 +28182,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0589",
+    "sub_nearest_mi": 2.88,
+    "sub_hc_kw": 2649,
+    "sub_candidates": "S0589",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -29022,6 +28488,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -29324,6 +28794,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -29626,6 +29100,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0553",
+    "sub_nearest_mi": 2.06,
+    "sub_hc_kw": 11094,
+    "sub_candidates": "S0553;S0527",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -29925,9 +29403,13 @@
     "program_year": "2025",
     "cost_usd": 2041338,
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0685",
+    "sub_nearest_mi": 1.05,
+    "sub_hc_kw": 26645,
+    "sub_candidates": "S0685;S0667;S0509",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -29938,271 +29420,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. LOCATION UPGRADED: snapped to derived ComEd substation S0685, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 26645 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.551822,
-       41.7943
+       -87.597099,
+       41.80368
       ],
       [
-       -87.552009,
-       41.797141
+       -87.597146,
+       41.80439
       ],
       [
-       -87.552569,
-       41.799955
+       -87.597286,
+       41.805094
       ],
       [
-       -87.553496,
-       41.802714
+       -87.597518,
+       41.805784
       ],
       [
-       -87.554781,
-       41.805392
+       -87.597839,
+       41.806453
       ],
       [
-       -87.556412,
-       41.807964
+       -87.598247,
+       41.807096
       ],
       [
-       -87.558374,
-       41.810403
+       -87.598737,
+       41.807706
       ],
       [
-       -87.560647,
-       41.812688
+       -87.599306,
+       41.808277
       ],
       [
-       -87.563209,
-       41.814796
+       -87.599946,
+       41.808804
       ],
       [
-       -87.566036,
-       41.816706
+       -87.600653,
+       41.809282
       ],
       [
-       -87.5691,
-       41.818401
+       -87.601419,
+       41.809705
       ],
       [
-       -87.572373,
-       41.819863
+       -87.602238,
+       41.810071
       ],
       [
-       -87.575822,
-       41.821079
+       -87.6031,
+       41.810375
       ],
       [
-       -87.579414,
-       41.822037
+       -87.603998,
+       41.810614
       ],
       [
-       -87.583115,
-       41.822729
+       -87.604924,
+       41.810787
       ],
       [
-       -87.586889,
-       41.823146
+       -87.605867,
+       41.810891
       ],
       [
-       -87.5907,
-       41.823286
+       -87.60682,
+       41.810926
       ],
       [
-       -87.594511,
-       41.823146
+       -87.607773,
+       41.810891
       ],
       [
-       -87.598285,
-       41.822729
+       -87.608716,
+       41.810787
       ],
       [
-       -87.601986,
-       41.822037
+       -87.609642,
+       41.810614
       ],
       [
-       -87.605578,
-       41.821079
+       -87.61054,
+       41.810375
       ],
       [
-       -87.609027,
-       41.819863
+       -87.611402,
+       41.810071
       ],
       [
-       -87.6123,
-       41.818401
+       -87.612221,
+       41.809705
       ],
       [
-       -87.615364,
-       41.816706
+       -87.612987,
+       41.809282
       ],
       [
-       -87.618191,
-       41.814796
+       -87.613694,
+       41.808804
       ],
       [
-       -87.620753,
-       41.812688
+       -87.614334,
+       41.808277
       ],
       [
-       -87.623026,
-       41.810403
+       -87.614903,
+       41.807706
       ],
       [
-       -87.624988,
-       41.807964
+       -87.615393,
+       41.807096
       ],
       [
-       -87.626619,
-       41.805392
+       -87.615801,
+       41.806453
       ],
       [
-       -87.627904,
-       41.802714
+       -87.616122,
+       41.805784
       ],
       [
-       -87.628831,
-       41.799955
+       -87.616354,
+       41.805094
       ],
       [
-       -87.629391,
-       41.797141
+       -87.616494,
+       41.80439
       ],
       [
-       -87.629578,
-       41.7943
+       -87.616541,
+       41.80368
       ],
       [
-       -87.629391,
-       41.791459
+       -87.616494,
+       41.80297
       ],
       [
-       -87.628831,
-       41.788645
+       -87.616354,
+       41.802266
       ],
       [
-       -87.627904,
-       41.785886
+       -87.616122,
+       41.801576
       ],
       [
-       -87.626619,
-       41.783208
+       -87.615801,
+       41.800907
       ],
       [
-       -87.624988,
-       41.780636
+       -87.615393,
+       41.800264
       ],
       [
-       -87.623026,
-       41.778197
+       -87.614903,
+       41.799654
       ],
       [
-       -87.620753,
-       41.775912
+       -87.614334,
+       41.799083
       ],
       [
-       -87.618191,
-       41.773804
+       -87.613694,
+       41.798556
       ],
       [
-       -87.615364,
-       41.771894
+       -87.612987,
+       41.798078
       ],
       [
-       -87.6123,
-       41.770199
+       -87.612221,
+       41.797655
       ],
       [
-       -87.609027,
-       41.768737
+       -87.611402,
+       41.797289
       ],
       [
-       -87.605578,
-       41.767521
+       -87.61054,
+       41.796985
       ],
       [
-       -87.601986,
-       41.766563
+       -87.609642,
+       41.796746
       ],
       [
-       -87.598285,
-       41.765871
+       -87.608716,
+       41.796573
       ],
       [
-       -87.594511,
-       41.765454
+       -87.607773,
+       41.796469
       ],
       [
-       -87.5907,
-       41.765314
+       -87.60682,
+       41.796434
       ],
       [
-       -87.586889,
-       41.765454
+       -87.605867,
+       41.796469
       ],
       [
-       -87.583115,
-       41.765871
+       -87.604924,
+       41.796573
       ],
       [
-       -87.579414,
-       41.766563
+       -87.603998,
+       41.796746
       ],
       [
-       -87.575822,
-       41.767521
+       -87.6031,
+       41.796985
       ],
       [
-       -87.572373,
-       41.768737
+       -87.602238,
+       41.797289
       ],
       [
-       -87.5691,
-       41.770199
+       -87.601419,
+       41.797655
       ],
       [
-       -87.566036,
-       41.771894
+       -87.600653,
+       41.798078
       ],
       [
-       -87.563209,
-       41.773804
+       -87.599946,
+       41.798556
       ],
       [
-       -87.560647,
-       41.775912
+       -87.599306,
+       41.799083
       ],
       [
-       -87.558374,
-       41.778197
+       -87.598737,
+       41.799654
       ],
       [
-       -87.556412,
-       41.780636
+       -87.598247,
+       41.800264
       ],
       [
-       -87.554781,
-       41.783208
+       -87.597839,
+       41.800907
       ],
       [
-       -87.553496,
-       41.785886
+       -87.597518,
+       41.801576
       ],
       [
-       -87.552569,
-       41.788645
+       -87.597286,
+       41.802266
       ],
       [
-       -87.552009,
-       41.791459
+       -87.597146,
+       41.80297
       ],
       [
-       -87.551822,
-       41.7943
+       -87.597099,
+       41.80368
       ]
      ]
     ]
@@ -30230,6 +29712,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -30532,6 +30018,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -30834,6 +30324,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -31136,6 +30630,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0676",
+    "sub_nearest_mi": 2.38,
+    "sub_hc_kw": 3996,
+    "sub_candidates": "S0676",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -31438,6 +30936,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -31737,9 +31239,13 @@
     "program_year": "2028-2031",
     "cost_usd": "",
     "est_headroom_mw": 4,
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0700",
+    "sub_nearest_mi": 0.72,
+    "sub_hc_kw": 33047,
+    "sub_candidates": "S0700;S0632;S0702;S0713;S0735;S0695;S0648",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -31750,271 +31256,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd MYIGP 2028-2031 (Docket 26-0047), filed 2026-01-16",
-    "notes": "Named in Ch.4 as a 4kV conversion/retirement target. Headroom estimated with ComEd's own +4 MW per 4-to-12kV conversion factor."
+    "notes": "Named in Ch.4 as a 4kV conversion/retirement target. Headroom estimated with ComEd's own +4 MW per 4-to-12kV conversion factor. LOCATION UPGRADED: snapped to derived ComEd substation S0700, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 33047 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.662356,
-       41.9016
+       -87.677524,
+       41.90069
       ],
       [
-       -87.662544,
-       41.904441
+       -87.677571,
+       41.9014
       ],
       [
-       -87.663105,
-       41.907255
+       -87.677711,
+       41.902104
       ],
       [
-       -87.664033,
-       41.910014
+       -87.677943,
+       41.902794
       ],
       [
-       -87.665321,
-       41.912692
+       -87.678265,
+       41.903463
       ],
       [
-       -87.666955,
-       41.915264
+       -87.678674,
+       41.904106
       ],
       [
-       -87.66892,
-       41.917703
+       -87.679165,
+       41.904716
       ],
       [
-       -87.671196,
-       41.919988
+       -87.679734,
+       41.905287
       ],
       [
-       -87.673763,
-       41.922096
+       -87.680376,
+       41.905814
       ],
       [
-       -87.676594,
-       41.924006
+       -87.681084,
+       41.906292
       ],
       [
-       -87.679664,
-       41.925701
+       -87.681851,
+       41.906715
       ],
       [
-       -87.682942,
-       41.927163
+       -87.682671,
+       41.907081
       ],
       [
-       -87.686397,
-       41.928379
+       -87.683534,
+       41.907385
       ],
       [
-       -87.689995,
-       41.929337
+       -87.684434,
+       41.907624
       ],
       [
-       -87.693702,
-       41.930029
+       -87.685361,
+       41.907797
       ],
       [
-       -87.697483,
-       41.930446
+       -87.686306,
+       41.907901
       ],
       [
-       -87.7013,
-       41.930586
+       -87.68726,
+       41.907936
       ],
       [
-       -87.705117,
-       41.930446
+       -87.688214,
+       41.907901
       ],
       [
-       -87.708898,
-       41.930029
+       -87.689159,
+       41.907797
       ],
       [
-       -87.712605,
-       41.929337
+       -87.690086,
+       41.907624
       ],
       [
-       -87.716203,
-       41.928379
+       -87.690986,
+       41.907385
       ],
       [
-       -87.719658,
-       41.927163
+       -87.691849,
+       41.907081
       ],
       [
-       -87.722936,
-       41.925701
+       -87.692669,
+       41.906715
       ],
       [
-       -87.726006,
-       41.924006
+       -87.693436,
+       41.906292
       ],
       [
-       -87.728837,
-       41.922096
+       -87.694144,
+       41.905814
       ],
       [
-       -87.731404,
-       41.919988
+       -87.694786,
+       41.905287
       ],
       [
-       -87.73368,
-       41.917703
+       -87.695355,
+       41.904716
       ],
       [
-       -87.735645,
-       41.915264
+       -87.695846,
+       41.904106
       ],
       [
-       -87.737279,
-       41.912692
+       -87.696255,
+       41.903463
       ],
       [
-       -87.738567,
-       41.910014
+       -87.696577,
+       41.902794
       ],
       [
-       -87.739495,
-       41.907255
+       -87.696809,
+       41.902104
       ],
       [
-       -87.740056,
-       41.904441
+       -87.696949,
+       41.9014
       ],
       [
-       -87.740244,
-       41.9016
+       -87.696996,
+       41.90069
       ],
       [
-       -87.740056,
-       41.898759
+       -87.696949,
+       41.89998
       ],
       [
-       -87.739495,
-       41.895945
+       -87.696809,
+       41.899276
       ],
       [
-       -87.738567,
-       41.893186
+       -87.696577,
+       41.898586
       ],
       [
-       -87.737279,
-       41.890508
+       -87.696255,
+       41.897917
       ],
       [
-       -87.735645,
-       41.887936
+       -87.695846,
+       41.897274
       ],
       [
-       -87.73368,
-       41.885497
+       -87.695355,
+       41.896664
       ],
       [
-       -87.731404,
-       41.883212
+       -87.694786,
+       41.896093
       ],
       [
-       -87.728837,
-       41.881104
+       -87.694144,
+       41.895566
       ],
       [
-       -87.726006,
-       41.879194
+       -87.693436,
+       41.895088
       ],
       [
-       -87.722936,
-       41.877499
+       -87.692669,
+       41.894665
       ],
       [
-       -87.719658,
-       41.876037
+       -87.691849,
+       41.894299
       ],
       [
-       -87.716203,
-       41.874821
+       -87.690986,
+       41.893995
       ],
       [
-       -87.712605,
-       41.873863
+       -87.690086,
+       41.893756
       ],
       [
-       -87.708898,
-       41.873171
+       -87.689159,
+       41.893583
       ],
       [
-       -87.705117,
-       41.872754
+       -87.688214,
+       41.893479
       ],
       [
-       -87.7013,
-       41.872614
+       -87.68726,
+       41.893444
       ],
       [
-       -87.697483,
-       41.872754
+       -87.686306,
+       41.893479
       ],
       [
-       -87.693702,
-       41.873171
+       -87.685361,
+       41.893583
       ],
       [
-       -87.689995,
-       41.873863
+       -87.684434,
+       41.893756
       ],
       [
-       -87.686397,
-       41.874821
+       -87.683534,
+       41.893995
       ],
       [
-       -87.682942,
-       41.876037
+       -87.682671,
+       41.894299
       ],
       [
-       -87.679664,
-       41.877499
+       -87.681851,
+       41.894665
       ],
       [
-       -87.676594,
-       41.879194
+       -87.681084,
+       41.895088
       ],
       [
-       -87.673763,
-       41.881104
+       -87.680376,
+       41.895566
       ],
       [
-       -87.671196,
-       41.883212
+       -87.679734,
+       41.896093
       ],
       [
-       -87.66892,
-       41.885497
+       -87.679165,
+       41.896664
       ],
       [
-       -87.666955,
-       41.887936
+       -87.678674,
+       41.897274
       ],
       [
-       -87.665321,
-       41.890508
+       -87.678265,
+       41.897917
       ],
       [
-       -87.664033,
-       41.893186
+       -87.677943,
+       41.898586
       ],
       [
-       -87.663105,
-       41.895945
+       -87.677711,
+       41.899276
       ],
       [
-       -87.662544,
-       41.898759
+       -87.677571,
+       41.89998
       ],
       [
-       -87.662356,
-       41.9016
+       -87.677524,
+       41.90069
       ]
      ]
     ]
@@ -32042,6 +31548,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0710",
+    "sub_nearest_mi": 0.19,
+    "sub_hc_kw": 8910,
+    "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -32341,9 +31851,13 @@
     "program_year": "2028-2031",
     "cost_usd": "",
     "est_headroom_mw": 4,
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0509",
+    "sub_nearest_mi": 1.3,
+    "sub_hc_kw": 10083,
+    "sub_candidates": "S0509;S0667;S0651",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -32354,271 +31868,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd MYIGP 2028-2031 (Docket 26-0047), filed 2026-01-16",
-    "notes": "Named in Ch.4 as a 4kV conversion/retirement target. Headroom estimated with ComEd's own +4 MW per 4-to-12kV conversion factor."
+    "notes": "Named in Ch.4 as a 4kV conversion/retirement target. Headroom estimated with ComEd's own +4 MW per 4-to-12kV conversion factor. LOCATION UPGRADED: snapped to derived ComEd substation S0509, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 10083 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.571142,
-       41.76
+       -87.577147,
+       41.7524
       ],
       [
-       -87.571329,
-       41.762841
+       -87.577194,
+       41.75311
       ],
       [
-       -87.571889,
-       41.765655
+       -87.577333,
+       41.753814
       ],
       [
-       -87.572816,
-       41.768414
+       -87.577565,
+       41.754504
       ],
       [
-       -87.5741,
-       41.771092
+       -87.577886,
+       41.755173
       ],
       [
-       -87.575731,
-       41.773664
+       -87.578294,
+       41.755816
       ],
       [
-       -87.577691,
-       41.776103
+       -87.578784,
+       41.756426
       ],
       [
-       -87.579963,
-       41.778388
+       -87.579352,
+       41.756997
       ],
       [
-       -87.582524,
-       41.780496
+       -87.579992,
+       41.757524
       ],
       [
-       -87.585349,
-       41.782406
+       -87.580698,
+       41.758002
       ],
       [
-       -87.588412,
-       41.784101
+       -87.581464,
+       41.758425
       ],
       [
-       -87.591683,
-       41.785563
+       -87.582281,
+       41.758791
       ],
       [
-       -87.59513,
-       41.786779
+       -87.583143,
+       41.759095
       ],
       [
-       -87.59872,
-       41.787737
+       -87.58404,
+       41.759334
       ],
       [
-       -87.602419,
-       41.788429
+       -87.584965,
+       41.759507
       ],
       [
-       -87.606191,
-       41.788846
+       -87.585908,
+       41.759611
       ],
       [
-       -87.61,
-       41.788986
+       -87.58686,
+       41.759646
       ],
       [
-       -87.613809,
-       41.788846
+       -87.587812,
+       41.759611
       ],
       [
-       -87.617581,
-       41.788429
+       -87.588755,
+       41.759507
       ],
       [
-       -87.62128,
-       41.787737
+       -87.58968,
+       41.759334
       ],
       [
-       -87.62487,
-       41.786779
+       -87.590577,
+       41.759095
       ],
       [
-       -87.628317,
-       41.785563
+       -87.591439,
+       41.758791
       ],
       [
-       -87.631588,
-       41.784101
+       -87.592256,
+       41.758425
       ],
       [
-       -87.634651,
-       41.782406
+       -87.593022,
+       41.758002
       ],
       [
-       -87.637476,
-       41.780496
+       -87.593728,
+       41.757524
       ],
       [
-       -87.640037,
-       41.778388
+       -87.594368,
+       41.756997
       ],
       [
-       -87.642309,
-       41.776103
+       -87.594936,
+       41.756426
       ],
       [
-       -87.644269,
-       41.773664
+       -87.595426,
+       41.755816
       ],
       [
-       -87.6459,
-       41.771092
+       -87.595834,
+       41.755173
       ],
       [
-       -87.647184,
-       41.768414
+       -87.596155,
+       41.754504
       ],
       [
-       -87.648111,
-       41.765655
+       -87.596387,
+       41.753814
       ],
       [
-       -87.648671,
-       41.762841
+       -87.596526,
+       41.75311
       ],
       [
-       -87.648858,
-       41.76
+       -87.596573,
+       41.7524
       ],
       [
-       -87.648671,
-       41.757159
+       -87.596526,
+       41.75169
       ],
       [
-       -87.648111,
-       41.754345
+       -87.596387,
+       41.750986
       ],
       [
-       -87.647184,
-       41.751586
+       -87.596155,
+       41.750296
       ],
       [
-       -87.6459,
-       41.748908
+       -87.595834,
+       41.749627
       ],
       [
-       -87.644269,
-       41.746336
+       -87.595426,
+       41.748984
       ],
       [
-       -87.642309,
-       41.743897
+       -87.594936,
+       41.748374
       ],
       [
-       -87.640037,
-       41.741612
+       -87.594368,
+       41.747803
       ],
       [
-       -87.637476,
-       41.739504
+       -87.593728,
+       41.747276
       ],
       [
-       -87.634651,
-       41.737594
+       -87.593022,
+       41.746798
       ],
       [
-       -87.631588,
-       41.735899
+       -87.592256,
+       41.746375
       ],
       [
-       -87.628317,
-       41.734437
+       -87.591439,
+       41.746009
       ],
       [
-       -87.62487,
-       41.733221
+       -87.590577,
+       41.745705
       ],
       [
-       -87.62128,
-       41.732263
+       -87.58968,
+       41.745466
       ],
       [
-       -87.617581,
-       41.731571
+       -87.588755,
+       41.745293
       ],
       [
-       -87.613809,
-       41.731154
+       -87.587812,
+       41.745189
       ],
       [
-       -87.61,
-       41.731014
+       -87.58686,
+       41.745154
       ],
       [
-       -87.606191,
-       41.731154
+       -87.585908,
+       41.745189
       ],
       [
-       -87.602419,
-       41.731571
+       -87.584965,
+       41.745293
       ],
       [
-       -87.59872,
-       41.732263
+       -87.58404,
+       41.745466
       ],
       [
-       -87.59513,
-       41.733221
+       -87.583143,
+       41.745705
       ],
       [
-       -87.591683,
-       41.734437
+       -87.582281,
+       41.746009
       ],
       [
-       -87.588412,
-       41.735899
+       -87.581464,
+       41.746375
       ],
       [
-       -87.585349,
-       41.737594
+       -87.580698,
+       41.746798
       ],
       [
-       -87.582524,
-       41.739504
+       -87.579992,
+       41.747276
       ],
       [
-       -87.579963,
-       41.741612
+       -87.579352,
+       41.747803
       ],
       [
-       -87.577691,
-       41.743897
+       -87.578784,
+       41.748374
       ],
       [
-       -87.575731,
-       41.746336
+       -87.578294,
+       41.748984
       ],
       [
-       -87.5741,
-       41.748908
+       -87.577886,
+       41.749627
       ],
       [
-       -87.572816,
-       41.751586
+       -87.577565,
+       41.750296
       ],
       [
-       -87.571889,
-       41.754345
+       -87.577333,
+       41.750986
       ],
       [
-       -87.571329,
-       41.757159
+       -87.577194,
+       41.75169
       ],
       [
-       -87.571142,
-       41.76
+       -87.577147,
+       41.7524
       ]
      ]
     ]
@@ -32643,9 +32157,13 @@
     "program_year": "2028-2031",
     "cost_usd": "",
     "est_headroom_mw": 4,
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0721",
+    "sub_nearest_mi": 0.5,
+    "sub_hc_kw": 224362,
+    "sub_candidates": "S0721;S0607",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -32656,271 +32174,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd MYIGP 2028-2031 (Docket 26-0047), filed 2026-01-16",
-    "notes": "Cited as an example of a larger station suited to conversion. Headroom estimated with ComEd's own +4 MW per 4-to-12kV conversion factor."
+    "notes": "Cited as an example of a larger station suited to conversion. Headroom estimated with ComEd's own +4 MW per 4-to-12kV conversion factor. LOCATION UPGRADED: snapped to derived ComEd substation S0721, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 224362 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.842269,
-       41.8814
+       -87.862637,
+       41.88453
       ],
       [
-       -87.842456,
-       41.884241
+       -87.862684,
+       41.88524
       ],
       [
-       -87.843017,
-       41.887055
+       -87.862824,
+       41.885944
       ],
       [
-       -87.843945,
-       41.889814
+       -87.863056,
+       41.886634
       ],
       [
-       -87.845232,
-       41.892492
+       -87.863378,
+       41.887303
       ],
       [
-       -87.846866,
-       41.895064
+       -87.863786,
+       41.887946
       ],
       [
-       -87.84883,
-       41.897503
+       -87.864277,
+       41.888556
       ],
       [
-       -87.851106,
-       41.899788
+       -87.864846,
+       41.889127
       ],
       [
-       -87.853671,
-       41.901896
+       -87.865488,
+       41.889654
       ],
       [
-       -87.856502,
-       41.903806
+       -87.866195,
+       41.890132
       ],
       [
-       -87.859571,
-       41.905501
+       -87.866962,
+       41.890555
       ],
       [
-       -87.862848,
-       41.906963
+       -87.867782,
+       41.890921
       ],
       [
-       -87.866302,
-       41.908179
+       -87.868645,
+       41.891225
       ],
       [
-       -87.869899,
-       41.909137
+       -87.869545,
+       41.891464
       ],
       [
-       -87.873605,
-       41.909829
+       -87.870471,
+       41.891637
       ],
       [
-       -87.877384,
-       41.910246
+       -87.871416,
+       41.891741
       ],
       [
-       -87.8812,
-       41.910386
+       -87.87237,
+       41.891776
       ],
       [
-       -87.885016,
-       41.910246
+       -87.873324,
+       41.891741
       ],
       [
-       -87.888795,
-       41.909829
+       -87.874269,
+       41.891637
       ],
       [
-       -87.892501,
-       41.909137
+       -87.875195,
+       41.891464
       ],
       [
-       -87.896098,
-       41.908179
+       -87.876095,
+       41.891225
       ],
       [
-       -87.899552,
-       41.906963
+       -87.876958,
+       41.890921
       ],
       [
-       -87.902829,
-       41.905501
+       -87.877778,
+       41.890555
       ],
       [
-       -87.905898,
-       41.903806
+       -87.878545,
+       41.890132
       ],
       [
-       -87.908729,
-       41.901896
+       -87.879252,
+       41.889654
       ],
       [
-       -87.911294,
-       41.899788
+       -87.879894,
+       41.889127
       ],
       [
-       -87.91357,
-       41.897503
+       -87.880463,
+       41.888556
       ],
       [
-       -87.915534,
-       41.895064
+       -87.880954,
+       41.887946
       ],
       [
-       -87.917168,
-       41.892492
+       -87.881362,
+       41.887303
       ],
       [
-       -87.918455,
-       41.889814
+       -87.881684,
+       41.886634
       ],
       [
-       -87.919383,
-       41.887055
+       -87.881916,
+       41.885944
       ],
       [
-       -87.919944,
-       41.884241
+       -87.882056,
+       41.88524
       ],
       [
-       -87.920131,
-       41.8814
+       -87.882103,
+       41.88453
       ],
       [
-       -87.919944,
-       41.878559
+       -87.882056,
+       41.88382
       ],
       [
-       -87.919383,
-       41.875745
+       -87.881916,
+       41.883116
       ],
       [
-       -87.918455,
-       41.872986
+       -87.881684,
+       41.882426
       ],
       [
-       -87.917168,
-       41.870308
+       -87.881362,
+       41.881757
       ],
       [
-       -87.915534,
-       41.867736
+       -87.880954,
+       41.881114
       ],
       [
-       -87.91357,
-       41.865297
+       -87.880463,
+       41.880504
       ],
       [
-       -87.911294,
-       41.863012
+       -87.879894,
+       41.879933
       ],
       [
-       -87.908729,
-       41.860904
+       -87.879252,
+       41.879406
       ],
       [
-       -87.905898,
-       41.858994
+       -87.878545,
+       41.878928
       ],
       [
-       -87.902829,
-       41.857299
+       -87.877778,
+       41.878505
       ],
       [
-       -87.899552,
-       41.855837
+       -87.876958,
+       41.878139
       ],
       [
-       -87.896098,
-       41.854621
+       -87.876095,
+       41.877835
       ],
       [
-       -87.892501,
-       41.853663
+       -87.875195,
+       41.877596
       ],
       [
-       -87.888795,
-       41.852971
+       -87.874269,
+       41.877423
       ],
       [
-       -87.885016,
-       41.852554
+       -87.873324,
+       41.877319
       ],
       [
-       -87.8812,
-       41.852414
+       -87.87237,
+       41.877284
       ],
       [
-       -87.877384,
-       41.852554
+       -87.871416,
+       41.877319
       ],
       [
-       -87.873605,
-       41.852971
+       -87.870471,
+       41.877423
       ],
       [
-       -87.869899,
-       41.853663
+       -87.869545,
+       41.877596
       ],
       [
-       -87.866302,
-       41.854621
+       -87.868645,
+       41.877835
       ],
       [
-       -87.862848,
-       41.855837
+       -87.867782,
+       41.878139
       ],
       [
-       -87.859571,
-       41.857299
+       -87.866962,
+       41.878505
       ],
       [
-       -87.856502,
-       41.858994
+       -87.866195,
+       41.878928
       ],
       [
-       -87.853671,
-       41.860904
+       -87.865488,
+       41.879406
       ],
       [
-       -87.851106,
-       41.863012
+       -87.864846,
+       41.879933
       ],
       [
-       -87.84883,
-       41.865297
+       -87.864277,
+       41.880504
       ],
       [
-       -87.846866,
-       41.867736
+       -87.863786,
+       41.881114
       ],
       [
-       -87.845232,
-       41.870308
+       -87.863378,
+       41.881757
       ],
       [
-       -87.843945,
-       41.872986
+       -87.863056,
+       41.882426
       ],
       [
-       -87.843017,
-       41.875745
+       -87.862824,
+       41.883116
       ],
       [
-       -87.842456,
-       41.878559
+       -87.862684,
+       41.88382
       ],
       [
-       -87.842269,
-       41.8814
+       -87.862637,
+       41.88453
       ]
      ]
     ]
@@ -32948,6 +32466,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0712",
+    "sub_nearest_mi": 0.35,
+    "sub_hc_kw": 5726,
+    "sub_candidates": "S0712;S0717;S0693;S0611;S0522",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -33250,6 +32772,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0537",
+    "sub_nearest_mi": 1.69,
+    "sub_hc_kw": 2549,
+    "sub_candidates": "S0537",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -33549,9 +33075,13 @@
     "program_year": "2028-2031",
     "cost_usd": "",
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0742",
+    "sub_nearest_mi": 1.36,
+    "sub_hc_kw": 11301,
+    "sub_candidates": "S0742;S0593;S0636;S0651",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -33562,271 +33092,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd MYIGP 2028-2031 (Docket 26-0047), filed 2026-01-16",
-    "notes": "Named hardening site (Ch.6). Note ComEd's Appendix A 'Location' field is an operating-area label, not a municipality - it tags TSS103 Lisle as 'Bolingbrook'."
+    "notes": "Named hardening site (Ch.6). Note ComEd's Appendix A 'Location' field is an operating-area label, not a municipality - it tags TSS103 Lisle as 'Bolingbrook'. LOCATION UPGRADED: snapped to derived ComEd substation S0742, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 11301 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.633668,
-       41.7178
+       -87.644614,
+       41.70349
       ],
       [
-       -87.633855,
-       41.720641
+       -87.644661,
+       41.7042
       ],
       [
-       -87.634414,
-       41.723455
+       -87.644801,
+       41.704904
       ],
       [
-       -87.63534,
-       41.726214
+       -87.645032,
+       41.705594
       ],
       [
-       -87.636624,
-       41.728892
+       -87.645353,
+       41.706263
       ],
       [
-       -87.638253,
-       41.731464
+       -87.64576,
+       41.706906
       ],
       [
-       -87.640212,
-       41.733903
+       -87.64625,
+       41.707516
       ],
       [
-       -87.642482,
-       41.736188
+       -87.646817,
+       41.708087
       ],
       [
-       -87.645042,
-       41.738296
+       -87.647457,
+       41.708614
       ],
       [
-       -87.647865,
-       41.740206
+       -87.648163,
+       41.709092
       ],
       [
-       -87.650926,
-       41.741901
+       -87.648928,
+       41.709515
       ],
       [
-       -87.654195,
-       41.743363
+       -87.649745,
+       41.709881
       ],
       [
-       -87.65764,
-       41.744579
+       -87.650606,
+       41.710185
       ],
       [
-       -87.661228,
-       41.745537
+       -87.651503,
+       41.710424
       ],
       [
-       -87.664924,
-       41.746229
+       -87.652426,
+       41.710597
       ],
       [
-       -87.668694,
-       41.746646
+       -87.653369,
+       41.710701
       ],
       [
-       -87.6725,
-       41.746786
+       -87.65432,
+       41.710736
       ],
       [
-       -87.676306,
-       41.746646
+       -87.655271,
+       41.710701
       ],
       [
-       -87.680076,
-       41.746229
+       -87.656214,
+       41.710597
       ],
       [
-       -87.683772,
-       41.745537
+       -87.657137,
+       41.710424
       ],
       [
-       -87.68736,
-       41.744579
+       -87.658034,
+       41.710185
       ],
       [
-       -87.690805,
-       41.743363
+       -87.658895,
+       41.709881
       ],
       [
-       -87.694074,
-       41.741901
+       -87.659712,
+       41.709515
       ],
       [
-       -87.697135,
-       41.740206
+       -87.660477,
+       41.709092
       ],
       [
-       -87.699958,
-       41.738296
+       -87.661183,
+       41.708614
       ],
       [
-       -87.702518,
-       41.736188
+       -87.661823,
+       41.708087
       ],
       [
-       -87.704788,
-       41.733903
+       -87.66239,
+       41.707516
       ],
       [
-       -87.706747,
-       41.731464
+       -87.66288,
+       41.706906
       ],
       [
-       -87.708376,
-       41.728892
+       -87.663287,
+       41.706263
       ],
       [
-       -87.70966,
-       41.726214
+       -87.663608,
+       41.705594
       ],
       [
-       -87.710586,
-       41.723455
+       -87.663839,
+       41.704904
       ],
       [
-       -87.711145,
-       41.720641
+       -87.663979,
+       41.7042
       ],
       [
-       -87.711332,
-       41.7178
+       -87.664026,
+       41.70349
       ],
       [
-       -87.711145,
-       41.714959
+       -87.663979,
+       41.70278
       ],
       [
-       -87.710586,
-       41.712145
+       -87.663839,
+       41.702076
       ],
       [
-       -87.70966,
-       41.709386
+       -87.663608,
+       41.701386
       ],
       [
-       -87.708376,
-       41.706708
+       -87.663287,
+       41.700717
       ],
       [
-       -87.706747,
-       41.704136
+       -87.66288,
+       41.700074
       ],
       [
-       -87.704788,
-       41.701697
+       -87.66239,
+       41.699464
       ],
       [
-       -87.702518,
-       41.699412
+       -87.661823,
+       41.698893
       ],
       [
-       -87.699958,
-       41.697304
+       -87.661183,
+       41.698366
       ],
       [
-       -87.697135,
-       41.695394
+       -87.660477,
+       41.697888
       ],
       [
-       -87.694074,
-       41.693699
+       -87.659712,
+       41.697465
       ],
       [
-       -87.690805,
-       41.692237
+       -87.658895,
+       41.697099
       ],
       [
-       -87.68736,
-       41.691021
+       -87.658034,
+       41.696795
       ],
       [
-       -87.683772,
-       41.690063
+       -87.657137,
+       41.696556
       ],
       [
-       -87.680076,
-       41.689371
+       -87.656214,
+       41.696383
       ],
       [
-       -87.676306,
-       41.688954
+       -87.655271,
+       41.696279
       ],
       [
-       -87.6725,
-       41.688814
+       -87.65432,
+       41.696244
       ],
       [
-       -87.668694,
-       41.688954
+       -87.653369,
+       41.696279
       ],
       [
-       -87.664924,
-       41.689371
+       -87.652426,
+       41.696383
       ],
       [
-       -87.661228,
-       41.690063
+       -87.651503,
+       41.696556
       ],
       [
-       -87.65764,
-       41.691021
+       -87.650606,
+       41.696795
       ],
       [
-       -87.654195,
-       41.692237
+       -87.649745,
+       41.697099
       ],
       [
-       -87.650926,
-       41.693699
+       -87.648928,
+       41.697465
       ],
       [
-       -87.647865,
-       41.695394
+       -87.648163,
+       41.697888
       ],
       [
-       -87.645042,
-       41.697304
+       -87.647457,
+       41.698366
       ],
       [
-       -87.642482,
-       41.699412
+       -87.646817,
+       41.698893
       ],
       [
-       -87.640212,
-       41.701697
+       -87.64625,
+       41.699464
       ],
       [
-       -87.638253,
-       41.704136
+       -87.64576,
+       41.700074
       ],
       [
-       -87.636624,
-       41.706708
+       -87.645353,
+       41.700717
       ],
       [
-       -87.63534,
-       41.709386
+       -87.645032,
+       41.701386
       ],
       [
-       -87.634414,
-       41.712145
+       -87.644801,
+       41.702076
       ],
       [
-       -87.633855,
-       41.714959
+       -87.644661,
+       41.70278
       ],
       [
-       -87.633668,
-       41.7178
+       -87.644614,
+       41.70349
       ]
      ]
     ]
@@ -33851,9 +33381,13 @@
     "program_year": "2028-2031",
     "cost_usd": "",
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "substation_match",
+    "uncertainty_mi": 0.5,
     "feeder_match": "",
+    "sub_nearest": "S0640",
+    "sub_nearest_mi": 0.86,
+    "sub_hc_kw": 69684,
+    "sub_candidates": "S0640;S0612",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -33864,271 +33398,271 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd MYIGP 2028-2031 (Docket 26-0047), filed 2026-01-16",
-    "notes": "Named hardening site (Ch.6). Note ComEd's Appendix A 'Location' field is an operating-area label, not a municipality - it tags TSS103 Lisle as 'Bolingbrook'."
+    "notes": "Named hardening site (Ch.6). Note ComEd's Appendix A 'Location' field is an operating-area label, not a municipality - it tags TSS103 Lisle as 'Bolingbrook'. LOCATION UPGRADED: snapped to derived ComEd substation S0640, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 69684 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -88.035618,
-       41.8009
+       -88.04852,
+       41.79773
       ],
       [
-       -88.035805,
-       41.803741
+       -88.048567,
+       41.79844
       ],
       [
-       -88.036365,
-       41.806555
+       -88.048707,
+       41.799144
       ],
       [
-       -88.037292,
-       41.809314
+       -88.048938,
+       41.799834
       ],
       [
-       -88.038577,
-       41.811992
+       -88.04926,
+       41.800503
       ],
       [
-       -88.040209,
-       41.814564
+       -88.049668,
+       41.801146
       ],
       [
-       -88.04217,
-       41.817003
+       -88.050158,
+       41.801756
       ],
       [
-       -88.044443,
-       41.819288
+       -88.050726,
+       41.802327
       ],
       [
-       -88.047006,
-       41.821396
+       -88.051367,
+       41.802854
       ],
       [
-       -88.049833,
-       41.823306
+       -88.052074,
+       41.803332
       ],
       [
-       -88.052898,
-       41.825001
+       -88.05284,
+       41.803755
       ],
       [
-       -88.056171,
-       41.826463
+       -88.053658,
+       41.804121
       ],
       [
-       -88.05962,
-       41.827679
+       -88.05452,
+       41.804425
       ],
       [
-       -88.063213,
-       41.828637
+       -88.055418,
+       41.804664
       ],
       [
-       -88.066914,
-       41.829329
+       -88.056344,
+       41.804837
       ],
       [
-       -88.070689,
-       41.829746
+       -88.057287,
+       41.804941
       ],
       [
-       -88.0745,
-       41.829886
+       -88.05824,
+       41.804976
       ],
       [
-       -88.078311,
-       41.829746
+       -88.059193,
+       41.804941
       ],
       [
-       -88.082086,
-       41.829329
+       -88.060136,
+       41.804837
       ],
       [
-       -88.085787,
-       41.828637
+       -88.061062,
+       41.804664
       ],
       [
-       -88.08938,
-       41.827679
+       -88.06196,
+       41.804425
       ],
       [
-       -88.092829,
-       41.826463
+       -88.062822,
+       41.804121
       ],
       [
-       -88.096102,
-       41.825001
+       -88.06364,
+       41.803755
       ],
       [
-       -88.099167,
-       41.823306
+       -88.064406,
+       41.803332
       ],
       [
-       -88.101994,
-       41.821396
+       -88.065113,
+       41.802854
       ],
       [
-       -88.104557,
-       41.819288
+       -88.065754,
+       41.802327
       ],
       [
-       -88.10683,
-       41.817003
+       -88.066322,
+       41.801756
       ],
       [
-       -88.108791,
-       41.814564
+       -88.066812,
+       41.801146
       ],
       [
-       -88.110423,
-       41.811992
+       -88.06722,
+       41.800503
       ],
       [
-       -88.111708,
-       41.809314
+       -88.067542,
+       41.799834
       ],
       [
-       -88.112635,
-       41.806555
+       -88.067773,
+       41.799144
       ],
       [
-       -88.113195,
-       41.803741
+       -88.067913,
+       41.79844
       ],
       [
-       -88.113382,
-       41.8009
+       -88.06796,
+       41.79773
       ],
       [
-       -88.113195,
-       41.798059
+       -88.067913,
+       41.79702
       ],
       [
-       -88.112635,
-       41.795245
+       -88.067773,
+       41.796316
       ],
       [
-       -88.111708,
-       41.792486
+       -88.067542,
+       41.795626
       ],
       [
-       -88.110423,
-       41.789808
+       -88.06722,
+       41.794957
       ],
       [
-       -88.108791,
-       41.787236
+       -88.066812,
+       41.794314
       ],
       [
-       -88.10683,
-       41.784797
+       -88.066322,
+       41.793704
       ],
       [
-       -88.104557,
-       41.782512
+       -88.065754,
+       41.793133
       ],
       [
-       -88.101994,
-       41.780404
+       -88.065113,
+       41.792606
       ],
       [
-       -88.099167,
-       41.778494
+       -88.064406,
+       41.792128
       ],
       [
-       -88.096102,
-       41.776799
+       -88.06364,
+       41.791705
       ],
       [
-       -88.092829,
-       41.775337
+       -88.062822,
+       41.791339
       ],
       [
-       -88.08938,
-       41.774121
+       -88.06196,
+       41.791035
       ],
       [
-       -88.085787,
-       41.773163
+       -88.061062,
+       41.790796
       ],
       [
-       -88.082086,
-       41.772471
+       -88.060136,
+       41.790623
       ],
       [
-       -88.078311,
-       41.772054
+       -88.059193,
+       41.790519
       ],
       [
-       -88.0745,
-       41.771914
+       -88.05824,
+       41.790484
       ],
       [
-       -88.070689,
-       41.772054
+       -88.057287,
+       41.790519
       ],
       [
-       -88.066914,
-       41.772471
+       -88.056344,
+       41.790623
       ],
       [
-       -88.063213,
-       41.773163
+       -88.055418,
+       41.790796
       ],
       [
-       -88.05962,
-       41.774121
+       -88.05452,
+       41.791035
       ],
       [
-       -88.056171,
-       41.775337
+       -88.053658,
+       41.791339
       ],
       [
-       -88.052898,
-       41.776799
+       -88.05284,
+       41.791705
       ],
       [
-       -88.049833,
-       41.778494
+       -88.052074,
+       41.792128
       ],
       [
-       -88.047006,
-       41.780404
+       -88.051367,
+       41.792606
       ],
       [
-       -88.044443,
-       41.782512
+       -88.050726,
+       41.793133
       ],
       [
-       -88.04217,
-       41.784797
+       -88.050158,
+       41.793704
       ],
       [
-       -88.040209,
-       41.787236
+       -88.049668,
+       41.794314
       ],
       [
-       -88.038577,
-       41.789808
+       -88.04926,
+       41.794957
       ],
       [
-       -88.037292,
-       41.792486
+       -88.048938,
+       41.795626
       ],
       [
-       -88.036365,
-       41.795245
+       -88.048707,
+       41.796316
       ],
       [
-       -88.035805,
-       41.798059
+       -88.048567,
+       41.79702
       ],
       [
-       -88.035618,
-       41.8009
+       -88.04852,
+       41.79773
       ]
      ]
     ]
@@ -34156,6 +33690,10 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "feeder_match": "",
+    "sub_nearest": "S0715",
+    "sub_nearest_mi": 1.79,
+    "sub_hc_kw": 131069,
+    "sub_candidates": "S0715",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -34458,6 +33996,10 @@
     "loc_method": "narrative_reference",
     "uncertainty_mi": 6.0,
     "feeder_match": "",
+    "sub_nearest": "",
+    "sub_nearest_mi": "",
+    "sub_hc_kw": "",
+    "sub_candidates": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
