@@ -303,9 +303,11 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   "esri/layers/GroupLayer","esri/layers/GraphicsLayer","esri/Graphic","esri/geometry/Point",
   "esri/geometry/Circle","esri/symbols/SimpleMarkerSymbol","esri/rest/locator",
   "esri/widgets/Search","esri/widgets/Home","esri/widgets/Locate","esri/widgets/ScaleBar",
-  "esri/widgets/Zoom","esri/widgets/Expand","esri/widgets/Legend","esri/widgets/LayerList","esri/widgets/BasemapToggle","esri/layers/GeoJSONLayer","esri/renderers/support/jsonUtils"
+  "esri/widgets/Zoom","esri/widgets/Expand","esri/widgets/Legend","esri/widgets/LayerList","esri/widgets/BasemapToggle","esri/layers/GeoJSONLayer","esri/renderers/support/jsonUtils",
+  "esri/geometry/geometryEngine","esri/geometry/Polygon"
 ], function(Map,MapView,VectorTileLayer,FeatureLayer,MapImageLayer,GroupLayer,GraphicsLayer,Graphic,Point,
-            Circle,SimpleMarkerSymbol,locator,Search,Home,Locate,ScaleBar,Zoom,Expand,Legend,LayerList,BasemapToggle,GeoJSONLayer,rendererJsonUtils){
+            Circle,SimpleMarkerSymbol,locator,Search,Home,Locate,ScaleBar,Zoom,Expand,Legend,LayerList,BasemapToggle,GeoJSONLayer,rendererJsonUtils,
+            geometryEngine,PolygonGeom){
   var INITIAL_HTML="<!DOCTYPE html>\n"+document.documentElement.outerHTML;
 
   var TILES="https://tiles.arcgis.com/tiles/3jEEGnl6c1x9Sze7/arcgis/rest/services/";
@@ -421,8 +423,62 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       popupTemplate:{title:"Transmission line",content:function(f){ var a=(f.graphic&&f.graphic.attributes)||{}; var kv=parseFloat(a.VOLTAGE);
         return '<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;color:#22223b;min-width:220px;">'+kv2("Voltage class",txnn(a.VOLT_CLASS))+kv2("Voltage (kV)",(isFinite(kv)&&kv>0)?kv:"not published")+kv2("Owner",txnn(a.OWNER))+kv2("Status",txnn(a.STATUS))+kv2("Between",txnn(a.SUB_1)+" ↔ "+txnn(a.SUB_2))+'</div>'; }}
     });
+    /* HIFLD_TX stays in the map but PERMANENTLY INVISIBLE. It is kept purely as
+       the query source for buildTxIndex() (nearest-transmission analysis) and
+       as the single source of truth for symbols and the popup. What the user
+       actually sees is txClipLayer below.                                    */
+    HIFLD_TX.visible=false;
     map.add(HIFLD_TX); buildTxIndex();
   }catch(e){} })();
+
+  /* ---------- Illinois clip for the all-voltage transmission layer ----------
+     HIFLD is a NATIONAL dataset, so drawn raw it ran lines across Michigan,
+     Ohio, Missouri, Kentucky and beyond. The 69 kV layer never had this problem
+     because its data is baked in already clipped to the state. This does the
+     same thing at runtime: query only lines intersecting Illinois, then CUT
+     each one at the border with geometryEngine.intersect — not merely filter
+     it, so no line extends past the state line.
+     Symbols and popup are pulled off HIFLD_TX's own renderer so the two can
+     never drift apart. If anything here fails we fall back to the unclipped
+     layer rather than showing nothing.                                      */
+  var IL_RING=[[-87.892,38.283],[-87.935,38.295],[-87.961,38.237],[-87.988,38.257],[-87.977,38.2],[-87.911,38.163],[-88.016,38.1],[-87.957,38.086],[-88.042,38.046],[-88.008,38.031],[-88.013,37.967],[-88.069,37.926],[-88.013,37.894],[-88.098,37.902],[-88.026,37.833],[-88.09,37.817],[-88.028,37.799],[-88.16,37.661],[-88.065,37.489],[-88.469,37.397],[-88.516,37.284],[-88.425,37.152],[-88.459,37.075],[-88.566,37.075],[-88.977,37.229],[-89.174,37.066],[-89.133,36.982],[-89.185,36.974],[-89.255,37.072],[-89.308,37.07],[-89.258,37.015],[-89.292,36.992],[-89.382,37.043],[-89.459,37.249],[-89.518,37.284],[-89.421,37.388],[-89.517,37.537],[-89.52,37.583],[-89.476,37.593],[-89.516,37.693],[-89.663,37.75],[-89.67,37.8],[-89.843,37.905],[-89.948,37.88],[-89.975,37.927],[-89.925,37.96],[-90.111,38.027],[-90.359,38.222],[-90.371,38.334],[-90.185,38.612],[-90.211,38.721],[-90.113,38.849],[-90.44,38.967],[-90.549,38.873],[-90.623,38.887],[-90.713,39.05],[-90.681,39.101],[-90.73,39.256],[-91.038,39.448],[-91.1,39.539],[-91.369,39.731],[-91.362,39.79],[-91.436,39.845],[-91.419,39.928],[-91.495,40.036],[-91.507,40.236],[-91.446,40.362],[-91.373,40.399],[-91.364,40.5],[-91.401,40.559],[-91.34,40.613],[-91.124,40.669],[-91.093,40.821],[-90.963,40.926],[-90.947,41.097],[-91.114,41.241],[-91.048,41.411],[-90.656,41.462],[-90.343,41.588],[-90.313,41.74],[-90.182,41.807],[-90.154,41.907],[-90.164,42.118],[-90.391,42.225],[-90.419,42.329],[-90.646,42.471],[-90.643,42.508],[-87.02,42.493],[-87.208,41.761],[-87.524,41.76],[-87.532,39.348],[-87.621,39.307],[-87.575,39.218],[-87.659,39.136],[-87.573,39.057],[-87.578,38.989],[-87.512,38.954],[-87.553,38.862],[-87.496,38.741],[-87.62,38.639],[-87.612,38.589],[-87.67,38.545],[-87.647,38.508],[-87.75,38.471],[-87.745,38.409],[-87.823,38.347],[-87.839,38.282],[-87.869,38.312],[-87.892,38.283]];
+  var __ilPoly=null;
+  function ilPoly(){ if(__ilPoly)return __ilPoly;
+    try{ __ilPoly=new PolygonGeom({rings:[IL_RING],spatialReference:{wkid:4326}}); }catch(e){ __ilPoly=null; }
+    return __ilPoly; }
+  var txClipLayer=null,__txClipReq=null;
+  function txSymFor(vc){ var r=HIFLD_TX&&HIFLD_TX.renderer;
+    if(!r) return {type:"simple-line",color:[150,150,150,0.85],width:1.1,cap:"round",join:"round"};
+    var infos=r.uniqueValueInfos||[];
+    for(var i=0;i<infos.length;i++){ if(String(infos[i].value)===String(vc)) return infos[i].symbol; }
+    return r.defaultSymbol||{type:"simple-line",color:[150,150,150,0.85],width:1.1,cap:"round",join:"round"}; }
+  function buildTxClip(){ if(__txClipReq) return __txClipReq;
+    var poly=ilPoly();
+    if(!poly||!HIFLD_TX||!geometryEngine){ __txClipReq=Promise.resolve(null); return __txClipReq; }
+    __txClipReq=HIFLD_TX.queryFeatures({geometry:poly,spatialRelationship:"intersects",
+        outFields:["VOLT_CLASS","VOLTAGE","OWNER","SUB_1","SUB_2","STATUS"],
+        returnGeometry:true,outSpatialReference:{wkid:4326},num:12000})
+      .then(function(r){
+        var feats=(r&&r.features)||[]; if(!feats.length) return null;
+        var gl=new GraphicsLayer({title:"Transmission lines (Illinois)",listMode:"hide"});
+        var pt=HIFLD_TX.popupTemplate;
+        feats.forEach(function(f){ if(!f.geometry) return;
+          var g=f.geometry;
+          try{ var cut=geometryEngine.intersect(f.geometry,poly); if(cut) g=cut; }catch(e){}
+          if(!g) return;
+          try{ gl.add(new Graphic({geometry:g,attributes:f.attributes,
+                 symbol:txSymFor(f.attributes&&f.attributes.VOLT_CLASS),popupTemplate:pt})); }catch(e){}
+        });
+        txClipLayer=gl; map.add(gl); raiseSites(); applyTxClass();
+        gl.visible=!!($("txOn")&&$("txOn").checked);
+        return gl; })
+      .catch(function(){ return null; });
+    return __txClipReq; }
+  function applyTxClass(){ var sel=$("txClass"), v=sel?sel.value:"";
+    if(!txClipLayer) return;
+    txClipLayer.graphics.forEach(function(gr){
+      var vc=(gr.attributes&&gr.attributes.VOLT_CLASS)||"";
+      gr.visible = (!v || String(vc)===String(v)); }); }
   function ceBuildLegend(r){ var box=document.createElement("div"); box.style.cssText="background:#fff;border:1px solid #b0b0b0;border-radius:4px;box-shadow:0 1px 6px rgba(0,0,0,.28);font-size:12px;min-width:178px;overflow:hidden;display:none;";
     var bar=document.createElement("div"); bar.style.cssText="padding:0 11px 4px;font-size:11px;font-weight:700;color:#637088;"; bar.textContent="Combined — available MW"; box.appendChild(bar);
     var body=document.createElement("div"); body.style.padding="2px 11px 9px"; var infos=(r&&(r.uniqueValueInfos||r.classBreakInfos))||[];
@@ -681,7 +737,8 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(g("project_id"))s+=kv2("Project ID",he(String(g("project_id"))));
     if(g("itn"))s+=kv2("ITN",he(String(g("itn"))));
     if(g("program_id"))s+=kv2("Program ID",he(String(g("program_id"))));
-    s+=kv2("Category",he(String(g("category")||"—")));
+    if(g("group"))s+=kv2("Group",he(String(g("group")).replace(/^\d+\.\s*/,"")));
+    s+=kv2("Filing category",he(String(g("category")||"—")));
     s+=kv2("Asset type",he(String(g("asset_type")||"—")));
     if(g("voltage_kv"))s+=kv2("Voltage (kV)",he(String(g("voltage_kv"))));
     if(g("feeder_id"))s+=kv2("Feeder / circuit",he(String(g("feeder_id"))));
@@ -865,7 +922,37 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       e.textContent="No mapped projects for the selected status."; box.appendChild(e); return; }
     var sorted=gpRows.slice().sort(function(a,b){
       return (parseFloat(gpA(b.attributes,"cost_usd"))||0)-(parseFloat(gpA(a.attributes,"cost_usd"))||0); });
-    sorted.forEach(function(f){ var a=f.attributes,g=function(k){return gpA(a,k);};
+    /* Split into the six asset groups. Ordered by how directly each kind of
+       work creates siting headroom, so new substations and feeder/line work
+       sit above reliability spend that rarely moves hosting capacity.       */
+    var GRP_NOTE={
+      "1. New substations":"Brand-new stations — the largest single source of future headroom.",
+      "2. Substation capacity":"Transformers, banks and rebuilds at existing stations.",
+      "3. Feeders & lines":"Voltage conversions, reconductoring, new feeders and load transfers.",
+      "4. DER & hosting capacity":"Work the utility itself ties to DER interconnection.",
+      "5. Reliability & hardening":"Rarely adds headroom — shown for completeness.",
+      "6. Programs, land & studies":"System-wide items with no single site."};
+    var buckets={},order=[];
+    sorted.forEach(function(f){ var k=String(gpA(f.attributes,"group")||"Other");
+      if(!buckets[k]){ buckets[k]=[]; order.push(k); } buckets[k].push(f); });
+    order.sort();
+    order.forEach(function(k){ var list=buckets[k],tot=0,mw=0;
+      list.forEach(function(f){ tot+=parseFloat(gpA(f.attributes,"cost_usd"))||0;
+                                mw+=parseFloat(gpA(f.attributes,"est_headroom_mw"))||0; });
+      var hd=document.createElement("div");
+      hd.style.cssText="margin:10px 0 3px;padding:5px 7px;background:#f3efff;border-left:3px solid #7c3aed;border-radius:4px;cursor:pointer;";
+      var bits=[list.length+" project"+(list.length===1?"":"s")];
+      if(tot>0)bits.push(gpMoney(tot));
+      if(mw>0)bits.push("~"+Math.round(mw)+" MW");
+      hd.innerHTML='<div style="font-size:11.5px;font-weight:800;color:#5b21b6;">'+he(k.replace(/^\d+\.\s*/,""))+' <span style="float:right;font-weight:600;color:#7c3aed;">▾</span></div>'
+        +'<div style="font-size:11px;color:#6b6b80;margin-top:1px;">'+he(bits.join(" · "))+'</div>'
+        +(GRP_NOTE[k]?('<div style="font-size:10.5px;color:#8a8a9c;margin-top:2px;">'+he(GRP_NOTE[k])+'</div>'):'');
+      var body=document.createElement("div");
+      hd.addEventListener("click",function(){
+        var open=body.style.display!=="none"; body.style.display=open?"none":"block";
+        var car=hd.querySelector("span"); if(car)car.textContent=open?"▸":"▾"; });
+      box.appendChild(hd); box.appendChild(body);
+      list.forEach(function(f){ var a=f.attributes,g=function(k2){return gpA(a,k2);};
       var d=document.createElement("div"); d.className="resRow"; d.style.cursor="pointer";
       var bits=[]; if(g("place"))bits.push(String(g("place")));
       if(g("program_year"))bits.push(String(g("program_year")));
@@ -879,7 +966,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
         +'<span class="m">'+he(String(g("utility")||""))+' · '+he(String(g("status")||""))+(bits.length?(" · "+he(bits.join(" · "))):"")+'</span>'
         +(isNaN(un)?"":'<br><span class="m" style="color:#8a8a9c;">could be within &plusmn; '+un+' mi</span>');
       d.addEventListener("click",function(){ gpGoTo(f); });
-      box.appendChild(d); });
+      body.appendChild(d); }); });
   }
   var GP_UNLOC_URL=GP_URL_BASE+"il_grid_plan_unlocated.geojson";
   var GP_SUMMARY_URL=GP_URL_BASE+"il_grid_plan_summary.json";
@@ -889,12 +976,12 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     c.addEventListener("change",function(){ if(showGP.checked)gpRefresh(); }); });
   (function(){ var b=$("gpExport"); if(!b)return; b.addEventListener("click",function(){
     if(!gpRows||!gpRows.length||typeof XLSX==="undefined")return;
-    var cols=["utility","docket","status","project_id","project_name","category","asset_type",
+    var cols=["utility","docket","status","group","project_id","project_name","category","asset_type",
               "feeder_id","substation","place","county","region","program_year","cost_usd",
               "est_headroom_mw","loc_method","uncertainty_mi","hosting_capacity_flag",
               "removal_risk","risk_reason","program_id","itn","ce_type","voltage_kv",
               "driver","nwa_status","source","notes"];
-    var hdr=["Utility","ICC docket","Status","Project ID","Project name","Category","Asset type",
+    var hdr=["Utility","ICC docket","Status","Group","Project ID","Project name","Filing category","Asset type",
              "Feeder / circuit","Substation","Place","County","Region","Program year","Filed cost (USD)",
              "Est. headroom (MW)","Location method","Location uncertainty (mi)","Hosting-capacity impact",
              "Risk of being cut","Why (risk basis)","Program ID","ITN",
@@ -904,8 +991,20 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Planned investments");
     XLSX.writeFile(wb,"planned_grid_investments.xlsx"); }); })();
   // (ComEd substations layer removed — substation detail is shown on feeder-ID click inside the feeder popup.)
-  (function(){ var _tx=$("txOn"); if(_tx){ _tx.addEventListener("change",function(){ if(HIFLD_TX)HIFLD_TX.visible=_tx.checked; }); }
-    var _c=$("txClass"); if(_c){ _c.addEventListener("change",function(){ if(HIFLD_TX)HIFLD_TX.definitionExpression=_c.value?("VOLT_CLASS='"+String(_c.value).replace(/'/g,"''")+"'"):null; }); }
+  (function(){ var _tx=$("txOn");
+    if(_tx){ _tx.addEventListener("change",function(){
+      if(!_tx.checked){ if(txClipLayer)txClipLayer.visible=false; if(HIFLD_TX)HIFLD_TX.visible=false; return; }
+      /* Build the Illinois-clipped layer on first use. If clipping is
+         unavailable for any reason, fall back to the raw national layer so the
+         checkbox still does something. */
+      buildTxClip().then(function(gl){
+        if(gl){ gl.visible=true; applyTxClass(); }
+        else if(HIFLD_TX){ HIFLD_TX.visible=true; }
+      }).catch(function(){ if(HIFLD_TX)HIFLD_TX.visible=true; });
+    }); }
+    var _c=$("txClass"); if(_c){ _c.addEventListener("change",function(){
+      applyTxClass();
+      if(!txClipLayer&&HIFLD_TX)HIFLD_TX.definitionExpression=_c.value?("VOLT_CLASS='"+String(_c.value).replace(/'/g,"''")+"'"):null; }); }
     var cnt=$("txCount"); if(cnt&&HIFLD_TX){ HIFLD_TX.when(function(){ HIFLD_TX.queryFeatureCount({where:"1=1",geometry:view.extent}).then(function(n){ cnt.textContent=(n||0).toLocaleString()+" line segment(s) in view"; }).catch(function(){}); }); } })();
   Array.prototype.forEach.call(document.querySelectorAll(".subCls"),function(cb){ cb.addEventListener("change",refreshSubLayer); });
   (function(){ var mk=$("subMinKv"); if(mk){ mk.addEventListener("input",refreshSubLayer); mk.addEventListener("change",refreshSubLayer); } })();
