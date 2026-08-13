@@ -829,6 +829,70 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
           });
           return out; })()}});
   }
+  /* ---------- Real feeder footprints for matched feeders ----------
+     Where a project names an actual Ameren FEEDERID we can do better than a
+     ring: query the live hosting-capacity grid, outline the feeder's real
+     published footprint in violet, and merge BOTH stories into one popup —
+     the feeder's present-day capacity and the planned work on top of it.
+     Ameren only, and matched on exact comma-token equality: FEEDERID holds
+     comma-separated lists, so a substring test on a short ID matches thousands
+     of unrelated cells.                                                     */
+  var gpFdrLayer=null,__gpFdrReq=null;
+  function gpFdrToken(s){ var m=String(s||"").match(/\b[A-Z]\d{5}\b/); return m?m[0]:null; }
+  function gpFdrHasToken(v,tok){ var p=String(v||"").split(",");
+    for(var i=0;i<p.length;i++){ if(p[i].trim()===tok) return true; } return false; }
+  function gpFdrPopup(f){ var a=f.graphic.attributes;
+    var s='<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;min-width:262px;color:#22223b;">';
+    s+='<div style="font-size:13px;font-weight:800;color:#1b2a4a;padding-bottom:6px;border-bottom:2px solid #7c3aed;margin-bottom:4px;">Feeder '+he(String(a.__tok||""))+'</div>';
+    s+=subhd("Existing feeder — as built today");
+    var gv=parseFloat(a.__gen),lv=parseFloat(a.__load);
+    s+=kv2("Generation hosting capacity",(isNaN(gv)?"—":fmtMW(gv)+" MW"));
+    s+=kv2("Load hosting capacity",(isNaN(lv)?"—":fmtMW(lv)+" MW"));
+    if(a.__cells)s+=kv2("Grid cells outlined",a.__cells);
+    s+='<div style="font-size:10.5px;color:#8a8a9c;margin:5px 0 2px;">Ameren&rsquo;s published present-day values. They do <b>not</b> reflect the planned work below, and they exclude the interconnection queue.</div>';
+    s+='<div style="border-top:1px dashed #d9cdf7;margin:7px 0 0;"></div>';
+    return s+gpPopup({graphic:{attributes:a}})+'</div>'; }
+  function gpBuildFdr(){ if(__gpFdrReq) return __gpFdrReq;
+    __gpFdrReq=fetch(GP_URL_BASE+"il_grid_plan_points.geojson").then(function(r){return r.json();})
+      .then(function(j){
+        var tg=[];
+        ((j&&j.features)||[]).forEach(function(f){ var p=f.properties||{};
+          if(String(p.feeder_match)!=="yes")return;
+          if(String(p.utility||"").indexOf("Ameren")!==0)return;   /* hard guard */
+          var tok=gpFdrToken(p.feeder_id); if(tok)tg.push({p:p,tok:tok}); });
+        if(!tg.length||typeof info==="undefined")return null;
+        var gl=new GraphicsLayer({title:"Planned feeder footprints",listMode:"hide"});
+        return Promise.all(tg.map(function(t){
+          return Promise.all([
+            info.queryFeatures({where:"FEEDERID LIKE '%"+t.tok+"%'",outFields:["FEEDERID","MAXGENMW_TXT"],
+              returnGeometry:true,outSpatialReference:{wkid:4326},num:4000}).catch(function(){return{features:[]};}),
+            (typeof LC!=="undefined"?LC.queryFeatures({where:"FEEDERID LIKE '%"+t.tok+"%'",
+              outFields:["FEEDERID","MAXLOADMW_TXT"],returnGeometry:false,num:4000}).catch(function(){return{features:[]};})
+              :Promise.resolve({features:[]}))
+          ]).then(function(rr){
+            var cells=[],gen=NaN,load=NaN;
+            ((rr[0]&&rr[0].features)||[]).forEach(function(cf){ var a=cf.attributes||{};
+              if(!gpFdrHasToken(a.FEEDERID,t.tok))return;
+              cells.push(cf.geometry);
+              cellFeeders(a.FEEDERID,a.MAXGENMW_TXT).forEach(function(x){
+                if(x.feeder===t.tok&&!isNaN(x.val)&&(isNaN(gen)||x.val>gen))gen=x.val; }); });
+            ((rr[1]&&rr[1].features)||[]).forEach(function(cf){ var a=cf.attributes||{};
+              if(!gpFdrHasToken(a.FEEDERID,t.tok))return;
+              cellFeeders(a.FEEDERID,a.MAXLOADMW_TXT).forEach(function(x){
+                if(x.feeder===t.tok&&!isNaN(x.val)&&(isNaN(load)||x.val>load))load=x.val; }); });
+            if(!cells.length)return;
+            var attrs={}; for(var k in t.p)attrs[k]=t.p[k];
+            attrs.__tok=t.tok; attrs.__gen=gen; attrs.__load=load; attrs.__cells=cells.length;
+            cells.forEach(function(geom){ try{ gl.add(new Graphic({geometry:geom,attributes:attrs,
+              symbol:{type:"simple-fill",color:[124,58,237,0.10],
+                      outline:{color:[124,58,237,0.95],width:1.6}},
+              popupTemplate:{title:"Planned work — feeder "+t.tok,outFields:["*"],content:gpFdrPopup}})); }catch(e){} });
+          });
+        })).then(function(){ if(!gl.graphics.length)return null;
+          gpFdrLayer=gl; map.add(gl); raiseSites(); return gl; });
+      }).catch(function(){ return null; });
+    return __gpFdrReq; }
+
   function gpRefresh(){ if(!showGP.checked)return;
     if(!gpPtLayer)gpBuild();
     var w=gpWhere();
@@ -836,8 +900,10 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(gpZonesCb.checked){ if(map.layers.indexOf(gpZoneLayer)<0)map.add(gpZoneLayer); }
     else { try{ map.remove(gpZoneLayer); }catch(e){} }
     if(map.layers.indexOf(gpPtLayer)<0)map.add(gpPtLayer);
+    gpBuildFdr().then(function(gl){ if(gl)gl.visible=true; }).catch(function(){});
     raiseSites(); gpCount(); }
   function gpHide(){ try{ map.remove(gpZoneLayer); }catch(e){} try{ map.remove(gpPtLayer); }catch(e){}
+    try{ if(gpFdrLayer)gpFdrLayer.visible=false; }catch(e){}
     var c=$("gpCount"); if(c)c.textContent=""; var u=$("gpUnloc");
     if(u)u.innerHTML='<div class="resEmpty">Tick the box above to load planned investments.</div>';
     var e2=$("gpExport"); if(e2)e2.disabled=true; }

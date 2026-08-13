@@ -29,6 +29,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -330,6 +331,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -631,6 +633,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -932,6 +935,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1233,6 +1237,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1534,6 +1539,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1835,6 +1841,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2136,6 +2143,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "high",
     "risk_reason": "The AG specifically targets this project ($7.9M) as cost-ineffective - the ONLY Ameren Capacity Expansion project any party seeks to remove on those grounds.",
@@ -2437,6 +2445,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "high",
     "risk_reason": "The AG specifically targets this project ($7.9M) as cost-ineffective - the ONLY Ameren Capacity Expansion project any party seeks to remove on those grounds.",
@@ -2738,6 +2747,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -3039,6 +3049,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -3340,6 +3351,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -3641,6 +3653,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -3942,6 +3955,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -4243,6 +4257,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -4544,6 +4559,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -4845,6 +4861,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "Falls within the AG's $34.7M of targeted substation transformer / switchgear / breaker reductions. Note these are asset replacement, so they add little headroom regardless.",
@@ -5146,6 +5163,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -5447,6 +5465,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -5748,6 +5767,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -6049,6 +6069,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -6350,6 +6371,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -6651,6 +6673,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -6952,6 +6975,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -7253,6 +7277,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -7554,6 +7579,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -7855,6 +7881,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -8156,6 +8183,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -8457,6 +8485,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -8758,6 +8787,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -9059,6 +9089,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -9360,6 +9391,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -9661,6 +9693,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -9962,6 +9995,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -10263,6 +10297,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -10564,6 +10599,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -10865,6 +10901,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -11166,6 +11203,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -11467,6 +11505,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -11768,6 +11807,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -12069,6 +12109,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -12370,6 +12411,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -12671,6 +12713,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -12972,6 +13015,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -13273,6 +13317,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -13574,6 +13619,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -13875,6 +13921,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -14176,6 +14223,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -14477,6 +14525,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -14778,6 +14827,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -15064,307 +15114,6 @@
     "utility": "Ameren Illinois",
     "docket": "22-0487",
     "status": "approved",
-    "group": "3. Feeders & lines",
-    "project_id": "",
-    "project_name": "WRE Maryville Feeder M49425 Meridia",
-    "category": "Capacity Expansion",
-    "asset_type": "feeder capacity",
-    "feeder_id": "M49425",
-    "substation": "",
-    "place": "Maryville",
-    "county": "Madison",
-    "region": "Western",
-    "program_year": "",
-    "cost_usd": "",
-    "est_headroom_mw": "",
-    "loc_method": "verified_service_extent",
-    "uncertainty_mi": 0.5,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "program_id": "",
-    "itn": "",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": "FEEDERID M49425 CONFIRMED present in Ameren IL_HC_Grids (130 grid cells). Extent 38.7432-38.7645 N, -90.0100 to -89.9884 W; the point is that extent's centre. The one project directly joinable to live hosting-capacity geometry. The feeder itself is unchanged in the Ameren layer - this entry is the planned work on top of it."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -89.989908,
-       38.7538
-      ],
-      [
-       -89.989953,
-       38.75451
-      ],
-      [
-       -89.990086,
-       38.755214
-      ],
-      [
-       -89.990308,
-       38.755904
-      ],
-      [
-       -89.990615,
-       38.756573
-      ],
-      [
-       -89.991005,
-       38.757216
-      ],
-      [
-       -89.991474,
-       38.757826
-      ],
-      [
-       -89.992017,
-       38.758397
-      ],
-      [
-       -89.992629,
-       38.758924
-      ],
-      [
-       -89.993305,
-       38.759402
-      ],
-      [
-       -89.994038,
-       38.759825
-      ],
-      [
-       -89.99482,
-       38.760191
-      ],
-      [
-       -89.995644,
-       38.760495
-      ],
-      [
-       -89.996503,
-       38.760734
-      ],
-      [
-       -89.997387,
-       38.760907
-      ],
-      [
-       -89.998289,
-       38.761011
-      ],
-      [
-       -89.9992,
-       38.761046
-      ],
-      [
-       -90.000111,
-       38.761011
-      ],
-      [
-       -90.001013,
-       38.760907
-      ],
-      [
-       -90.001897,
-       38.760734
-      ],
-      [
-       -90.002756,
-       38.760495
-      ],
-      [
-       -90.00358,
-       38.760191
-      ],
-      [
-       -90.004362,
-       38.759825
-      ],
-      [
-       -90.005095,
-       38.759402
-      ],
-      [
-       -90.005771,
-       38.758924
-      ],
-      [
-       -90.006383,
-       38.758397
-      ],
-      [
-       -90.006926,
-       38.757826
-      ],
-      [
-       -90.007395,
-       38.757216
-      ],
-      [
-       -90.007785,
-       38.756573
-      ],
-      [
-       -90.008092,
-       38.755904
-      ],
-      [
-       -90.008314,
-       38.755214
-      ],
-      [
-       -90.008447,
-       38.75451
-      ],
-      [
-       -90.008492,
-       38.7538
-      ],
-      [
-       -90.008447,
-       38.75309
-      ],
-      [
-       -90.008314,
-       38.752386
-      ],
-      [
-       -90.008092,
-       38.751696
-      ],
-      [
-       -90.007785,
-       38.751027
-      ],
-      [
-       -90.007395,
-       38.750384
-      ],
-      [
-       -90.006926,
-       38.749774
-      ],
-      [
-       -90.006383,
-       38.749203
-      ],
-      [
-       -90.005771,
-       38.748676
-      ],
-      [
-       -90.005095,
-       38.748198
-      ],
-      [
-       -90.004362,
-       38.747775
-      ],
-      [
-       -90.00358,
-       38.747409
-      ],
-      [
-       -90.002756,
-       38.747105
-      ],
-      [
-       -90.001897,
-       38.746866
-      ],
-      [
-       -90.001013,
-       38.746693
-      ],
-      [
-       -90.000111,
-       38.746589
-      ],
-      [
-       -89.9992,
-       38.746554
-      ],
-      [
-       -89.998289,
-       38.746589
-      ],
-      [
-       -89.997387,
-       38.746693
-      ],
-      [
-       -89.996503,
-       38.746866
-      ],
-      [
-       -89.995644,
-       38.747105
-      ],
-      [
-       -89.99482,
-       38.747409
-      ],
-      [
-       -89.994038,
-       38.747775
-      ],
-      [
-       -89.993305,
-       38.748198
-      ],
-      [
-       -89.992629,
-       38.748676
-      ],
-      [
-       -89.992017,
-       38.749203
-      ],
-      [
-       -89.991474,
-       38.749774
-      ],
-      [
-       -89.991005,
-       38.750384
-      ],
-      [
-       -89.990615,
-       38.751027
-      ],
-      [
-       -89.990308,
-       38.751696
-      ],
-      [
-       -89.990086,
-       38.752386
-      ],
-      [
-       -89.989953,
-       38.75309
-      ],
-      [
-       -89.989908,
-       38.7538
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "Ameren Illinois",
-    "docket": "22-0487",
-    "status": "approved",
     "group": "1. New substations",
     "project_id": "",
     "project_name": "Marion Banterra - Substation Construction",
@@ -15380,6 +15129,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -15681,6 +15431,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -15982,6 +15733,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -16283,6 +16035,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -16584,6 +16337,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -16885,6 +16639,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -17186,6 +16941,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -17487,6 +17243,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -17788,6 +17545,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -18089,6 +17847,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -18390,6 +18149,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -18691,6 +18451,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -18992,6 +18753,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -19293,6 +19055,7 @@
     "est_headroom_mw": "",
     "loc_method": "verified_asset_match",
     "uncertainty_mi": 0.75,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in cuts overall, but this project cleared ComEd's own non-wires screen and has a dedicated cost-effectiveness appendix, which strengthens it relative to other ComEd asks.",
@@ -19594,6 +19357,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "high",
     "risk_reason": "CUB seeks $405M of data-center-driven upgrades cut until costs are allocated to the causing customers, arguing the forecasts come from developers facing no penalty for speculating. ComEd conceded one such data center was CANCELLED by its developer.",
@@ -19895,6 +19659,7 @@
     "est_headroom_mw": "",
     "loc_method": "narrative_reference",
     "uncertainty_mi": 1.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -20196,6 +19961,7 @@
     "est_headroom_mw": "",
     "loc_method": "narrative_reference",
     "uncertainty_mi": 1.5,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -20497,6 +20263,7 @@
     "est_headroom_mw": "",
     "loc_method": "narrative_reference",
     "uncertainty_mi": 3.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -20798,6 +20565,7 @@
     "est_headroom_mw": "",
     "loc_method": "narrative_reference",
     "uncertainty_mi": 1.5,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -21099,6 +20867,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -21400,6 +21169,7 @@
     "est_headroom_mw": "",
     "loc_method": "approximate_locality",
     "uncertainty_mi": 1.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -21701,6 +21471,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -22002,6 +21773,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -22303,6 +22075,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -22604,6 +22377,7 @@
     "est_headroom_mw": "",
     "loc_method": "approximate_locality",
     "uncertainty_mi": 1.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -22905,6 +22679,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -23206,6 +22981,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -23507,6 +23283,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -23808,6 +23585,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -24109,6 +23887,7 @@
     "est_headroom_mw": "",
     "loc_method": "constraint_zone",
     "uncertainty_mi": 25.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -24410,6 +24189,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -24711,6 +24491,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -25012,6 +24793,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -25313,6 +25095,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -25614,6 +25397,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -25915,6 +25699,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -26216,6 +26001,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -26517,6 +26303,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -26818,6 +26605,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -27119,6 +26907,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -27420,6 +27209,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -27721,6 +27511,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -28022,6 +27813,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -28323,6 +28115,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -28624,6 +28417,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -28925,6 +28719,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -29226,6 +29021,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -29527,6 +29323,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -29828,6 +29625,7 @@
     "est_headroom_mw": 4,
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -30129,6 +29927,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -30430,6 +30229,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -30731,6 +30531,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -31032,6 +30833,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -31333,6 +31135,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -31634,6 +31437,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -31935,6 +31739,7 @@
     "est_headroom_mw": 4,
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -32236,6 +32041,7 @@
     "est_headroom_mw": 4,
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -32537,6 +32343,7 @@
     "est_headroom_mw": 4,
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -32838,6 +32645,7 @@
     "est_headroom_mw": 4,
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -33139,6 +32947,7 @@
     "est_headroom_mw": 4,
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -33440,6 +33249,7 @@
     "est_headroom_mw": 4,
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -33741,6 +33551,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -34042,6 +33853,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -34343,6 +34155,7 @@
     "est_headroom_mw": "",
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -34644,6 +34457,7 @@
     "est_headroom_mw": "",
     "loc_method": "narrative_reference",
     "uncertainty_mi": 6.0,
+    "feeder_match": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
