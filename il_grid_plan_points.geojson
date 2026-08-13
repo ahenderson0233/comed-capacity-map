@@ -33,7 +33,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -79,7 +85,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -125,7 +137,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -136,13 +154,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.4959,
-     39.1611
+     -89.498704,
+     39.157335
     ]
    }
   },
@@ -171,7 +189,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -217,7 +241,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -228,12 +258,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.4959,
+     -89.490293,
      39.1611
     ]
    }
@@ -263,7 +293,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -274,12 +310,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9548,
+     -88.949138,
      39.8403
     ]
    }
@@ -309,7 +345,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -320,13 +362,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9548,
-     39.8403
+     -88.957631,
+     39.836535
     ]
    }
   },
@@ -355,7 +397,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "high",
     "risk_reason": "The AG specifically targets this project ($7.9M) as cost-ineffective - the ONLY Ameren Capacity Expansion project any party seeks to remove on those grounds.",
@@ -366,12 +414,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9937,
+     -88.987984,
      40.4842
     ]
    }
@@ -401,7 +449,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "high",
     "risk_reason": "The AG specifically targets this project ($7.9M) as cost-ineffective - the ONLY Ameren Capacity Expansion project any party seeks to remove on those grounds.",
@@ -412,13 +466,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9937,
-     40.4842
+     -88.996558,
+     40.480435
     ]
    }
   },
@@ -447,7 +501,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 4,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -458,12 +518,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 4 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 4 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.9248,
+     -89.919018,
      41.2453
     ]
    }
@@ -493,7 +553,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -504,12 +570,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.6407,
+     -89.634976,
      40.5675
     ]
    }
@@ -539,7 +605,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -550,13 +622,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.6407,
-     40.5675
+     -89.643562,
+     40.571265
     ]
    }
   },
@@ -585,7 +657,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -596,13 +674,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.6407,
-     40.5675
+     -89.643562,
+     40.563735
     ]
    }
   },
@@ -631,7 +709,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 4,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -642,13 +726,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 4 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 4 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
      -89.9248,
-     41.2453
+     41.249648
     ]
    }
   },
@@ -677,7 +761,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 4,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -688,12 +778,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 4 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 4 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.9248,
+     -89.930582,
      41.2453
     ]
    }
@@ -723,7 +813,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 4,
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -734,13 +830,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
+    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor. DISPLAY NOTE: 4 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 4 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
      -89.9248,
-     41.2453
+     41.240952
     ]
    }
   },
@@ -769,7 +865,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "Falls within the AG's $34.7M of targeted substation transformer / switchgear / breaker reductions. Note these are asset replacement, so they add little headroom regardless.",
@@ -815,7 +917,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -861,7 +969,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -872,13 +986,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9548,
-     39.8403
+     -88.957631,
+     39.844065
     ]
    }
   },
@@ -907,7 +1021,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -918,12 +1038,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "New distribution substation."
+    "notes": "New distribution substation. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.9831,
+     -89.977525,
      38.7522
     ]
    }
@@ -953,7 +1073,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -964,12 +1090,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Only NWA candidate for 2028-2031. 10.5 MVA 69/12kV at ~85% loading; exceedance moved 2029->2031."
+    "notes": "Only NWA candidate for 2028-2031. 10.5 MVA 69/12kV at ~85% loading; exceedance moved 2029->2031. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.0951,
+     -88.089386,
      40.4606
     ]
    }
@@ -999,7 +1125,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1045,7 +1177,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1091,7 +1229,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1137,7 +1281,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1148,12 +1298,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Paired with New Sub Site Purchase $331,957."
+    "notes": "Paired with New Sub Site Purchase $331,957. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.3812,
+     -89.386744,
      38.3437
     ]
    }
@@ -1183,7 +1333,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1194,12 +1350,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Land for new Nashville substation."
+    "notes": "Land for new Nashville substation. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.3812,
+     -89.375656,
      38.3437
     ]
    }
@@ -1229,7 +1385,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1240,12 +1402,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Paired with Aviston Capacity Line $249,745."
+    "notes": "Paired with Aviston Capacity Line $249,745. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.6042,
+     -89.609764,
      38.6103
     ]
    }
@@ -1275,7 +1437,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1286,12 +1454,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.6042,
+     -89.598636,
      38.6103
     ]
    }
@@ -1321,7 +1489,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1367,7 +1541,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1413,7 +1593,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1459,7 +1645,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1470,12 +1662,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Paired with land acquisition $337,958 and NRE LAS Marseilles substation line work. TERRITORY FLAG: the Marseilles town centroid falls inside our approximated ComEd territory polygon, yet the project is Ameren's (filed in Docket 26-0051, Northern Region, 'LAS' = LaSalle Co.). Service territories interleave at this boundary, so treat the utility label as authoritative and the point as boundary-zone approximate."
+    "notes": "Paired with land acquisition $337,958 and NRE LAS Marseilles substation line work. TERRITORY FLAG: the Marseilles town centroid falls inside our approximated ComEd territory polygon, yet the project is Ameren's (filed in Docket 26-0051, Northern Region, 'LAS' = LaSalle Co.). Service territories interleave at this boundary, so treat the utility label as authoritative and the point as boundary-zone approximate. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.7081,
+     -88.70231,
      41.3306
     ]
    }
@@ -1505,7 +1697,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1516,12 +1714,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "TERRITORY FLAG: see the paired Marseilles construction entry - town centroid sits inside the approximated ComEd boundary although the project is Ameren's."
+    "notes": "TERRITORY FLAG: see the paired Marseilles construction entry - town centroid sits inside the approximated ComEd boundary although the project is Ameren's. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.7081,
+     -88.71389,
      41.3306
     ]
    }
@@ -1551,7 +1749,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1597,7 +1801,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1608,12 +1818,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Paired with Hudson Rural Xfmr $1,408,760."
+    "notes": "Paired with Hudson Rural Xfmr $1,408,760. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9853,
+     -88.979574,
      40.6011
     ]
    }
@@ -1643,7 +1853,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1654,12 +1870,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9853,
+     -88.991026,
      40.6011
     ]
    }
@@ -1689,7 +1905,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1735,7 +1957,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1781,7 +2009,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1827,7 +2061,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1873,7 +2113,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1919,7 +2165,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1930,12 +2182,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "New South Edwardsville substation referenced."
+    "notes": "New South Edwardsville substation referenced. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.9532,
+     -89.95878,
      38.8114
     ]
    }
@@ -1965,7 +2217,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -1976,13 +2234,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.4959,
-     39.1611
+     -89.498704,
+     39.164865
     ]
    }
   },
@@ -2011,7 +2269,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2057,7 +2321,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2103,7 +2373,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2149,7 +2425,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2195,7 +2477,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2241,7 +2529,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2252,12 +2546,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "L#### IDs are subtransmission lines (34.5/69kV) - NOT present in the <=15kV distribution HC layer."
+    "notes": "L#### IDs are subtransmission lines (34.5/69kV) - NOT present in the <=15kV distribution HC layer. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.0284,
+     -89.033903,
      37.8028
     ]
    }
@@ -2287,7 +2581,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2333,7 +2633,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2379,7 +2685,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2390,12 +2702,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9331,
+     -88.927603,
      37.7306
     ]
    }
@@ -2425,7 +2737,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2436,13 +2754,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9331,
-     37.7306
+     -88.935849,
+     37.726835
     ]
    }
   },
@@ -2471,7 +2789,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2482,13 +2806,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9331,
-     37.7306
+     -88.935849,
+     37.734365
     ]
    }
   },
@@ -2517,7 +2841,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2528,12 +2858,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": "New feeder = new distribution capacity."
+    "notes": "New feeder = new distribution capacity. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.9831,
+     -89.988675,
      38.7522
     ]
    }
@@ -2563,7 +2893,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2609,7 +2945,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2655,7 +2997,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2666,12 +3014,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.0284,
+     -89.022897,
      37.8028
     ]
    }
@@ -2701,7 +3049,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2712,12 +3066,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": ""
+    "notes": "DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.9532,
+     -89.94762,
      38.8114
     ]
    }
@@ -2747,7 +3101,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 3,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2758,13 +3118,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": "In service 2025-07-01. Ameren states explicitly this project WILL INCREASE HOSTING CAPACITY - the clearest such statement by either utility. Child: J0627 BLM Powerhouse Sub Ln Wrk."
+    "notes": "In service 2025-07-01. Ameren states explicitly this project WILL INCREASE HOSTING CAPACITY - the clearest such statement by either utility. Child: J0627 BLM Powerhouse Sub Ln Wrk. DISPLAY NOTE: 3 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 3 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.9937,
-     40.4842
+     -88.996558,
+     40.487965
     ]
    }
   },
@@ -2793,7 +3153,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2839,7 +3205,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2885,7 +3257,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -2931,7 +3309,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
@@ -2942,12 +3326,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren public Non-Wire Alternative projects page",
-    "notes": "RFP publishes 2026-12-31, closes 2027-06-30; est in-service 2029-12-31. Circuit Y55. NOTE: 'Y55' substring-matches 3,977 HC cells - requires exact tokenized match, not LIKE."
+    "notes": "RFP publishes 2026-12-31, closes 2027-06-30; est in-service 2029-12-31. Circuit Y55. NOTE: 'Y55' substring-matches 3,977 HC cells - requires exact tokenized match, not LIKE. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.0951,
+     -88.100814,
      40.4606
     ]
    }
@@ -2977,7 +3361,13 @@
     "sub_nearest": "S0732",
     "sub_nearest_mi": 0.06,
     "sub_hc_kw": 223823,
+    "sub_q_kw": 14204,
+    "sub_qc": 13,
+    "sub_pr": "0.08",
+    "sub_feeders": 78,
+    "sub_headroom_kw": 209619,
     "sub_candidates": "S0732;S0665",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in cuts overall, but this project cleared ComEd's own non-wires screen and has a dedicated cost-effectiveness appendix, which strengthens it relative to other ComEd asks.",
@@ -3023,7 +3413,13 @@
     "sub_nearest": "S0528",
     "sub_nearest_mi": 1.77,
     "sub_hc_kw": 14361,
+    "sub_q_kw": 19358,
+    "sub_qc": 21,
+    "sub_pr": "0.16",
+    "sub_feeders": 39,
+    "sub_headroom_kw": -4997,
     "sub_candidates": "S0528;S0638;S0538;S0752",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "high",
     "risk_reason": "CUB seeks $405M of data-center-driven upgrades cut until costs are allocated to the causing customers, arguing the forecasts come from developers facing no penalty for speculating. ComEd conceded one such data center was CANCELLED by its developer.",
@@ -3069,7 +3465,13 @@
     "sub_nearest": "S0702",
     "sub_nearest_mi": 0.9,
     "sub_hc_kw": 27364,
+    "sub_q_kw": 153,
+    "sub_qc": 3,
+    "sub_pr": "0.01",
+    "sub_feeders": 40,
+    "sub_headroom_kw": 27211,
     "sub_candidates": "S0702;S0713;S0735;S0648;S0504;S0700;S0697",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -3115,7 +3517,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.22,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0740;S0723;S0633;S0698;S0706;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -3161,7 +3569,13 @@
     "sub_nearest": "S0736",
     "sub_nearest_mi": 1.25,
     "sub_hc_kw": 1470,
+    "sub_q_kw": 42365,
+    "sub_qc": 20,
+    "sub_pr": "1.04",
+    "sub_feeders": 10,
+    "sub_headroom_kw": -40895,
     "sub_candidates": "S0736;S0072;S0559",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -3207,7 +3621,13 @@
     "sub_nearest": "S0632",
     "sub_nearest_mi": 1.35,
     "sub_hc_kw": 25513,
+    "sub_q_kw": 1279,
+    "sub_qc": 2,
+    "sub_pr": "0.04",
+    "sub_feeders": 46,
+    "sub_headroom_kw": 24234,
     "sub_candidates": "S0632;S0700;S0698;S0693",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -3218,12 +3638,12 @@
     "driver": "West Loop / Illinois Medical District growth",
     "nwa_status": "",
     "source": "ComEd MYIGP 2028-2031 (Docket 26-0047), filed 2026-01-16",
-    "notes": "RESOLVED from filing narrative: sited in East Garfield Park, serving the West Loop and Illinois Medical District. Load drivers named as the Medical District, Fulton Market and United Center. Relieves the Humboldt Park and Medical Center substations, whose loading has increased; nearest substations to the area are ~5 miles away. Land purchase booked as ITN 80493."
+    "notes": "RESOLVED from filing narrative: sited in East Garfield Park, serving the West Loop and Illinois Medical District. Load drivers named as the Medical District, Fulton Market and United Center. Relieves the Humboldt Park and Medical Center substations, whose loading has increased; nearest substations to the area are ~5 miles away. Land purchase booked as ITN 80493. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.7003,
+     -87.70614,
      41.8817
     ]
    }
@@ -3253,7 +3673,13 @@
     "sub_nearest": "S0661",
     "sub_nearest_mi": 1.23,
     "sub_hc_kw": 48221,
+    "sub_q_kw": 74246,
+    "sub_qc": 24,
+    "sub_pr": "0.57",
+    "sub_feeders": 30,
+    "sub_headroom_kw": -26025,
     "sub_candidates": "S0661",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3299,7 +3725,13 @@
     "sub_nearest": "S0699",
     "sub_nearest_mi": 0.55,
     "sub_hc_kw": 9067,
+    "sub_q_kw": 113,
+    "sub_qc": 2,
+    "sub_pr": "0.06",
+    "sub_feeders": 21,
+    "sub_headroom_kw": 8954,
     "sub_candidates": "S0699;S0694;S0599;S0695",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3345,7 +3777,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3356,13 +3794,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": "NEW substation, Chicago West Side. Land purchase stage; exact site not disclosed."
+    "notes": "NEW substation, Chicago West Side. Land purchase stage; exact site not disclosed. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.630631,
+     41.882404
     ]
    }
   },
@@ -3391,7 +3829,13 @@
     "sub_nearest": "S0277",
     "sub_nearest_mi": 0.93,
     "sub_hc_kw": 0,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.16",
+    "sub_feeders": 1,
+    "sub_headroom_kw": 0,
     "sub_candidates": "S0277;S0276",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3402,12 +3846,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": "FORECAST REVISED DOWN SHARPLY: ComEd's Q4 2025 filing projected $24.27M for this same 2026 work; the Q1 2026 filing shows $4.48M. The later figure is used here. A revision this large is a caution against treating any single-vintage cost as settled. LOCATION UPGRADED: snapped to derived ComEd substation S0277, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 0 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
+    "notes": "FORECAST REVISED DOWN SHARPLY: ComEd's Q4 2025 filing projected $24.27M for this same 2026 work; the Q1 2026 filing shows $4.48M. The later figure is used here. A revision this large is a caution against treating any single-vintage cost as settled. LOCATION UPGRADED: snapped to derived ComEd substation S0277, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 0 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.77386,
+     -88.770459,
      41.78504
     ]
    }
@@ -3437,7 +3881,13 @@
     "sub_nearest": "S0277",
     "sub_nearest_mi": 0.93,
     "sub_hc_kw": 0,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.16",
+    "sub_feeders": 1,
+    "sub_headroom_kw": 0,
     "sub_candidates": "S0277;S0276",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3448,12 +3898,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": "LOCATION UPGRADED: snapped to derived ComEd substation S0277, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 0 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity."
+    "notes": "LOCATION UPGRADED: snapped to derived ComEd substation S0277, the only known substation within 1.5 mi of the named town. Its as-built substation hosting capacity is 0 kW. Matched by proximity, not by ID - ComEd's public map is anonymized, so this is a strong inference rather than a confirmed identity. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -88.77386,
+     -88.777261,
      41.78504
     ]
    }
@@ -3483,7 +3933,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3529,7 +3985,13 @@
     "sub_nearest": "S0708",
     "sub_nearest_mi": 2.0,
     "sub_hc_kw": 28555,
+    "sub_q_kw": 944,
+    "sub_qc": 4,
+    "sub_pr": "0.05",
+    "sub_feeders": 55,
+    "sub_headroom_kw": 27611,
     "sub_candidates": "S0708;S0741;S0550",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3575,7 +4037,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3621,7 +4089,13 @@
     "sub_nearest": "S0664",
     "sub_nearest_mi": 1.16,
     "sub_hc_kw": 10668,
+    "sub_q_kw": 650,
+    "sub_qc": 6,
+    "sub_pr": "0.07",
+    "sub_feeders": 18,
+    "sub_headroom_kw": 10018,
     "sub_candidates": "S0664;S0711",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3667,7 +4141,13 @@
     "sub_nearest": "S0591",
     "sub_nearest_mi": 0.5,
     "sub_hc_kw": 11914,
+    "sub_q_kw": 10563,
+    "sub_qc": 11,
+    "sub_pr": "0.15",
+    "sub_feeders": 22,
+    "sub_headroom_kw": 1351,
     "sub_candidates": "S0591",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3713,7 +4193,13 @@
     "sub_nearest": "S0668",
     "sub_nearest_mi": 0.44,
     "sub_hc_kw": 922,
+    "sub_q_kw": 7160,
+    "sub_qc": 7,
+    "sub_pr": "0.53",
+    "sub_feeders": 15,
+    "sub_headroom_kw": -6238,
     "sub_candidates": "S0668",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3759,7 +4245,13 @@
     "sub_nearest": "S0655",
     "sub_nearest_mi": 1.12,
     "sub_hc_kw": 30328,
+    "sub_q_kw": 54941,
+    "sub_qc": 23,
+    "sub_pr": "1.35",
+    "sub_feeders": 39,
+    "sub_headroom_kw": -24613,
     "sub_candidates": "S0655",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3805,7 +4297,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -3816,13 +4314,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.627374,
+     41.882055
     ]
    }
   },
@@ -3851,7 +4349,13 @@
     "sub_nearest": "S0593",
     "sub_nearest_mi": 0.56,
     "sub_hc_kw": 6772,
+    "sub_q_kw": 649,
+    "sub_qc": 4,
+    "sub_pr": "0.06",
+    "sub_feeders": 11,
+    "sub_headroom_kw": 6123,
     "sub_candidates": "S0593;S0636;S0696;S0742",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -3897,7 +4401,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -3908,13 +4418,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.627374,
+     41.874145
     ]
    }
   },
@@ -3943,7 +4453,13 @@
     "sub_nearest": "S0554",
     "sub_nearest_mi": 1.75,
     "sub_hc_kw": 342,
+    "sub_q_kw": 20935,
+    "sub_qc": 10,
+    "sub_pr": "0.76",
+    "sub_feeders": 7,
+    "sub_headroom_kw": -20593,
     "sub_candidates": "S0554",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -3989,7 +4505,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -4000,12 +4522,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
+     -87.623961,
      41.8781
     ]
    }
@@ -4035,7 +4557,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4081,7 +4609,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -4092,13 +4626,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.624888,
+     41.875749
     ]
    }
   },
@@ -4127,7 +4661,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -4138,13 +4678,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.633624,
+     41.881386
     ]
    }
   },
@@ -4173,7 +4713,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4184,13 +4730,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.624888,
+     41.880451
     ]
    }
   },
@@ -4219,7 +4765,13 @@
     "sub_nearest": "S0734",
     "sub_nearest_mi": 2.97,
     "sub_hc_kw": 1692,
+    "sub_q_kw": 80086,
+    "sub_qc": 25,
+    "sub_pr": "1.04",
+    "sub_feeders": 10,
+    "sub_headroom_kw": -78394,
     "sub_candidates": "S0734",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4265,7 +4817,13 @@
     "sub_nearest": "S0535",
     "sub_nearest_mi": 1.07,
     "sub_hc_kw": 5203,
+    "sub_q_kw": 536,
+    "sub_qc": 2,
+    "sub_pr": "0.08",
+    "sub_feeders": 15,
+    "sub_headroom_kw": 4667,
     "sub_candidates": "S0535;S0549",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4311,7 +4869,13 @@
     "sub_nearest": "S0718",
     "sub_nearest_mi": 1.41,
     "sub_hc_kw": 27700,
+    "sub_q_kw": 6334,
+    "sub_qc": 11,
+    "sub_pr": "0.32",
+    "sub_feeders": 43,
+    "sub_headroom_kw": 21366,
     "sub_candidates": "S0718;S0591",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4357,7 +4921,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4403,7 +4973,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4414,12 +4990,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.6879,
+     -89.68207,
      41.7717
     ]
    }
@@ -4449,7 +5025,13 @@
     "sub_nearest": "S0589",
     "sub_nearest_mi": 2.88,
     "sub_hc_kw": 2649,
+    "sub_q_kw": 5270,
+    "sub_qc": 2,
+    "sub_pr": "0.28",
+    "sub_feeders": 8,
+    "sub_headroom_kw": -2621,
     "sub_candidates": "S0589",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4495,7 +5077,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -4541,7 +5129,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4552,12 +5146,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.7003,
+     -87.69446,
      41.8817
     ]
    }
@@ -4587,7 +5181,13 @@
     "sub_nearest": "S0553",
     "sub_nearest_mi": 2.06,
     "sub_hc_kw": 11094,
+    "sub_q_kw": 1083,
+    "sub_qc": 9,
+    "sub_pr": "0.06",
+    "sub_feeders": 30,
+    "sub_headroom_kw": 10011,
     "sub_candidates": "S0553;S0527",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -4633,7 +5233,13 @@
     "sub_nearest": "S0685",
     "sub_nearest_mi": 1.05,
     "sub_hc_kw": 26645,
+    "sub_q_kw": 8250,
+    "sub_qc": 2,
+    "sub_pr": "0.06",
+    "sub_feeders": 43,
+    "sub_headroom_kw": 18395,
     "sub_candidates": "S0685;S0667;S0509",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4679,7 +5285,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4690,13 +5302,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.635403,
+     41.876875
     ]
    }
   },
@@ -4725,7 +5337,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4736,13 +5354,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.633624,
+     41.874814
     ]
    }
   },
@@ -4771,7 +5389,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4782,13 +5406,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.630631,
+     41.873796
     ]
    }
   },
@@ -4817,7 +5441,13 @@
     "sub_nearest": "S0676",
     "sub_nearest_mi": 2.38,
     "sub_hc_kw": 3996,
+    "sub_q_kw": 12722,
+    "sub_qc": 18,
+    "sub_pr": "0.46",
+    "sub_feeders": 18,
+    "sub_headroom_kw": -8726,
     "sub_candidates": "S0676",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
@@ -4863,7 +5493,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": 2,
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - complete",
     "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
@@ -4874,12 +5510,12 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
+    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site. DISPLAY NOTE: 2 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 2 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -89.6879,
+     -89.69373,
      41.7717
     ]
    }
@@ -4909,7 +5545,13 @@
     "sub_nearest": "S0700",
     "sub_nearest_mi": 0.72,
     "sub_hc_kw": 33047,
+    "sub_q_kw": 588,
+    "sub_qc": 4,
+    "sub_pr": "0.02",
+    "sub_feeders": 66,
+    "sub_headroom_kw": 32459,
     "sub_candidates": "S0700;S0632;S0702;S0713;S0735;S0695;S0648",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -4955,7 +5597,13 @@
     "sub_nearest": "S0710",
     "sub_nearest_mi": 0.19,
     "sub_hc_kw": 8910,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.00",
+    "sub_feeders": 24,
+    "sub_headroom_kw": 8910,
     "sub_candidates": "S0710;S0634;S0723;S0740;S0633;S0706;S0698;S0635;S0722;S0697;S0658;S0735;S0504;S0520;S0632;S0637;S0713",
+    "stacked_n": 11,
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -4966,13 +5614,13 @@
     "driver": "",
     "nwa_status": "",
     "source": "ComEd MYIGP 2028-2031 (Docket 26-0047), filed 2026-01-16",
-    "notes": "Named in Ch.4 as a 4kV conversion/retirement target. Headroom estimated with ComEd's own +4 MW per 4-to-12kV conversion factor."
+    "notes": "Named in Ch.4 as a 4kV conversion/retirement target. Headroom estimated with ComEd's own +4 MW per 4-to-12kV conversion factor. DISPLAY NOTE: 11 projects share this location in the record, so markers are fanned slightly apart to stay individually clickable. The offset carries no locational meaning - all 11 sit at the same filed point."
    },
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -87.6298,
-     41.8781
+     -87.635403,
+     41.879325
     ]
    }
   },
@@ -5001,7 +5649,13 @@
     "sub_nearest": "S0509",
     "sub_nearest_mi": 1.3,
     "sub_hc_kw": 10083,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.04",
+    "sub_feeders": 1,
+    "sub_headroom_kw": 10083,
     "sub_candidates": "S0509;S0667;S0651",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -5047,7 +5701,13 @@
     "sub_nearest": "S0721",
     "sub_nearest_mi": 0.5,
     "sub_hc_kw": 224362,
+    "sub_q_kw": 29382,
+    "sub_qc": 26,
+    "sub_pr": "0.18",
+    "sub_feeders": 81,
+    "sub_headroom_kw": 194980,
     "sub_candidates": "S0721;S0607",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -5093,7 +5753,13 @@
     "sub_nearest": "S0712",
     "sub_nearest_mi": 0.35,
     "sub_hc_kw": 5726,
+    "sub_q_kw": 1300,
+    "sub_qc": 3,
+    "sub_pr": "0.07",
+    "sub_feeders": 25,
+    "sub_headroom_kw": 4426,
     "sub_candidates": "S0712;S0717;S0693;S0611;S0522",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -5139,7 +5805,13 @@
     "sub_nearest": "S0537",
     "sub_nearest_mi": 1.69,
     "sub_hc_kw": 2549,
+    "sub_q_kw": 0,
+    "sub_qc": 0,
+    "sub_pr": "0.12",
+    "sub_feeders": 7,
+    "sub_headroom_kw": 2549,
     "sub_candidates": "S0537",
+    "stacked_n": "",
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -5185,7 +5857,13 @@
     "sub_nearest": "S0742",
     "sub_nearest_mi": 1.36,
     "sub_hc_kw": 11301,
+    "sub_q_kw": 214,
+    "sub_qc": 5,
+    "sub_pr": "0.05",
+    "sub_feeders": 25,
+    "sub_headroom_kw": 11087,
     "sub_candidates": "S0742;S0593;S0636;S0651",
+    "stacked_n": "",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -5231,7 +5909,13 @@
     "sub_nearest": "S0640",
     "sub_nearest_mi": 0.86,
     "sub_hc_kw": 69684,
+    "sub_q_kw": 2694,
+    "sub_qc": 10,
+    "sub_pr": "0.08",
+    "sub_feeders": 46,
+    "sub_headroom_kw": 66990,
     "sub_candidates": "S0640;S0612",
+    "stacked_n": "",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -5277,7 +5961,13 @@
     "sub_nearest": "S0715",
     "sub_nearest_mi": 1.79,
     "sub_hc_kw": 131069,
+    "sub_q_kw": 22152,
+    "sub_qc": 28,
+    "sub_pr": "0.25",
+    "sub_feeders": 41,
+    "sub_headroom_kw": 108917,
     "sub_candidates": "S0715",
+    "stacked_n": "",
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
@@ -5323,7 +6013,13 @@
     "sub_nearest": "",
     "sub_nearest_mi": "",
     "sub_hc_kw": "",
+    "sub_q_kw": "",
+    "sub_qc": "",
+    "sub_pr": "",
+    "sub_feeders": "",
+    "sub_headroom_kw": "",
     "sub_candidates": "",
+    "stacked_n": "",
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
