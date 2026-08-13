@@ -357,6 +357,11 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   var stInfo=new FeatureLayer({url:SVC+"ST_Grids/FeatureServer/0",title:"Subtransmission (click)",renderer:clear,outFields:["*"],legendEnabled:false,listMode:"hide",
     popupTemplate:{title:"Subtransmission Feeder {feeder}",content:[{type:"fields",fieldInfos:[{fieldName:"hca_con_txt",label:"Hosting Capacity (MW)"},{fieldName:"OPERATINGVOLTAGE",label:"Operating Voltage"}]}]}});
   var pvHeat=new VectorTileLayer({url:TILES+"HcVectorTiles/VectorTileServer",title:"Generation Hosting Capacity",visible:true});
+  /* Black casing drawn UNDER the subtransmission line — same cased-line trick
+     the 69 kV layer uses. A second copy of the same source, styled black and
+     wider, so the coloured line reads as a bold black-outlined line. This is
+     what makes 34.5/69 kV instantly tellable from distribution feeders. */
+  var stCase=new VectorTileLayer({url:TILES+"SubtHcVectorTile/VectorTileServer",title:"Subtransmission outline",visible:true,legendEnabled:false,listMode:"hide"});
   var stHeat=new VectorTileLayer({url:TILES+"SubtHcVectorTile/VectorTileServer",title:"Subtransmission Hosting Capacity",visible:true});
   var lcHeat=new VectorTileLayer({url:TILES+"LcVectorTile/VectorTileServer",title:"Load Capacity",visible:false});
   var evL=new FeatureLayer({url:SVC+"EV_Corridors/FeatureServer/0",title:"EV Corridors",visible:false,outFields:["*"],popupTemplate:{title:"EV Corridor",content:[{type:"fields"}]}});
@@ -367,13 +372,16 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   var ncesSchools=new FeatureLayer({url:"https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0",definitionExpression:"STATE='IL'",outFields:["NAME","CITY","STATE"],visible:false,title:"NCES schools (Illinois)",renderer:{type:"simple",symbol:{type:"simple-marker",style:"circle",size:5,color:[37,99,235,0.85],outline:{color:"#fff",width:0.5}}},popupTemplate:{title:"{NAME}",content:"NCES public school \u00b7 {CITY}, {STATE}"}});
   (function(){ var ci=$("ctxCookInd"); if(ci) ci.addEventListener("change",function(){ cookIndustrial.visible=ci.checked; if(ci.checked){ try{ map.reorder(cookIndustrial,map.layers.length-1); }catch(e){} } });
     var ns=$("showNces"); if(ns) ns.addEventListener("change",function(){ ncesSchools.visible=ns.checked; if(ns.checked){ try{ map.reorder(ncesSchools,map.layers.length-1); }catch(e){} } }); })();
-  var heat=new GroupLayer({title:"Capacity heat (toggle)",visibilityMode:"independent",layers:[lcHeat,stHeat,pvHeat]});
+  var heat=new GroupLayer({title:"Capacity heat (toggle)",visibilityMode:"independent",layers:[lcHeat,stCase,stHeat,pvHeat]});
   var AMEREN_AVG_READY=false; var avgHeat=null;
   function ensureAvgHeat(){ if(avgHeat||!AMEREN_AVG_READY)return avgHeat; try{ avgHeat=new VectorTileLayer({url:(location.href.replace(/[?#].*$/,"").replace(/[^/]*$/,""))+"data/ameren_avg/style.json",title:"Combined Hosting Capacity (avg)",visible:false}); heat.add(avgHeat); }catch(e){} return avgHeat; }
   function recolorAmeren(){ var pv={"HC_PRI_CONDUCTOR:1/0.000000":"#a50026","HC_PRI_CONDUCTOR:1/0.000001 - 0.500000":"#d73027","HC_PRI_CONDUCTOR:1/0.500001 - 1.000000":"#fd8c3c","HC_PRI_CONDUCTOR:1/1.000001 - 2.000000":"#fed36e","HC_PRI_CONDUCTOR:1/2.000001 - 5.000000":"#a6d96a","HC_PRI_CONDUCTOR:1/5.000001 - 8.000000":"#1a9641"}; var st={"subtransmission_hca_web_erase/0.000000 - 4.999999":"#d73027","subtransmission_hca_web_erase/5.000000 - 9.999999":"#fd8c3c","subtransmission_hca_web_erase/10.000000 - 14.999999":"#a6d96a","subtransmission_hca_web_erase/15.000000 - 50.000000":"#1a9641"}; try{ pvHeat.when(function(){ Object.keys(pv).forEach(function(id){ try{ pvHeat.setPaintProperties(id,{"line-color":pv[id],"line-width":3}); }catch(e){} }); }).catch(function(){}); }catch(e){} /* Subtransmission drawn WIDER than distribution (3) on purpose: the two share a
    colour ramp but not a scale (0-50 MW vs 0-8 MW), so they must be tellable
    apart at a glance or a 34.5 kV line gets read against the wrong legend. */
-  try{ stHeat.when(function(){ Object.keys(st).forEach(function(id){ try{ stHeat.setPaintProperties(id,{"line-color":st[id],"line-width":6}); }catch(e){} }); }).catch(function(){}); }catch(e){} }
+  try{ stHeat.when(function(){ Object.keys(st).forEach(function(id){ try{ stHeat.setPaintProperties(id,{"line-color":st[id],"line-width":6}); }catch(e){} }); }).catch(function(){}); }catch(e){}
+  /* Casing sits beneath and wider, so the black reads as an outline on both
+     edges of the coloured line rather than replacing it. */
+  try{ stCase.when(function(){ Object.keys(st).forEach(function(id){ try{ stCase.setPaintProperties(id,{"line-color":"#000000","line-width":10}); }catch(e){} }); }).catch(function(){}); }catch(e){} }
   recolorAmeren();
   
   var context=new GroupLayer({title:"Context & EV",visibilityMode:"independent",layers:[evL,coop,equity]});
@@ -492,6 +500,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
         var cur=b?b.getAttribute("data-cap"):null;
         if(cur&&typeof setCapMetric==="function"){ setCapMetric(cur); return; } }catch(e){}
       try{ if(typeof stHeat!=="undefined") stHeat.visible=_st.checked; }catch(e){}
+      try{ if(typeof stCase!=="undefined") stCase.visible=_st.checked; }catch(e){}
     }); })();
   function ceBuildLegend(r){ var box=document.createElement("div"); box.style.cssText="background:#fff;border:1px solid #b0b0b0;border-radius:4px;box-shadow:0 1px 6px rgba(0,0,0,.28);font-size:12px;min-width:178px;overflow:hidden;display:none;";
     var bar=document.createElement("div"); bar.style.cssText="padding:0 11px 4px;font-size:11px;font-weight:700;color:#637088;"; bar.textContent="Combined — available MW"; box.appendChild(bar);
@@ -546,7 +555,8 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
        appearing and disappearing with the mode. */
     try{ var _stcb=$("stOn"), stWanted=(!_stcb||_stcb.checked)&&(m!=="load");
       if(AMEREN_AVG_READY){ pvHeat.visible=(m==="gen"); stHeat.visible=stWanted; lcHeat.visible=(m==="load"); var _av=ensureAvgHeat(); if(_av)_av.visible=(m==="combined"); }
-      else { var gen=(m!=="load"); pvHeat.visible=gen; stHeat.visible=stWanted; lcHeat.visible=!gen; } }catch(e){}
+      else { var gen=(m!=="load"); pvHeat.visible=gen; stHeat.visible=stWanted; lcHeat.visible=!gen; }
+      try{ stCase.visible=stHeat.visible; }catch(e){} }catch(e){}
     try{ var host=document.getElementById("capLegendInner"); if(host){ host.innerHTML=""; var nb=ceBuildLegend(base); nb.style.cssText="font-size:12px;"; nb.style.display=(ACTIVE_UTIL!=="ameren")?"":"none"; var bar=nb.querySelector("div"); if(bar){bar.textContent=CAP_LABEL[m]+" — available MW"; bar.style.cssText="padding:0 11px 4px;font-size:11px;font-weight:700;color:#637088;";} host.appendChild(nb); ceLegendBox=nb; } }catch(e){}
   }
   (function(){ var seg=document.getElementById("capSeg"); if(seg)[].forEach.call(seg.querySelectorAll("button"),function(b){ b.addEventListener("click",function(){ setCapMetric(b.getAttribute("data-cap")); }); }); try{ setCapMetric("combined"); }catch(e){} })();
