@@ -31,7 +31,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -332,7 +331,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -633,7 +631,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -934,7 +931,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -1235,7 +1231,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -1536,7 +1531,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -1837,7 +1831,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -2138,7 +2131,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "high",
     "risk_reason": "The AG specifically targets this project ($7.9M) as cost-ineffective - the ONLY Ameren Capacity Expansion project any party seeks to remove on those grounds.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -2439,7 +2431,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "high",
     "risk_reason": "The AG specifically targets this project ($7.9M) as cost-ineffective - the ONLY Ameren Capacity Expansion project any party seeks to remove on those grounds.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -2723,307 +2714,6 @@
     "utility": "Ameren Illinois",
     "docket": "26-0051",
     "status": "proposed",
-    "project_id": "AIC13749",
-    "project_name": "NRE East Broadway B54 13.2kV Conversion",
-    "category": "Capacity Expansion",
-    "asset_type": "voltage conversion 4kV-12kV",
-    "feeder_id": "B54",
-    "substation": "",
-    "place": "",
-    "county": "",
-    "region": "Northern",
-    "program_year": 2030,
-    "cost_usd": 617695,
-    "est_headroom_mw": "",
-    "loc_method": "region_approximation",
-    "uncertainty_mi": 50,
-    "hosting_capacity_flag": "likely",
-    "removal_risk": "low",
-    "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Voltage conversion raises feeder capacity; Ameren publishes no MW-per-conversion factor."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -88.444183,
-       40.7
-      ],
-      [
-       -88.448786,
-       40.771027
-      ],
-      [
-       -88.462549,
-       40.84137
-      ],
-      [
-       -88.48534,
-       40.910351
-      ],
-      [
-       -88.51694,
-       40.977307
-      ],
-      [
-       -88.557045,
-       41.041592
-      ],
-      [
-       -88.605267,
-       41.102587
-      ],
-      [
-       -88.661143,
-       41.159705
-      ],
-      [
-       -88.724135,
-       41.212396
-      ],
-      [
-       -88.793636,
-       41.260153
-      ],
-      [
-       -88.868977,
-       41.302514
-      ],
-      [
-       -88.949431,
-       41.339073
-      ],
-      [
-       -89.034225,
-       41.369478
-      ],
-      [
-       -89.122541,
-       41.393435
-      ],
-      [
-       -89.213529,
-       41.410714
-      ],
-      [
-       -89.306314,
-       41.421148
-      ],
-      [
-       -89.4,
-       41.424638
-      ],
-      [
-       -89.493686,
-       41.421148
-      ],
-      [
-       -89.586471,
-       41.410714
-      ],
-      [
-       -89.677459,
-       41.393435
-      ],
-      [
-       -89.765775,
-       41.369478
-      ],
-      [
-       -89.850569,
-       41.339073
-      ],
-      [
-       -89.931023,
-       41.302514
-      ],
-      [
-       -90.006364,
-       41.260153
-      ],
-      [
-       -90.075865,
-       41.212396
-      ],
-      [
-       -90.138857,
-       41.159705
-      ],
-      [
-       -90.194733,
-       41.102587
-      ],
-      [
-       -90.242955,
-       41.041592
-      ],
-      [
-       -90.28306,
-       40.977307
-      ],
-      [
-       -90.31466,
-       40.910351
-      ],
-      [
-       -90.337451,
-       40.84137
-      ],
-      [
-       -90.351214,
-       40.771027
-      ],
-      [
-       -90.355817,
-       40.7
-      ],
-      [
-       -90.351214,
-       40.628973
-      ],
-      [
-       -90.337451,
-       40.55863
-      ],
-      [
-       -90.31466,
-       40.489649
-      ],
-      [
-       -90.28306,
-       40.422693
-      ],
-      [
-       -90.242955,
-       40.358408
-      ],
-      [
-       -90.194733,
-       40.297413
-      ],
-      [
-       -90.138857,
-       40.240295
-      ],
-      [
-       -90.075865,
-       40.187604
-      ],
-      [
-       -90.006364,
-       40.139847
-      ],
-      [
-       -89.931023,
-       40.097486
-      ],
-      [
-       -89.850569,
-       40.060927
-      ],
-      [
-       -89.765775,
-       40.030522
-      ],
-      [
-       -89.677459,
-       40.006565
-      ],
-      [
-       -89.586471,
-       39.989286
-      ],
-      [
-       -89.493686,
-       39.978852
-      ],
-      [
-       -89.4,
-       39.975362
-      ],
-      [
-       -89.306314,
-       39.978852
-      ],
-      [
-       -89.213529,
-       39.989286
-      ],
-      [
-       -89.122541,
-       40.006565
-      ],
-      [
-       -89.034225,
-       40.030522
-      ],
-      [
-       -88.949431,
-       40.060927
-      ],
-      [
-       -88.868977,
-       40.097486
-      ],
-      [
-       -88.793636,
-       40.139847
-      ],
-      [
-       -88.724135,
-       40.187604
-      ],
-      [
-       -88.661143,
-       40.240295
-      ],
-      [
-       -88.605267,
-       40.297413
-      ],
-      [
-       -88.557045,
-       40.358408
-      ],
-      [
-       -88.51694,
-       40.422693
-      ],
-      [
-       -88.48534,
-       40.489649
-      ],
-      [
-       -88.462549,
-       40.55863
-      ],
-      [
-       -88.448786,
-       40.628973
-      ],
-      [
-       -88.444183,
-       40.7
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "Ameren Illinois",
-    "docket": "26-0051",
-    "status": "proposed",
     "project_id": "AIC13782",
     "project_name": "Kewanee N 4-12kV Conversion",
     "category": "Capacity Expansion",
@@ -3041,7 +2731,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -3342,7 +3031,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -3643,7 +3331,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -3944,7 +3631,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -4245,7 +3931,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -4546,7 +4231,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -4847,7 +4531,6 @@
     "hosting_capacity_flag": "likely",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -5148,7 +4831,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "Falls within the AG's $34.7M of targeted substation transformer / switchgear / breaker reductions. Note these are asset replacement, so they add little headroom regardless.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -5449,7 +5131,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -5750,7 +5431,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -6051,7 +5731,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -6352,7 +6031,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -6653,7 +6331,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -6954,7 +6631,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -7255,7 +6931,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -7556,7 +7231,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -7857,7 +7531,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -8158,7 +7831,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -8459,7 +8131,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -8760,7 +8431,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -9061,7 +8731,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -9362,7 +9031,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -9663,7 +9331,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -9671,7 +9338,7 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "Paired with land acquisition $337,958 and NRE LAS Marseilles substation line work."
+    "notes": "Paired with land acquisition $337,958 and NRE LAS Marseilles substation line work. TERRITORY FLAG: the Marseilles town centroid falls inside our approximated ComEd territory polygon, yet the project is Ameren's (filed in Docket 26-0051, Northern Region, 'LAS' = LaSalle Co.). Service territories interleave at this boundary, so treat the utility label as authoritative and the point as boundary-zone approximate."
    },
    "geometry": {
     "type": "Polygon",
@@ -9964,7 +9631,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -9972,7 +9638,7 @@
     "driver": "",
     "nwa_status": "",
     "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": ""
+    "notes": "TERRITORY FLAG: see the paired Marseilles construction entry - town centroid sits inside the approximated ComEd boundary although the project is Ameren's."
    },
    "geometry": {
     "type": "Polygon",
@@ -10265,7 +9931,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -10566,7 +10231,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -10867,7 +10531,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -11168,7 +10831,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -11469,7 +11131,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -11770,7 +11431,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -12071,7 +11731,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -12372,7 +12031,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -12673,7 +12331,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -12974,7 +12631,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -13275,7 +12931,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -13576,7 +13231,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -13877,7 +13531,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -14178,7 +13831,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -14479,7 +14131,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -14780,7 +14431,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -15065,307 +14715,6 @@
     "docket": "26-0051",
     "status": "proposed",
     "project_id": "",
-    "project_name": "SRE-ECP102 L3452 Capacity & Reliability Upgrade",
-    "category": "Capacity Expansion",
-    "asset_type": "reconductor",
-    "feeder_id": "L3452",
-    "substation": "",
-    "place": "",
-    "county": "",
-    "region": "Southern",
-    "program_year": "",
-    "cost_usd": 1860800,
-    "est_headroom_mw": "",
-    "loc_method": "region_approximation",
-    "uncertainty_mi": 55,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "low",
-    "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ICC Staff Ex. 15.02 (Docket 26-0051), 2026-05-07",
-    "notes": "L#### IDs are subtransmission lines (34.5/69kV) - NOT present in the <=15kV distribution HC layer."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -88.187773,
-       38.05
-      ],
-      [
-       -88.192647,
-       38.12813
-      ],
-      [
-       -88.207223,
-       38.205507
-      ],
-      [
-       -88.231359,
-       38.281386
-      ],
-      [
-       -88.264824,
-       38.355038
-      ],
-      [
-       -88.307296,
-       38.425751
-      ],
-      [
-       -88.358364,
-       38.492846
-      ],
-      [
-       -88.417538,
-       38.555676
-      ],
-      [
-       -88.484248,
-       38.613636
-      ],
-      [
-       -88.55785,
-       38.666168
-      ],
-      [
-       -88.637637,
-       38.712766
-      ],
-      [
-       -88.72284,
-       38.752981
-      ],
-      [
-       -88.812638,
-       38.786426
-      ],
-      [
-       -88.906166,
-       38.812779
-      ],
-      [
-       -89.002524,
-       38.831785
-      ],
-      [
-       -89.100784,
-       38.843263
-      ],
-      [
-       -89.2,
-       38.847101
-      ],
-      [
-       -89.299216,
-       38.843263
-      ],
-      [
-       -89.397476,
-       38.831785
-      ],
-      [
-       -89.493834,
-       38.812779
-      ],
-      [
-       -89.587362,
-       38.786426
-      ],
-      [
-       -89.67716,
-       38.752981
-      ],
-      [
-       -89.762363,
-       38.712766
-      ],
-      [
-       -89.84215,
-       38.666168
-      ],
-      [
-       -89.915752,
-       38.613636
-      ],
-      [
-       -89.982462,
-       38.555676
-      ],
-      [
-       -90.041636,
-       38.492846
-      ],
-      [
-       -90.092704,
-       38.425751
-      ],
-      [
-       -90.135176,
-       38.355038
-      ],
-      [
-       -90.168641,
-       38.281386
-      ],
-      [
-       -90.192777,
-       38.205507
-      ],
-      [
-       -90.207353,
-       38.12813
-      ],
-      [
-       -90.212227,
-       38.05
-      ],
-      [
-       -90.207353,
-       37.97187
-      ],
-      [
-       -90.192777,
-       37.894493
-      ],
-      [
-       -90.168641,
-       37.818614
-      ],
-      [
-       -90.135176,
-       37.744962
-      ],
-      [
-       -90.092704,
-       37.674249
-      ],
-      [
-       -90.041636,
-       37.607154
-      ],
-      [
-       -89.982462,
-       37.544324
-      ],
-      [
-       -89.915752,
-       37.486364
-      ],
-      [
-       -89.84215,
-       37.433832
-      ],
-      [
-       -89.762363,
-       37.387234
-      ],
-      [
-       -89.67716,
-       37.347019
-      ],
-      [
-       -89.587362,
-       37.313574
-      ],
-      [
-       -89.493834,
-       37.287221
-      ],
-      [
-       -89.397476,
-       37.268215
-      ],
-      [
-       -89.299216,
-       37.256737
-      ],
-      [
-       -89.2,
-       37.252899
-      ],
-      [
-       -89.100784,
-       37.256737
-      ],
-      [
-       -89.002524,
-       37.268215
-      ],
-      [
-       -88.906166,
-       37.287221
-      ],
-      [
-       -88.812638,
-       37.313574
-      ],
-      [
-       -88.72284,
-       37.347019
-      ],
-      [
-       -88.637637,
-       37.387234
-      ],
-      [
-       -88.55785,
-       37.433832
-      ],
-      [
-       -88.484248,
-       37.486364
-      ],
-      [
-       -88.417538,
-       37.544324
-      ],
-      [
-       -88.358364,
-       37.607154
-      ],
-      [
-       -88.307296,
-       37.674249
-      ],
-      [
-       -88.264824,
-       37.744962
-      ],
-      [
-       -88.231359,
-       37.818614
-      ],
-      [
-       -88.207223,
-       37.894493
-      ],
-      [
-       -88.192647,
-       37.97187
-      ],
-      [
-       -88.187773,
-       38.05
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "Ameren Illinois",
-    "docket": "26-0051",
-    "status": "proposed",
-    "project_id": "",
     "project_name": "J0LV8 NRE Morton-Bush 2 Reconductor",
     "category": "Capacity Expansion",
     "asset_type": "reconductor",
@@ -15382,7 +14731,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -15683,7 +15031,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -15691,7 +15038,7 @@
     "driver": "",
     "nwa_status": "",
     "source": "Ameren 2025 Annual Report - Electric Distribution (Docket 22-0487), 2026-03-31",
-    "notes": "FEEDERID M49425 CONFIRMED present in Ameren IL_HC_Grids (130 cells). Extent 38.7432-38.7645 N, -90.0100 to -89.8884 W. This is the one project directly joinable to live HC geometry."
+    "notes": "FEEDERID M49425 CONFIRMED present in Ameren IL_HC_Grids (130 grid cells). Extent 38.7432-38.7645 N, -90.0100 to -89.9884 W; the point is that extent's centre. The one project directly joinable to live hosting-capacity geometry. The feeder itself is unchanged in the Ameren layer - this entry is the planned work on top of it."
    },
    "geometry": {
     "type": "Polygon",
@@ -15984,7 +15331,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -16285,7 +15631,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -16586,7 +15931,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -16887,7 +16231,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -17188,7 +16531,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -17489,7 +16831,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -17790,7 +17131,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -18091,7 +17431,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -18392,7 +17731,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -18693,7 +18031,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -18994,7 +18331,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -19295,7 +18631,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -19596,7 +18931,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "low",
     "risk_reason": "Party asks total ~$450M against $2.68B (~17%), far milder than the 2023 rejection, and ICC Staff finds the plan substantially compliant. Only one Capacity Expansion project is targeted for removal.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -19892,284 +19226,283 @@
     "program_year": "2028-2031",
     "cost_usd": "",
     "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
+    "loc_method": "verified_asset_match",
+    "uncertainty_mi": 0.75,
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in cuts overall, but this project cleared ComEd's own non-wires screen and has a dedicated cost-effectiveness appendix, which strengthens it relative to other ComEd asks.",
-    "n_projects": "",
     "program_id": "401001",
     "itn": "364566",
     "ce_type": "Type 4B",
-    "voltage_kv": "",
+    "voltage_kv": "138 (existing site)",
     "driver": "area load growth",
     "nwa_status": "screened - no non-wires option met ComEd TRC criteria",
     "source": "ComEd MYIGP 2028-2031 (Docket 26-0047), filed 2026-01-16",
-    "notes": "Has a dedicated public cost-effectiveness appendix. 'Do nothing' does not support area load growth."
+    "notes": "Has a dedicated public cost-effectiveness appendix. 'Do nothing' does not support area load growth. Filing places it 'south of O'Hare International Airport in Franklin Park' and states the airport's critical load is networked across two substations. COORDINATE VERIFIED against the HIFLD Electric_Substations record named FRANKLIN PARK (138 kV) - the only ComEd project in this register whose name matched HIFLD. The existing substation is NOT replaced by this entry; it remains in the substation layer with its own data."
    },
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -87.826336,
-       41.9353
+       -87.873744,
+       41.935447
       ],
       [
-       -87.826523,
-       41.938141
+       -87.873815,
+       41.936512
       ],
       [
-       -87.827084,
-       41.940955
+       -87.874025,
+       41.937568
       ],
       [
-       -87.828014,
-       41.943714
+       -87.874374,
+       41.938602
       ],
       [
-       -87.829302,
-       41.946392
+       -87.874857,
+       41.939607
       ],
       [
-       -87.830937,
-       41.948964
+       -87.87547,
+       41.940571
       ],
       [
-       -87.832902,
-       41.951403
+       -87.876207,
+       41.941486
       ],
       [
-       -87.83518,
-       41.953688
+       -87.877061,
+       41.942343
       ],
       [
-       -87.837748,
-       41.955796
+       -87.878024,
+       41.943133
       ],
       [
-       -87.840581,
-       41.957706
+       -87.879086,
+       41.943849
       ],
       [
-       -87.843653,
-       41.959401
+       -87.880238,
+       41.944485
       ],
       [
-       -87.846932,
-       41.960863
+       -87.881468,
+       41.945033
       ],
       [
-       -87.850389,
-       41.962079
+       -87.882764,
+       41.945489
       ],
       [
-       -87.853989,
-       41.963037
+       -87.884114,
+       41.945849
       ],
       [
-       -87.857698,
-       41.963729
+       -87.885505,
+       41.946108
       ],
       [
-       -87.861481,
-       41.964146
+       -87.886924,
+       41.946264
       ],
       [
-       -87.8653,
-       41.964286
+       -87.888356,
+       41.946317
       ],
       [
-       -87.869119,
-       41.964146
+       -87.889788,
+       41.946264
       ],
       [
-       -87.872902,
-       41.963729
+       -87.891207,
+       41.946108
       ],
       [
-       -87.876611,
-       41.963037
+       -87.892598,
+       41.945849
       ],
       [
-       -87.880211,
-       41.962079
+       -87.893948,
+       41.945489
       ],
       [
-       -87.883668,
-       41.960863
+       -87.895244,
+       41.945033
       ],
       [
-       -87.886947,
-       41.959401
+       -87.896474,
+       41.944485
       ],
       [
-       -87.890019,
-       41.957706
+       -87.897626,
+       41.943849
       ],
       [
-       -87.892852,
-       41.955796
+       -87.898688,
+       41.943133
       ],
       [
-       -87.89542,
-       41.953688
+       -87.899651,
+       41.942343
       ],
       [
-       -87.897698,
-       41.951403
+       -87.900505,
+       41.941486
       ],
       [
-       -87.899663,
-       41.948964
+       -87.901242,
+       41.940571
       ],
       [
-       -87.901298,
-       41.946392
+       -87.901855,
+       41.939607
       ],
       [
-       -87.902586,
-       41.943714
+       -87.902338,
+       41.938602
       ],
       [
-       -87.903516,
-       41.940955
+       -87.902687,
+       41.937568
       ],
       [
-       -87.904077,
-       41.938141
+       -87.902897,
+       41.936512
       ],
       [
-       -87.904264,
-       41.9353
+       -87.902968,
+       41.935447
       ],
       [
-       -87.904077,
-       41.932459
+       -87.902897,
+       41.934382
       ],
       [
-       -87.903516,
-       41.929645
+       -87.902687,
+       41.933326
       ],
       [
-       -87.902586,
-       41.926886
+       -87.902338,
+       41.932292
       ],
       [
-       -87.901298,
-       41.924208
+       -87.901855,
+       41.931287
       ],
       [
-       -87.899663,
-       41.921636
+       -87.901242,
+       41.930323
       ],
       [
-       -87.897698,
-       41.919197
+       -87.900505,
+       41.929408
       ],
       [
-       -87.89542,
-       41.916912
+       -87.899651,
+       41.928551
       ],
       [
-       -87.892852,
-       41.914804
+       -87.898688,
+       41.927761
       ],
       [
-       -87.890019,
-       41.912894
+       -87.897626,
+       41.927045
       ],
       [
-       -87.886947,
-       41.911199
+       -87.896474,
+       41.926409
       ],
       [
-       -87.883668,
-       41.909737
+       -87.895244,
+       41.925861
       ],
       [
-       -87.880211,
-       41.908521
+       -87.893948,
+       41.925405
       ],
       [
-       -87.876611,
-       41.907563
+       -87.892598,
+       41.925045
       ],
       [
-       -87.872902,
-       41.906871
+       -87.891207,
+       41.924786
       ],
       [
-       -87.869119,
-       41.906454
+       -87.889788,
+       41.92463
       ],
       [
-       -87.8653,
-       41.906314
+       -87.888356,
+       41.924577
       ],
       [
-       -87.861481,
-       41.906454
+       -87.886924,
+       41.92463
       ],
       [
-       -87.857698,
-       41.906871
+       -87.885505,
+       41.924786
       ],
       [
-       -87.853989,
-       41.907563
+       -87.884114,
+       41.925045
       ],
       [
-       -87.850389,
-       41.908521
+       -87.882764,
+       41.925405
       ],
       [
-       -87.846932,
-       41.909737
+       -87.881468,
+       41.925861
       ],
       [
-       -87.843653,
-       41.911199
+       -87.880238,
+       41.926409
       ],
       [
-       -87.840581,
-       41.912894
+       -87.879086,
+       41.927045
       ],
       [
-       -87.837748,
-       41.914804
+       -87.878024,
+       41.927761
       ],
       [
-       -87.83518,
-       41.916912
+       -87.877061,
+       41.928551
       ],
       [
-       -87.832902,
-       41.919197
+       -87.876207,
+       41.929408
       ],
       [
-       -87.830937,
-       41.921636
+       -87.87547,
+       41.930323
       ],
       [
-       -87.829302,
-       41.924208
+       -87.874857,
+       41.931287
       ],
       [
-       -87.828014,
-       41.926886
+       -87.874374,
+       41.932292
       ],
       [
-       -87.827084,
-       41.929645
+       -87.874025,
+       41.933326
       ],
       [
-       -87.826523,
-       41.932459
+       -87.873815,
+       41.934382
       ],
       [
-       -87.826336,
-       41.9353
+       -87.873744,
+       41.935447
       ]
      ]
     ]
@@ -20198,7 +19531,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "high",
     "risk_reason": "CUB seeks $405M of data-center-driven upgrades cut until costs are allocated to the causing customers, arguing the forecasts come from developers facing no penalty for speculating. ComEd conceded one such data center was CANCELLED by its developer.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "Type 4B",
@@ -20499,7 +19831,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "77687",
     "ce_type": "",
@@ -20800,7 +20131,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -21101,7 +20431,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -21402,7 +20731,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "64090",
     "ce_type": "",
@@ -21703,9 +21031,8 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
-    "itn": "",
+    "itn": "81689",
     "ce_type": "",
     "voltage_kv": "",
     "driver": "",
@@ -22004,9 +21331,8 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
-    "itn": "",
+    "itn": "363364",
     "ce_type": "",
     "voltage_kv": "",
     "driver": "",
@@ -22305,7 +21631,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -22606,15 +21931,14 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
-    "itn": "",
+    "itn": "364833",
     "ce_type": "",
     "voltage_kv": "",
     "driver": "",
     "nwa_status": "",
     "source": "ComEd Q1 2026 Investment Report (Docket 22-0486), filed 2026-06-29",
-    "notes": ""
+    "notes": "FORECAST REVISED DOWN SHARPLY: ComEd's Q4 2025 filing projected $24.27M for this same 2026 work; the Q1 2026 filing shows $4.48M. The later figure is used here. A revision this large is a caution against treating any single-vintage cost as settled."
    },
    "geometry": {
     "type": "Polygon",
@@ -22907,7 +22231,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -23208,7 +22531,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -23509,9 +22831,8 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
-    "itn": "",
+    "itn": "88213",
     "ce_type": "",
     "voltage_kv": "",
     "driver": "",
@@ -23810,9 +23131,8 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
-    "itn": "",
+    "itn": "80727",
     "ce_type": "",
     "voltage_kv": "",
     "driver": "",
@@ -24111,9 +23431,8 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
-    "itn": "",
+    "itn": "77706",
     "ce_type": "",
     "voltage_kv": "",
     "driver": "",
@@ -24412,7 +23731,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -24713,7 +24031,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -25014,7 +24331,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -25313,9 +24629,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "76261",
     "ce_type": "",
@@ -25614,9 +24929,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "76780",
     "ce_type": "",
@@ -25915,9 +25229,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "67908",
     "ce_type": "",
@@ -26218,7 +25531,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "79696",
     "ce_type": "",
@@ -26519,7 +25831,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "50576",
     "ce_type": "",
@@ -26818,9 +26129,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "74954",
     "ce_type": "",
@@ -27121,7 +26431,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "76913",
     "ce_type": "",
@@ -27422,7 +26731,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "69892",
     "ce_type": "",
@@ -27721,9 +27029,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "69908",
     "ce_type": "",
@@ -28022,9 +27329,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "74650",
     "ce_type": "",
@@ -28323,9 +27629,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "77304",
     "ce_type": "",
@@ -28624,9 +27929,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "77212",
     "ce_type": "",
@@ -28925,9 +28229,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "62472",
     "ce_type": "",
@@ -29226,9 +28529,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "78753",
     "ce_type": "",
@@ -29527,9 +28829,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "76371",
     "ce_type": "",
@@ -29830,7 +29131,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "77842",
     "ce_type": "",
@@ -30129,9 +29429,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "80493",
     "ce_type": "",
@@ -30432,7 +29731,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "64077",
     "ce_type": "",
@@ -30715,2113 +30013,6 @@
    "properties": {
     "utility": "ComEd",
     "docket": "22-0486/23-0055/24-0181",
-    "status": "approved",
-    "project_id": "364833",
-    "project_name": "Install new TR and 34kV terminal at TSS113 Waterman",
-    "category": "Capacity Planning and Management",
-    "asset_type": "transformer addition",
-    "feeder_id": "",
-    "substation": "",
-    "place": "Waterman",
-    "county": "DeKalb",
-    "region": "",
-    "program_year": "2025",
-    "cost_usd": 24269501,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "364833",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -88.738135,
-       41.7717
-      ],
-      [
-       -88.738322,
-       41.774541
-      ],
-      [
-       -88.738882,
-       41.777355
-      ],
-      [
-       -88.739809,
-       41.780114
-      ],
-      [
-       -88.741094,
-       41.782792
-      ],
-      [
-       -88.742724,
-       41.785364
-      ],
-      [
-       -88.744685,
-       41.787803
-      ],
-      [
-       -88.746957,
-       41.790088
-      ],
-      [
-       -88.749518,
-       41.792196
-      ],
-      [
-       -88.752344,
-       41.794106
-      ],
-      [
-       -88.755408,
-       41.795801
-      ],
-      [
-       -88.758679,
-       41.797263
-      ],
-      [
-       -88.762127,
-       41.798479
-      ],
-      [
-       -88.765718,
-       41.799437
-      ],
-      [
-       -88.769418,
-       41.800129
-      ],
-      [
-       -88.773191,
-       41.800546
-      ],
-      [
-       -88.777,
-       41.800686
-      ],
-      [
-       -88.780809,
-       41.800546
-      ],
-      [
-       -88.784582,
-       41.800129
-      ],
-      [
-       -88.788282,
-       41.799437
-      ],
-      [
-       -88.791873,
-       41.798479
-      ],
-      [
-       -88.795321,
-       41.797263
-      ],
-      [
-       -88.798592,
-       41.795801
-      ],
-      [
-       -88.801656,
-       41.794106
-      ],
-      [
-       -88.804482,
-       41.792196
-      ],
-      [
-       -88.807043,
-       41.790088
-      ],
-      [
-       -88.809315,
-       41.787803
-      ],
-      [
-       -88.811276,
-       41.785364
-      ],
-      [
-       -88.812906,
-       41.782792
-      ],
-      [
-       -88.814191,
-       41.780114
-      ],
-      [
-       -88.815118,
-       41.777355
-      ],
-      [
-       -88.815678,
-       41.774541
-      ],
-      [
-       -88.815865,
-       41.7717
-      ],
-      [
-       -88.815678,
-       41.768859
-      ],
-      [
-       -88.815118,
-       41.766045
-      ],
-      [
-       -88.814191,
-       41.763286
-      ],
-      [
-       -88.812906,
-       41.760608
-      ],
-      [
-       -88.811276,
-       41.758036
-      ],
-      [
-       -88.809315,
-       41.755597
-      ],
-      [
-       -88.807043,
-       41.753312
-      ],
-      [
-       -88.804482,
-       41.751204
-      ],
-      [
-       -88.801656,
-       41.749294
-      ],
-      [
-       -88.798592,
-       41.747599
-      ],
-      [
-       -88.795321,
-       41.746137
-      ],
-      [
-       -88.791873,
-       41.744921
-      ],
-      [
-       -88.788282,
-       41.743963
-      ],
-      [
-       -88.784582,
-       41.743271
-      ],
-      [
-       -88.780809,
-       41.742854
-      ],
-      [
-       -88.777,
-       41.742714
-      ],
-      [
-       -88.773191,
-       41.742854
-      ],
-      [
-       -88.769418,
-       41.743271
-      ],
-      [
-       -88.765718,
-       41.743963
-      ],
-      [
-       -88.762127,
-       41.744921
-      ],
-      [
-       -88.758679,
-       41.746137
-      ],
-      [
-       -88.755408,
-       41.747599
-      ],
-      [
-       -88.752344,
-       41.749294
-      ],
-      [
-       -88.749518,
-       41.751204
-      ],
-      [
-       -88.746957,
-       41.753312
-      ],
-      [
-       -88.744685,
-       41.755597
-      ],
-      [
-       -88.742724,
-       41.758036
-      ],
-      [
-       -88.741094,
-       41.760608
-      ],
-      [
-       -88.739809,
-       41.763286
-      ],
-      [
-       -88.738882,
-       41.766045
-      ],
-      [
-       -88.738322,
-       41.768859
-      ],
-      [
-       -88.738135,
-       41.7717
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "ComEd",
-    "docket": "22-0486/23-0055/24-0181",
-    "status": "approved",
-    "project_id": "77698",
-    "project_name": "New TR & 34kV L11345 at TSS113 Waterman",
-    "category": "Capacity Planning and Management",
-    "asset_type": "transformer addition",
-    "feeder_id": "",
-    "substation": "",
-    "place": "Waterman",
-    "county": "DeKalb",
-    "region": "",
-    "program_year": "2025",
-    "cost_usd": 5489593,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "77698",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -88.738135,
-       41.7717
-      ],
-      [
-       -88.738322,
-       41.774541
-      ],
-      [
-       -88.738882,
-       41.777355
-      ],
-      [
-       -88.739809,
-       41.780114
-      ],
-      [
-       -88.741094,
-       41.782792
-      ],
-      [
-       -88.742724,
-       41.785364
-      ],
-      [
-       -88.744685,
-       41.787803
-      ],
-      [
-       -88.746957,
-       41.790088
-      ],
-      [
-       -88.749518,
-       41.792196
-      ],
-      [
-       -88.752344,
-       41.794106
-      ],
-      [
-       -88.755408,
-       41.795801
-      ],
-      [
-       -88.758679,
-       41.797263
-      ],
-      [
-       -88.762127,
-       41.798479
-      ],
-      [
-       -88.765718,
-       41.799437
-      ],
-      [
-       -88.769418,
-       41.800129
-      ],
-      [
-       -88.773191,
-       41.800546
-      ],
-      [
-       -88.777,
-       41.800686
-      ],
-      [
-       -88.780809,
-       41.800546
-      ],
-      [
-       -88.784582,
-       41.800129
-      ],
-      [
-       -88.788282,
-       41.799437
-      ],
-      [
-       -88.791873,
-       41.798479
-      ],
-      [
-       -88.795321,
-       41.797263
-      ],
-      [
-       -88.798592,
-       41.795801
-      ],
-      [
-       -88.801656,
-       41.794106
-      ],
-      [
-       -88.804482,
-       41.792196
-      ],
-      [
-       -88.807043,
-       41.790088
-      ],
-      [
-       -88.809315,
-       41.787803
-      ],
-      [
-       -88.811276,
-       41.785364
-      ],
-      [
-       -88.812906,
-       41.782792
-      ],
-      [
-       -88.814191,
-       41.780114
-      ],
-      [
-       -88.815118,
-       41.777355
-      ],
-      [
-       -88.815678,
-       41.774541
-      ],
-      [
-       -88.815865,
-       41.7717
-      ],
-      [
-       -88.815678,
-       41.768859
-      ],
-      [
-       -88.815118,
-       41.766045
-      ],
-      [
-       -88.814191,
-       41.763286
-      ],
-      [
-       -88.812906,
-       41.760608
-      ],
-      [
-       -88.811276,
-       41.758036
-      ],
-      [
-       -88.809315,
-       41.755597
-      ],
-      [
-       -88.807043,
-       41.753312
-      ],
-      [
-       -88.804482,
-       41.751204
-      ],
-      [
-       -88.801656,
-       41.749294
-      ],
-      [
-       -88.798592,
-       41.747599
-      ],
-      [
-       -88.795321,
-       41.746137
-      ],
-      [
-       -88.791873,
-       41.744921
-      ],
-      [
-       -88.788282,
-       41.743963
-      ],
-      [
-       -88.784582,
-       41.743271
-      ],
-      [
-       -88.780809,
-       41.742854
-      ],
-      [
-       -88.777,
-       41.742714
-      ],
-      [
-       -88.773191,
-       41.742854
-      ],
-      [
-       -88.769418,
-       41.743271
-      ],
-      [
-       -88.765718,
-       41.743963
-      ],
-      [
-       -88.762127,
-       41.744921
-      ],
-      [
-       -88.758679,
-       41.746137
-      ],
-      [
-       -88.755408,
-       41.747599
-      ],
-      [
-       -88.752344,
-       41.749294
-      ],
-      [
-       -88.749518,
-       41.751204
-      ],
-      [
-       -88.746957,
-       41.753312
-      ],
-      [
-       -88.744685,
-       41.755597
-      ],
-      [
-       -88.742724,
-       41.758036
-      ],
-      [
-       -88.741094,
-       41.760608
-      ],
-      [
-       -88.739809,
-       41.763286
-      ],
-      [
-       -88.738882,
-       41.766045
-      ],
-      [
-       -88.738322,
-       41.768859
-      ],
-      [
-       -88.738135,
-       41.7717
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "ComEd",
-    "docket": "22-0486/23-0055/24-0181",
-    "status": "approved",
-    "project_id": "81689",
-    "project_name": "TSS131 West Chicago",
-    "category": "Capacity Planning and Management",
-    "asset_type": "capacity relief",
-    "feeder_id": "",
-    "substation": "",
-    "place": "West Chicago",
-    "county": "DuPage",
-    "region": "",
-    "program_year": "2025",
-    "cost_usd": 6878768,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "81689",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -88.164967,
-       41.8847
-      ],
-      [
-       -88.165154,
-       41.887541
-      ],
-      [
-       -88.165715,
-       41.890355
-      ],
-      [
-       -88.166643,
-       41.893114
-      ],
-      [
-       -88.16793,
-       41.895792
-      ],
-      [
-       -88.169564,
-       41.898364
-      ],
-      [
-       -88.171528,
-       41.900803
-      ],
-      [
-       -88.173804,
-       41.903088
-      ],
-      [
-       -88.17637,
-       41.905196
-      ],
-      [
-       -88.179201,
-       41.907106
-      ],
-      [
-       -88.18227,
-       41.908801
-      ],
-      [
-       -88.185547,
-       41.910263
-      ],
-      [
-       -88.189001,
-       41.911479
-      ],
-      [
-       -88.192598,
-       41.912437
-      ],
-      [
-       -88.196304,
-       41.913129
-      ],
-      [
-       -88.200084,
-       41.913546
-      ],
-      [
-       -88.2039,
-       41.913686
-      ],
-      [
-       -88.207716,
-       41.913546
-      ],
-      [
-       -88.211496,
-       41.913129
-      ],
-      [
-       -88.215202,
-       41.912437
-      ],
-      [
-       -88.218799,
-       41.911479
-      ],
-      [
-       -88.222253,
-       41.910263
-      ],
-      [
-       -88.22553,
-       41.908801
-      ],
-      [
-       -88.228599,
-       41.907106
-      ],
-      [
-       -88.23143,
-       41.905196
-      ],
-      [
-       -88.233996,
-       41.903088
-      ],
-      [
-       -88.236272,
-       41.900803
-      ],
-      [
-       -88.238236,
-       41.898364
-      ],
-      [
-       -88.23987,
-       41.895792
-      ],
-      [
-       -88.241157,
-       41.893114
-      ],
-      [
-       -88.242085,
-       41.890355
-      ],
-      [
-       -88.242646,
-       41.887541
-      ],
-      [
-       -88.242833,
-       41.8847
-      ],
-      [
-       -88.242646,
-       41.881859
-      ],
-      [
-       -88.242085,
-       41.879045
-      ],
-      [
-       -88.241157,
-       41.876286
-      ],
-      [
-       -88.23987,
-       41.873608
-      ],
-      [
-       -88.238236,
-       41.871036
-      ],
-      [
-       -88.236272,
-       41.868597
-      ],
-      [
-       -88.233996,
-       41.866312
-      ],
-      [
-       -88.23143,
-       41.864204
-      ],
-      [
-       -88.228599,
-       41.862294
-      ],
-      [
-       -88.22553,
-       41.860599
-      ],
-      [
-       -88.222253,
-       41.859137
-      ],
-      [
-       -88.218799,
-       41.857921
-      ],
-      [
-       -88.215202,
-       41.856963
-      ],
-      [
-       -88.211496,
-       41.856271
-      ],
-      [
-       -88.207716,
-       41.855854
-      ],
-      [
-       -88.2039,
-       41.855714
-      ],
-      [
-       -88.200084,
-       41.855854
-      ],
-      [
-       -88.196304,
-       41.856271
-      ],
-      [
-       -88.192598,
-       41.856963
-      ],
-      [
-       -88.189001,
-       41.857921
-      ],
-      [
-       -88.185547,
-       41.859137
-      ],
-      [
-       -88.18227,
-       41.860599
-      ],
-      [
-       -88.179201,
-       41.862294
-      ],
-      [
-       -88.17637,
-       41.864204
-      ],
-      [
-       -88.173804,
-       41.866312
-      ],
-      [
-       -88.171528,
-       41.868597
-      ],
-      [
-       -88.169564,
-       41.871036
-      ],
-      [
-       -88.16793,
-       41.873608
-      ],
-      [
-       -88.166643,
-       41.876286
-      ],
-      [
-       -88.165715,
-       41.879045
-      ],
-      [
-       -88.165154,
-       41.881859
-      ],
-      [
-       -88.164967,
-       41.8847
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "ComEd",
-    "docket": "22-0486/23-0055/24-0181",
-    "status": "approved",
-    "project_id": "363364",
-    "project_name": "TSS37 Natoma 138kV hardening",
-    "category": "Capacity Planning and Management",
-    "asset_type": "substation hardening",
-    "feeder_id": "",
-    "substation": "",
-    "place": "Chicago",
-    "county": "Cook",
-    "region": "",
-    "program_year": "2025",
-    "cost_usd": 5547019,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "363364",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -87.590871,
-       41.8781
-      ],
-      [
-       -87.591058,
-       41.880941
-      ],
-      [
-       -87.591619,
-       41.883755
-      ],
-      [
-       -87.592547,
-       41.886514
-      ],
-      [
-       -87.593834,
-       41.889192
-      ],
-      [
-       -87.595467,
-       41.891764
-      ],
-      [
-       -87.597431,
-       41.894203
-      ],
-      [
-       -87.599707,
-       41.896488
-      ],
-      [
-       -87.602273,
-       41.898596
-      ],
-      [
-       -87.605103,
-       41.900506
-      ],
-      [
-       -87.608172,
-       41.902201
-      ],
-      [
-       -87.611449,
-       41.903663
-      ],
-      [
-       -87.614902,
-       41.904879
-      ],
-      [
-       -87.618499,
-       41.905837
-      ],
-      [
-       -87.622205,
-       41.906529
-      ],
-      [
-       -87.625984,
-       41.906946
-      ],
-      [
-       -87.6298,
-       41.907086
-      ],
-      [
-       -87.633616,
-       41.906946
-      ],
-      [
-       -87.637395,
-       41.906529
-      ],
-      [
-       -87.641101,
-       41.905837
-      ],
-      [
-       -87.644698,
-       41.904879
-      ],
-      [
-       -87.648151,
-       41.903663
-      ],
-      [
-       -87.651428,
-       41.902201
-      ],
-      [
-       -87.654497,
-       41.900506
-      ],
-      [
-       -87.657327,
-       41.898596
-      ],
-      [
-       -87.659893,
-       41.896488
-      ],
-      [
-       -87.662169,
-       41.894203
-      ],
-      [
-       -87.664133,
-       41.891764
-      ],
-      [
-       -87.665766,
-       41.889192
-      ],
-      [
-       -87.667053,
-       41.886514
-      ],
-      [
-       -87.667981,
-       41.883755
-      ],
-      [
-       -87.668542,
-       41.880941
-      ],
-      [
-       -87.668729,
-       41.8781
-      ],
-      [
-       -87.668542,
-       41.875259
-      ],
-      [
-       -87.667981,
-       41.872445
-      ],
-      [
-       -87.667053,
-       41.869686
-      ],
-      [
-       -87.665766,
-       41.867008
-      ],
-      [
-       -87.664133,
-       41.864436
-      ],
-      [
-       -87.662169,
-       41.861997
-      ],
-      [
-       -87.659893,
-       41.859712
-      ],
-      [
-       -87.657327,
-       41.857604
-      ],
-      [
-       -87.654497,
-       41.855694
-      ],
-      [
-       -87.651428,
-       41.853999
-      ],
-      [
-       -87.648151,
-       41.852537
-      ],
-      [
-       -87.644698,
-       41.851321
-      ],
-      [
-       -87.641101,
-       41.850363
-      ],
-      [
-       -87.637395,
-       41.849671
-      ],
-      [
-       -87.633616,
-       41.849254
-      ],
-      [
-       -87.6298,
-       41.849114
-      ],
-      [
-       -87.625984,
-       41.849254
-      ],
-      [
-       -87.622205,
-       41.849671
-      ],
-      [
-       -87.618499,
-       41.850363
-      ],
-      [
-       -87.614902,
-       41.851321
-      ],
-      [
-       -87.611449,
-       41.852537
-      ],
-      [
-       -87.608172,
-       41.853999
-      ],
-      [
-       -87.605103,
-       41.855694
-      ],
-      [
-       -87.602273,
-       41.857604
-      ],
-      [
-       -87.599707,
-       41.859712
-      ],
-      [
-       -87.597431,
-       41.861997
-      ],
-      [
-       -87.595467,
-       41.864436
-      ],
-      [
-       -87.593834,
-       41.867008
-      ],
-      [
-       -87.592547,
-       41.869686
-      ],
-      [
-       -87.591619,
-       41.872445
-      ],
-      [
-       -87.591058,
-       41.875259
-      ],
-      [
-       -87.590871,
-       41.8781
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "ComEd",
-    "docket": "22-0486/23-0055/24-0181",
-    "status": "approved",
-    "project_id": "88213",
-    "project_name": "SS249 Wilmette TR51 replacement",
-    "category": "Capacity Planning and Management",
-    "asset_type": "transformer replacement",
-    "feeder_id": "",
-    "substation": "",
-    "place": "Wilmette",
-    "county": "Cook",
-    "region": "",
-    "program_year": "2025",
-    "cost_usd": 2378325,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "88213",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -87.683752,
-       42.0722
-      ],
-      [
-       -87.68394,
-       42.075041
-      ],
-      [
-       -87.684502,
-       42.077855
-      ],
-      [
-       -87.685433,
-       42.080614
-      ],
-      [
-       -87.686724,
-       42.083292
-      ],
-      [
-       -87.688363,
-       42.085864
-      ],
-      [
-       -87.690333,
-       42.088303
-      ],
-      [
-       -87.692615,
-       42.090588
-      ],
-      [
-       -87.695189,
-       42.092696
-      ],
-      [
-       -87.698028,
-       42.094606
-      ],
-      [
-       -87.701106,
-       42.096301
-      ],
-      [
-       -87.704393,
-       42.097763
-      ],
-      [
-       -87.707857,
-       42.098979
-      ],
-      [
-       -87.711465,
-       42.099937
-      ],
-      [
-       -87.715182,
-       42.100629
-      ],
-      [
-       -87.718973,
-       42.101046
-      ],
-      [
-       -87.7228,
-       42.101186
-      ],
-      [
-       -87.726627,
-       42.101046
-      ],
-      [
-       -87.730418,
-       42.100629
-      ],
-      [
-       -87.734135,
-       42.099937
-      ],
-      [
-       -87.737743,
-       42.098979
-      ],
-      [
-       -87.741207,
-       42.097763
-      ],
-      [
-       -87.744494,
-       42.096301
-      ],
-      [
-       -87.747572,
-       42.094606
-      ],
-      [
-       -87.750411,
-       42.092696
-      ],
-      [
-       -87.752985,
-       42.090588
-      ],
-      [
-       -87.755267,
-       42.088303
-      ],
-      [
-       -87.757237,
-       42.085864
-      ],
-      [
-       -87.758876,
-       42.083292
-      ],
-      [
-       -87.760167,
-       42.080614
-      ],
-      [
-       -87.761098,
-       42.077855
-      ],
-      [
-       -87.76166,
-       42.075041
-      ],
-      [
-       -87.761848,
-       42.0722
-      ],
-      [
-       -87.76166,
-       42.069359
-      ],
-      [
-       -87.761098,
-       42.066545
-      ],
-      [
-       -87.760167,
-       42.063786
-      ],
-      [
-       -87.758876,
-       42.061108
-      ],
-      [
-       -87.757237,
-       42.058536
-      ],
-      [
-       -87.755267,
-       42.056097
-      ],
-      [
-       -87.752985,
-       42.053812
-      ],
-      [
-       -87.750411,
-       42.051704
-      ],
-      [
-       -87.747572,
-       42.049794
-      ],
-      [
-       -87.744494,
-       42.048099
-      ],
-      [
-       -87.741207,
-       42.046637
-      ],
-      [
-       -87.737743,
-       42.045421
-      ],
-      [
-       -87.734135,
-       42.044463
-      ],
-      [
-       -87.730418,
-       42.043771
-      ],
-      [
-       -87.726627,
-       42.043354
-      ],
-      [
-       -87.7228,
-       42.043214
-      ],
-      [
-       -87.718973,
-       42.043354
-      ],
-      [
-       -87.715182,
-       42.043771
-      ],
-      [
-       -87.711465,
-       42.044463
-      ],
-      [
-       -87.707857,
-       42.045421
-      ],
-      [
-       -87.704393,
-       42.046637
-      ],
-      [
-       -87.701106,
-       42.048099
-      ],
-      [
-       -87.698028,
-       42.049794
-      ],
-      [
-       -87.695189,
-       42.051704
-      ],
-      [
-       -87.692615,
-       42.053812
-      ],
-      [
-       -87.690333,
-       42.056097
-      ],
-      [
-       -87.688363,
-       42.058536
-      ],
-      [
-       -87.686724,
-       42.061108
-      ],
-      [
-       -87.685433,
-       42.063786
-      ],
-      [
-       -87.684502,
-       42.066545
-      ],
-      [
-       -87.68394,
-       42.069359
-      ],
-      [
-       -87.683752,
-       42.0722
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "ComEd",
-    "docket": "22-0486/23-0055/24-0181",
-    "status": "approved",
-    "project_id": "80727",
-    "project_name": "TSS163 Roscoe Bert TR71 replacement",
-    "category": "Capacity Planning and Management",
-    "asset_type": "transformer replacement",
-    "feeder_id": "",
-    "substation": "",
-    "place": "Roscoe",
-    "county": "Winnebago",
-    "region": "",
-    "program_year": "2025",
-    "cost_usd": 5486537,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "80727",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -88.969436,
-       42.42
-      ],
-      [
-       -88.969625,
-       42.422841
-      ],
-      [
-       -88.97019,
-       42.425655
-      ],
-      [
-       -88.971127,
-       42.428414
-      ],
-      [
-       -88.972425,
-       42.431092
-      ],
-      [
-       -88.974072,
-       42.433664
-      ],
-      [
-       -88.976053,
-       42.436103
-      ],
-      [
-       -88.978348,
-       42.438388
-      ],
-      [
-       -88.980936,
-       42.440496
-      ],
-      [
-       -88.983791,
-       42.442406
-      ],
-      [
-       -88.986886,
-       42.444101
-      ],
-      [
-       -88.990191,
-       42.445563
-      ],
-      [
-       -88.993674,
-       42.446779
-      ],
-      [
-       -88.997302,
-       42.447737
-      ],
-      [
-       -89.00104,
-       42.448429
-      ],
-      [
-       -89.004851,
-       42.448846
-      ],
-      [
-       -89.0087,
-       42.448986
-      ],
-      [
-       -89.012549,
-       42.448846
-      ],
-      [
-       -89.01636,
-       42.448429
-      ],
-      [
-       -89.020098,
-       42.447737
-      ],
-      [
-       -89.023726,
-       42.446779
-      ],
-      [
-       -89.027209,
-       42.445563
-      ],
-      [
-       -89.030514,
-       42.444101
-      ],
-      [
-       -89.033609,
-       42.442406
-      ],
-      [
-       -89.036464,
-       42.440496
-      ],
-      [
-       -89.039052,
-       42.438388
-      ],
-      [
-       -89.041347,
-       42.436103
-      ],
-      [
-       -89.043328,
-       42.433664
-      ],
-      [
-       -89.044975,
-       42.431092
-      ],
-      [
-       -89.046273,
-       42.428414
-      ],
-      [
-       -89.04721,
-       42.425655
-      ],
-      [
-       -89.047775,
-       42.422841
-      ],
-      [
-       -89.047964,
-       42.42
-      ],
-      [
-       -89.047775,
-       42.417159
-      ],
-      [
-       -89.04721,
-       42.414345
-      ],
-      [
-       -89.046273,
-       42.411586
-      ],
-      [
-       -89.044975,
-       42.408908
-      ],
-      [
-       -89.043328,
-       42.406336
-      ],
-      [
-       -89.041347,
-       42.403897
-      ],
-      [
-       -89.039052,
-       42.401612
-      ],
-      [
-       -89.036464,
-       42.399504
-      ],
-      [
-       -89.033609,
-       42.397594
-      ],
-      [
-       -89.030514,
-       42.395899
-      ],
-      [
-       -89.027209,
-       42.394437
-      ],
-      [
-       -89.023726,
-       42.393221
-      ],
-      [
-       -89.020098,
-       42.392263
-      ],
-      [
-       -89.01636,
-       42.391571
-      ],
-      [
-       -89.012549,
-       42.391154
-      ],
-      [
-       -89.0087,
-       42.391014
-      ],
-      [
-       -89.004851,
-       42.391154
-      ],
-      [
-       -89.00104,
-       42.391571
-      ],
-      [
-       -88.997302,
-       42.392263
-      ],
-      [
-       -88.993674,
-       42.393221
-      ],
-      [
-       -88.990191,
-       42.394437
-      ],
-      [
-       -88.986886,
-       42.395899
-      ],
-      [
-       -88.983791,
-       42.397594
-      ],
-      [
-       -88.980936,
-       42.399504
-      ],
-      [
-       -88.978348,
-       42.401612
-      ],
-      [
-       -88.976053,
-       42.403897
-      ],
-      [
-       -88.974072,
-       42.406336
-      ],
-      [
-       -88.972425,
-       42.408908
-      ],
-      [
-       -88.971127,
-       42.411586
-      ],
-      [
-       -88.97019,
-       42.414345
-      ],
-      [
-       -88.969625,
-       42.417159
-      ],
-      [
-       -88.969436,
-       42.42
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "ComEd",
-    "docket": "22-0486/23-0055/24-0181",
-    "status": "approved",
-    "project_id": "77706",
-    "project_name": "DCD140 Brookfield TR1 replacement",
-    "category": "Capacity Planning and Management",
-    "asset_type": "transformer replacement",
-    "feeder_id": "",
-    "substation": "",
-    "place": "Brookfield",
-    "county": "Cook",
-    "region": "",
-    "program_year": "2025",
-    "cost_usd": 2636729,
-    "est_headroom_mw": "",
-    "loc_method": "municipality_centroid",
-    "uncertainty_mi": 2.0,
-    "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
-    "program_id": "",
-    "itn": "77706",
-    "ce_type": "",
-    "voltage_kv": "",
-    "driver": "",
-    "nwa_status": "",
-    "source": "ComEd quarterly Sect 16-108.18(f)(5) Investment Reports, 2024-2025",
-    "notes": "From ComEd's quarterly investment reporting. Named substation, so geocodable to the town - but the town centroid is NOT the substation site."
-   },
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -87.812504,
-       41.8236
-      ],
-      [
-       -87.812691,
-       41.826441
-      ],
-      [
-       -87.813251,
-       41.829255
-      ],
-      [
-       -87.814179,
-       41.832014
-      ],
-      [
-       -87.815465,
-       41.834692
-      ],
-      [
-       -87.817097,
-       41.837264
-      ],
-      [
-       -87.819059,
-       41.839703
-      ],
-      [
-       -87.821333,
-       41.841988
-      ],
-      [
-       -87.823896,
-       41.844096
-      ],
-      [
-       -87.826725,
-       41.846006
-      ],
-      [
-       -87.82979,
-       41.847701
-      ],
-      [
-       -87.833064,
-       41.849163
-      ],
-      [
-       -87.836515,
-       41.850379
-      ],
-      [
-       -87.840109,
-       41.851337
-      ],
-      [
-       -87.843812,
-       41.852029
-      ],
-      [
-       -87.847588,
-       41.852446
-      ],
-      [
-       -87.8514,
-       41.852586
-      ],
-      [
-       -87.855212,
-       41.852446
-      ],
-      [
-       -87.858988,
-       41.852029
-      ],
-      [
-       -87.862691,
-       41.851337
-      ],
-      [
-       -87.866285,
-       41.850379
-      ],
-      [
-       -87.869736,
-       41.849163
-      ],
-      [
-       -87.87301,
-       41.847701
-      ],
-      [
-       -87.876075,
-       41.846006
-      ],
-      [
-       -87.878904,
-       41.844096
-      ],
-      [
-       -87.881467,
-       41.841988
-      ],
-      [
-       -87.883741,
-       41.839703
-      ],
-      [
-       -87.885703,
-       41.837264
-      ],
-      [
-       -87.887335,
-       41.834692
-      ],
-      [
-       -87.888621,
-       41.832014
-      ],
-      [
-       -87.889549,
-       41.829255
-      ],
-      [
-       -87.890109,
-       41.826441
-      ],
-      [
-       -87.890296,
-       41.8236
-      ],
-      [
-       -87.890109,
-       41.820759
-      ],
-      [
-       -87.889549,
-       41.817945
-      ],
-      [
-       -87.888621,
-       41.815186
-      ],
-      [
-       -87.887335,
-       41.812508
-      ],
-      [
-       -87.885703,
-       41.809936
-      ],
-      [
-       -87.883741,
-       41.807497
-      ],
-      [
-       -87.881467,
-       41.805212
-      ],
-      [
-       -87.878904,
-       41.803104
-      ],
-      [
-       -87.876075,
-       41.801194
-      ],
-      [
-       -87.87301,
-       41.799499
-      ],
-      [
-       -87.869736,
-       41.798037
-      ],
-      [
-       -87.866285,
-       41.796821
-      ],
-      [
-       -87.862691,
-       41.795863
-      ],
-      [
-       -87.858988,
-       41.795171
-      ],
-      [
-       -87.855212,
-       41.794754
-      ],
-      [
-       -87.8514,
-       41.794614
-      ],
-      [
-       -87.847588,
-       41.794754
-      ],
-      [
-       -87.843812,
-       41.795171
-      ],
-      [
-       -87.840109,
-       41.795863
-      ],
-      [
-       -87.836515,
-       41.796821
-      ],
-      [
-       -87.833064,
-       41.798037
-      ],
-      [
-       -87.82979,
-       41.799499
-      ],
-      [
-       -87.826725,
-       41.801194
-      ],
-      [
-       -87.823896,
-       41.803104
-      ],
-      [
-       -87.821333,
-       41.805212
-      ],
-      [
-       -87.819059,
-       41.807497
-      ],
-      [
-       -87.817097,
-       41.809936
-      ],
-      [
-       -87.815465,
-       41.812508
-      ],
-      [
-       -87.814179,
-       41.815186
-      ],
-      [
-       -87.813251,
-       41.817945
-      ],
-      [
-       -87.812691,
-       41.820759
-      ],
-      [
-       -87.812504,
-       41.8236
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "properties": {
-    "utility": "ComEd",
-    "docket": "22-0486/23-0055/24-0181",
     "status": "in_service",
     "project_id": "80729",
     "project_name": "SS860 Hyde Park TR1 replacement",
@@ -32838,9 +30029,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "80729",
     "ce_type": "",
@@ -33139,9 +30329,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "69701",
     "ce_type": "",
@@ -33440,9 +30629,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "77224",
     "ce_type": "",
@@ -33741,9 +30929,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "87288",
     "ce_type": "",
@@ -34044,7 +31231,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "none - approved",
     "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
     "program_id": "",
     "itn": "77206",
     "ce_type": "",
@@ -34343,9 +31529,8 @@
     "loc_method": "municipality_centroid",
     "uncertainty_mi": 2.0,
     "hosting_capacity_flag": "possible",
-    "removal_risk": "none - approved",
-    "risk_reason": "Already approved by the ICC and in execution. Timing can still slip: Ameren's Sidney and New Berlin projects were both dropped from the 2024-2027 portfolio after approval.",
-    "n_projects": "",
+    "removal_risk": "none - complete",
+    "risk_reason": "Already placed in service, so there is nothing left to cut. Useful as evidence of where each utility has actually been adding capacity, rather than where it says it will.",
     "program_id": "",
     "itn": "85857",
     "ce_type": "",
@@ -34646,7 +31831,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -34947,7 +32131,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -35248,7 +32431,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -35549,7 +32731,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -35850,7 +33031,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -36151,7 +33331,6 @@
     "hosting_capacity_flag": "explicit",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -36452,7 +33631,6 @@
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -36753,7 +33931,6 @@
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -37054,7 +34231,6 @@
     "hosting_capacity_flag": "unknown",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",
@@ -37355,7 +34531,6 @@
     "hosting_capacity_flag": "possible",
     "removal_risk": "moderate",
     "risk_reason": "CUB seeks over $1B in total reductions from ComEd's $15.3B ask, including $238M of summer-peak adequacy investment for failure to evaluate non-wires alternatives.",
-    "n_projects": "",
     "program_id": "",
     "itn": "",
     "ce_type": "",

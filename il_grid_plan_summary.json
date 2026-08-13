@@ -2,8 +2,8 @@
  "unplottable": [
   {
    "utility": "Ameren Illinois",
-   "n": 7,
-   "cost_usd": 96384889,
+   "n": 9,
+   "cost_usd": 98863384,
    "est_headroom_mw": 0.0,
    "why": "Ameren's Appendix I redacts project names and locations in the public version, and program-level items carry no location at all."
   },

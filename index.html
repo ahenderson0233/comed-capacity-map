@@ -159,6 +159,7 @@
             <div style="font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:#9a9ab0;margin-bottom:3px;">Status</div>
             <label class="chk" style="font-size:12px;"><input type="checkbox" class="gpSt" value="proposed" checked /> <span style="display:inline-block;width:11px;height:11px;background:#c4b5fd;border:1px dashed #6d28d9;margin:0 5px -1px 0;"></span>Proposed (pending ICC order)</label>
             <label class="chk" style="font-size:12px;"><input type="checkbox" class="gpSt" value="approved" checked /> <span style="display:inline-block;width:11px;height:11px;background:#8b5cf6;border:1px solid #4c1d95;margin:0 5px -1px 0;"></span>Approved / in execution</label>
+            <label class="chk" style="font-size:12px;"><input type="checkbox" class="gpSt" value="in_service" checked /> <span style="display:inline-block;width:11px;height:11px;background:#4c1d95;border:1px solid #2e1065;margin:0 5px -1px 0;"></span>Completed / in service</label>
           </div>
           <label class="chk" style="font-size:12px;"><input type="checkbox" id="gpZones" checked /> Show location-uncertainty rings</label>
           <div class="note" style="margin:2px 0 8px 0;">Most projects are named only by town, so the ring shows where the asset <b>could</b> be &mdash; not a precise site. Ring size reflects how well the location is actually known.</div>
@@ -705,10 +706,10 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
       +'background:'+rc[0]+';color:'+rc[1]+';border:1px solid '+rc[2]+';text-transform:uppercase;letter-spacing:.3px;">'
       +he(String(g("removal_risk")||"unrated"))+'</div>';
     if(g("risk_reason"))s+='<div style="font-size:11px;color:#5a5a72;margin-top:5px;line-height:1.45;">'+he(String(g("risk_reason")))+'</div>';
-    if(g("n_projects"))s+=kv2("Projects rolled up",he(String(g("n_projects"))));
     s+=subhd("Location confidence");
     var lm=String(g("loc_method")||""),un=parseFloat(g("uncertainty_mi"));
     var LMT={verified_service_extent:"Verified from live feeder geometry",
+             verified_asset_match:"Matched to a real substation record",
              municipality_centroid:"Town centroid — NOT the asset site",
              approximate_locality:"Neighborhood / road reference",
              narrative_reference:"Utility's own descriptive siting language",
@@ -738,6 +739,7 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
         defaultSymbol:{type:"simple-fill",color:[196,181,253,0.15],outline:{color:[109,40,217,0.65],width:1.2,style:"dash"}},
         uniqueValueInfos:[
           {value:"verified_service_extent",symbol:{type:"simple-fill",color:[139,92,246,0.28],outline:{color:[76,29,149,0.9],width:1.6,style:"solid"}}},
+          {value:"verified_asset_match",symbol:{type:"simple-fill",color:[139,92,246,0.26],outline:{color:[76,29,149,0.9],width:1.6,style:"solid"}}},
           {value:"approximate_locality",symbol:{type:"simple-fill",color:[167,139,250,0.20],outline:{color:[91,33,182,0.75],width:1.3,style:"dash"}}},
           {value:"narrative_reference",symbol:{type:"simple-fill",color:[167,139,250,0.18],outline:{color:[91,33,182,0.7],width:1.3,style:"dash"}}},
           {value:"municipality_centroid",symbol:{type:"simple-fill",color:[196,181,253,0.15],outline:{color:[109,40,217,0.6],width:1.2,style:"dash"}}},
@@ -752,14 +754,22 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
          A rollup reads as "a count, not a site" before the popup is opened.  */
       renderer:{type:"unique-value",field:"status",field2:"loc_method",fieldDelimiter:"|",
         defaultSymbol:{type:"simple-marker",style:"diamond",size:12,color:[237,233,254],outline:{color:[124,58,237],width:1.6}},
+        /* Every loc_method in the data MUST be listed here. A missing one falls
+           through to defaultSymbol and silently loses the proposed/approved
+           distinction — which is exactly what happened to the narrative-tier
+           substations and the Mendota constraint zone. */
         uniqueValueInfos:(function(){ var out=[],
-            METH=["verified_service_extent","approximate_locality","municipality_centroid","region_approximation","system_wide"];
+            METH=["verified_service_extent","verified_asset_match","approximate_locality",
+                  "narrative_reference","municipality_centroid","constraint_zone",
+                  "region_approximation","system_wide"];
           METH.forEach(function(m){
             out.push({value:"proposed|"+m,symbol:{type:"simple-marker",style:"diamond",size:12,color:[237,233,254],outline:{color:[124,58,237],width:1.7}}});
             out.push({value:"approved|"+m,symbol:{type:"simple-marker",style:"diamond",size:12,color:[139,92,246],outline:{color:[76,29,149],width:1.7}}});
           });
-          out.push({value:"proposed|territory_aggregate",symbol:{type:"simple-marker",style:"circle",size:18,color:[255,255,255,0.5],outline:{color:[124,58,237],width:2.2}}});
-          out.push({value:"approved|territory_aggregate",symbol:{type:"simple-marker",style:"circle",size:18,color:[196,181,253,0.55],outline:{color:[76,29,149],width:2.2}}});
+          /* in_service = already energised: solid, darkest. */
+          METH.forEach(function(m){
+            out.push({value:"in_service|"+m,symbol:{type:"simple-marker",style:"diamond",size:12,color:[76,29,149],outline:{color:[46,16,101],width:1.7}}});
+          });
           return out; })()}});
   }
   function gpRefresh(){ if(!showGP.checked)return;
@@ -823,6 +833,30 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
           +(bits.length?(' — '+he(bits.join(", "))):'')
           +'<div style="font-size:11px;color:#6b6b80;margin-top:2px;">'+he(u.why)+'</div>';
         wrap.appendChild(line); });
+      /* Name them individually too — a count alone hides WHICH projects are
+         missing, and those are disproportionately the largest ones.        */
+      var tog=document.createElement("div");
+      tog.style.cssText="font-size:11.5px;color:#5b21b6;cursor:pointer;font-weight:700;margin-top:2px;";
+      tog.textContent="Show the unplottable projects ▾";
+      var list=document.createElement("div"); list.style.display="none";
+      tog.addEventListener("click",function(){
+        var open=list.style.display!=="none";
+        list.style.display=open?"none":"block";
+        tog.textContent=(open?"Show":"Hide")+" the unplottable projects "+(open?"▾":"▴"); });
+      wrap.appendChild(tog); wrap.appendChild(list);
+      fetch(GP_UNLOC_URL).then(function(r){return r.json();}).then(function(u){
+        var rows=(u&&u.features?u.features.map(function(x){return x.properties;}):[]);
+        rows.sort(function(a,b){return (parseFloat(b.cost_usd)||0)-(parseFloat(a.cost_usd)||0);});
+        rows.forEach(function(p){ if(st.indexOf(String(p.status))<0)return;
+          var bits=[]; if(p.feeder_id)bits.push("circuit "+p.feeder_id);
+          var m=gpMoney(p.cost_usd); if(m)bits.push(m);
+          var hm=parseFloat(p.est_headroom_mw); if(!isNaN(hm)&&hm>0)bits.push("~"+hm+" MW");
+          var d=document.createElement("div");
+          d.style.cssText="font-size:11.5px;color:#3f3f52;padding:4px 0;border-top:1px solid #efe9fb;line-height:1.4;";
+          d.innerHTML='<b>'+he(String(p.project_name||"—"))+'</b>'
+            +(bits.length?('<br><span style="color:#6b6b80;">'+he(bits.join(" · "))+'</span>'):'');
+          list.appendChild(d); });
+      }).catch(function(){});
       box.insertBefore(wrap,box.firstChild);
     }).catch(function(){});
     /* ---- 2. clickable list of everything we CAN place ---- */
@@ -858,12 +892,12 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     var cols=["utility","docket","status","project_id","project_name","category","asset_type",
               "feeder_id","substation","place","county","region","program_year","cost_usd",
               "est_headroom_mw","loc_method","uncertainty_mi","hosting_capacity_flag",
-              "removal_risk","risk_reason","n_projects","program_id","itn","ce_type","voltage_kv",
+              "removal_risk","risk_reason","program_id","itn","ce_type","voltage_kv",
               "driver","nwa_status","source","notes"];
     var hdr=["Utility","ICC docket","Status","Project ID","Project name","Category","Asset type",
              "Feeder / circuit","Substation","Place","County","Region","Program year","Filed cost (USD)",
              "Est. headroom (MW)","Location method","Location uncertainty (mi)","Hosting-capacity impact",
-             "Risk of being cut","Why (risk basis)","Projects rolled up","Program ID","ITN",
+             "Risk of being cut","Why (risk basis)","Program ID","ITN",
              "Cost-effectiveness type","Voltage (kV)","Driver","Non-wires screen","Source","Notes"];
     var aoa=[hdr];
     gpRows.forEach(function(f){ aoa.push(cols.map(function(k){ var v=gpA(f.attributes,k); return v==null?"":v; })); });
