@@ -151,6 +151,24 @@
         </div>
       </div>
       <div class="section">
+        <h3>Planned grid investments</h3>
+        <div class="inner">
+          <label class="chk"><input type="checkbox" id="showGP" /> Show planned upgrades (ICC grid plan dockets)</label>
+          <div class="note" style="margin:0 0 7px 0;">Utility investments filed with the Illinois Commerce Commission &mdash; where <b>future</b> capacity is likely to appear. These are <b>not</b> existing assets and are <b>not</b> reflected in either utility&rsquo;s published hosting capacity.</div>
+          <div style="margin:0 0 7px 0;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:#9a9ab0;margin-bottom:3px;">Status</div>
+            <label class="chk" style="font-size:12px;"><input type="checkbox" class="gpSt" value="proposed" checked /> <span style="display:inline-block;width:11px;height:11px;background:#c4b5fd;border:1px dashed #6d28d9;margin:0 5px -1px 0;"></span>Proposed (pending ICC order)</label>
+            <label class="chk" style="font-size:12px;"><input type="checkbox" class="gpSt" value="approved" checked /> <span style="display:inline-block;width:11px;height:11px;background:#8b5cf6;border:1px solid #4c1d95;margin:0 5px -1px 0;"></span>Approved / in execution</label>
+          </div>
+          <label class="chk" style="font-size:12px;"><input type="checkbox" id="gpZones" checked /> Show location-uncertainty rings</label>
+          <div class="note" style="margin:2px 0 8px 0;">Most projects are named only by town, so the ring shows where the asset <b>could</b> be &mdash; not a precise site. Ring size reflects how well the location is actually known.</div>
+          <div class="count" id="gpCount"></div>
+          <div class="results" id="gpUnloc"><div class="resEmpty">Tick the box above to load planned investments.</div></div>
+          <div class="btnRow"><button class="btnPrimary" id="gpExport" disabled>Export planned investments (Excel)</button></div>
+          <div class="note">Sources: ComEd Docket <b>26-0047</b> and Ameren Illinois Docket <b>26-0051</b> (2028&ndash;2031 grid plans, both pending &mdash; ICC order due 15 Dec 2026), plus approved work in ComEd 22-0486 and Ameren 22-0487. Costs and headroom are as filed; headroom for ComEd conversions uses ComEd&rsquo;s own published factors (+8 MW per new 12 kV circuit, +4 MW per 4&rarr;12 kV conversion).</div>
+        </div>
+      </div>
+      <div class="section">
         <h3>Transmission lines</h3>
         <div class="inner">
           <label class="chk"><input type="checkbox" id="txOn" /> Show transmission lines (all voltages)</label>
@@ -258,7 +276,7 @@
   (function(){
     var head=document.getElementById("sideHead");
     if(head && !document.getElementById("brandSub")){ var p=document.createElement("p"); p.id="brandSub"; p.textContent="Illinois \u00b7 ComEd + Ameren \u00b7 Load + Generation hosting capacity"; head.appendChild(p); }
-    var TAB={ "Utility":"layers","Network":"layers","Capacity legend (MW)":"layers","Substations":"layers","Transmission lines":"layers","Candidate Sites":"layers","Context (informational)":"layers","Basemap":"layers",
+    var TAB={ "Utility":"layers","Network":"layers","Capacity legend (MW)":"layers","Substations":"layers","Planned grid investments":"layers","Transmission lines":"layers","Candidate Sites":"layers","Context (informational)":"layers","Basemap":"layers",
       "Find":"find",
       "Add a site":"sites","Upload sites":"sites","Site analysis":"sites","Save / Load Session":"sites",
       "Coordinate capture":"sites","Site footprint":"foot" };
@@ -634,6 +652,178 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   function raiseSites(){ try{ var tops=[]; if(typeof manualLayer!=="undefined"&&manualLayer)tops.push(manualLayer); if(typeof upLayers!=="undefined"&&upLayers)upLayers.forEach(function(L){ if(L)tops.push(L); }); if(typeof matchLayer!=="undefined"&&matchLayer)tops.push(matchLayer); var n=map.layers.length; tops.forEach(function(L){ try{ map.reorder(L,n-1); }catch(e){} }); }catch(e){} }
   function refreshSubLayer(){ if(!showSubs.checked) return; if(subLayer){ map.remove(subLayer); subLayer=null; } subLayer=buildSubLayer(); map.add(subLayer); raiseSites(); updateSubCount(); }
   showSubs.addEventListener("change",function(){ if(showSubs.checked) refreshSubLayer(); else if(subLayer){ map.remove(subLayer); subLayer=null; } });
+
+  /* ---------- Planned grid investments (ICC grid plan dockets) ----------
+     Deliberately styled in VIOLET so it can never be confused with the
+     red->green as-built capacity ramp or the blue/red substation markers.
+     These are filings, not assets: most are pending an ICC order due 15 Dec 2026.
+     Location precision varies wildly, so we draw an uncertainty ring sized by
+     loc_method rather than pretending each point is a surveyed site.        */
+  var GP_URL_BASE=(location.href.replace(/[?#].*$/,"").replace(/[^/]*$/,""));
+  var gpPtLayer=null,gpZoneLayer=null,gpRows=null,showGP=$("showGP"),gpZonesCb=$("gpZones");
+  var GP_VIO=[124,58,237], GP_VIO_L=[196,181,253];
+  function gpA(g,k){ var a=g||{}; if(a[k]!=null)return a[k]; var K=k.toUpperCase(); if(a[K]!=null)return a[K];
+    for(var p in a){ if(p.toLowerCase()===k.toLowerCase()) return a[p]; } return null; }
+  function gpMoney(v){ v=parseFloat(v); return (isNaN(v)||v<=0)?null:("$"+Math.round(v).toLocaleString()); }
+  function gpStatuses(){ var o=[]; Array.prototype.forEach.call(document.querySelectorAll(".gpSt"),function(c){ if(c.checked)o.push(c.value); }); return o; }
+  function gpWhere(){ var s=gpStatuses(); if(!s.length) return "1=0";
+    return "status IN ('"+s.join("','")+"')"; }
+  function gpPopup(f){ var a=f.graphic.attributes,g=function(k){return gpA(a,k);};
+    var s='<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;min-width:262px;color:#22223b;">';
+    var st=String(g("status")||"");
+    s+='<div style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;margin-bottom:6px;'
+      +(st==="proposed"?'background:#ede9fe;color:#5b21b6;border:1px dashed #7c3aed;':'background:#7c3aed;color:#fff;')+'">'
+      +(st==="proposed"?"PROPOSED — not yet approved":"APPROVED / in execution")+'</div>';
+    s+=subhd("Project");
+    s+=kv2("Utility",he(String(g("utility")||"—")));
+    s+=kv2("ICC docket",he(String(g("docket")||"—")));
+    if(g("project_id"))s+=kv2("Project ID",he(String(g("project_id"))));
+    if(g("itn"))s+=kv2("ITN",he(String(g("itn"))));
+    if(g("program_id"))s+=kv2("Program ID",he(String(g("program_id"))));
+    s+=kv2("Category",he(String(g("category")||"—")));
+    s+=kv2("Asset type",he(String(g("asset_type")||"—")));
+    if(g("voltage_kv"))s+=kv2("Voltage (kV)",he(String(g("voltage_kv"))));
+    if(g("feeder_id"))s+=kv2("Feeder / circuit",he(String(g("feeder_id"))));
+    if(g("substation"))s+=kv2("Substation",he(String(g("substation"))));
+    s+=subhd("Investment");
+    if(g("program_year"))s+=kv2("Program year",he(String(g("program_year"))));
+    var c=gpMoney(g("cost_usd")); if(c)s+=kv2("Filed cost",c);
+    var hm=parseFloat(g("est_headroom_mw"));
+    if(!isNaN(hm)&&hm>0)s+=kv2("Est. headroom","~"+hm+" MW *");
+    if(g("ce_type"))s+=kv2("Cost-effectiveness",he(String(g("ce_type"))));
+    if(g("driver"))s+=kv2("Driver",he(String(g("driver"))));
+    if(g("nwa_status"))s+=kv2("Non-wires screen",he(String(g("nwa_status"))));
+    s+=kv2("Hosting-capacity impact",he(String(g("hosting_capacity_flag")||"—")));
+    /* Risk is shown for EVERY project, both utilities. A planned upgrade that
+       gets cut is worse than no data, so this is never hidden.              */
+    s+=subhd("Risk of being cut");
+    var rk=String(g("removal_risk")||"unrated").toLowerCase();
+    var RKC={high:["#fee2e2","#991b1b","#dc2626"],moderate:["#ffedd5","#9a3412","#ea580c"],
+             low:["#dcfce7","#166534","#16a34a"]};
+    var rc=RKC[rk]||(rk.indexOf("none")===0?["#eef2ff","#3730a3","#4f46e5"]:["#f1f5f9","#475569","#64748b"]);
+    s+='<div style="display:inline-block;padding:3px 9px;border-radius:10px;font-size:11px;font-weight:800;'
+      +'background:'+rc[0]+';color:'+rc[1]+';border:1px solid '+rc[2]+';text-transform:uppercase;letter-spacing:.3px;">'
+      +he(String(g("removal_risk")||"unrated"))+'</div>';
+    if(g("risk_reason"))s+='<div style="font-size:11px;color:#5a5a72;margin-top:5px;line-height:1.45;">'+he(String(g("risk_reason")))+'</div>';
+    if(g("n_projects"))s+=kv2("Projects rolled up",he(String(g("n_projects"))));
+    s+=subhd("Location confidence");
+    var lm=String(g("loc_method")||""),un=parseFloat(g("uncertainty_mi"));
+    var LMT={verified_service_extent:"Verified from live feeder geometry",
+             municipality_centroid:"Town centroid — NOT the asset site",
+             approximate_locality:"Neighborhood / road reference",
+             region_approximation:"Utility region only — no town filed",
+             territory_aggregate:"NOT A LOCATION — whole-territory rollup",
+             system_wide:"Program-level — no location filed"};
+    s+=kv2("Method",he(LMT[lm]||lm||"—"));
+    if(!isNaN(un)&&un>0)s+=kv2("Could be within","± "+un+" mi");
+    if(g("place"))s+=kv2("Named place",he(String(g("place")))+(g("county")?(", "+he(String(g("county")))+" Co."):""));
+    if(g("region"))s+=kv2("Region",he(String(g("region"))));
+    if(!isNaN(hm)&&hm>0)s+='<div style="font-size:10.5px;color:#8a8a9c;margin-top:7px;">* Estimate using ComEd&rsquo;s published averages (+8 MW per new 12 kV circuit, +4 MW per 4&rarr;12 kV conversion). Not a project-specific engineering value.</div>';
+    if(g("notes"))s+='<div style="font-size:11px;color:#5a5a72;margin-top:7px;border-top:1px solid #ececf2;padding-top:6px;">'+he(String(g("notes")))+'</div>';
+    if(g("source"))s+='<div style="font-size:10.5px;color:#9a9ab0;margin-top:6px;">Source: '+he(String(g("source")))+'</div>';
+    return s+'</div>'; }
+  function gpBuild(){
+    gpZoneLayer=new GeoJSONLayer({url:GP_URL_BASE+"il_grid_plan_zones.geojson",title:"Planned upgrades — location uncertainty",
+      outFields:["*"],legendEnabled:false,listMode:"hide",definitionExpression:gpWhere(),
+      popupEnabled:false,
+      /* Keyed on loc_method, not status: the ring communicates HOW WELL WE KNOW
+         the location. Territory rollups are 45-95 mi, so they get outline-only
+         styling or they would swamp everything else on the map.             */
+      renderer:{type:"unique-value",field:"loc_method",
+        defaultSymbol:{type:"simple-fill",color:[196,181,253,0.15],outline:{color:[109,40,217,0.65],width:1.2,style:"dash"}},
+        uniqueValueInfos:[
+          {value:"verified_service_extent",symbol:{type:"simple-fill",color:[139,92,246,0.28],outline:{color:[76,29,149,0.9],width:1.6,style:"solid"}}},
+          {value:"approximate_locality",symbol:{type:"simple-fill",color:[167,139,250,0.20],outline:{color:[91,33,182,0.75],width:1.3,style:"dash"}}},
+          {value:"municipality_centroid",symbol:{type:"simple-fill",color:[196,181,253,0.15],outline:{color:[109,40,217,0.6],width:1.2,style:"dash"}}},
+          {value:"region_approximation",symbol:{type:"simple-fill",color:[221,214,254,0.07],outline:{color:[124,58,237,0.45],width:1,style:"short-dash"}}},
+          {value:"territory_aggregate",symbol:{type:"simple-fill",color:[0,0,0,0],outline:{color:[124,58,237,0.34],width:1.4,style:"dot"}}}]}});
+    gpPtLayer=new GeoJSONLayer({url:GP_URL_BASE+"il_grid_plan_points.geojson",title:"Planned grid investments",
+      outFields:["*"],legendEnabled:false,listMode:"hide",definitionExpression:gpWhere(),
+      popupTemplate:{title:"{project_name}",outFields:["*"],content:gpPopup},
+      /* Two-field renderer so BOTH distinctions survive:
+           status     -> proposed (hollow) vs approved (solid)
+           loc_method -> real project (diamond) vs territory rollup (circle)
+         A rollup reads as "a count, not a site" before the popup is opened.  */
+      renderer:{type:"unique-value",field:"status",field2:"loc_method",fieldDelimiter:"|",
+        defaultSymbol:{type:"simple-marker",style:"diamond",size:12,color:[237,233,254],outline:{color:[124,58,237],width:1.6}},
+        uniqueValueInfos:(function(){ var out=[],
+            METH=["verified_service_extent","approximate_locality","municipality_centroid","region_approximation","system_wide"];
+          METH.forEach(function(m){
+            out.push({value:"proposed|"+m,symbol:{type:"simple-marker",style:"diamond",size:12,color:[237,233,254],outline:{color:[124,58,237],width:1.7}}});
+            out.push({value:"approved|"+m,symbol:{type:"simple-marker",style:"diamond",size:12,color:[139,92,246],outline:{color:[76,29,149],width:1.7}}});
+          });
+          out.push({value:"proposed|territory_aggregate",symbol:{type:"simple-marker",style:"circle",size:18,color:[255,255,255,0.5],outline:{color:[124,58,237],width:2.2}}});
+          out.push({value:"approved|territory_aggregate",symbol:{type:"simple-marker",style:"circle",size:18,color:[196,181,253,0.55],outline:{color:[76,29,149],width:2.2}}});
+          return out; })()}});
+  }
+  function gpRefresh(){ if(!showGP.checked)return;
+    if(!gpPtLayer)gpBuild();
+    var w=gpWhere();
+    try{ gpZoneLayer.definitionExpression=w; gpPtLayer.definitionExpression=w; }catch(e){}
+    if(gpZonesCb.checked){ if(map.layers.indexOf(gpZoneLayer)<0)map.add(gpZoneLayer); }
+    else { try{ map.remove(gpZoneLayer); }catch(e){} }
+    if(map.layers.indexOf(gpPtLayer)<0)map.add(gpPtLayer);
+    raiseSites(); gpCount(); }
+  function gpHide(){ try{ map.remove(gpZoneLayer); }catch(e){} try{ map.remove(gpPtLayer); }catch(e){}
+    var c=$("gpCount"); if(c)c.textContent=""; var u=$("gpUnloc");
+    if(u)u.innerHTML='<div class="resEmpty">Tick the box above to load planned investments.</div>';
+    var e2=$("gpExport"); if(e2)e2.disabled=true; }
+  function gpCount(){ if(!gpPtLayer)return;
+    gpPtLayer.queryFeatures({where:gpWhere(),outFields:["*"],returnGeometry:false,num:2000}).then(function(r){
+      var f=r.features||[],cost=0,mapped=f.length;
+      f.forEach(function(x){ var v=parseFloat(gpA(x.attributes,"cost_usd")); if(!isNaN(v))cost+=v; });
+      var c=$("gpCount"); if(c)c.textContent=mapped+" planned project(s) on map"+(cost>0?(" — "+gpMoney(cost)+" filed"):"");
+      gpRows=f; var e2=$("gpExport"); if(e2)e2.disabled=!f.length;
+      gpRenderUnloc(); }).catch(function(){});
+  }
+  /* The register below is the honest counterpart to the map: projects the
+     utilities disclose but do NOT locate. Most of the money lives here.     */
+  function gpRenderUnloc(){ var box=$("gpUnloc"); if(!box)return;
+    if(!gpPtLayer){ return; }
+    fetch(GP_UNLOC_URL).then(function(r){return r.json();}).then(function(j){
+      var rows=(j&&j.features?j.features.map(function(x){return x.properties;}):[]);
+      box.innerHTML="";
+      var hd=document.createElement("div"); hd.className="note"; hd.style.cssText="margin:0 0 6px 0;";
+      box.appendChild(hd);
+      var st=gpStatuses(),shown=0,cost=0;
+      rows.forEach(function(p){ if(st.indexOf(String(p.status))<0)return; shown++;
+        var v=parseFloat(p.cost_usd); if(!isNaN(v))cost+=v;
+        var d=document.createElement("div"); d.className="resRow"; d.style.cursor="default";
+        var bits=[]; if(p.feeder_id)bits.push("circuit "+p.feeder_id);
+        if(p.program_year)bits.push(String(p.program_year));
+        var m=gpMoney(p.cost_usd); if(m)bits.push(m);
+        var hm=parseFloat(p.est_headroom_mw); if(!isNaN(hm)&&hm>0)bits.push("~"+hm+" MW");
+        d.innerHTML='<span class="f">'+he(String(p.project_name||"—"))+'</span><br>'
+          +'<span class="m">'+he(String(p.utility||""))+' · '+he(bits.join(" · "))+'</span>'
+          +'<br><span class="m" style="color:#8a8a9c;">'+he(String(p.notes||"").slice(0,150))+'</span>';
+        box.appendChild(d); });
+      hd.innerHTML='<b>'+shown+' project(s) cannot be placed on the map</b>'
+        +(cost>0?(' — '+gpMoney(cost)+' filed'):'')
+        +'. The utilities disclose these but publish no usable location: ComEd names no feeder geography (its public map uses anonymized IDs), and program-level items are filed as &ldquo;System Wide.&rdquo;';
+      if(!shown)box.innerHTML='<div class="resEmpty">No unlocated projects for the selected status.</div>';
+    }).catch(function(){ box.innerHTML='<div class="resEmpty">Unlocated register unavailable.</div>'; });
+  }
+  var GP_UNLOC_URL=GP_URL_BASE+"il_grid_plan_unlocated.geojson";
+  showGP.addEventListener("change",function(){ if(showGP.checked)gpRefresh(); else gpHide(); });
+  gpZonesCb.addEventListener("change",function(){ if(showGP.checked)gpRefresh(); });
+  Array.prototype.forEach.call(document.querySelectorAll(".gpSt"),function(c){
+    c.addEventListener("change",function(){ if(showGP.checked)gpRefresh(); }); });
+  (function(){ var b=$("gpExport"); if(!b)return; b.addEventListener("click",function(){
+    if(!gpRows||!gpRows.length||typeof XLSX==="undefined")return;
+    var cols=["utility","docket","status","project_id","project_name","category","asset_type",
+              "feeder_id","substation","place","county","region","program_year","cost_usd",
+              "est_headroom_mw","loc_method","uncertainty_mi","hosting_capacity_flag",
+              "removal_risk","risk_reason","n_projects","program_id","itn","ce_type","voltage_kv",
+              "driver","nwa_status","source","notes"];
+    var hdr=["Utility","ICC docket","Status","Project ID","Project name","Category","Asset type",
+             "Feeder / circuit","Substation","Place","County","Region","Program year","Filed cost (USD)",
+             "Est. headroom (MW)","Location method","Location uncertainty (mi)","Hosting-capacity impact",
+             "Risk of being cut","Why (risk basis)","Projects rolled up","Program ID","ITN",
+             "Cost-effectiveness type","Voltage (kV)","Driver","Non-wires screen","Source","Notes"];
+    var aoa=[hdr];
+    gpRows.forEach(function(f){ aoa.push(cols.map(function(k){ var v=gpA(f.attributes,k); return v==null?"":v; })); });
+    var wb=XLSX.utils.book_new(); XLSX.utils.book_append_sheet(wb,xlAoa(aoa),"Planned investments");
+    XLSX.writeFile(wb,"planned_grid_investments.xlsx"); }); })();
   // (ComEd substations layer removed — substation detail is shown on feeder-ID click inside the feeder popup.)
   (function(){ var _tx=$("txOn"); if(_tx){ _tx.addEventListener("change",function(){ if(HIFLD_TX)HIFLD_TX.visible=_tx.checked; }); }
     var _c=$("txClass"); if(_c){ _c.addEventListener("change",function(){ if(HIFLD_TX)HIFLD_TX.definitionExpression=_c.value?("VOLT_CLASS='"+String(_c.value).replace(/'/g,"''")+"'"):null; }); }
