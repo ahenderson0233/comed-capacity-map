@@ -711,14 +711,19 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     var LMT={verified_service_extent:"Verified from live feeder geometry",
              municipality_centroid:"Town centroid — NOT the asset site",
              approximate_locality:"Neighborhood / road reference",
+             narrative_reference:"Utility's own descriptive siting language",
+             constraint_zone:"Radius the utility itself states",
              region_approximation:"Utility region only — no town filed",
-             territory_aggregate:"NOT A LOCATION — whole-territory rollup",
              system_wide:"Program-level — no location filed"};
     s+=kv2("Method",he(LMT[lm]||lm||"—"));
     if(!isNaN(un)&&un>0)s+=kv2("Could be within","± "+un+" mi");
     if(g("place"))s+=kv2("Named place",he(String(g("place")))+(g("county")?(", "+he(String(g("county")))+" Co."):""));
     if(g("region"))s+=kv2("Region",he(String(g("region"))));
     if(!isNaN(hm)&&hm>0)s+='<div style="font-size:10.5px;color:#8a8a9c;margin-top:7px;">* Estimate using ComEd&rsquo;s published averages (+8 MW per new 12 kV circuit, +4 MW per 4&rarr;12 kV conversion). Not a project-specific engineering value.</div>';
+    /* This layer is ADDITIVE. Where a planned project sits at an existing
+       asset, the existing substation/feeder record is untouched and still
+       shown by its own layer with its own as-built data.                    */
+    if(g("substation")||g("feeder_id"))s+='<div style="font-size:10.5px;color:#6b6b80;margin-top:7px;border-top:1px dashed #e0d7f5;padding-top:5px;">This is planned work <b>in addition to</b> the existing asset. The current substation / feeder and its as-built hosting capacity are unchanged &mdash; open the underlying layer for present-day values.</div>';
     if(g("notes"))s+='<div style="font-size:11px;color:#5a5a72;margin-top:7px;border-top:1px solid #ececf2;padding-top:6px;">'+he(String(g("notes")))+'</div>';
     if(g("source"))s+='<div style="font-size:10.5px;color:#9a9ab0;margin-top:6px;">Source: '+he(String(g("source")))+'</div>';
     return s+'</div>'; }
@@ -734,9 +739,10 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
         uniqueValueInfos:[
           {value:"verified_service_extent",symbol:{type:"simple-fill",color:[139,92,246,0.28],outline:{color:[76,29,149,0.9],width:1.6,style:"solid"}}},
           {value:"approximate_locality",symbol:{type:"simple-fill",color:[167,139,250,0.20],outline:{color:[91,33,182,0.75],width:1.3,style:"dash"}}},
+          {value:"narrative_reference",symbol:{type:"simple-fill",color:[167,139,250,0.18],outline:{color:[91,33,182,0.7],width:1.3,style:"dash"}}},
           {value:"municipality_centroid",symbol:{type:"simple-fill",color:[196,181,253,0.15],outline:{color:[109,40,217,0.6],width:1.2,style:"dash"}}},
-          {value:"region_approximation",symbol:{type:"simple-fill",color:[221,214,254,0.07],outline:{color:[124,58,237,0.45],width:1,style:"short-dash"}}},
-          {value:"territory_aggregate",symbol:{type:"simple-fill",color:[0,0,0,0],outline:{color:[124,58,237,0.34],width:1.4,style:"dot"}}}]}});
+          {value:"constraint_zone",symbol:{type:"simple-fill",color:[124,58,237,0.06],outline:{color:[124,58,237,0.55],width:1.6,style:"long-dash"}}},
+          {value:"region_approximation",symbol:{type:"simple-fill",color:[221,214,254,0.07],outline:{color:[124,58,237,0.45],width:1,style:"short-dash"}}}]}});
     gpPtLayer=new GeoJSONLayer({url:GP_URL_BASE+"il_grid_plan_points.geojson",title:"Planned grid investments",
       outFields:["*"],legendEnabled:false,listMode:"hide",definitionExpression:gpWhere(),
       popupTemplate:{title:"{project_name}",outFields:["*"],content:gpPopup},
@@ -769,41 +775,80 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
     if(u)u.innerHTML='<div class="resEmpty">Tick the box above to load planned investments.</div>';
     var e2=$("gpExport"); if(e2)e2.disabled=true; }
   function gpCount(){ if(!gpPtLayer)return;
-    gpPtLayer.queryFeatures({where:gpWhere(),outFields:["*"],returnGeometry:false,num:2000}).then(function(r){
+    gpPtLayer.queryFeatures({where:gpWhere(),outFields:["*"],returnGeometry:true,outSpatialReference:{wkid:4326},num:2000}).then(function(r){
       var f=r.features||[],cost=0,mapped=f.length;
       f.forEach(function(x){ var v=parseFloat(gpA(x.attributes,"cost_usd")); if(!isNaN(v))cost+=v; });
       var c=$("gpCount"); if(c)c.textContent=mapped+" planned project(s) on map"+(cost>0?(" — "+gpMoney(cost)+" filed"):"");
       gpRows=f; var e2=$("gpExport"); if(e2)e2.disabled=!f.length;
       gpRenderUnloc(); }).catch(function(){});
   }
-  /* The register below is the honest counterpart to the map: projects the
-     utilities disclose but do NOT locate. Most of the money lives here.     */
+  /* Zoom to a project and open its popup — same interaction as the substation
+     and site lists elsewhere in the tool.                                    */
+  function gpGoTo(f){ if(!f||!f.geometry)return;
+    var lon=f.geometry.longitude,lat=f.geometry.latitude;
+    if(lon==null&&f.geometry.x!=null){ lon=f.geometry.x; lat=f.geometry.y; }
+    var lm=String(gpA(f.attributes,"loc_method")||""),un=parseFloat(gpA(f.attributes,"uncertainty_mi"));
+    /* Zoom out for coarse locations so the whole uncertainty ring is visible —
+       zooming to street level on a 25-mile constraint zone would imply a
+       precision this project does not have.                                  */
+    var z=15; if(!isNaN(un)){ z = un>20?9 : un>5?11 : un>1.6?12 : un>1.1?13 : 14; }
+    if(lm==="region_approximation")z=8;
+    try{
+      view.goTo({center:[lon,lat],zoom:z}).then(function(){
+        try{ view.openPopup({features:[f],location:{longitude:lon,latitude:lat}}); }catch(e){}
+      }).catch(function(){});
+    }catch(e){}
+  }
+  /* Panel = the honest counterpart to the map. Everything that CAN be placed is
+     a clickable row; everything that cannot is stated in words per utility,
+     because inventing a point for it would be worse than saying so.          */
   function gpRenderUnloc(){ var box=$("gpUnloc"); if(!box)return;
-    if(!gpPtLayer){ return; }
-    fetch(GP_UNLOC_URL).then(function(r){return r.json();}).then(function(j){
-      var rows=(j&&j.features?j.features.map(function(x){return x.properties;}):[]);
-      box.innerHTML="";
-      var hd=document.createElement("div"); hd.className="note"; hd.style.cssText="margin:0 0 6px 0;";
-      box.appendChild(hd);
-      var st=gpStatuses(),shown=0,cost=0;
-      rows.forEach(function(p){ if(st.indexOf(String(p.status))<0)return; shown++;
-        var v=parseFloat(p.cost_usd); if(!isNaN(v))cost+=v;
-        var d=document.createElement("div"); d.className="resRow"; d.style.cursor="default";
-        var bits=[]; if(p.feeder_id)bits.push("circuit "+p.feeder_id);
-        if(p.program_year)bits.push(String(p.program_year));
-        var m=gpMoney(p.cost_usd); if(m)bits.push(m);
-        var hm=parseFloat(p.est_headroom_mw); if(!isNaN(hm)&&hm>0)bits.push("~"+hm+" MW");
-        d.innerHTML='<span class="f">'+he(String(p.project_name||"—"))+'</span><br>'
-          +'<span class="m">'+he(String(p.utility||""))+' · '+he(bits.join(" · "))+'</span>'
-          +'<br><span class="m" style="color:#8a8a9c;">'+he(String(p.notes||"").slice(0,150))+'</span>';
-        box.appendChild(d); });
-      hd.innerHTML='<b>'+shown+' project(s) cannot be placed on the map</b>'
-        +(cost>0?(' — '+gpMoney(cost)+' filed'):'')
-        +'. The utilities disclose these but publish no usable location: ComEd names no feeder geography (its public map uses anonymized IDs), and program-level items are filed as &ldquo;System Wide.&rdquo;';
-      if(!shown)box.innerHTML='<div class="resEmpty">No unlocated projects for the selected status.</div>';
-    }).catch(function(){ box.innerHTML='<div class="resEmpty">Unlocated register unavailable.</div>'; });
+    box.innerHTML="";
+    var st=gpStatuses();
+    /* ---- 1. unplottable headline, per utility ---- */
+    fetch(GP_SUMMARY_URL).then(function(r){return r.json();}).then(function(j){
+      var ups=(j&&j.unplottable)||[];
+      var wrap=document.createElement("div");
+      wrap.style.cssText="margin:0 0 9px 0;padding:8px 9px;border:1px solid #e6d9fb;border-left:3px solid #7c3aed;border-radius:6px;background:#faf7ff;";
+      var h=document.createElement("div");
+      h.style.cssText="font-size:11px;font-weight:800;letter-spacing:.3px;text-transform:uppercase;color:#5b21b6;margin-bottom:5px;";
+      h.textContent="Not plottable"; wrap.appendChild(h);
+      ups.forEach(function(u){
+        var line=document.createElement("div");
+        line.style.cssText="font-size:12px;color:#22223b;margin-bottom:4px;line-height:1.5;";
+        var bits=[];
+        if(u.cost_usd>0)bits.push(gpMoney(u.cost_usd)+" filed");
+        if(u.est_headroom_mw>0)bits.push("~"+u.est_headroom_mw+" MW est. headroom");
+        line.innerHTML='<b>'+he(u.utility)+':</b> '+u.n+' project(s)'
+          +(bits.length?(' — '+he(bits.join(", "))):'')
+          +'<div style="font-size:11px;color:#6b6b80;margin-top:2px;">'+he(u.why)+'</div>';
+        wrap.appendChild(line); });
+      box.insertBefore(wrap,box.firstChild);
+    }).catch(function(){});
+    /* ---- 2. clickable list of everything we CAN place ---- */
+    if(!gpRows||!gpRows.length){
+      var e=document.createElement("div"); e.className="resEmpty";
+      e.textContent="No mapped projects for the selected status."; box.appendChild(e); return; }
+    var sorted=gpRows.slice().sort(function(a,b){
+      return (parseFloat(gpA(b.attributes,"cost_usd"))||0)-(parseFloat(gpA(a.attributes,"cost_usd"))||0); });
+    sorted.forEach(function(f){ var a=f.attributes,g=function(k){return gpA(a,k);};
+      var d=document.createElement("div"); d.className="resRow"; d.style.cursor="pointer";
+      var bits=[]; if(g("place"))bits.push(String(g("place")));
+      if(g("program_year"))bits.push(String(g("program_year")));
+      var m=gpMoney(g("cost_usd")); if(m)bits.push(m);
+      var hm=parseFloat(g("est_headroom_mw")); if(!isNaN(hm)&&hm>0)bits.push("~"+hm+" MW");
+      var un=parseFloat(g("uncertainty_mi"));
+      var rk=String(g("removal_risk")||"").toLowerCase();
+      var rkc=rk==="high"?"#dc2626":(rk==="moderate"?"#ea580c":(rk==="low"?"#16a34a":"#94a3b8"));
+      d.innerHTML='<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:'+rkc+';margin-right:6px;vertical-align:middle;"></span>'
+        +'<span class="f">'+he(String(g("project_name")||"—"))+'</span><br>'
+        +'<span class="m">'+he(String(g("utility")||""))+' · '+he(String(g("status")||""))+(bits.length?(" · "+he(bits.join(" · "))):"")+'</span>'
+        +(isNaN(un)?"":'<br><span class="m" style="color:#8a8a9c;">could be within &plusmn; '+un+' mi</span>');
+      d.addEventListener("click",function(){ gpGoTo(f); });
+      box.appendChild(d); });
   }
   var GP_UNLOC_URL=GP_URL_BASE+"il_grid_plan_unlocated.geojson";
+  var GP_SUMMARY_URL=GP_URL_BASE+"il_grid_plan_summary.json";
   showGP.addEventListener("change",function(){ if(showGP.checked)gpRefresh(); else gpHide(); });
   gpZonesCb.addEventListener("change",function(){ if(showGP.checked)gpRefresh(); });
   Array.prototype.forEach.call(document.querySelectorAll(".gpSt"),function(c){

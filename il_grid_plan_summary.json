@@ -1,0 +1,18 @@
+{
+ "unplottable": [
+  {
+   "utility": "Ameren Illinois",
+   "n": 7,
+   "cost_usd": 96384889,
+   "est_headroom_mw": 0.0,
+   "why": "Ameren's Appendix I redacts project names and locations in the public version, and program-level items carry no location at all."
+  },
+  {
+   "utility": "ComEd",
+   "n": 23,
+   "cost_usd": 767848960,
+   "est_headroom_mw": 44.0,
+   "why": "ComEd identifies these only by internal circuit designator (X4859, D3429, J8031...) or files them as scope 'System Wide.' Its public hosting-capacity map uses anonymized feeder IDs (F0001-F5516) with no public crosswalk - verified: 0 of 41 tested identifiers matched."
+  }
+ ]
+}
