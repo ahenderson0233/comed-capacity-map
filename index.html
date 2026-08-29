@@ -190,6 +190,13 @@
           <label class="chk"><input type="checkbox" id="ctxEquity" /> Show Equity Investment Eligible Communities</label>
           <div style="margin:5px 0 6px;display:flex;align-items:center;"><span style="display:inline-block;width:15px;height:15px;background:rgba(124,58,178,0.32);border:1px solid #7a2da0;margin-right:7px;"></span><span style="font-size:12px;color:#5a5a72;">Equity / R3 + EJ communities</span></div>
           <div class="note" style="margin:0;">Illinois Equity Investment Eligible Communities (R3 + Environmental-Justice areas under CEJA) \u2014 where clean-energy &amp; battery-storage equity incentives apply. Shown for context; not used in site matching.</div>
+          <label class="chk"><input type="checkbox" id="ctxTif" /> Show TIF districts (Tax Increment Financing)</label>
+          <div style="margin:5px 0 6px;display:flex;align-items:center;flex-wrap:wrap;gap:10px;">
+            <span style="display:inline-flex;align-items:center;"><span style="display:inline-block;width:15px;height:15px;background:rgba(13,148,136,0.22);border:1.5px solid #0d9488;margin-right:7px;"></span><span style="font-size:12px;color:#5a5a72;">Active TIF</span></span>
+            <span style="display:inline-flex;align-items:center;"><span style="display:inline-block;width:15px;height:15px;background:rgba(13,148,136,0.10);border:1.5px dashed #5eead4;margin-right:7px;"></span><span style="font-size:12px;color:#5a5a72;">Expired / inactive</span></span>
+          </div>
+          <div class="count" id="tifCount"></div>
+          <div class="note" style="margin:0 0 8px 0;"><b>A TIF district is not a tax exemption.</b> Property inside one pays the same tax bill; what changes is that the revenue from the <i>increment</i> above the base year is diverted into a municipal fund. It matters here because Illinois paused its state data-center incentive for new projects on 1 July 2026, leaving TIF as one of the few remaining ways a municipality can fund site work &mdash; grading, roads, water, sewer and electrical service extension &mdash; out of the increment a large load generates. Read it as <b>where local incentive capacity still exists</b>, not where tax is avoided.<br><br><b>Coverage is partial.</b> Illinois has roughly 1,488 active districts across 511 municipalities and there is no statewide file; this layer assembles ~20 county and municipal sources. Cook and the collar counties are essentially complete, downstate is partial. <b>No polygon here does not mean no TIF district.</b></div>
           <label class="chk"><input type="checkbox" id="ctxCookInd" /> Show industrial-classed parcels (7-county region)</label>
           <div style="margin:5px 0 6px;display:flex;align-items:center;"><span style="display:inline-block;width:15px;height:15px;background:rgba(245,130,32,0.45);border:1px solid #b45a0a;margin-right:7px;"></span><span style="font-size:12px;color:#5a5a72;">Industrial parcels</span></div>
           <div class="note" style="margin:0;">CMAP Land Use Inventory (industrial / manufacturing / warehousing) across the 7-county region \u2014 Cook + DuPage, Kane, Kendall, Lake, McHenry, Will. Loads when zoomed in past ~metro scale.</div>
@@ -370,6 +377,58 @@ var IL_SCHOOLS=[["River Ridge High School",-90.2707,42.3119],["River Ridge Middl
   (function(){ var _ce=$("ctxEquity"); if(_ce) _ce.addEventListener("change",function(){ equity.visible=_ce.checked; }); })();
   var cookIndustrial=new FeatureLayer({url:"https://services5.arcgis.com/LcMXE3TFhi1BSaCY/arcgis/rest/services/LUI20_geodatabase_v1_CMAP/FeatureServer/0",definitionExpression:"(LANDUSE LIKE '14%' OR LANDUSE = '4130')",outFields:["LANDUSE"],visible:false,minScale:6000000,title:"Industrial-classed parcels (7-county region)",renderer:{type:"simple",symbol:{type:"simple-fill",color:[245,130,32,0.45],outline:{color:[180,90,10,0.95],width:0.5}}},popupTemplate:{title:"Industrial-classed parcel",content:"CMAP Land Use Inventory 2020 \u00b7 land-use class {LANDUSE} (industrial / manufacturing / warehousing)."}});
   var ncesSchools=new FeatureLayer({url:"https://services1.arcgis.com/Ua5sjt3LWTPigjyD/arcgis/rest/services/Public_School_Locations_Current/FeatureServer/0",definitionExpression:"STATE='IL'",outFields:["NAME","CITY","STATE"],visible:false,title:"NCES schools (Illinois)",renderer:{type:"simple",symbol:{type:"simple-marker",style:"circle",size:5,color:[37,99,235,0.85],outline:{color:"#fff",width:0.5}}},popupTemplate:{title:"{NAME}",content:"NCES public school \u00b7 {CITY}, {STATE}"}});
+  /* ---------- TIF districts (Tax Increment Financing) ----------
+     Teal, chosen because it collides with nothing else on the map: not the
+     red-to-green capacity ramp, not the violet planned investments, not the
+     red/blue substations. Active districts are solid, expired ones dashed and
+     faint. Built lazily on first tick, and if the data file has not been
+     generated yet the checkbox reports that instead of failing silently.    */
+  var tifLayer=null,__tifReq=null;
+  function tifPopup(f){ var a=f.graphic.attributes||{},g=function(k){ if(a[k]!=null)return a[k];
+      for(var p in a){ if(p.toLowerCase()===k.toLowerCase())return a[p]; } return null; };
+    var act=(String(g("active"))==="true"||g("active")===true);
+    var s='<div style="font-family:Segoe UI,Arial,sans-serif;font-size:12.5px;min-width:250px;color:#22223b;">';
+    s+='<div style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;margin-bottom:6px;'
+      +(act?'background:#0d9488;color:#fff;':'background:#e6fffb;color:#0f766e;border:1px dashed #5eead4;')+'">'
+      +(act?"ACTIVE TIF DISTRICT":"EXPIRED / INACTIVE")+'</div>';
+    s+=subhd("District");
+    if(g("municipality"))s+=kv2("Municipality",he(String(g("municipality"))));
+    if(g("county"))s+=kv2("County",he(String(g("county")))+" Co.");
+    if(g("year_created"))s+=kv2("Created",he(String(g("year_created"))));
+    if(g("year_expiry"))s+=kv2("Expires",he(String(g("year_expiry"))));
+    if(g("ordinance"))s+=kv2("Ordinance",he(String(g("ordinance"))));
+    s+='<div style="font-size:11px;color:#5a5a72;margin-top:7px;border-top:1px solid #ececf2;padding-top:6px;line-height:1.45;">'
+      +'Not a tax exemption &mdash; property here pays the normal bill, but the <b>increment</b> above the base year funds a municipal redevelopment account. '
+      +'With the state data-center incentive paused for new projects since 1 Jul 2026, this is one of the few remaining local funding routes for site and utility work.</div>';
+    if(g("source"))s+='<div style="font-size:10.5px;color:#9a9ab0;margin-top:5px;">Source: '+he(String(g("source")))+'</div>';
+    return s+'</div>'; }
+  function tifBuild(){ if(__tifReq)return __tifReq;
+    __tifReq=new Promise(function(res){
+      var L=new GeoJSONLayer({url:GP_URL_BASE+"il_tif_districts.geojson",
+        title:"TIF districts",outFields:["*"],legendEnabled:false,listMode:"hide",
+        popupTemplate:{title:"{tif_name}",outFields:["*"],content:tifPopup},
+        renderer:{type:"unique-value",field:"active",
+          defaultSymbol:{type:"simple-fill",color:[13,148,136,0.22],outline:{color:[13,148,136,0.95],width:1.5}},
+          uniqueValueInfos:[
+            {value:"true",symbol:{type:"simple-fill",color:[13,148,136,0.22],outline:{color:[13,148,136,0.95],width:1.5}}},
+            {value:true,  symbol:{type:"simple-fill",color:[13,148,136,0.22],outline:{color:[13,148,136,0.95],width:1.5}}},
+            {value:"false",symbol:{type:"simple-fill",color:[13,148,136,0.10],outline:{color:[94,234,212,0.9],width:1.2,style:"dash"}}},
+            {value:false, symbol:{type:"simple-fill",color:[13,148,136,0.10],outline:{color:[94,234,212,0.9],width:1.2,style:"dash"}}}]}});
+      L.load().then(function(){ tifLayer=L; map.add(L); raiseSites();
+        L.queryFeatureCount({where:"1=1"}).then(function(n){
+          var c=$("tifCount"); if(c)c.textContent=(n||0).toLocaleString()+" TIF district(s) loaded";
+        }).catch(function(){});
+        res(L);
+      }).catch(function(){
+        var c=$("tifCount");
+        if(c)c.innerHTML='<span style="color:#b45309;">TIF data not generated yet &mdash; run <b>scraper_tif.py</b>, then redeploy.</span>';
+        var cb=$("ctxTif"); if(cb)cb.checked=false;
+        res(null); });
+    });
+    return __tifReq; }
+  (function(){ var tf=$("ctxTif"); if(tf) tf.addEventListener("change",function(){
+      if(!tf.checked){ if(tifLayer)tifLayer.visible=false; return; }
+      tifBuild().then(function(L){ if(L){ L.visible=true; try{ map.reorder(L,map.layers.length-1); }catch(e){} raiseSites(); } }); }); })();
   (function(){ var ci=$("ctxCookInd"); if(ci) ci.addEventListener("change",function(){ cookIndustrial.visible=ci.checked; if(ci.checked){ try{ map.reorder(cookIndustrial,map.layers.length-1); }catch(e){} } });
     var ns=$("showNces"); if(ns) ns.addEventListener("change",function(){ ncesSchools.visible=ns.checked; if(ns.checked){ try{ map.reorder(ncesSchools,map.layers.length-1); }catch(e){} } }); })();
   var heat=new GroupLayer({title:"Capacity heat (toggle)",visibilityMode:"independent",layers:[lcHeat,stCase,stHeat,pvHeat]});
